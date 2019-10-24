@@ -20,12 +20,20 @@ testset    -> ./input/test
 cd input  
 unzip mask.zip  
 download model_50A_slim_ensemble.csv(https://drive.google.com/file/d/1hfOu3_JR0vWJkNlRhKwhqJDaF3ID2vRs/view?usp=sharing)  into ./input
+This can be done from the command line with the following:
+<code> wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1hfOu3_JR0vWJkNlRhKwhqJDaF3ID2vRs' -O model_50A_slim_ensemble.csv </code>
 
 ## playground data  
 download playground data, then put them into input/train  
-https://www.kaggle.com/c/whale-categorization-playground/data
-
-
+https://www.kaggle.com/c/whale-categorization-playground/data  
+To efficiently do this, you need to create a Kaggle account and be registered with this competition. You need to click the late submission button and follow the steps outlined. Then, you can use the kaggle module to download the datasets directly to your directory through the command line using the following lines:  
+<code>   
+pip install kaggle (or with conda)   
+kaggle competitions files humpback-whale-identification  
+kaggle competitions download humpback-whale-identification -f train.zip   
+kaggle competitions download humpback-whale-identification -f test.zip   
+kaggle competitions download humpback-whale-identification -f train.csv   
+</code>
 
 ### Train  
 line 301 in train.py  
