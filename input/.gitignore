@@ -1,0 +1,6 @@
+# Ignore large files
+model*
+masks
+train.csv
+train.zip
+test.zip
