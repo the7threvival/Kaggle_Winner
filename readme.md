@@ -25,8 +25,10 @@ This can be done from the command line with the following:
 <code> wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1hfOu3_JR0vWJkNlRhKwhqJDaF3ID2vRs' -O model_50A_slim_ensemble.csv </code>
 
 ## playground data  
-download playground data, then put them into input/train  
+download data, then put them into input/  
 https://www.kaggle.com/c/whale-categorization-playground/data  
+https://www.kaggle.com/c/humpback-whale-identification/data   
+(The second one should be more complete)   
 
 To efficiently do this, you need to create a Kaggle account and be registered with this competition. You need to click the late submission button and follow the steps outlined. Then, you can use the kaggle module to download the datasets directly to your directory through the command line using the following lines:  
 ``` 
@@ -35,7 +37,8 @@ kaggle competitions files humpback-whale-identification
 kaggle competitions download humpback-whale-identification -f train.zip   
 kaggle competitions download humpback-whale-identification -f test.zip   
 kaggle competitions download humpback-whale-identification -f train.csv   
-```
+```  
+Then extract train.zip, test.zip, and masks.zip to the appropriate directory: train/, test/, and . .  
 
 ### Train  
 line 301 in train.py  
