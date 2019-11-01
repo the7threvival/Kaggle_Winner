@@ -32,7 +32,7 @@ https://www.kaggle.com/c/humpback-whale-identification/data
 
 To efficiently do this, you need to create a Kaggle account and be registered with this competition. You need to click the late submission button and follow the steps outlined. Then, you can use the kaggle module to download the datasets directly to your directory through the command line using the following lines:  
 ``` 
-pip install kaggle (or with conda)   
+pip install kaggle (or with conda install -c conda-forge kaggle)   
 kaggle competitions files humpback-whale-identification  
 kaggle competitions download humpback-whale-identification -f train.zip   
 kaggle competitions download humpback-whale-identification -f test.zip   
