@@ -6,6 +6,11 @@
 - python==3.6
 - torch==0.4.1
 - torchvision==0.2.1
+- opencv
+- pandas
+- matplotlib
+
+conda install -c conda-forge opencv matplotlib pandas python==3.6 torch torchvision
 
 
 ## Solution  
@@ -33,6 +38,11 @@ https://www.kaggle.com/c/humpback-whale-identification/data
 To efficiently do this, you need to create a Kaggle account and be registered with this competition. You need to click the late submission button and follow the steps outlined. Then, you can use the kaggle module to download the datasets directly to your directory through the command line using the following lines:  
 ``` 
 pip install kaggle (or with conda install -c conda-forge kaggle)   
+```
+For this next step you should hvae a Kaggle account already created.
+Then follow the "API credentials" <a href="https://github.com/Kaggle/kaggle-api">guidelines</a> for kaggle to be able to automatically verify your identity.
+
+```
 kaggle competitions files humpback-whale-identification  
 kaggle competitions download humpback-whale-identification -f train.zip   
 kaggle competitions download humpback-whale-identification -f test.zip   

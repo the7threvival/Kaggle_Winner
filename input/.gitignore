@@ -1,6 +1,11 @@
 # Ignore large files
 model*
 masks
+playground
+challenge
+test
+train
+result
 train.csv
 train.zip
 test.zip
