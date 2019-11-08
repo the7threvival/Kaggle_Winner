@@ -35,13 +35,14 @@ https://www.kaggle.com/c/whale-categorization-playground/data
 https://www.kaggle.com/c/humpback-whale-identification/data   
 (The second one should be more complete)   
 
-To efficiently do this, you need to create a Kaggle account and be registered with this competition. You need to click the late submission button and follow the steps outlined. Then, you can use the kaggle module to download the datasets directly to your directory through the command line using the following lines:  
+To efficiently do this, install the official kaggle command line tool:   
 ``` 
 pip install kaggle (or with conda install -c conda-forge kaggle)   
 ```
-For this next step you should hvae a Kaggle account already created.
-Then follow the "API credentials" <a href="https://github.com/Kaggle/kaggle-api">guidelines</a> for kaggle to be able to automatically verify your identity.
+For this next step you should have a Kaggle account already created.  
+Then **follow** the "API credentials" <a href="https://github.com/Kaggle/kaggle-api">guidelines</a> for kaggle to be able to automatically verify your identity.
 
+You then need to register with this competition. You need to click the late submission button and follow the steps outlined. Then, you can use the kaggle module to download the datasets directly to your directory through the command line using the following lines:
 ```
 kaggle competitions files humpback-whale-identification  
 kaggle competitions download humpback-whale-identification -f train.zip   
