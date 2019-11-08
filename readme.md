@@ -1,8 +1,6 @@
-# Kaggle Humpback Whale Identification Challenge  1st place code
+# Kaggle Humpback Whale Identification Challenge 1st place code
 
-#### Recent Updates
-[2019.3.1 16:44] uploading mask file
-#### Dependencies
+## Dependencies
 - python==3.6
 - torch==0.4.1
 - torchvision==0.2.1
@@ -13,15 +11,16 @@
 conda install -c conda-forge opencv matplotlib pandas python==3.6 torch torchvision
 
 
-## Solution  
+## Base solution  
 https://www.kaggle.com/c/humpback-whale-identification/discussion/82366  
 
-### prepare data  
-## competition dataset  
+
+## Prepare Data  
+### Competition dataset  
 trainset    -> ./input/train  
 testset    -> ./input/test  
 
-## mask
+### Mask
 cd input  
 unzip mask.zip  
 download model_50A_slim_ensemble.csv(https://drive.google.com/file/d/1hfOu3_JR0vWJkNlRhKwhqJDaF3ID2vRs/view?usp=sharing)  into ./input  
@@ -29,7 +28,7 @@ download model_50A_slim_ensemble.csv(https://drive.google.com/file/d/1hfOu3_JR0v
 This can be done from the command line with the following:   
 <code> wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1hfOu3_JR0vWJkNlRhKwhqJDaF3ID2vRs' -O model_50A_slim_ensemble.csv </code>
 
-## playground data  
+### Challenge data  
 download data, then put them into input/  
 https://www.kaggle.com/c/whale-categorization-playground/data  
 https://www.kaggle.com/c/humpback-whale-identification/data   
@@ -51,7 +50,8 @@ kaggle competitions download humpback-whale-identification -f train.csv
 ```  
 Then extract train.zip, test.zip, and masks.zip to the appropriate directory: train/, test/, and . .  
 
-### Train  
+
+## Train  
 line 301 in train.py  
 step 1.   
 &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;            freeze = False  
