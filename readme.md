@@ -17,10 +17,12 @@ https://www.kaggle.com/c/humpback-whale-identification/discussion/82366
 
 ## Prepare Data  
 ### Competition dataset  
+<hr>
 trainset    -> ./input/train  
 testset    -> ./input/test  
 
 ### Mask
+<hr>
 cd input  
 unzip mask.zip  
 download model_50A_slim_ensemble.csv(https://drive.google.com/file/d/1hfOu3_JR0vWJkNlRhKwhqJDaF3ID2vRs/view?usp=sharing)  into ./input  
@@ -29,6 +31,7 @@ This can be done from the command line with the following:
 <code> wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1hfOu3_JR0vWJkNlRhKwhqJDaF3ID2vRs' -O model_50A_slim_ensemble.csv </code>
 
 ### Challenge data  
+<hr>
 download data, then put them into input/  
 https://www.kaggle.com/c/whale-categorization-playground/data  
 https://www.kaggle.com/c/humpback-whale-identification/data   
@@ -75,7 +78,7 @@ step 3.
    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;     checkPoint_start = best checkPoint of step 2  
    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;     lr = 3e-5  
 
-### Test  
+## Test  
 line 99 in test.py  
 &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;       checkPoint_start = best checkPoint of step 3  
 
