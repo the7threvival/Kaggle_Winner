@@ -8,7 +8,8 @@
 - pandas
 - matplotlib
 
-conda install -c conda-forge opencv matplotlib pandas python==3.6 torch torchvision
+conda install -c conda-forge opencv matplotlib pandas python==3.6 
+conda install -c pytorch torch torchvision
 
 <br>
 
