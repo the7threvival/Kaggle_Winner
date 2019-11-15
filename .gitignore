@@ -3,3 +3,4 @@
 
 # Ignore strange result thing
 result
+.train*
