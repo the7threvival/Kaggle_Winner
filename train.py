@@ -8,7 +8,7 @@ import torch
 import time
 from utils import *
 from torch.nn.parallel.data_parallel import data_parallel
-
+import numpy as np
 
 
 def train_collate(batch):
@@ -44,10 +44,17 @@ def valid_collate(batch):
     return images, labels, names
 def transform_train(image, mask, label):
     add_ = 0
-    image = cv2.resize(image, (512, 256))
-    mask = cv2.resize(mask, (512, 256))
+    #import ipdb
+    #ipdb.set_trace(context=7)  
+    print("reached")
+    #image = cv2.resize(image, (512, 256))
+    #mask = cv2.resize(mask, (512, 256))
+    print(image.shape, mask.shape)
+    image = np.resize(image, (256, 512, 3))
+    mask = np.resize(mask, (256, 512))
     mask = mask[:,:, None]
-
+    print(image.shape, mask.shape)
+    print("here")
     image = np.concatenate([image, mask], 2)
     # if 0:
     #     if random.random() < 0.5:
