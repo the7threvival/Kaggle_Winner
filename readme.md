@@ -10,7 +10,7 @@
 
 conda install -c conda-forge python==3.6   
 conda install -c conda-forge opencv pandas matplotlib (tqdm)  
-(you might need to do "conda update -all" for matplotlib to install properly)
+(you might need to do "conda update -all" for matplotlib to install properly)  
 conda install -c pytorch pytorch==0.4.1 torchvision=0.2.1 cudatoolkit  
 
 <br>
