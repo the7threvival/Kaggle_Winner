@@ -32,7 +32,9 @@ class WhaleDataset(Dataset):
         self.labels_dict = self.load_labels()
         self.bbox_dict = self.load_bbox()
         self.rle_masks = self.load_mask()
-        self.id_labels = {Image:Id for Image, Id in zip(self.names, self.labels)}
+        # This is not used in this file and prob never anywhere else because
+        # labels could still change...
+        #self.id_labels = {Image:Id for Image, Id in zip(self.names, self.labels)}
         labels = []
         for label in self.labels:
             if label.find(' ') > -1:
@@ -45,6 +47,9 @@ class WhaleDataset(Dataset):
             # self.labels = list(self.dict_train.keys())
             self.labels = [k for k in self.dict_train.keys()
                             if len(self.dict_train[k]) >= min_num_classes]
+            images = [len(self.dict_train[k]) for k in self.dict_train.keys()
+                            if len(self.dict_train[k]) >= min_num_classes]
+            self.num_images = sum(images)
 
     def load_mask(self):
         print('loading mask...')
@@ -93,6 +98,12 @@ class WhaleDataset(Dataset):
         return len(self.labels)
 
     def get_image(self, name, transform, label, mode='train'):
+        #import ipdb
+        #ipdb.set_trace(context=5)
+        
+        #print()
+        #print("In get_image")
+        #print(name, label)
         image = cv2.imread('./input/{}/{}'.format(mode, name))
         # for Pseudo label
         if image is None:
@@ -102,36 +113,60 @@ class WhaleDataset(Dataset):
             mask = cv2.resize(mask, image.shape[:2][::-1])
         except:
             mask = cv2.imread('./input/masks/' + name, cv2.IMREAD_GRAYSCALE)
-        x0, y0, x1, y1 = self.bbox_dict[name]
         if mask is None:
             mask = np.zeros_like(image[:,:,0])
-        image = image[int(y0):int(y1), int(x0):int(x1)]
-        mask = mask[int(y0):int(y1), int(x0):int(x1)]
+        #print("got mask and image")
+        
+        #print("Trying to get bbox")
+        # Get bounding box if it exists, else use whole image
+        if name in self.bbox_dict: 
+            x0, y0, x1, y1 = self.bbox_dict[name]
+            image = image[int(y0):int(y1), int(x0):int(x1)]
+            mask = mask[int(y0):int(y1), int(x0):int(x1)]
+        #print(y0, y1, x0, x1)
+        #print(mask, image)
+        #print("trying to run transform and getting stuck")
+
+        #add_ is a number added to the label integer to create a new label
+        #for flipped images, if flipped.. (smart)
         image, add_ = transform(image, mask, label)
+        #print(label)
+        #print("got image, returning")
         return image, add_
 
     def __getitem__(self, index):
+        #import ipdb
+        #ipdb.set_trace(context=5)
         label = self.labels[index]
         names = self.dict_train[label]
         nums = len(names)
+        # Anchor and positive are same if only 1 image exists 
         if nums == 1:
             anchor_name = names[0]
             positive_name = names[0]
         else:
             anchor_name, positive_name = random.sample(names, 2)
-        negative_label = random.choice(list(set(self.labels) ^ set([label, 'new_whale'])))
+        # Negative is picked from labels excluding anchor,new_whale
+        #negative_label = random.choice(list(set(self.labels) ^ set([label, 'new_whale'])))
+        negative_label = random.choice(list(set(self.labels) ^ set([label])))
         negative_name = random.choice(self.dict_train[negative_label])
-        negative_label2 = 'new_whale'
-        negative_name2 = random.choice(self.dict_train[negative_label2])
+        # Excluded as we do not have this new_whale thing
+        #negative_label2 = 'new_whale'
+        #negative_name2 = random.choice(self.dict_train[negative_label2])
 
+        #print("In the __getitem__")
+        #print(anchor_name, label)
         anchor_image, anchor_add = self.get_image(anchor_name, self.transform_train, label)
         positive_image, positive_add = self.get_image(positive_name, self.transform_train, label)
         negative_image,  negative_add = self.get_image(negative_name, self.transform_train, negative_label)
-        negative_image2, negative_add2 = self.get_image(negative_name2, self.transform_train, negative_label2)
+        #negative_image2, negative_add2 = self.get_image(negative_name2, self.transform_train, negative_label2)
 
         assert anchor_name != negative_name
-        return [anchor_image, positive_image, negative_image, negative_image2], \
-               [self.labels_dict[label] + anchor_add, self.labels_dict[label] + positive_add, self.labels_dict[negative_label] + negative_add, self.labels_dict[negative_label2] + negative_add2]
+        #return [anchor_image, positive_image, negative_image, negative_image2], \
+        #       [self.labels_dict[label] + anchor_add, self.labels_dict[label] + positive_add, self.labels_dict[negative_label] + negative_add, self.labels_dict[negative_label2] + negative_add2]
+
+        return [anchor_image, positive_image, negative_image], \
+               [self.labels_dict[label] + anchor_add, self.labels_dict[label] + positive_add, self.labels_dict[negative_label] + negative_add]
 
 
 class WhaleTestDataset(Dataset):
@@ -157,9 +192,10 @@ class WhaleTestDataset(Dataset):
             mask = cv2.imread('./input/masks/' + name, cv2.IMREAD_GRAYSCALE)
         if mask is None:
             mask = np.zeros_like(image[:, :, 0])
-        x0, y0, x1, y1 = self.bbox_dict[name]
-        image = image[int(y0):int(y1), int(x0):int(x1)]
-        mask = mask[int(y0):int(y1), int(x0):int(x1)]
+        if name in self.bbox_dict: 
+            x0, y0, x1, y1 = self.bbox_dict[name]
+            image = image[int(y0):int(y1), int(x0):int(x1)]
+            mask = mask[int(y0):int(y1), int(x0):int(x1)]
         image = transform(image, mask)
         return image
 

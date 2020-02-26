@@ -24,7 +24,10 @@ def cosine_rampdown(current, rampdown_length):
     assert 0 <= current <= rampdown_length
     return float(.5 * (np.cos(np.pi * current / rampdown_length) + 1))
 def accuracy(output, target, topk=(1, 5)):
-    """Computes the precision@k for the specified values of k"""
+    """
+    Computes the precision@k for the specified values of k
+    This ignores the number of guesses.
+    """
     maxk = max(topk)
     batch_size = target.size(0)
 
@@ -37,12 +40,20 @@ def accuracy(output, target, topk=(1, 5)):
         correct_k = correct[:k].view(-1).float().sum(0, keepdim=True)
         res.append(correct_k.mul_(100.0 / batch_size))
     return res
+
 def get_top_k(output, topk=(3,)):
     maxk = max(topk)
     _, pred = output.topk(maxk, 1, True, True)
     return pred
 
 def apk(actual, predicted, k=10):
+    """ 
+    Computes average precision at k: 
+    Sees if any of top k predictions matches the
+    1 actual, but takes into account number of
+    guesses before reaching actual correct one..
+    https://rdrr.io/cran/Metrics/man/apk.html
+    """
     actual = [int(actual)]
     if len(predicted)>k:
         predicted = predicted[:k]
@@ -57,10 +68,12 @@ def apk(actual, predicted, k=10):
 
     if not actual:
         return 0.0
-
+    
+    # print(actual)
     return score / min(len(actual), k)
 
 def mapk(actual, predicted, k=10):
+    """ Computes the mean average precision. """
     _, predicted = predicted.topk(k, 1, True, True)
     actual = actual.data.cpu().numpy()
     predicted = predicted.data.cpu().numpy()

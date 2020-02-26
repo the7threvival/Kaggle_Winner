@@ -1,0 +1,28 @@
+This file shall contain information on the various split files
+available. Mainly why are there different ones and what they
+each mean.
+
+_challenge : those are one of the original split files. 
+             tested and known to give good results with the original
+             kaggle data. Kept as a reference.
+
+_flukes10 : first try at splitting the data. Some refining was done and
+          these contain our research fluke data separated so as to do
+          introductory testing. We are using a minimum number of occurences
+          of 10 as a start to make sure the network has plenty of data to 
+          train and learn from. This also makes sure that all images found
+          in the validation set are also in the training set as this 
+          initial stage does not allow for new_whale recognition. 
+          
+          That shall be the next hopeful step when the model and training
+          can show good learning and then next step after that will be
+          to not only recognize new_whale upon their first occurence,
+          but assign an ID to that new_whale and be able to recognize
+          it again upon resurfacing, not as a new_whale but as a previously 
+          seen one.
+
+_flukes5 : Same as _flukes10 but with min # of occurences of 5.    
+
+_flukes2 : Same as _flukes10 but with min # of occurences of 2. Can't be 1
+          as that would mean 'new_whale' IDs are included (not there yet).
+          This is just to see improvements in the algorithm and possibilities.  

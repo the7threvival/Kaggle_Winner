@@ -8,8 +8,13 @@ import torch
 import time
 from utils import *
 from torch.nn.parallel.data_parallel import data_parallel
+# from torchsummary import summary
 
+# To stop cv2/dataloader deadlock type situation
+cv2.setNumThreads(0)
 
+width = 512
+height = 256
 
 def train_collate(batch):
 
@@ -42,16 +47,29 @@ def valid_collate(batch):
     images = torch.stack(images, 0)
     labels = torch.from_numpy(np.array(labels))
     return images, labels, names
-def transform_train(image, mask, label):
-    add_ = 0
-    image = cv2.resize(image, (512, 256))
-    mask = cv2.resize(mask, (512, 256))
-    mask = mask[:,:, None]
 
+def transform_train(image, mask, label):
+    #print("in transform")
+    add_ = 0
+
+    #print(label)
+    #print(image)
+    #print(len(image), len(image[0]))
+    
+    #import ipdb
+    #ipdb.set_trace(context=5)
+    image = cv2.resize(image, (512, 256))
+    #print("1")
+    mask = cv2.resize(mask, (512, 256))
+    #print("2")
+    mask = mask[:,:, None]
+    
+    #print("3")
     image = np.concatenate([image, mask], 2)
     # if 0:
     #     if random.random() < 0.5:
     #         image = bgr_to_gray(image)
+    #print("so far in transform")
 
     if 1:
         if random.random() < 0.5:
@@ -88,6 +106,8 @@ def transform_train(image, mask, label):
     if 1:
         if random.random() < 0.5:
             mask[...] = 0
+
+    #print("at the end of transform")
     mask = mask[:, :, None]
     image = np.concatenate([image, mask], 2)
     image = np.transpose(image, (2, 0, 1))
@@ -157,9 +177,16 @@ def eval(model, dataLoader_valid):
         valid_loss /= index_valid
         return valid_loss, top1, top5, map5, best_t
 
-def train(freeze=False, fold_index=1, model_name='seresnext50',min_num_class=10, checkPoint_start=0, lr=3e-4, batch_size=36):
+def train(debug, freeze=False, fold_index=1, model_name='seresnext50',min_num_class=10, checkPoint_start=0, lr=3e-4, batch_size=36):
+    import ipdb
+
     num_classes = 5004 * 2
+    
     model = model_whale(num_classes=num_classes, inchannels=4, model_name=model_name).cuda()
+    if debug:
+        print(model)
+    #    summary(model.cuda(), (3, width, height))
+    
     i = 0
     iter_smooth = 50
     iter_valid = 200
@@ -179,7 +206,10 @@ def train(freeze=False, fold_index=1, model_name='seresnext50',min_num_class=10,
     log.open(os.path.join(resultDir, 'log_train.txt'), mode= 'a')
     log.write(' start_time :{} \n'.format(datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')))
     log.write(' batch_size :{} \n'.format(batch_size))
+    
     # Image,Id
+    # if debug: ipdb.set_trace(context=5)
+    
     data_train = pd.read_csv('./input/train_split_{}.csv'.format(fold_index))
     names_train = data_train['Image'].tolist()
     labels_train = data_train['Id'].tolist()
@@ -187,11 +217,50 @@ def train(freeze=False, fold_index=1, model_name='seresnext50',min_num_class=10,
     names_valid = data_valid['Image'].tolist()
     labels_valid = data_valid['Id'].tolist()
     num_data = len(names_train)
+    num_vld = len(names_valid)
+    ind1 = len(set(labels_train))
+    ind2 = len(set(labels_valid))
+    print()
+    print("Initial incoming image analysis")
+    log.write("\nLooking at {} total images.\n".format(num_data+num_vld))
+    log.write("{} train and {} validation images\n".format(num_data, num_vld))
+    log.write("{} train and {} valid individuals\n".format(ind1, ind2))
+
     dst_train = WhaleDataset(names_train, labels_train,mode='train',transform_train=transform_train, min_num_classes=min_num_class)
     dataloader_train = DataLoader(dst_train, shuffle=True, drop_last=True, batch_size=batch_size, num_workers=16, collate_fn=train_collate)
-    print(dst_train.__len__())
+    # num_workers was previously 16
+    # changed these becasue dataloader was hanging and never returning the data
+    # some post online said that this helped.. (there are 2 workarounds)
+    # doesn't really seem to be an issue I can "fix" as is between "packages"
+    # https://github.com/pytorch/pytorch/issues/1355
+    #dataloader_train = DataLoader(dst_train, shuffle=True, drop_last=True, batch_size=batch_size, num_workers=0, collate_fn=train_collate)
+
     dst_valid = WhaleTestDataset(names_valid, labels_valid, mode='valid',transform=transform_valid)
     dataloader_valid = DataLoader(dst_valid, shuffle=False, batch_size=batch_size * 2, num_workers=8, collate_fn=valid_collate)
+    # num_workers was previously 8
+    #dataloader_valid = DataLoader(dst_valid, shuffle=False, batch_size=batch_size * 2, num_workers=0, collate_fn=valid_collate)
+    #ipdb.set_trace(context=5)
+    
+    print()
+    print("Analysis of images to be used")
+    print("Train & valid image analysis:")
+    print("Number of training images with at least {} instances: {}".format(min_num_class, dst_train.num_images)) 
+    print("Number of validation images with at least {} instances: {}".format(0, dst_valid.__len__()))
+    
+    # Right now it is important for everything in valid to be in train
+    # (this should be changed later on) 
+    trn = set(dst_train.labels)
+    vld = set(dst_valid.labels)
+    extra = vld-trn
+    i2 = len(vld)
+    i1 = i2 - len(extra)
+
+    print("There are {} individuals found in train".format(len(trn)))
+    print("{} out of {} ids in valid are found in train".format(i1, i2))
+    if (i1 < i2):
+      print("The missing ones are: {}".format(extra))
+    print()
+
     train_loss = 0.0
     valid_loss = 0.0
     top1, top5, map5 = 0, 0, 0
@@ -213,98 +282,136 @@ def train(freeze=False, fold_index=1, model_name='seresnext50',min_num_class=10,
         adjust_learning_rate(optimizer, lr)
         i = checkPoint_start
         epoch = ckp['epoch']
+    #log.write(
+    #        ' rate     iter   epoch  | valid   top@1    top@5    map@5  | '
+    #        'train    top@1    top@5    map@5 |'
+    #        ' batch    top@1    top@5    map@5 |  time          \n')
     log.write(
-            ' rate     iter   epoch  | valid   top@1    top@5    map@5  | '
-            'train    top@1    top@5    map@5 |'
-            ' batch    top@1    top@5    map@5 |  time          \n')
+	    'format: \n'
+            'rate   iter  k  epoch | valid   top@1   top@5   map@5   best_t |'
+            ' train   top@1   map@5 |'
+            ' batch   top@1   map@5 | time \n')
     log.write(
-            '---------------------------------------------------------------------------------------------------------------------------------------------------------------------------\n')
+            '--------------------------------------------------------------------------------------------------------------------------------------\n')
     start = timer()
 
     start_epoch = epoch
     best_t = 0
     cycle_epoch = 0
-    while i < 10000000:
-        for data in dataloader_train:
-            epoch = start_epoch + (i - checkPoint_start) * 4 * batch_size/num_data
-            if i % iter_valid == 0:
-                valid_loss, top1, top5, map5, best_t = \
-                    eval(model, dataloader_valid)
-                print('\r', end='', flush=True)
+    
+    from ipdb import launch_ipdb_on_exception
+    
+    #ipdb.set_trace(context=5)
 
-                log.write(
-                    '%0.5f %5.2f k %5.2f  |'
-                    ' %0.3f    %0.3f    %0.3f    %0.4f    %0.4f | %0.3f    %0.3f    %0.3f | %0.3f     %0.3f    %0.3f | %s \n' % ( \
-                        lr, i / 1000, epoch,
-                        valid_loss, top1, top5, map5, best_t,
-                        train_loss, top1_train, map5_train,
-                        batch_loss, top1_batch, map5_batch,
-                        time_to_str((timer() - start) / 60)))
-                time.sleep(0.01)
+    # with launch_ipdb_on_exception():
+    if True:
+      while i < 10000000:
+          print("\nAt iteration:", i)
+          for data in dataloader_train:
+              #print("starting model learning process")
+              epoch = start_epoch + (i - checkPoint_start) * 4 * batch_size/num_data
+              if i % iter_valid == 0:
+                  #print("before eval")
+                  valid_loss, top1, top5, map5, best_t = \
+                      eval(model, dataloader_valid)
+                  print('\r', end='', flush=True)
 
-            if i % iter_save == 0 and not i == checkPoint_start:
-                torch.save(model.state_dict(), resultDir + '/checkpoint/%08d_model.pth' % (i))
-                torch.save({
-                    'optimizer': optimizer.state_dict(),
-                    'iter': i,
-                    'epoch': epoch,
-                    'best_t':best_t,
-                }, resultDir + '/checkpoint/%08d_optimizer.pth' % (i))
+                  log.write(
+                      '%0.5f %5.2f v %5.2f  |'
+                      ' %0.3f    %0.3f    %0.3f    %0.4f    %0.4f | %0.3f    %0.3f    %0.3f | %0.3f     %0.3f    %0.3f | %s\n' % ( \
+                          lr, i / 1000, epoch,
+                          valid_loss, top1, top5, map5, best_t,
+                          train_loss, top1_train, map5_train,
+                          batch_loss, top1_batch, map5_batch,
+                          time_to_str((timer() - start) / 60)))
+                  time.sleep(0.01)
 
+              if i % iter_save == 0 and not i == checkPoint_start:
+                  torch.save(model.state_dict(), resultDir + '/checkpoint/%08d_model.pth' % (i))
+                  torch.save({
+                      'optimizer': optimizer.state_dict(),
+                      'iter': i,
+                      'epoch': epoch,
+                      'best_t':best_t,
+                  }, resultDir + '/checkpoint/%08d_optimizer.pth' % (i))
 
-            model.train()
+              #print("gonna train")
+              # This doesn't actually do any training but sets up the 
+              # modules in the model so that they are ready for training
+              model.train()
 
-            model.mode = 'train'
-            images, labels = data
-            images = images.cuda()
-            labels = labels.cuda().long()
-            global_feat, local_feat, results = data_parallel(model,images)
-            model.getLoss(global_feat, local_feat, results, labels)
-            batch_loss = model.loss
+              model.mode = 'train'
+              images, labels = data
+              images = images.cuda()
+              labels = labels.cuda().long()
+              global_feat, local_feat, results = data_parallel(model,images)
+              model.getLoss(global_feat, local_feat, results, labels)
+              batch_loss = model.loss
+               
+              #print("backprop")
+              optimizer.zero_grad()
+              batch_loss.backward()
+              torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=5.0, norm_type=2)
+              optimizer.step()
+              results = torch.cat([torch.sigmoid(results), torch.ones_like(results[:, :1]).float().cuda() * 0.5], 1)
+              top1_batch = accuracy(results, labels, topk=(1,))[0]
+              map5_batch = mapk(labels, results, k=5)
 
-            optimizer.zero_grad()
-            batch_loss.backward()
-            torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=5.0, norm_type=2)
-            optimizer.step()
-            results = torch.cat([torch.sigmoid(results), torch.ones_like(results[:, :1]).float().cuda() * 0.5], 1)
-            top1_batch = accuracy(results, labels, topk=(1,))[0]
-            map5_batch = mapk(labels, results, k=5)
+              batch_loss = batch_loss.data.cpu().numpy()
+              sum += 1
+              train_loss_sum += batch_loss
+              train_top1_sum += top1_batch
+              train_map5_sum += map5_batch
+              if (i + 1) % iter_smooth == 0:
+                  print("\nSmoothing after {}".format(iter_smooth))
+                  train_loss = train_loss_sum/sum
+                  top1_train = train_top1_sum/sum
+                  map5_train = train_map5_sum/sum
+                  train_loss_sum = 0
+                  train_top1_sum = 0
+                  train_map5_sum = 0
+                  sum = 0
 
-            batch_loss = batch_loss.data.cpu().numpy()
-            sum += 1
-            train_loss_sum += batch_loss
-            train_top1_sum += top1_batch
-            train_map5_sum += map5_batch
-            if (i + 1) % iter_smooth == 0:
-                train_loss = train_loss_sum/sum
-                top1_train = train_top1_sum/sum
-                map5_train = train_map5_sum/sum
-                train_loss_sum = 0
-                train_top1_sum = 0
-                train_map5_sum = 0
-                sum = 0
-
-            print('\r%0.5f %5.2f k %5.2f  | %0.3f    %0.3f    %0.3f    %0.4f    %0.4f | %0.3f    %0.3f    %0.3f | %0.3f     %0.3f    %0.3f | %s  %d %d' % ( \
-                    lr, i / 1000, epoch,
-                    valid_loss, top1, top5,map5,best_t,
-                    train_loss, top1_train, map5_train,
-                    batch_loss, top1_batch, map5_batch,
-                    time_to_str((timer() - start) / 60), checkPoint_start, i)
-                , end='', flush=True)
-            i += 1
-           
-        pass
+              print('%0.5f %5.2f l %5.2f  | %0.3f    %0.3f    %0.3f    %0.4f    %0.4f | %0.3f    %0.3f    %0.3f | %0.3f     %0.3f    %0.3f | %s  %d %d\n' % ( \
+                      lr, i / 1000, epoch,
+                      valid_loss, top1, top5, map5, best_t,
+                      train_loss, top1_train, map5_train,
+                      batch_loss, top1_batch, map5_batch,
+                      time_to_str((timer() - start) / 60), checkPoint_start, i)
+                  , end='', flush=True)
+              i += 1
+             
+          pass
 
 
 if __name__ == '__main__':
+    #torch.multiprocesssing.set_start_method('spawn')
+
     if 1:
+        # Light command-line arguments check 
+        try:
+          fold_index = sys.argv[1]
+        except:
+          fold_index = "flukes10"
+       
+        # Other debugging info
+        try:
+          debug = sys.argv[2]
+        except:
+          debug = False
+       
+        # Other necessary variables
         os.environ['CUDA_VISIBLE_DEVICES'] = '0,1,2,3,5'
         freeze = False
         model_name = 'senet154'
-        fold_index = 1
-        min_num_class = 10
+        min_num_class = 0
         checkPoint_start = 0
         lr = 3e-4
         batch_size = 12
-        print(5005%batch_size)
-        train(freeze, fold_index, model_name, min_num_class, checkPoint_start, lr, batch_size)
+        
+        #print(5005%batch_size)
+        print("Some params:")
+        print("Learning rate: {}, batch size: {}, fold_index: {}".format(lr, batch_size, fold_index))
+        print(sys.argv)
+        
+        train(debug, freeze, fold_index, model_name, min_num_class, checkPoint_start, lr, batch_size)
