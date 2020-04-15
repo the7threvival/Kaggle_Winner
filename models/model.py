@@ -64,6 +64,8 @@ class model_whale(nn.Module):
         self.bottleneck_g.bias.requires_grad_(False)  # no shift
         # self.archead = Arcface(embedding_size=planes, classnum=num_classes, s=64.0)
         #
+        print("\n\n\n\n\n\n\n\n")
+        print(num_classes)
         self.fc = nn.Linear(planes, num_classes)
         init.normal_(self.fc.weight, std=0.001)
         init.constant_(self.fc.bias, 0)

@@ -8,7 +8,13 @@ import math
 import cv2
 import matplotlib.pyplot as plt
 from torch.utils.data import DataLoader
+import time
+
 BASE_SIZE = 256
+# NUM_CLASSES = 5004 * 2
+NUM_CLASSES = 839 * 2
+new_whale = True
+
 def do_length_decode(rle, H=192, W=384, fill_value=255):
     mask = np.zeros((H,W), np.uint8)
     if type(rle).__name__ == 'float': return mask
@@ -26,9 +32,14 @@ class WhaleDataset(Dataset):
         super(WhaleDataset, self).__init__()
         self.pairs = 2
         self.names = names
+        # labels is used to have all the labels that are input. they might
+        # be repeated or not. (Represents original entries of elephant IDs
+        # passed in as the training data)
         self.labels = labels
         self.mode = mode
         self.transform_train = transform_train
+        # this dict stores (label, id) pair for use when comparing results
+        # from model prediction
         self.labels_dict = self.load_labels()
         self.bbox_dict = self.load_bbox()
         self.rle_masks = self.load_mask()
@@ -44,7 +55,10 @@ class WhaleDataset(Dataset):
         self.labels = labels
         if mode in ['train', 'valid']:
             self.dict_train = self.balance_train()
+            # This is overwritten right after so removed for now
             # self.labels = list(self.dict_train.keys())
+
+            # Making sure there is a minimum number of classes for chosen IDs
             self.labels = [k for k in self.dict_train.keys()
                             if len(self.dict_train[k]) >= min_num_classes]
             images = [len(self.dict_train[k]) for k in self.dict_train.keys()
@@ -81,11 +95,12 @@ class WhaleDataset(Dataset):
         id = 0
         for name in labelName:
             if name == 'new_whale':
-                dict_label[name] = 5004 * 2
+                dict_label[name] = NUM_CLASSES
                 continue
             dict_label[name] = id
             id += 1
         return dict_label
+    
     def balance_train(self):
         dict_train = {}
         for name, label in zip(self.names, self.labels):
@@ -94,6 +109,7 @@ class WhaleDataset(Dataset):
             else:
                 dict_train[label].append(name)
         return dict_train
+    
     def __len__(self):
         return len(self.labels)
 
@@ -120,10 +136,14 @@ class WhaleDataset(Dataset):
         #print("Trying to get bbox")
         # Get bounding box if it exists, else use whole image
         if name in self.bbox_dict: 
+        #if False: 
+            #print("got bounding box")
             x0, y0, x1, y1 = self.bbox_dict[name]
             image = image[int(y0):int(y1), int(x0):int(x1)]
             mask = mask[int(y0):int(y1), int(x0):int(x1)]
-        #print(y0, y1, x0, x1)
+            #print(y0, y1, x0, x1)
+            #print()
+        
         #print(mask, image)
         #print("trying to run transform and getting stuck")
 
@@ -140,33 +160,38 @@ class WhaleDataset(Dataset):
         label = self.labels[index]
         names = self.dict_train[label]
         nums = len(names)
-        # Anchor and positive are same if only 1 image exists 
+        # Anchor and positive are same if only 1 image exists
+        # Low probability otherwise
         if nums == 1:
             anchor_name = names[0]
             positive_name = names[0]
         else:
             anchor_name, positive_name = random.sample(names, 2)
-        # Negative is picked from labels excluding anchor,new_whale
-        #negative_label = random.choice(list(set(self.labels) ^ set([label, 'new_whale'])))
-        negative_label = random.choice(list(set(self.labels) ^ set([label])))
+
+        # Negative is picked from labels excluding anchor and new_whale
+        if new_whale:
+          negative_label = random.choice(list(set(self.labels) ^ set([label, 'new_whale'])))
+          # Previuosly excluded as I did not have this new_whale thing
+          negative_label2 = 'new_whale'
+          negative_name2 = random.choice(self.dict_train[negative_label2])
+          negative_image2, negative_add2 = self.get_image(negative_name2, self.transform_train, negative_label2)
+        else:
+          negative_label = random.choice(list(set(self.labels) ^ set([label])))
         negative_name = random.choice(self.dict_train[negative_label])
-        # Excluded as we do not have this new_whale thing
-        #negative_label2 = 'new_whale'
-        #negative_name2 = random.choice(self.dict_train[negative_label2])
 
         #print("In the __getitem__")
         #print(anchor_name, label)
         anchor_image, anchor_add = self.get_image(anchor_name, self.transform_train, label)
         positive_image, positive_add = self.get_image(positive_name, self.transform_train, label)
         negative_image,  negative_add = self.get_image(negative_name, self.transform_train, negative_label)
-        #negative_image2, negative_add2 = self.get_image(negative_name2, self.transform_train, negative_label2)
 
         assert anchor_name != negative_name
-        #return [anchor_image, positive_image, negative_image, negative_image2], \
-        #       [self.labels_dict[label] + anchor_add, self.labels_dict[label] + positive_add, self.labels_dict[negative_label] + negative_add, self.labels_dict[negative_label2] + negative_add2]
-
-        return [anchor_image, positive_image, negative_image], \
-               [self.labels_dict[label] + anchor_add, self.labels_dict[label] + positive_add, self.labels_dict[negative_label] + negative_add]
+        if new_whale:
+          return [anchor_image, positive_image, negative_image, negative_image2], \
+                 [self.labels_dict[label] + anchor_add, self.labels_dict[label] + positive_add, self.labels_dict[negative_label] + negative_add, self.labels_dict[negative_label2] + negative_add2]
+        else:
+          return [anchor_image, positive_image, negative_image], \
+                 [self.labels_dict[label] + anchor_add, self.labels_dict[label] + positive_add, self.labels_dict[negative_label] + negative_add]
 
 
 class WhaleTestDataset(Dataset):
@@ -206,7 +231,7 @@ class WhaleTestDataset(Dataset):
         id = 0
         for name in labelName:
             if name == 'new_whale':
-                dict_label[name] = 5004 * 2
+                dict_label[name] = NUM_CLASSES
                 continue
             dict_label[name] = id
             id += 1
