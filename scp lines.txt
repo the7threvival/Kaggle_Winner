@@ -1,0 +1,8 @@
+scp DLANstnf@lp01.ccni.rpi.edu:scratch/Masters-Thesis/Kaggle_Winner/train.py .
+scp DLANstnf@lp01.ccni.rpi.edu:scratch/Masters-Thesis/Kaggle_Winner/models/\{model,utils\}.py ./models/
+scp DLANstnf@lp01.ccni.rpi.edu:scratch/Masters-Thesis/Kaggle_Winner/input/\{bboxs,label\}.csv ./input/
+scp DLANstnf@lp02.ccni.rpi.edu:scratch/Masters-Thesis/Kaggle_Winner/dataSet/reader.py ./dataSet/
+scp -r DLANstnf@lp02.ccni.rpi.edu:scratch/Masters-Thesis/Kaggle_Winner/sbatches ./sbatches
+scp -r DLANstnf@lp01.ccni.rpi.edu:scratch/Masters-Thesis/Kaggle_Winner/input/\{train*,valid*\}.csv ./input
+scp -r DLANstnf@lp01.ccni.rpi.edu:scratch/Masters-Thesis/Kaggle_Winner/input/flukebook/data_formatters/* ./input/flukebook/data_formatters/
+
