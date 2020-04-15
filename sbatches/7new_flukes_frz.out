@@ -1,0 +1,2193 @@
+Some params:
+Fold_index: new_flukes, Check_start: 0, Learning rate: 0.0003
+!!! Sanity check !!!
+Input:  ['train.py', 'new_flukes', '0', '3e-4', 'True']
+
+model_whale(
+  (basemodel): SENet(
+    (layer0): Sequential(
+      (conv1): Conv2d(4, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu1): ReLU(inplace)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu2): ReLU(inplace)
+      (conv3): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu3): ReLU(inplace)
+      (pool): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=True)
+    )
+    (layer1): Sequential(
+      (0): SEBottleneck(
+        (conv1): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+        (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace)
+        (se_module): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(256, 16, kernel_size=(1, 1), stride=(1, 1))
+          (relu): ReLU(inplace)
+          (fc2): Conv2d(16, 256, kernel_size=(1, 1), stride=(1, 1))
+          (sigmoid): Sigmoid()
+        )
+        (downsample): Sequential(
+          (0): Conv2d(128, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (1): SEBottleneck(
+        (conv1): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+        (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace)
+        (se_module): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(256, 16, kernel_size=(1, 1), stride=(1, 1))
+          (relu): ReLU(inplace)
+          (fc2): Conv2d(16, 256, kernel_size=(1, 1), stride=(1, 1))
+          (sigmoid): Sigmoid()
+        )
+      )
+      (2): SEBottleneck(
+        (conv1): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+        (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace)
+        (se_module): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(256, 16, kernel_size=(1, 1), stride=(1, 1))
+          (relu): ReLU(inplace)
+          (fc2): Conv2d(16, 256, kernel_size=(1, 1), stride=(1, 1))
+          (sigmoid): Sigmoid()
+        )
+      )
+    )
+    (layer2): Sequential(
+      (0): SEBottleneck(
+        (conv1): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(256, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=64, bias=False)
+        (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace)
+        (se_module): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(512, 32, kernel_size=(1, 1), stride=(1, 1))
+          (relu): ReLU(inplace)
+          (fc2): Conv2d(32, 512, kernel_size=(1, 1), stride=(1, 1))
+          (sigmoid): Sigmoid()
+        )
+        (downsample): Sequential(
+          (0): Conv2d(256, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+          (1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (1): SEBottleneck(
+        (conv1): Conv2d(512, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+        (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace)
+        (se_module): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(512, 32, kernel_size=(1, 1), stride=(1, 1))
+          (relu): ReLU(inplace)
+          (fc2): Conv2d(32, 512, kernel_size=(1, 1), stride=(1, 1))
+          (sigmoid): Sigmoid()
+        )
+      )
+      (2): SEBottleneck(
+        (conv1): Conv2d(512, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+        (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace)
+        (se_module): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(512, 32, kernel_size=(1, 1), stride=(1, 1))
+          (relu): ReLU(inplace)
+          (fc2): Conv2d(32, 512, kernel_size=(1, 1), stride=(1, 1))
+          (sigmoid): Sigmoid()
+        )
+      )
+      (3): SEBottleneck(
+        (conv1): Conv2d(512, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+        (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace)
+        (se_module): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(512, 32, kernel_size=(1, 1), stride=(1, 1))
+          (relu): ReLU(inplace)
+          (fc2): Conv2d(32, 512, kernel_size=(1, 1), stride=(1, 1))
+          (sigmoid): Sigmoid()
+        )
+      )
+      (4): SEBottleneck(
+        (conv1): Conv2d(512, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+        (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace)
+        (se_module): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(512, 32, kernel_size=(1, 1), stride=(1, 1))
+          (relu): ReLU(inplace)
+          (fc2): Conv2d(32, 512, kernel_size=(1, 1), stride=(1, 1))
+          (sigmoid): Sigmoid()
+        )
+      )
+      (5): SEBottleneck(
+        (conv1): Conv2d(512, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+        (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace)
+        (se_module): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(512, 32, kernel_size=(1, 1), stride=(1, 1))
+          (relu): ReLU(inplace)
+          (fc2): Conv2d(32, 512, kernel_size=(1, 1), stride=(1, 1))
+          (sigmoid): Sigmoid()
+        )
+      )
+      (6): SEBottleneck(
+        (conv1): Conv2d(512, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+        (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace)
+        (se_module): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(512, 32, kernel_size=(1, 1), stride=(1, 1))
+          (relu): ReLU(inplace)
+          (fc2): Conv2d(32, 512, kernel_size=(1, 1), stride=(1, 1))
+          (sigmoid): Sigmoid()
+        )
+      )
+      (7): SEBottleneck(
+        (conv1): Conv2d(512, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+        (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace)
+        (se_module): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(512, 32, kernel_size=(1, 1), stride=(1, 1))
+          (relu): ReLU(inplace)
+          (fc2): Conv2d(32, 512, kernel_size=(1, 1), stride=(1, 1))
+          (sigmoid): Sigmoid()
+        )
+      )
+    )
+    (layer3): Sequential(
+      (0): SEBottleneck(
+        (conv1): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(512, 1024, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=64, bias=False)
+        (bn2): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace)
+        (se_module): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(1024, 64, kernel_size=(1, 1), stride=(1, 1))
+          (relu): ReLU(inplace)
+          (fc2): Conv2d(64, 1024, kernel_size=(1, 1), stride=(1, 1))
+          (sigmoid): Sigmoid()
+        )
+        (downsample): Sequential(
+          (0): Conv2d(512, 1024, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+          (1): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (1): SEBottleneck(
+        (conv1): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+        (bn2): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace)
+        (se_module): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(1024, 64, kernel_size=(1, 1), stride=(1, 1))
+          (relu): ReLU(inplace)
+          (fc2): Conv2d(64, 1024, kernel_size=(1, 1), stride=(1, 1))
+          (sigmoid): Sigmoid()
+        )
+      )
+      (2): SEBottleneck(
+        (conv1): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+        (bn2): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace)
+        (se_module): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(1024, 64, kernel_size=(1, 1), stride=(1, 1))
+          (relu): ReLU(inplace)
+          (fc2): Conv2d(64, 1024, kernel_size=(1, 1), stride=(1, 1))
+          (sigmoid): Sigmoid()
+        )
+      )
+      (3): SEBottleneck(
+        (conv1): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+        (bn2): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace)
+        (se_module): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(1024, 64, kernel_size=(1, 1), stride=(1, 1))
+          (relu): ReLU(inplace)
+          (fc2): Conv2d(64, 1024, kernel_size=(1, 1), stride=(1, 1))
+          (sigmoid): Sigmoid()
+        )
+      )
+      (4): SEBottleneck(
+        (conv1): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+        (bn2): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace)
+        (se_module): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(1024, 64, kernel_size=(1, 1), stride=(1, 1))
+          (relu): ReLU(inplace)
+          (fc2): Conv2d(64, 1024, kernel_size=(1, 1), stride=(1, 1))
+          (sigmoid): Sigmoid()
+        )
+      )
+      (5): SEBottleneck(
+        (conv1): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+        (bn2): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace)
+        (se_module): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(1024, 64, kernel_size=(1, 1), stride=(1, 1))
+          (relu): ReLU(inplace)
+          (fc2): Conv2d(64, 1024, kernel_size=(1, 1), stride=(1, 1))
+          (sigmoid): Sigmoid()
+        )
+      )
+      (6): SEBottleneck(
+        (conv1): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+        (bn2): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace)
+        (se_module): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(1024, 64, kernel_size=(1, 1), stride=(1, 1))
+          (relu): ReLU(inplace)
+          (fc2): Conv2d(64, 1024, kernel_size=(1, 1), stride=(1, 1))
+          (sigmoid): Sigmoid()
+        )
+      )
+      (7): SEBottleneck(
+        (conv1): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+        (bn2): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace)
+        (se_module): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(1024, 64, kernel_size=(1, 1), stride=(1, 1))
+          (relu): ReLU(inplace)
+          (fc2): Conv2d(64, 1024, kernel_size=(1, 1), stride=(1, 1))
+          (sigmoid): Sigmoid()
+        )
+      )
+      (8): SEBottleneck(
+        (conv1): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+        (bn2): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace)
+        (se_module): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(1024, 64, kernel_size=(1, 1), stride=(1, 1))
+          (relu): ReLU(inplace)
+          (fc2): Conv2d(64, 1024, kernel_size=(1, 1), stride=(1, 1))
+          (sigmoid): Sigmoid()
+        )
+      )
+      (9): SEBottleneck(
+        (conv1): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+        (bn2): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace)
+        (se_module): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(1024, 64, kernel_size=(1, 1), stride=(1, 1))
+          (relu): ReLU(inplace)
+          (fc2): Conv2d(64, 1024, kernel_size=(1, 1), stride=(1, 1))
+          (sigmoid): Sigmoid()
+        )
+      )
+      (10): SEBottleneck(
+        (conv1): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+        (bn2): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace)
+        (se_module): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(1024, 64, kernel_size=(1, 1), stride=(1, 1))
+          (relu): ReLU(inplace)
+          (fc2): Conv2d(64, 1024, kernel_size=(1, 1), stride=(1, 1))
+          (sigmoid): Sigmoid()
+        )
+      )
+      (11): SEBottleneck(
+        (conv1): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+        (bn2): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace)
+        (se_module): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(1024, 64, kernel_size=(1, 1), stride=(1, 1))
+          (relu): ReLU(inplace)
+          (fc2): Conv2d(64, 1024, kernel_size=(1, 1), stride=(1, 1))
+          (sigmoid): Sigmoid()
+        )
+      )
+      (12): SEBottleneck(
+        (conv1): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+        (bn2): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace)
+        (se_module): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(1024, 64, kernel_size=(1, 1), stride=(1, 1))
+          (relu): ReLU(inplace)
+          (fc2): Conv2d(64, 1024, kernel_size=(1, 1), stride=(1, 1))
+          (sigmoid): Sigmoid()
+        )
+      )
+      (13): SEBottleneck(
+        (conv1): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+        (bn2): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace)
+        (se_module): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(1024, 64, kernel_size=(1, 1), stride=(1, 1))
+          (relu): ReLU(inplace)
+          (fc2): Conv2d(64, 1024, kernel_size=(1, 1), stride=(1, 1))
+          (sigmoid): Sigmoid()
+        )
+      )
+      (14): SEBottleneck(
+        (conv1): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+        (bn2): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace)
+        (se_module): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(1024, 64, kernel_size=(1, 1), stride=(1, 1))
+          (relu): ReLU(inplace)
+          (fc2): Conv2d(64, 1024, kernel_size=(1, 1), stride=(1, 1))
+          (sigmoid): Sigmoid()
+        )
+      )
+      (15): SEBottleneck(
+        (conv1): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+        (bn2): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace)
+        (se_module): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(1024, 64, kernel_size=(1, 1), stride=(1, 1))
+          (relu): ReLU(inplace)
+          (fc2): Conv2d(64, 1024, kernel_size=(1, 1), stride=(1, 1))
+          (sigmoid): Sigmoid()
+        )
+      )
+      (16): SEBottleneck(
+        (conv1): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+        (bn2): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace)
+        (se_module): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(1024, 64, kernel_size=(1, 1), stride=(1, 1))
+          (relu): ReLU(inplace)
+          (fc2): Conv2d(64, 1024, kernel_size=(1, 1), stride=(1, 1))
+          (sigmoid): Sigmoid()
+        )
+      )
+      (17): SEBottleneck(
+        (conv1): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+        (bn2): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace)
+        (se_module): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(1024, 64, kernel_size=(1, 1), stride=(1, 1))
+          (relu): ReLU(inplace)
+          (fc2): Conv2d(64, 1024, kernel_size=(1, 1), stride=(1, 1))
+          (sigmoid): Sigmoid()
+        )
+      )
+      (18): SEBottleneck(
+        (conv1): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+        (bn2): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace)
+        (se_module): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(1024, 64, kernel_size=(1, 1), stride=(1, 1))
+          (relu): ReLU(inplace)
+          (fc2): Conv2d(64, 1024, kernel_size=(1, 1), stride=(1, 1))
+          (sigmoid): Sigmoid()
+        )
+      )
+      (19): SEBottleneck(
+        (conv1): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+        (bn2): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace)
+        (se_module): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(1024, 64, kernel_size=(1, 1), stride=(1, 1))
+          (relu): ReLU(inplace)
+          (fc2): Conv2d(64, 1024, kernel_size=(1, 1), stride=(1, 1))
+          (sigmoid): Sigmoid()
+        )
+      )
+      (20): SEBottleneck(
+        (conv1): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+        (bn2): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace)
+        (se_module): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(1024, 64, kernel_size=(1, 1), stride=(1, 1))
+          (relu): ReLU(inplace)
+          (fc2): Conv2d(64, 1024, kernel_size=(1, 1), stride=(1, 1))
+          (sigmoid): Sigmoid()
+        )
+      )
+      (21): SEBottleneck(
+        (conv1): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+        (bn2): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace)
+        (se_module): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(1024, 64, kernel_size=(1, 1), stride=(1, 1))
+          (relu): ReLU(inplace)
+          (fc2): Conv2d(64, 1024, kernel_size=(1, 1), stride=(1, 1))
+          (sigmoid): Sigmoid()
+        )
+      )
+      (22): SEBottleneck(
+        (conv1): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+        (bn2): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace)
+        (se_module): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(1024, 64, kernel_size=(1, 1), stride=(1, 1))
+          (relu): ReLU(inplace)
+          (fc2): Conv2d(64, 1024, kernel_size=(1, 1), stride=(1, 1))
+          (sigmoid): Sigmoid()
+        )
+      )
+      (23): SEBottleneck(
+        (conv1): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+        (bn2): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace)
+        (se_module): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(1024, 64, kernel_size=(1, 1), stride=(1, 1))
+          (relu): ReLU(inplace)
+          (fc2): Conv2d(64, 1024, kernel_size=(1, 1), stride=(1, 1))
+          (sigmoid): Sigmoid()
+        )
+      )
+      (24): SEBottleneck(
+        (conv1): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+        (bn2): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace)
+        (se_module): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(1024, 64, kernel_size=(1, 1), stride=(1, 1))
+          (relu): ReLU(inplace)
+          (fc2): Conv2d(64, 1024, kernel_size=(1, 1), stride=(1, 1))
+          (sigmoid): Sigmoid()
+        )
+      )
+      (25): SEBottleneck(
+        (conv1): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+        (bn2): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace)
+        (se_module): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(1024, 64, kernel_size=(1, 1), stride=(1, 1))
+          (relu): ReLU(inplace)
+          (fc2): Conv2d(64, 1024, kernel_size=(1, 1), stride=(1, 1))
+          (sigmoid): Sigmoid()
+        )
+      )
+      (26): SEBottleneck(
+        (conv1): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+        (bn2): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace)
+        (se_module): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(1024, 64, kernel_size=(1, 1), stride=(1, 1))
+          (relu): ReLU(inplace)
+          (fc2): Conv2d(64, 1024, kernel_size=(1, 1), stride=(1, 1))
+          (sigmoid): Sigmoid()
+        )
+      )
+      (27): SEBottleneck(
+        (conv1): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+        (bn2): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace)
+        (se_module): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(1024, 64, kernel_size=(1, 1), stride=(1, 1))
+          (relu): ReLU(inplace)
+          (fc2): Conv2d(64, 1024, kernel_size=(1, 1), stride=(1, 1))
+          (sigmoid): Sigmoid()
+        )
+      )
+      (28): SEBottleneck(
+        (conv1): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+        (bn2): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace)
+        (se_module): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(1024, 64, kernel_size=(1, 1), stride=(1, 1))
+          (relu): ReLU(inplace)
+          (fc2): Conv2d(64, 1024, kernel_size=(1, 1), stride=(1, 1))
+          (sigmoid): Sigmoid()
+        )
+      )
+      (29): SEBottleneck(
+        (conv1): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+        (bn2): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace)
+        (se_module): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(1024, 64, kernel_size=(1, 1), stride=(1, 1))
+          (relu): ReLU(inplace)
+          (fc2): Conv2d(64, 1024, kernel_size=(1, 1), stride=(1, 1))
+          (sigmoid): Sigmoid()
+        )
+      )
+      (30): SEBottleneck(
+        (conv1): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+        (bn2): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace)
+        (se_module): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(1024, 64, kernel_size=(1, 1), stride=(1, 1))
+          (relu): ReLU(inplace)
+          (fc2): Conv2d(64, 1024, kernel_size=(1, 1), stride=(1, 1))
+          (sigmoid): Sigmoid()
+        )
+      )
+      (31): SEBottleneck(
+        (conv1): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+        (bn2): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace)
+        (se_module): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(1024, 64, kernel_size=(1, 1), stride=(1, 1))
+          (relu): ReLU(inplace)
+          (fc2): Conv2d(64, 1024, kernel_size=(1, 1), stride=(1, 1))
+          (sigmoid): Sigmoid()
+        )
+      )
+      (32): SEBottleneck(
+        (conv1): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+        (bn2): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace)
+        (se_module): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(1024, 64, kernel_size=(1, 1), stride=(1, 1))
+          (relu): ReLU(inplace)
+          (fc2): Conv2d(64, 1024, kernel_size=(1, 1), stride=(1, 1))
+          (sigmoid): Sigmoid()
+        )
+      )
+      (33): SEBottleneck(
+        (conv1): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+        (bn2): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace)
+        (se_module): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(1024, 64, kernel_size=(1, 1), stride=(1, 1))
+          (relu): ReLU(inplace)
+          (fc2): Conv2d(64, 1024, kernel_size=(1, 1), stride=(1, 1))
+          (sigmoid): Sigmoid()
+        )
+      )
+      (34): SEBottleneck(
+        (conv1): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+        (bn2): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace)
+        (se_module): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(1024, 64, kernel_size=(1, 1), stride=(1, 1))
+          (relu): ReLU(inplace)
+          (fc2): Conv2d(64, 1024, kernel_size=(1, 1), stride=(1, 1))
+          (sigmoid): Sigmoid()
+        )
+      )
+      (35): SEBottleneck(
+        (conv1): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+        (bn2): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace)
+        (se_module): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(1024, 64, kernel_size=(1, 1), stride=(1, 1))
+          (relu): ReLU(inplace)
+          (fc2): Conv2d(64, 1024, kernel_size=(1, 1), stride=(1, 1))
+          (sigmoid): Sigmoid()
+        )
+      )
+    )
+    (layer4): Sequential(
+      (0): SEBottleneck(
+        (conv1): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(1024, 2048, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=64, bias=False)
+        (bn2): BatchNorm2d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(2048, 2048, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace)
+        (se_module): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(2048, 128, kernel_size=(1, 1), stride=(1, 1))
+          (relu): ReLU(inplace)
+          (fc2): Conv2d(128, 2048, kernel_size=(1, 1), stride=(1, 1))
+          (sigmoid): Sigmoid()
+        )
+        (downsample): Sequential(
+          (0): Conv2d(1024, 2048, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+          (1): BatchNorm2d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (1): SEBottleneck(
+        (conv1): Conv2d(2048, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(1024, 2048, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+        (bn2): BatchNorm2d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(2048, 2048, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace)
+        (se_module): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(2048, 128, kernel_size=(1, 1), stride=(1, 1))
+          (relu): ReLU(inplace)
+          (fc2): Conv2d(128, 2048, kernel_size=(1, 1), stride=(1, 1))
+          (sigmoid): Sigmoid()
+        )
+      )
+      (2): SEBottleneck(
+        (conv1): Conv2d(2048, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(1024, 2048, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+        (bn2): BatchNorm2d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv3): Conv2d(2048, 2048, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNorm2d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace)
+        (se_module): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(2048, 128, kernel_size=(1, 1), stride=(1, 1))
+          (relu): ReLU(inplace)
+          (fc2): Conv2d(128, 2048, kernel_size=(1, 1), stride=(1, 1))
+          (sigmoid): Sigmoid()
+        )
+      )
+    )
+  )
+  (local_conv): Conv2d(2048, 512, kernel_size=(1, 1), stride=(1, 1))
+  (local_bn): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bottleneck_g): BatchNorm1d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (fc): Linear(in_features=2048, out_features=10008, bias=True)
+)
+ start_time :2020-03-04 18:50:10 
+ batch_size :12 
+
+Initial incoming image analysis
+
+Looking at 3076 total images.
+2171 train and 905 validation images
+839 train and 839 valid individuals
+loading bbox...
+loading mask...
+loading bbox...
+
+Analysis of images to be used
+Train & valid image analysis:
+Number of training images with at least 0 instances: 2171
+Number of validation images with at least 0 instances: 905
+There are 839 individuals found in train
+839 out of 839 ids in valid are found in train
+
+format: 
+rate   iter  k  epoch | valid   top@1   top@5   map@5   best_t | train   top@1   map@5 | batch   top@1   map@5 | time 
+--------------------------------------------------------------------------------------------------------------------------------------
+
+At iteration: 0
+0.00030  0.00 v  0.00  | 1.760    0.000    0.110    0.0003    0.1000 | 0.000    0.000    0.000 | 0.000     0.000    0.000 |  0 hr 00 min
+
+Smoothing after 50
+0.00030  0.05 l  1.08  | 1.760    0.000    0.110    0.0003    0.1000 | 1.777    0.500    0.008 | 1.612     0.000    0.000 |  0 hr 01 min  0 49
+
+At iteration: 69
+
+Smoothing after 50
+0.00030  0.10 l  2.19  | 1.760    0.000    0.110    0.0003    0.1000 | 1.696    2.667    0.038 | 1.677     8.333    0.098 |  0 hr 02 min  0 99
+
+At iteration: 138
+
+Smoothing after 50
+0.00030  0.15 l  3.29  | 1.760    0.000    0.110    0.0003    0.1000 | 1.664    3.556    0.051 | 1.756     0.000    0.062 |  0 hr 02 min  0 149
+
+Smoothing after 50
+0.00030  0.20 l  4.40  | 1.760    0.000    0.110    0.0003    0.1000 | 1.656    4.778    0.064 | 1.696     2.778    0.079 |  0 hr 03 min  0 199
+0.00030  0.20 v  4.42  | 1.561    1.657    4.751    0.0274    0.1000 | 1.656    4.778    0.064 | 1.696     2.778    0.079 |  0 hr 03 min
+
+At iteration: 207
+
+Smoothing after 50
+0.00030  0.25 l  5.51  | 1.561    1.657    4.751    0.0274    0.1000 | 1.641    7.222    0.101 | 1.668     13.889    0.162 |  0 hr 04 min  0 249
+
+At iteration: 276
+
+Smoothing after 50
+0.00030  0.30 l  6.61  | 1.561    1.657    4.751    0.0274    0.1000 | 1.613    7.722    0.115 | 1.577     13.889    0.167 |  0 hr 05 min  0 299
+
+At iteration: 345
+
+Smoothing after 50
+0.00030  0.35 l  7.72  | 1.561    1.657    4.751    0.0274    0.1000 | 1.622    8.778    0.127 | 1.632     13.889    0.194 |  0 hr 06 min  0 349
+
+Smoothing after 50
+0.00030  0.40 l  8.82  | 1.561    1.657    4.751    0.0274    0.1000 | 1.612    12.611    0.169 | 1.708     25.000    0.320 |  0 hr 07 min  0 399
+0.00030  0.40 v  8.84  | 1.565    3.204    10.608    0.0568    0.1000 | 1.612    12.611    0.169 | 1.708     25.000    0.320 |  0 hr 07 min
+
+At iteration: 414
+
+Smoothing after 50
+0.00030  0.45 l  9.93  | 1.565    3.204    10.608    0.0568    0.1000 | 1.586    15.500    0.209 | 1.526     2.778    0.109 |  0 hr 08 min  0 449
+
+At iteration: 483
+
+Smoothing after 50
+0.00030  0.50 l 11.03  | 1.565    3.204    10.608    0.0568    0.1000 | 1.601    17.611    0.235 | 1.703     19.444    0.258 |  0 hr 08 min  0 499
+
+Smoothing after 50
+0.00030  0.55 l 12.14  | 1.565    3.204    10.608    0.0568    0.1000 | 1.572    19.222    0.264 | 1.486     16.667    0.231 |  0 hr 09 min  0 549
+
+At iteration: 552
+
+Smoothing after 50
+0.00030  0.60 l 13.24  | 1.565    3.204    10.608    0.0568    0.1000 | 1.551    26.167    0.341 | 1.502     22.222    0.328 |  0 hr 10 min  0 599
+0.00030  0.60 v 13.27  | 1.562    6.740    17.127    0.1053    0.1000 | 1.551    26.167    0.341 | 1.502     22.222    0.328 |  0 hr 10 min
+
+At iteration: 621
+
+Smoothing after 50
+0.00030  0.65 l 14.35  | 1.562    6.740    17.127    0.1053    0.1000 | 1.537    31.333    0.392 | 1.436     33.333    0.448 |  0 hr 11 min  0 649
+
+At iteration: 690
+
+Smoothing after 50
+0.00030  0.70 l 15.45  | 1.562    6.740    17.127    0.1053    0.1000 | 1.538    33.778    0.415 | 1.414     58.333    0.630 |  0 hr 12 min  0 699
+
+Smoothing after 50
+0.00030  0.75 l 16.56  | 1.562    6.740    17.127    0.1053    0.1000 | 1.524    35.889    0.451 | 1.373     44.444    0.529 |  0 hr 13 min  0 749
+
+At iteration: 759
+
+Smoothing after 50
+0.00030  0.80 l 17.67  | 1.562    6.740    17.127    0.1053    0.1000 | 1.496    42.444    0.515 | 1.620     36.111    0.436 |  0 hr 13 min  0 799
+0.00030  0.80 v 17.69  | 1.568    9.613    22.762    0.1424    0.1000 | 1.496    42.444    0.515 | 1.620     36.111    0.436 |  0 hr 14 min
+
+At iteration: 828
+
+Smoothing after 50
+0.00030  0.85 l 18.77  | 1.568    9.613    22.762    0.1424    0.1000 | 1.482    44.833    0.538 | 1.446     52.778    0.579 |  0 hr 14 min  0 849
+
+At iteration: 897
+
+Smoothing after 50
+0.00030  0.90 l 19.88  | 1.568    9.613    22.762    0.1424    0.1000 | 1.479    46.611    0.554 | 1.611     44.444    0.594 |  0 hr 15 min  0 899
+
+Smoothing after 50
+0.00030  0.95 l 20.98  | 1.568    9.613    22.762    0.1424    0.1000 | 1.462    51.667    0.606 | 1.413     52.778    0.634 |  0 hr 16 min  0 949
+
+At iteration: 966
+
+Smoothing after 50
+0.00030  1.00 l 22.09  | 1.568    9.613    22.762    0.1424    0.1000 | 1.419    55.389    0.640 | 1.477     50.000    0.604 |  0 hr 17 min  0 999
+0.00030  1.00 v 22.11  | 1.552    15.249    33.812    0.2195    0.1000 | 1.419    55.389    0.640 | 1.477     50.000    0.604 |  0 hr 17 min
+
+At iteration: 1035
+
+Smoothing after 50
+0.00030  1.05 l 23.19  | 1.552    15.249    33.812    0.2195    0.1000 | 1.421    56.556    0.650 | 1.410     44.444    0.597 |  0 hr 18 min  0 1049
+
+Smoothing after 50
+0.00030  1.10 l 24.30  | 1.552    15.249    33.812    0.2195    0.1000 | 1.412    59.667    0.681 | 1.453     47.222    0.560 |  0 hr 19 min  0 1099
+
+At iteration: 1104
+
+Smoothing after 50
+0.00030  1.15 l 25.40  | 1.552    15.249    33.812    0.2195    0.1000 | 1.379    63.056    0.709 | 1.280     61.111    0.694 |  0 hr 19 min  0 1149
+
+At iteration: 1173
+
+Smoothing after 50
+0.00030  1.20 l 26.51  | 1.552    15.249    33.812    0.2195    0.1000 | 1.391    64.944    0.715 | 1.461     69.444    0.782 |  0 hr 20 min  0 1199
+0.00030  1.20 v 26.53  | 1.553    18.011    35.912    0.2432    0.1000 | 1.391    64.944    0.715 | 1.461     69.444    0.782 |  0 hr 20 min
+
+At iteration: 1242
+
+Smoothing after 50
+0.00030  1.25 l 27.61  | 1.553    18.011    35.912    0.2432    0.1000 | 1.370    67.000    0.737 | 1.308     50.000    0.650 |  0 hr 21 min  0 1249
+
+Smoothing after 50
+0.00030  1.30 l 28.72  | 1.553    18.011    35.912    0.2432    0.1000 | 1.356    69.000    0.757 | 1.320     80.556    0.815 |  0 hr 22 min  0 1299
+
+At iteration: 1311
+
+Smoothing after 50
+0.00030  1.35 l 29.83  | 1.553    18.011    35.912    0.2432    0.1000 | 1.319    72.833    0.787 | 1.298     63.889    0.738 |  0 hr 23 min  0 1349
+
+At iteration: 1380
+
+Smoothing after 50
+0.00030  1.40 l 30.93  | 1.553    18.011    35.912    0.2432    0.1000 | 1.320    70.500    0.775 | 1.306     66.667    0.743 |  0 hr 24 min  0 1399
+0.00030  1.40 v 30.95  | 1.533    24.530    45.967    0.3228    0.1000 | 1.320    70.500    0.775 | 1.306     66.667    0.743 |  0 hr 24 min
+
+At iteration: 1449
+
+Smoothing after 50
+0.00030  1.45 l 32.04  | 1.533    24.530    45.967    0.3228    0.1000 | 1.301    72.667    0.787 | 1.255     69.444    0.750 |  0 hr 25 min  0 1449
+
+Smoothing after 50
+0.00030  1.50 l 33.14  | 1.533    24.530    45.967    0.3228    0.1000 | 1.291    75.944    0.815 | 1.456     58.333    0.606 |  0 hr 25 min  0 1499
+
+At iteration: 1518
+
+Smoothing after 50
+0.00030  1.55 l 34.25  | 1.533    24.530    45.967    0.3228    0.1000 | 1.280    76.722    0.818 | 1.327     80.556    0.853 |  0 hr 26 min  0 1549
+
+At iteration: 1587
+
+Smoothing after 50
+0.00030  1.60 l 35.35  | 1.533    24.530    45.967    0.3228    0.1000 | 1.248    78.667    0.833 | 1.448     77.778    0.812 |  0 hr 27 min  0 1599
+0.00030  1.60 v 35.38  | 1.528    26.961    46.519    0.3435    0.1000 | 1.248    78.667    0.833 | 1.448     77.778    0.812 |  0 hr 27 min
+
+Smoothing after 50
+0.00030  1.65 l 36.46  | 1.528    26.961    46.519    0.3435    0.1000 | 1.252    79.222    0.837 | 1.254     69.444    0.731 |  0 hr 28 min  0 1649
+
+At iteration: 1656
+
+Smoothing after 50
+0.00030  1.70 l 37.56  | 1.528    26.961    46.519    0.3435    0.1000 | 1.216    82.056    0.861 | 1.122     86.111    0.907 |  0 hr 29 min  0 1699
+
+At iteration: 1725
+
+Smoothing after 50
+0.00030  1.75 l 38.67  | 1.528    26.961    46.519    0.3435    0.1000 | 1.216    80.833    0.849 | 1.137     86.111    0.889 |  0 hr 30 min  0 1749
+
+At iteration: 1794
+
+Smoothing after 50
+0.00030  1.80 l 39.78  | 1.528    26.961    46.519    0.3435    0.1000 | 1.194    82.222    0.863 | 1.064     91.667    0.926 |  0 hr 30 min  0 1799
+0.00030  1.80 v 39.80  | 1.505    31.602    51.823    0.3929    0.1000 | 1.194    82.222    0.863 | 1.064     91.667    0.926 |  0 hr 31 min
+
+Smoothing after 50
+0.00030  1.85 l 40.88  | 1.505    31.602    51.823    0.3929    0.1000 | 1.192    83.389    0.876 | 1.153     88.889    0.912 |  0 hr 31 min  0 1849
+
+At iteration: 1863
+
+Smoothing after 50
+0.00030  1.90 l 41.99  | 1.505    31.602    51.823    0.3929    0.1000 | 1.175    84.889    0.888 | 1.249     86.111    0.904 |  0 hr 32 min  0 1899
+
+At iteration: 1932
+
+Smoothing after 50
+0.00030  1.95 l 43.09  | 1.505    31.602    51.823    0.3929    0.1000 | 1.168    85.000    0.886 | 1.137     86.111    0.922 |  0 hr 33 min  0 1949
+
+Smoothing after 50
+0.00030  2.00 l 44.20  | 1.505    31.602    51.823    0.3929    0.1000 | 1.167    85.167    0.886 | 1.319     83.333    0.861 |  0 hr 34 min  0 1999
+0.00030  2.00 v 44.22  | 1.526    35.691    54.144    0.4248    0.1000 | 1.167    85.167    0.886 | 1.319     83.333    0.861 |  0 hr 34 min
+
+At iteration: 2001
+
+Smoothing after 50
+0.00030  2.05 l 45.30  | 1.526    35.691    54.144    0.4248    0.1000 | 1.130    87.000    0.902 | 1.081     80.556    0.833 |  0 hr 35 min  0 2049
+
+At iteration: 2070
+
+Smoothing after 50
+0.00030  2.10 l 46.41  | 1.526    35.691    54.144    0.4248    0.1000 | 1.128    86.611    0.897 | 1.100     83.333    0.889 |  0 hr 36 min  0 2099
+
+At iteration: 2139
+
+Smoothing after 50
+0.00030  2.15 l 47.51  | 1.526    35.691    54.144    0.4248    0.1000 | 1.113    87.778    0.907 | 1.156     97.222    0.972 |  0 hr 36 min  0 2149
+
+Smoothing after 50
+0.00030  2.20 l 48.62  | 1.526    35.691    54.144    0.4248    0.1000 | 1.085    87.722    0.906 | 1.108     83.333    0.877 |  0 hr 37 min  0 2199
+0.00030  2.20 v 48.64  | 1.475    41.436    59.227    0.4822    0.1000 | 1.085    87.722    0.906 | 1.108     83.333    0.877 |  0 hr 37 min
+
+At iteration: 2208
+
+Smoothing after 50
+0.00030  2.25 l 49.72  | 1.475    41.436    59.227    0.4822    0.1000 | 1.074    89.389    0.920 | 0.911     97.222    0.986 |  0 hr 38 min  0 2249
+
+At iteration: 2277
+
+Smoothing after 50
+0.00030  2.30 l 50.83  | 1.475    41.436    59.227    0.4822    0.1000 | 1.065    89.000    0.914 | 1.034     91.667    0.931 |  0 hr 39 min  0 2299
+
+At iteration: 2346
+
+Smoothing after 50
+0.00030  2.35 l 51.94  | 1.475    41.436    59.227    0.4822    0.1000 | 1.044    89.556    0.920 | 1.025     86.111    0.875 |  0 hr 40 min  0 2349
+
+Smoothing after 50
+0.00030  2.40 l 53.04  | 1.475    41.436    59.227    0.4822    0.1000 | 1.031    90.667    0.931 | 1.040     86.111    0.884 |  0 hr 41 min  0 2399
+0.00030  2.40 v 53.06  | 1.464    41.547    59.116    0.4815    0.1000 | 1.031    90.667    0.931 | 1.040     86.111    0.884 |  0 hr 41 min
+
+At iteration: 2415
+
+Smoothing after 50
+0.00030  2.45 l 54.15  | 1.464    41.547    59.116    0.4815    0.1000 | 1.034    91.111    0.936 | 1.029     100.000    1.000 |  0 hr 42 min  0 2449
+
+At iteration: 2484
+
+Smoothing after 50
+0.00030  2.50 l 55.25  | 1.464    41.547    59.116    0.4815    0.1000 | 1.014    91.889    0.939 | 0.985     97.222    0.972 |  0 hr 42 min  0 2499
+
+Smoothing after 50
+0.00030  2.55 l 56.36  | 1.464    41.547    59.116    0.4815    0.1000 | 1.021    91.333    0.934 | 1.012     94.444    0.958 |  0 hr 43 min  0 2549
+
+At iteration: 2553
+
+Smoothing after 50
+0.00030  2.60 l 57.46  | 1.464    41.547    59.116    0.4815    0.1000 | 0.981    92.056    0.940 | 0.896     100.000    1.000 |  0 hr 44 min  0 2599
+0.00030  2.60 v 57.49  | 1.459    43.536    60.221    0.5008    0.1000 | 0.981    92.056    0.940 | 0.896     100.000    1.000 |  0 hr 44 min
+
+At iteration: 2622
+
+Smoothing after 50
+0.00030  2.65 l 58.57  | 1.459    43.536    60.221    0.5008    0.1000 | 0.976    92.000    0.939 | 0.926     100.000    1.000 |  0 hr 45 min  0 2649
+
+At iteration: 2691
+
+Smoothing after 50
+0.00030  2.70 l 59.67  | 1.459    43.536    60.221    0.5008    0.1000 | 0.964    92.222    0.940 | 0.996     94.444    0.954 |  0 hr 46 min  0 2699
+
+Smoothing after 50
+0.00030  2.75 l 60.78  | 1.459    43.536    60.221    0.5008    0.1000 | 0.969    92.556    0.943 | 0.904     94.444    0.958 |  0 hr 47 min  0 2749
+
+At iteration: 2760
+
+Smoothing after 50
+0.00030  2.80 l 61.88  | 1.459    43.536    60.221    0.5008    0.1000 | 0.940    92.944    0.947 | 0.981     91.667    0.940 |  0 hr 47 min  0 2799
+0.00030  2.80 v 61.91  | 1.448    46.298    62.431    0.5263    0.1000 | 0.940    92.944    0.947 | 0.981     91.667    0.940 |  0 hr 48 min
+
+At iteration: 2829
+
+Smoothing after 50
+0.00030  2.85 l 62.99  | 1.448    46.298    62.431    0.5263    0.1000 | 0.936    92.722    0.945 | 0.928     94.444    0.958 |  0 hr 48 min  0 2849
+
+At iteration: 2898
+
+Smoothing after 50
+0.00030  2.90 l 64.10  | 1.448    46.298    62.431    0.5263    0.1000 | 0.922    93.333    0.950 | 0.970     91.667    0.944 |  0 hr 49 min  0 2899
+
+Smoothing after 50
+0.00030  2.95 l 65.20  | 1.448    46.298    62.431    0.5263    0.1000 | 0.902    93.278    0.951 | 0.892     88.889    0.933 |  0 hr 50 min  0 2949
+
+At iteration: 2967
+
+Smoothing after 50
+0.00030  3.00 l 66.31  | 1.448    46.298    62.431    0.5263    0.1000 | 0.875    93.944    0.953 | 0.894     91.667    0.940 |  0 hr 51 min  0 2999
+0.00030  3.00 v 66.33  | 1.452    46.409    63.204    0.5303    0.1000 | 0.875    93.944    0.953 | 0.894     91.667    0.940 |  0 hr 51 min
+
+At iteration: 3036
+
+Smoothing after 50
+0.00030  3.05 l 67.41  | 1.452    46.409    63.204    0.5303    0.1000 | 0.889    94.000    0.954 | 0.863     97.222    0.986 |  0 hr 52 min  0 3049
+
+Smoothing after 50
+0.00030  3.10 l 68.52  | 1.452    46.409    63.204    0.5303    0.1000 | 0.883    93.222    0.950 | 0.784     100.000    1.000 |  0 hr 53 min  0 3099
+
+At iteration: 3105
+
+Smoothing after 50
+0.00030  3.15 l 69.62  | 1.452    46.409    63.204    0.5303    0.1000 | 0.870    94.111    0.956 | 0.952     91.667    0.924 |  0 hr 53 min  0 3149
+
+At iteration: 3174
+
+Smoothing after 50
+0.00030  3.20 l 70.73  | 1.452    46.409    63.204    0.5303    0.1000 | 0.860    94.556    0.961 | 0.865     94.444    0.964 |  0 hr 54 min  0 3199
+0.00030  3.20 v 70.75  | 1.455    49.171    64.420    0.5512    0.1000 | 0.860    94.556    0.961 | 0.865     94.444    0.964 |  0 hr 54 min
+
+At iteration: 3243
+
+Smoothing after 50
+0.00030  3.25 l 71.83  | 1.455    49.171    64.420    0.5512    0.1000 | 0.837    94.444    0.959 | 0.937     91.667    0.917 |  0 hr 55 min  0 3249
+
+Smoothing after 50
+0.00030  3.30 l 72.94  | 1.455    49.171    64.420    0.5512    0.1000 | 0.828    95.278    0.963 | 0.779     97.222    0.972 |  0 hr 56 min  0 3299
+
+At iteration: 3312
+
+Smoothing after 50
+0.00030  3.35 l 74.05  | 1.455    49.171    64.420    0.5512    0.1000 | 0.808    94.944    0.963 | 0.779     100.000    1.000 |  0 hr 57 min  0 3349
+
+At iteration: 3381
+
+Smoothing after 50
+0.00030  3.40 l 75.15  | 1.455    49.171    64.420    0.5512    0.1000 | 0.821    94.444    0.959 | 0.752     94.444    0.958 |  0 hr 57 min  0 3399
+0.00030  3.40 v 75.17  | 1.432    50.608    65.304    0.5621    0.1000 | 0.821    94.444    0.959 | 0.752     94.444    0.958 |  0 hr 58 min
+
+Smoothing after 50
+0.00030  3.45 l 76.26  | 1.432    50.608    65.304    0.5621    0.1000 | 0.789    94.944    0.964 | 0.940     91.667    0.917 |  0 hr 58 min  0 3449
+
+At iteration: 3450
+
+Smoothing after 50
+0.00030  3.50 l 77.36  | 1.432    50.608    65.304    0.5621    0.1000 | 0.785    95.611    0.970 | 0.742     91.667    0.958 |  0 hr 59 min  0 3499
+
+At iteration: 3519
+
+Smoothing after 50
+0.00030  3.55 l 78.47  | 1.432    50.608    65.304    0.5621    0.1000 | 0.766    95.333    0.966 | 0.695     97.222    0.981 |  1 hr 00 min  0 3549
+
+At iteration: 3588
+
+Smoothing after 50
+0.00030  3.60 l 79.57  | 1.432    50.608    65.304    0.5621    0.1000 | 0.764    95.389    0.966 | 0.865     94.444    0.958 |  1 hr 01 min  0 3599
+0.00030  3.60 v 79.59  | 1.431    51.602    65.304    0.5694    0.1000 | 0.764    95.389    0.966 | 0.865     94.444    0.958 |  1 hr 01 min
+
+Smoothing after 50
+0.00030  3.65 l 80.68  | 1.431    51.602    65.304    0.5694    0.1000 | 0.775    94.667    0.962 | 0.779     97.222    0.981 |  1 hr 02 min  0 3649
+
+At iteration: 3657
+
+Smoothing after 50
+0.00030  3.70 l 81.78  | 1.431    51.602    65.304    0.5694    0.1000 | 0.752    95.056    0.966 | 0.802     91.667    0.944 |  1 hr 03 min  0 3699
+
+At iteration: 3726
+
+Smoothing after 50
+0.00030  3.75 l 82.89  | 1.431    51.602    65.304    0.5694    0.1000 | 0.728    96.778    0.976 | 0.604     100.000    1.000 |  1 hr 03 min  0 3749
+
+At iteration: 3795
+
+Smoothing after 50
+0.00030  3.80 l 83.99  | 1.431    51.602    65.304    0.5694    0.1000 | 0.749    94.389    0.958 | 0.691     97.222    0.986 |  1 hr 04 min  0 3799
+0.00030  3.80 v 84.02  | 1.456    50.497    66.409    0.5655    0.1000 | 0.749    94.389    0.958 | 0.691     97.222    0.986 |  1 hr 04 min
+
+Smoothing after 50
+0.00030  3.85 l 85.10  | 1.456    50.497    66.409    0.5655    0.1000 | 0.721    96.000    0.971 | 0.673     100.000    1.000 |  1 hr 05 min  0 3849
+
+At iteration: 3864
+
+Smoothing after 50
+0.00030  3.90 l 86.21  | 1.456    50.497    66.409    0.5655    0.1000 | 0.711    95.722    0.970 | 0.751     97.222    0.986 |  1 hr 06 min  0 3899
+
+At iteration: 3933
+
+Smoothing after 50
+0.00030  3.95 l 87.31  | 1.456    50.497    66.409    0.5655    0.1000 | 0.720    95.500    0.970 | 0.824     97.222    0.986 |  1 hr 07 min  0 3949
+
+Smoothing after 50
+0.00030  4.00 l 88.42  | 1.456    50.497    66.409    0.5655    0.1000 | 0.706    95.722    0.969 | 0.705     94.444    0.963 |  1 hr 08 min  0 3999
+0.00030  4.00 v 88.44  | 1.418    53.812    66.851    0.5881    0.1000 | 0.706    95.722    0.969 | 0.705     94.444    0.963 |  1 hr 08 min
+
+At iteration: 4002
+
+Smoothing after 50
+0.00030  4.05 l 89.52  | 1.418    53.812    66.851    0.5881    0.1000 | 0.698    95.722    0.968 | 0.704     94.444    0.968 |  1 hr 09 min  0 4049
+
+At iteration: 4071
+
+Smoothing after 50
+0.00030  4.10 l 90.63  | 1.418    53.812    66.851    0.5881    0.1000 | 0.690    96.222    0.972 | 0.560     100.000    1.000 |  1 hr 10 min  0 4099
+
+At iteration: 4140
+
+Smoothing after 50
+0.00030  4.15 l 91.73  | 1.418    53.812    66.851    0.5881    0.1000 | 0.676    96.000    0.972 | 0.620     97.222    0.986 |  1 hr 10 min  0 4149
+
+Smoothing after 50
+0.00030  4.20 l 92.84  | 1.418    53.812    66.851    0.5881    0.1000 | 0.660    96.000    0.972 | 0.678     94.444    0.968 |  1 hr 11 min  0 4199
+0.00030  4.20 v 92.86  | 1.405    55.912    68.508    0.6065    0.1000 | 0.660    96.000    0.972 | 0.678     94.444    0.968 |  1 hr 11 min
+
+At iteration: 4209
+
+Smoothing after 50
+0.00030  4.25 l 93.94  | 1.405    55.912    68.508    0.6065    0.1000 | 0.663    96.278    0.974 | 0.606     100.000    1.000 |  1 hr 12 min  0 4249
+
+At iteration: 4278
+
+Smoothing after 50
+0.00030  4.30 l 95.05  | 1.405    55.912    68.508    0.6065    0.1000 | 0.671    95.944    0.971 | 0.806     94.444    0.944 |  1 hr 13 min  0 4299
+
+At iteration: 4347
+
+Smoothing after 50
+0.00030  4.35 l 96.15  | 1.405    55.912    68.508    0.6065    0.1000 | 0.659    96.056    0.972 | 0.708     94.444    0.954 |  1 hr 14 min  0 4349
+
+Smoothing after 50
+0.00030  4.40 l 97.26  | 1.405    55.912    68.508    0.6065    0.1000 | 0.631    96.778    0.979 | 0.630     97.222    0.986 |  1 hr 14 min  0 4399
+0.00030  4.40 v 97.28  | 1.406    54.365    68.066    0.5976    0.1000 | 0.631    96.778    0.979 | 0.630     97.222    0.986 |  1 hr 15 min
+
+At iteration: 4416
+
+Smoothing after 50
+0.00030  4.45 l 98.37  | 1.406    54.365    68.066    0.5976    0.1000 | 0.641    95.667    0.970 | 0.570     97.222    0.986 |  1 hr 16 min  0 4449
+
+At iteration: 4485
+
+Smoothing after 50
+0.00030  4.50 l 99.47  | 1.406    54.365    68.066    0.5976    0.1000 | 0.625    96.333    0.976 | 0.619     97.222    0.979 |  1 hr 16 min  0 4499
+
+Smoothing after 50
+0.00030  4.55 l 100.58  | 1.406    54.365    68.066    0.5976    0.1000 | 0.620    96.556    0.977 | 0.618     88.889    0.944 |  1 hr 17 min  0 4549
+
+At iteration: 4554
+
+Smoothing after 50
+0.00030  4.60 l 101.68  | 1.406    54.365    68.066    0.5976    0.1000 | 0.615    96.111    0.973 | 0.625     97.222    0.986 |  1 hr 18 min  0 4599
+0.00030  4.60 v 101.70  | 1.441    57.238    69.503    0.6225    0.1000 | 0.615    96.111    0.973 | 0.625     97.222    0.986 |  1 hr 18 min
+
+At iteration: 4623
+
+Smoothing after 50
+0.00030  4.65 l 102.79  | 1.441    57.238    69.503    0.6225    0.1000 | 0.597    96.889    0.979 | 0.512     100.000    1.000 |  1 hr 19 min  0 4649
+
+At iteration: 4692
+
+Smoothing after 50
+0.00030  4.70 l 103.89  | 1.441    57.238    69.503    0.6225    0.1000 | 0.615    96.722    0.977 | 0.635     100.000    1.000 |  1 hr 20 min  0 4699
+
+Smoothing after 50
+0.00030  4.75 l 105.00  | 1.441    57.238    69.503    0.6225    0.1000 | 0.601    96.722    0.977 | 0.604     91.667    0.947 |  1 hr 20 min  0 4749
+
+At iteration: 4761
+
+Smoothing after 50
+0.00030  4.80 l 106.10  | 1.441    57.238    69.503    0.6225    0.1000 | 0.586    96.944    0.979 | 0.515     97.222    0.972 |  1 hr 21 min  0 4799
+0.00030  4.80 v 106.13  | 1.426    54.475    67.845    0.5980    0.1000 | 0.586    96.944    0.979 | 0.515     97.222    0.972 |  1 hr 22 min
+
+At iteration: 4830
+
+Smoothing after 50
+0.00030  4.85 l 107.21  | 1.426    54.475    67.845    0.5980    0.1000 | 0.589    96.667    0.978 | 0.611     94.444    0.964 |  1 hr 22 min  0 4849
+
+At iteration: 4899
+
+Smoothing after 50
+0.00030  4.90 l 108.32  | 1.426    54.475    67.845    0.5980    0.1000 | 0.602    96.056    0.974 | 0.599     94.444    0.972 |  1 hr 23 min  0 4899
+
+Smoothing after 50
+0.00030  4.95 l 109.42  | 1.426    54.475    67.845    0.5980    0.1000 | 0.576    96.833    0.978 | 0.585     100.000    1.000 |  1 hr 24 min  0 4949
+
+At iteration: 4968
+
+Smoothing after 50
+0.00030  5.00 l 110.53  | 1.426    54.475    67.845    0.5980    0.1000 | 0.574    96.944    0.980 | 0.528     97.222    0.986 |  1 hr 25 min  0 4999
+0.00030  5.00 v 110.55  | 1.425    56.796    70.497    0.6221    0.1000 | 0.574    96.944    0.980 | 0.528     97.222    0.986 |  1 hr 25 min
+
+At iteration: 5037
+
+Smoothing after 50
+0.00030  5.05 l 111.63  | 1.425    56.796    70.497    0.6221    0.1000 | 0.561    97.000    0.980 | 0.529     97.222    0.986 |  1 hr 26 min  0 5049
+
+Smoothing after 50
+0.00030  5.10 l 112.74  | 1.425    56.796    70.497    0.6221    0.1000 | 0.551    96.333    0.976 | 0.492     100.000    1.000 |  1 hr 26 min  0 5099
+
+At iteration: 5106
+
+Smoothing after 50
+0.00030  5.15 l 113.84  | 1.425    56.796    70.497    0.6221    0.1000 | 0.558    96.944    0.980 | 0.699     91.667    0.933 |  1 hr 27 min  0 5149
+
+At iteration: 5175
+
+Smoothing after 50
+0.00030  5.20 l 114.95  | 1.425    56.796    70.497    0.6221    0.1000 | 0.551    97.111    0.981 | 0.733     94.444    0.944 |  1 hr 28 min  0 5199
+0.00030  5.20 v 114.97  | 1.420    54.033    67.956    0.5957    0.1000 | 0.551    97.111    0.981 | 0.733     94.444    0.944 |  1 hr 28 min
+
+At iteration: 5244
+
+Smoothing after 50
+0.00030  5.25 l 116.05  | 1.420    54.033    67.956    0.5957    0.1000 | 0.554    96.556    0.978 | 0.502     97.222    0.978 |  1 hr 29 min  0 5249
+
+Smoothing after 50
+0.00030  5.30 l 117.16  | 1.420    54.033    67.956    0.5957    0.1000 | 0.537    97.444    0.983 | 0.501     100.000    1.000 |  1 hr 30 min  0 5299
+
+At iteration: 5313
+
+Smoothing after 50
+0.00030  5.35 l 118.26  | 1.420    54.033    67.956    0.5957    0.1000 | 0.521    97.167    0.981 | 0.529     100.000    1.000 |  1 hr 31 min  0 5349
+
+At iteration: 5382
+
+Smoothing after 50
+0.00030  5.40 l 119.37  | 1.420    54.033    67.956    0.5957    0.1000 | 0.525    97.722    0.985 | 0.503     100.000    1.000 |  1 hr 31 min  0 5399
+0.00030  5.40 v 119.39  | 1.435    56.022    71.050    0.6195    0.1000 | 0.525    97.722    0.985 | 0.503     100.000    1.000 |  1 hr 32 min
+
+Smoothing after 50
+0.00030  5.45 l 120.48  | 1.435    56.022    71.050    0.6195    0.1000 | 0.523    97.056    0.981 | 0.507     91.667    0.942 |  1 hr 32 min  0 5449
+
+At iteration: 5451
+
+Smoothing after 50
+0.00030  5.50 l 121.58  | 1.435    56.022    71.050    0.6195    0.1000 | 0.506    97.222    0.983 | 0.484     97.222    0.972 |  1 hr 33 min  0 5499
+
+At iteration: 5520
+
+Smoothing after 50
+0.00030  5.55 l 122.69  | 1.435    56.022    71.050    0.6195    0.1000 | 0.496    97.722    0.986 | 0.487     100.000    1.000 |  1 hr 34 min  0 5549
+
+At iteration: 5589
+
+Smoothing after 50
+0.00030  5.60 l 123.79  | 1.435    56.022    71.050    0.6195    0.1000 | 0.519    97.278    0.982 | 0.596     100.000    1.000 |  1 hr 35 min  0 5599
+0.00030  5.60 v 123.81  | 1.433    59.669    72.155    0.6462    0.1000 | 0.519    97.278    0.982 | 0.596     100.000    1.000 |  1 hr 35 min
+
+Smoothing after 50
+0.00030  5.65 l 124.90  | 1.433    59.669    72.155    0.6462    0.1000 | 0.494    97.833    0.986 | 0.468     94.444    0.958 |  1 hr 36 min  0 5649
+
+At iteration: 5658
+
+Smoothing after 50
+0.00030  5.70 l 126.00  | 1.433    59.669    72.155    0.6462    0.1000 | 0.501    97.722    0.985 | 0.510     100.000    1.000 |  1 hr 37 min  0 5699
+
+At iteration: 5727
+
+Smoothing after 50
+0.00030  5.75 l 127.11  | 1.433    59.669    72.155    0.6462    0.1000 | 0.505    96.556    0.979 | 0.534     97.222    0.986 |  1 hr 37 min  0 5749
+
+At iteration: 5796
+
+Smoothing after 50
+0.00030  5.80 l 128.21  | 1.433    59.669    72.155    0.6462    0.1000 | 0.509    97.111    0.982 | 0.584     94.444    0.958 |  1 hr 38 min  0 5799
+0.00030  5.80 v 128.24  | 1.431    58.011    72.928    0.6410    0.1000 | 0.509    97.111    0.982 | 0.584     94.444    0.958 |  1 hr 38 min
+
+Smoothing after 50
+0.00030  5.85 l 129.32  | 1.431    58.011    72.928    0.6410    0.1000 | 0.493    97.333    0.983 | 0.483     97.222    0.986 |  1 hr 39 min  0 5849
+
+At iteration: 5865
+
+Smoothing after 50
+0.00030  5.90 l 130.42  | 1.431    58.011    72.928    0.6410    0.1000 | 0.487    97.111    0.982 | 0.584     100.000    1.000 |  1 hr 40 min  0 5899
+
+At iteration: 5934
+
+Smoothing after 50
+0.00030  5.95 l 131.53  | 1.431    58.011    72.928    0.6410    0.1000 | 0.467    98.111    0.988 | 0.455     100.000    1.000 |  1 hr 41 min  0 5949
+
+Smoothing after 50
+0.00030  6.00 l 132.64  | 1.431    58.011    72.928    0.6410    0.1000 | 0.478    97.556    0.985 | 0.520     97.222    0.986 |  1 hr 42 min  0 5999
+0.00030  6.00 v 132.66  | 1.482    57.680    71.823    0.6316    0.1000 | 0.478    97.556    0.985 | 0.520     97.222    0.986 |  1 hr 42 min
+
+At iteration: 6003
+
+Smoothing after 50
+0.00030  6.05 l 133.74  | 1.482    57.680    71.823    0.6316    0.1000 | 0.485    96.778    0.980 | 0.421     94.444    0.968 |  1 hr 43 min  0 6049
+
+At iteration: 6072
+
+Smoothing after 50
+0.00030  6.10 l 134.85  | 1.482    57.680    71.823    0.6316    0.1000 | 0.470    97.389    0.984 | 0.474     94.444    0.972 |  1 hr 43 min  0 6099
+
+At iteration: 6141
+
+Smoothing after 50
+0.00030  6.15 l 135.95  | 1.482    57.680    71.823    0.6316    0.1000 | 0.474    97.389    0.983 | 0.438     100.000    1.000 |  1 hr 44 min  0 6149
+
+Smoothing after 50
+0.00030  6.20 l 137.06  | 1.482    57.680    71.823    0.6316    0.1000 | 0.460    97.611    0.984 | 0.475     100.000    1.000 |  1 hr 45 min  0 6199
+0.00030  6.20 v 137.08  | 1.439    58.232    70.276    0.6299    0.1000 | 0.460    97.611    0.984 | 0.475     100.000    1.000 |  1 hr 45 min
+
+At iteration: 6210
+
+Smoothing after 50
+0.00030  6.25 l 138.16  | 1.439    58.232    70.276    0.6299    0.1000 | 0.475    96.722    0.980 | 0.470     97.222    0.972 |  1 hr 46 min  0 6249
+
+At iteration: 6279
+
+Smoothing after 50
+0.00030  6.30 l 139.27  | 1.439    58.232    70.276    0.6299    0.1000 | 0.454    97.833    0.986 | 0.415     100.000    1.000 |  1 hr 47 min  0 6299
+
+At iteration: 6348
+
+Smoothing after 50
+0.00030  6.35 l 140.37  | 1.439    58.232    70.276    0.6299    0.1000 | 0.449    98.111    0.988 | 0.485     97.222    0.986 |  1 hr 48 min  0 6349
+
+Smoothing after 50
+0.00030  6.40 l 141.48  | 1.439    58.232    70.276    0.6299    0.1000 | 0.450    97.889    0.988 | 0.361     100.000    1.000 |  1 hr 48 min  0 6399
+0.00030  6.40 v 141.50  | 1.458    56.133    70.276    0.6170    0.1000 | 0.450    97.889    0.988 | 0.361     100.000    1.000 |  1 hr 49 min
+
+At iteration: 6417
+
+Smoothing after 50
+0.00030  6.45 l 142.58  | 1.458    56.133    70.276    0.6170    0.1000 | 0.462    97.111    0.982 | 0.464     100.000    1.000 |  1 hr 49 min  0 6449
+
+At iteration: 6486
+
+Smoothing after 50
+0.00030  6.50 l 143.69  | 1.458    56.133    70.276    0.6170    0.1000 | 0.449    97.500    0.984 | 0.483     94.444    0.958 |  1 hr 50 min  0 6499
+
+Smoothing after 50
+0.00030  6.55 l 144.80  | 1.458    56.133    70.276    0.6170    0.1000 | 0.444    96.889    0.980 | 0.408     100.000    1.000 |  1 hr 51 min  0 6549
+
+At iteration: 6555
+
+Smoothing after 50
+0.00030  6.60 l 145.90  | 1.458    56.133    70.276    0.6170    0.1000 | 0.422    98.167    0.987 | 0.494     94.444    0.972 |  1 hr 52 min  0 6599
+0.00030  6.60 v 145.92  | 1.430    56.685    71.160    0.6217    0.1000 | 0.422    98.167    0.987 | 0.494     94.444    0.972 |  1 hr 52 min
+
+At iteration: 6624
+
+Smoothing after 50
+0.00030  6.65 l 147.01  | 1.430    56.685    71.160    0.6217    0.1000 | 0.442    97.944    0.986 | 0.545     94.444    0.965 |  1 hr 53 min  0 6649
+
+At iteration: 6693
+
+Smoothing after 50
+0.00030  6.70 l 148.11  | 1.430    56.685    71.160    0.6217    0.1000 | 0.427    98.111    0.988 | 0.426     97.222    0.972 |  1 hr 54 min  0 6699
+
+Smoothing after 50
+0.00030  6.75 l 149.22  | 1.430    56.685    71.160    0.6217    0.1000 | 0.437    98.000    0.987 | 0.340     100.000    1.000 |  1 hr 54 min  0 6749
+
+At iteration: 6762
+
+Smoothing after 50
+0.00030  6.80 l 150.32  | 1.430    56.685    71.160    0.6217    0.1000 | 0.443    97.222    0.983 | 0.471     97.222    0.972 |  1 hr 55 min  0 6799
+0.00030  6.80 v 150.35  | 1.475    58.232    73.481    0.6424    0.1000 | 0.443    97.222    0.983 | 0.471     97.222    0.972 |  1 hr 55 min
+
+At iteration: 6831
+
+Smoothing after 50
+0.00030  6.85 l 151.43  | 1.475    58.232    73.481    0.6424    0.1000 | 0.429    97.889    0.988 | 0.314     100.000    1.000 |  1 hr 56 min  0 6849
+
+Smoothing after 50
+0.00030  6.90 l 152.53  | 1.475    58.232    73.481    0.6424    0.1000 | 0.433    97.389    0.984 | 0.401     100.000    1.000 |  1 hr 57 min  0 6899
+
+At iteration: 6900
+
+Smoothing after 50
+0.00030  6.95 l 153.64  | 1.475    58.232    73.481    0.6424    0.1000 | 0.428    97.556    0.986 | 0.468     97.222    0.986 |  1 hr 58 min  0 6949
+
+At iteration: 6969
+
+Smoothing after 50
+0.00030  7.00 l 154.75  | 1.475    58.232    73.481    0.6424    0.1000 | 0.424    97.944    0.987 | 0.503     97.222    0.986 |  1 hr 58 min  0 6999
+0.00030  7.00 v 154.77  | 1.502    60.994    73.591    0.6574    0.1000 | 0.424    97.944    0.987 | 0.503     97.222    0.986 |  1 hr 59 min
+
+At iteration: 7038
+
+Smoothing after 50
+0.00030  7.05 l 155.85  | 1.502    60.994    73.591    0.6574    0.1000 | 0.437    97.611    0.985 | 0.406     94.444    0.968 |  2 hr 00 min  0 7049
+
+Smoothing after 50
+0.00030  7.10 l 156.96  | 1.502    60.994    73.591    0.6574    0.1000 | 0.403    97.889    0.987 | 0.335     97.222    0.986 |  2 hr 00 min  0 7099
+
+At iteration: 7107
+
+Smoothing after 50
+0.00030  7.15 l 158.06  | 1.502    60.994    73.591    0.6574    0.1000 | 0.405    98.056    0.987 | 0.437     97.222    0.979 |  2 hr 01 min  0 7149
+
+At iteration: 7176
+
+Smoothing after 50
+0.00030  7.20 l 159.17  | 1.502    60.994    73.591    0.6574    0.1000 | 0.420    97.778    0.986 | 0.399     97.222    0.986 |  2 hr 02 min  0 7199
+0.00030  7.20 v 159.19  | 1.521    59.227    72.155    0.6463    0.1000 | 0.420    97.778    0.986 | 0.399     97.222    0.986 |  2 hr 02 min
+
+At iteration: 7245
+
+Smoothing after 50
+0.00030  7.25 l 160.27  | 1.521    59.227    72.155    0.6463    0.1000 | 0.395    98.000    0.987 | 0.411     100.000    1.000 |  2 hr 03 min  0 7249
+
+Smoothing after 50
+0.00030  7.30 l 161.38  | 1.521    59.227    72.155    0.6463    0.1000 | 0.394    98.167    0.989 | 0.392     100.000    1.000 |  2 hr 04 min  0 7299
+
+At iteration: 7314
+
+Smoothing after 50
+0.00030  7.35 l 162.48  | 1.521    59.227    72.155    0.6463    0.1000 | 0.403    97.722    0.986 | 0.471     97.222    0.986 |  2 hr 05 min  0 7349
+
+At iteration: 7383
+
+Smoothing after 50
+0.00030  7.40 l 163.59  | 1.521    59.227    72.155    0.6463    0.1000 | 0.406    98.056    0.988 | 0.416     97.222    0.986 |  2 hr 05 min  0 7399
+0.00030  7.40 v 163.61  | 1.448    58.122    71.160    0.6326    0.1000 | 0.406    98.056    0.988 | 0.416     97.222    0.986 |  2 hr 06 min
+
+Smoothing after 50
+0.00030  7.45 l 164.69  | 1.448    58.122    71.160    0.6326    0.1000 | 0.406    97.222    0.983 | 0.401     97.222    0.986 |  2 hr 06 min  0 7449
+
+At iteration: 7452
+
+Smoothing after 50
+0.00030  7.50 l 165.80  | 1.448    58.122    71.160    0.6326    0.1000 | 0.393    98.222    0.989 | 0.408     97.222    0.986 |  2 hr 07 min  0 7499
+
+At iteration: 7521
+
+Smoothing after 50
+0.00030  7.55 l 166.91  | 1.448    58.122    71.160    0.6326    0.1000 | 0.398    97.722    0.986 | 0.334     100.000    1.000 |  2 hr 08 min  0 7549
+
+At iteration: 7590
+
+Smoothing after 50
+0.00030  7.60 l 168.01  | 1.448    58.122    71.160    0.6326    0.1000 | 0.383    98.389    0.990 | 0.435     100.000    1.000 |  2 hr 09 min  0 7599
+0.00030  7.60 v 168.03  | 1.482    58.674    72.155    0.6400    0.1000 | 0.383    98.389    0.990 | 0.435     100.000    1.000 |  2 hr 09 min
+
+Smoothing after 50
+0.00030  7.65 l 169.12  | 1.482    58.674    72.155    0.6400    0.1000 | 0.398    97.389    0.984 | 0.412     91.667    0.958 |  2 hr 10 min  0 7649
+
+At iteration: 7659
+
+Smoothing after 50
+0.00030  7.70 l 170.22  | 1.482    58.674    72.155    0.6400    0.1000 | 0.381    97.889    0.987 | 0.406     97.222    0.986 |  2 hr 10 min  0 7699
+
+At iteration: 7728
+
+Smoothing after 50
+0.00030  7.75 l 171.33  | 1.482    58.674    72.155    0.6400    0.1000 | 0.393    97.944    0.988 | 0.425     100.000    1.000 |  2 hr 11 min  0 7749
+
+At iteration: 7797
+
+Smoothing after 50
+0.00030  7.80 l 172.43  | 1.482    58.674    72.155    0.6400    0.1000 | 0.388    97.278    0.983 | 0.427     100.000    1.000 |  2 hr 12 min  0 7799
+0.00030  7.80 v 172.46  | 1.477    60.442    73.260    0.6535    0.1000 | 0.388    97.278    0.983 | 0.427     100.000    1.000 |  2 hr 12 min
+
+Smoothing after 50
+0.00030  7.85 l 173.54  | 1.477    60.442    73.260    0.6535    0.1000 | 0.385    98.278    0.988 | 0.268     100.000    1.000 |  2 hr 13 min  0 7849
+
+At iteration: 7866
+
+Smoothing after 50
+0.00030  7.90 l 174.64  | 1.477    60.442    73.260    0.6535    0.1000 | 0.364    98.278    0.990 | 0.361     97.222    0.986 |  2 hr 14 min  0 7899
+
+At iteration: 7935
+
+Smoothing after 50
+0.00030  7.95 l 175.75  | 1.477    60.442    73.260    0.6535    0.1000 | 0.383    97.944    0.989 | 0.335     100.000    1.000 |  2 hr 15 min  0 7949
+
+Smoothing after 50
+0.00030  8.00 l 176.85  | 1.477    60.442    73.260    0.6535    0.1000 | 0.378    98.389    0.990 | 0.501     94.444    0.968 |  2 hr 15 min  0 7999
+0.00030  8.00 v 176.88  | 1.495    58.564    72.265    0.6374    0.1000 | 0.378    98.389    0.990 | 0.501     94.444    0.968 |  2 hr 16 min
+
+At iteration: 8004
+
+Smoothing after 50
+0.00030  8.05 l 177.96  | 1.495    58.564    72.265    0.6374    0.1000 | 0.355    98.722    0.992 | 0.302     100.000    1.000 |  2 hr 16 min  0 8049
+
+At iteration: 8073
+
+Smoothing after 50
+0.00030  8.10 l 179.07  | 1.495    58.564    72.265    0.6374    0.1000 | 0.383    97.889    0.987 | 0.352     100.000    1.000 |  2 hr 17 min  0 8099
+
+At iteration: 8142
+
+Smoothing after 50
+0.00030  8.15 l 180.17  | 1.495    58.564    72.265    0.6374    0.1000 | 0.385    97.667    0.985 | 0.398     100.000    1.000 |  2 hr 18 min  0 8149
+
+Smoothing after 50
+0.00030  8.20 l 181.28  | 1.495    58.564    72.265    0.6374    0.1000 | 0.352    98.556    0.991 | 0.392     100.000    1.000 |  2 hr 19 min  0 8199
+0.00030  8.20 v 181.30  | 1.494    59.669    74.144    0.6543    0.1000 | 0.352    98.556    0.991 | 0.392     100.000    1.000 |  2 hr 19 min
+
+At iteration: 8211
+
+Smoothing after 50
+0.00030  8.25 l 182.38  | 1.494    59.669    74.144    0.6543    0.1000 | 0.361    98.167    0.989 | 0.314     100.000    1.000 |  2 hr 20 min  0 8249
+
+At iteration: 8280
+
+Smoothing after 50
+0.00030  8.30 l 183.49  | 1.494    59.669    74.144    0.6543    0.1000 | 0.345    98.833    0.993 | 0.317     100.000    1.000 |  2 hr 21 min  0 8299
+
+At iteration: 8349
+
+Smoothing after 50
+0.00030  8.35 l 184.59  | 1.494    59.669    74.144    0.6543    0.1000 | 0.365    98.444    0.991 | 0.572     94.444    0.958 |  2 hr 21 min  0 8349
+
+Smoothing after 50
+0.00030  8.40 l 185.70  | 1.494    59.669    74.144    0.6543    0.1000 | 0.366    97.833    0.987 | 0.404     100.000    1.000 |  2 hr 22 min  0 8399
+0.00030  8.40 v 185.72  | 1.509    56.906    70.939    0.6235    0.1000 | 0.366    97.833    0.987 | 0.404     100.000    1.000 |  2 hr 22 min
+
+At iteration: 8418
+
+Smoothing after 50
+0.00030  8.45 l 186.80  | 1.509    56.906    70.939    0.6235    0.1000 | 0.361    97.944    0.988 | 0.363     97.222    0.972 |  2 hr 23 min  0 8449
+
+At iteration: 8487
+
+Smoothing after 50
+0.00030  8.50 l 187.91  | 1.509    56.906    70.939    0.6235    0.1000 | 0.349    98.389    0.990 | 0.447     97.222    0.972 |  2 hr 24 min  0 8499
+
+Smoothing after 50
+0.00030  8.55 l 189.02  | 1.509    56.906    70.939    0.6235    0.1000 | 0.360    98.056    0.988 | 0.366     97.222    0.986 |  2 hr 25 min  0 8549
+
+At iteration: 8556
+
+Smoothing after 50
+0.00030  8.60 l 190.12  | 1.509    56.906    70.939    0.6235    0.1000 | 0.335    98.667    0.991 | 0.371     100.000    1.000 |  2 hr 26 min  0 8599
+0.00030  8.60 v 190.14  | 1.525    58.895    72.265    0.6411    0.1000 | 0.335    98.667    0.991 | 0.371     100.000    1.000 |  2 hr 26 min
+
+At iteration: 8625
+
+Smoothing after 50
+0.00030  8.65 l 191.23  | 1.525    58.895    72.265    0.6411    0.1000 | 0.354    97.889    0.986 | 0.344     94.444    0.972 |  2 hr 27 min  0 8649
+
+At iteration: 8694
+
+Smoothing after 50
+0.00030  8.70 l 192.33  | 1.525    58.895    72.265    0.6411    0.1000 | 0.355    97.778    0.988 | 0.222     100.000    1.000 |  2 hr 27 min  0 8699
+
+Smoothing after 50
+0.00030  8.75 l 193.44  | 1.525    58.895    72.265    0.6411    0.1000 | 0.352    98.611    0.991 | 0.300     100.000    1.000 |  2 hr 28 min  0 8749
+
+At iteration: 8763
+
+Smoothing after 50
+0.00030  8.80 l 194.54  | 1.525    58.895    72.265    0.6411    0.1000 | 0.347    98.278    0.991 | 0.441     91.667    0.958 |  2 hr 29 min  0 8799
+0.00030  8.80 v 194.56  | 1.485    59.558    73.481    0.6482    0.1000 | 0.347    98.278    0.991 | 0.441     91.667    0.958 |  2 hr 29 min
+
+At iteration: 8832
+
+Smoothing after 50
+0.00030  8.85 l 195.65  | 1.485    59.558    73.481    0.6482    0.1000 | 0.350    98.056    0.989 | 0.281     100.000    1.000 |  2 hr 30 min  0 8849
+
+Smoothing after 50
+0.00030  8.90 l 196.75  | 1.485    59.558    73.481    0.6482    0.1000 | 0.343    98.000    0.988 | 0.396     100.000    1.000 |  2 hr 31 min  0 8899
+
+At iteration: 8901
+
+Smoothing after 50
+0.00030  8.95 l 197.86  | 1.485    59.558    73.481    0.6482    0.1000 | 0.349    98.222    0.989 | 0.443     94.444    0.958 |  2 hr 31 min  0 8949
+
+At iteration: 8970
+
+Smoothing after 50
+0.00030  9.00 l 198.96  | 1.485    59.558    73.481    0.6482    0.1000 | 0.337    98.333    0.989 | 0.253     100.000    1.000 |  2 hr 32 min  0 8999
+0.00030  9.00 v 198.99  | 1.507    59.116    73.370    0.6479    0.1000 | 0.337    98.333    0.989 | 0.253     100.000    1.000 |  2 hr 33 min
+
+At iteration: 9039
+
+Smoothing after 50
+0.00030  9.05 l 200.07  | 1.507    59.116    73.370    0.6479    0.1000 | 0.347    97.611    0.986 | 0.257     97.222    0.986 |  2 hr 33 min  0 9049
+
+Smoothing after 50
+0.00030  9.10 l 201.18  | 1.507    59.116    73.370    0.6479    0.1000 | 0.339    98.722    0.993 | 0.431     97.222    0.986 |  2 hr 34 min  0 9099
+
+At iteration: 9108
+
+Smoothing after 50
+0.00030  9.15 l 202.28  | 1.507    59.116    73.370    0.6479    0.1000 | 0.341    98.500    0.991 | 0.264     100.000    1.000 |  2 hr 35 min  0 9149
+
+At iteration: 9177
+
+Smoothing after 50
+0.00030  9.20 l 203.39  | 1.507    59.116    73.370    0.6479    0.1000 | 0.314    99.000    0.995 | 0.295     100.000    1.000 |  2 hr 36 min  0 9199
+0.00030  9.20 v 203.41  | 1.498    59.448    75.028    0.6571    0.1000 | 0.314    99.000    0.995 | 0.295     100.000    1.000 |  2 hr 36 min
+
+At iteration: 9246
+
+Smoothing after 50
+0.00030  9.25 l 204.49  | 1.498    59.448    75.028    0.6571    0.1000 | 0.336    97.778    0.987 | 0.310     100.000    1.000 |  2 hr 37 min  0 9249
+
+Smoothing after 50
+0.00030  9.30 l 205.60  | 1.498    59.448    75.028    0.6571    0.1000 | 0.327    98.056    0.989 | 0.361     97.222    0.986 |  2 hr 37 min  0 9299
+
+At iteration: 9315
+
+Smoothing after 50
+0.00030  9.35 l 206.70  | 1.498    59.448    75.028    0.6571    0.1000 | 0.326    98.944    0.994 | 0.254     100.000    1.000 |  2 hr 38 min  0 9349
+
+At iteration: 9384
+
+Smoothing after 50
+0.00030  9.40 l 207.81  | 1.498    59.448    75.028    0.6571    0.1000 | 0.334    98.444    0.990 | 0.372     97.222    0.986 |  2 hr 39 min  0 9399
+0.00030  9.40 v 207.83  | 1.505    60.552    73.812    0.6569    0.1000 | 0.334    98.444    0.990 | 0.372     97.222    0.986 |  2 hr 39 min
+
+Smoothing after 50
+0.00030  9.45 l 208.91  | 1.505    60.552    73.812    0.6569    0.1000 | 0.332    98.333    0.990 | 0.302     100.000    1.000 |  2 hr 40 min  0 9449
+
+At iteration: 9453
+
+Smoothing after 50
+0.00030  9.50 l 210.02  | 1.505    60.552    73.812    0.6569    0.1000 | 0.319    98.667    0.992 | 0.344     97.222    0.986 |  2 hr 41 min  0 9499
+
+At iteration: 9522
+
+Smoothing after 50
+0.00030  9.55 l 211.12  | 1.505    60.552    73.812    0.6569    0.1000 | 0.333    98.389    0.990 | 0.329     97.222    0.986 |  2 hr 42 min  0 9549
+
+At iteration: 9591
+
+Smoothing after 50
+0.00030  9.60 l 212.23  | 1.505    60.552    73.812    0.6569    0.1000 | 0.334    98.111    0.989 | 0.356     94.444    0.968 |  2 hr 42 min  0 9599
+0.00030  9.60 v 212.25  | 1.558    60.663    74.365    0.6624    0.1000 | 0.334    98.111    0.989 | 0.356     94.444    0.968 |  2 hr 43 min
+
+Smoothing after 50
+0.00030  9.65 l 213.34  | 1.558    60.663    74.365    0.6624    0.1000 | 0.323    98.778    0.993 | 0.405     94.444    0.968 |  2 hr 44 min  0 9649
+
+At iteration: 9660
+
+Smoothing after 50
+0.00030  9.70 l 214.44  | 1.558    60.663    74.365    0.6624    0.1000 | 0.320    98.389    0.990 | 0.308     97.222    0.986 |  2 hr 44 min  0 9699
+
+At iteration: 9729
+
+Smoothing after 50
+0.00030  9.75 l 215.55  | 1.558    60.663    74.365    0.6624    0.1000 | 0.325    97.833    0.988 | 0.277     97.222    0.986 |  2 hr 46 min  0 9749
+
+At iteration: 9798
+
+Smoothing after 50
+0.00030  9.80 l 216.65  | 1.558    60.663    74.365    0.6624    0.1000 | 0.320    98.333    0.991 | 0.363     100.000    1.000 |  2 hr 46 min  0 9799
+0.00030  9.80 v 216.67  | 1.524    60.110    74.475    0.6582    0.1000 | 0.320    98.333    0.991 | 0.363     100.000    1.000 |  2 hr 47 min
+
+Smoothing after 50
+0.00030  9.85 l 217.76  | 1.524    60.110    74.475    0.6582    0.1000 | 0.309    98.278    0.990 | 0.284     100.000    1.000 |  2 hr 48 min  0 9849
+
+At iteration: 9867
+
+Smoothing after 50
+0.00030  9.90 l 218.86  | 1.524    60.110    74.475    0.6582    0.1000 | 0.311    98.278    0.990 | 0.289     100.000    1.000 |  2 hr 49 min  0 9899
+
+At iteration: 9936
+
+Smoothing after 50
+0.00030  9.95 l 219.97  | 1.524    60.110    74.475    0.6582    0.1000 | 0.303    99.000    0.994 | 0.312     100.000    1.000 |  2 hr 50 min  0 9949
+
+Smoothing after 50
+0.00030 10.00 l 221.07  | 1.524    60.110    74.475    0.6582    0.1000 | 0.331    97.944    0.988 | 0.254     100.000    1.000 |  2 hr 50 min  0 9999
+0.00030 10.00 v 221.10  | 1.529    60.884    74.807    0.6632    0.1000 | 0.331    97.944    0.988 | 0.254     100.000    1.000 |  2 hr 51 min
+
+At iteration: 10005
+
+Smoothing after 50
+0.00030 10.05 l 222.18  | 1.529    60.884    74.807    0.6632    0.1000 | 0.318    98.556    0.992 | 0.321     97.222    0.981 |  2 hr 52 min  0 10049
+
+At iteration: 10074
+
+Smoothing after 50
+0.00030 10.10 l 223.29  | 1.529    60.884    74.807    0.6632    0.1000 | 0.316    98.111    0.988 | 0.295     100.000    1.000 |  2 hr 52 min  0 10099
+
+At iteration: 10143
+
+Smoothing after 50
+0.00030 10.15 l 224.39  | 1.529    60.884    74.807    0.6632    0.1000 | 0.300    98.667    0.992 | 0.230     100.000    1.000 |  2 hr 53 min  0 10149
+
+Smoothing after 50
+0.00030 10.20 l 225.50  | 1.529    60.884    74.807    0.6632    0.1000 | 0.315    98.222    0.990 | 0.349     97.222    0.986 |  2 hr 54 min  0 10199
+0.00030 10.20 v 225.52  | 1.572    58.895    74.475    0.6502    0.1000 | 0.315    98.222    0.990 | 0.349     97.222    0.986 |  2 hr 54 min
+
+At iteration: 10212
+
+Smoothing after 50
+0.00030 10.25 l 226.60  | 1.572    58.895    74.475    0.6502    0.1000 | 0.307    97.944    0.989 | 0.284     100.000    1.000 |  2 hr 55 min  0 10249
+
+At iteration: 10281
+
+Smoothing after 50
+0.00030 10.30 l 227.71  | 1.572    58.895    74.475    0.6502    0.1000 | 0.304    98.167    0.989 | 0.332     100.000    1.000 |  2 hr 56 min  0 10299
+
+Smoothing after 50
+0.00030 10.35 l 228.81  | 1.572    58.895    74.475    0.6502    0.1000 | 0.317    98.222    0.989 | 0.486     94.444    0.958 |  2 hr 56 min  0 10349
+
+At iteration: 10350
+
+Smoothing after 50
+0.00030 10.40 l 229.92  | 1.572    58.895    74.475    0.6502    0.1000 | 0.326    98.167    0.989 | 0.370     100.000    1.000 |  2 hr 57 min  0 10399
+0.00030 10.40 v 229.94  | 1.563    58.674    73.370    0.6446    0.1000 | 0.326    98.167    0.989 | 0.370     100.000    1.000 |  2 hr 58 min
+
+At iteration: 10419
+
+Smoothing after 50
+0.00030 10.45 l 231.02  | 1.563    58.674    73.370    0.6446    0.1000 | 0.303    98.278    0.990 | 0.320     97.222    0.986 |  2 hr 58 min  0 10449
+
+At iteration: 10488
+
+Smoothing after 50
+0.00030 10.50 l 232.13  | 1.563    58.674    73.370    0.6446    0.1000 | 0.306    98.611    0.992 | 0.359     97.222    0.981 |  2 hr 59 min  0 10499
+
+Smoothing after 50
+0.00030 10.55 l 233.23  | 1.563    58.674    73.370    0.6446    0.1000 | 0.319    98.000    0.988 | 0.257     100.000    1.000 |  3 hr 00 min  0 10549
+
+At iteration: 10557
+
+Smoothing after 50
+0.00030 10.60 l 234.34  | 1.563    58.674    73.370    0.6446    0.1000 | 0.305    98.667    0.992 | 0.264     97.222    0.986 |  3 hr 01 min  0 10599
+0.00030 10.60 v 234.36  | 1.542    59.558    74.365    0.6543    0.1000 | 0.305    98.667    0.992 | 0.264     97.222    0.986 |  3 hr 01 min
+
+At iteration: 10626
+
+Smoothing after 50
+0.00030 10.65 l 235.45  | 1.542    59.558    74.365    0.6543    0.1000 | 0.293    98.556    0.992 | 0.279     100.000    1.000 |  3 hr 02 min  0 10649
+
+At iteration: 10695
+
+Smoothing after 50
+0.00030 10.70 l 236.55  | 1.542    59.558    74.365    0.6543    0.1000 | 0.319    97.611    0.986 | 0.225     100.000    1.000 |  3 hr 02 min  0 10699
+
+Smoothing after 50
+0.00030 10.75 l 237.66  | 1.542    59.558    74.365    0.6543    0.1000 | 0.298    98.611    0.992 | 0.374     100.000    1.000 |  3 hr 03 min  0 10749
+
+At iteration: 10764
+
+Smoothing after 50
+0.00030 10.80 l 238.76  | 1.542    59.558    74.365    0.6543    0.1000 | 0.308    98.111    0.989 | 0.374     97.222    0.986 |  3 hr 04 min  0 10799
+0.00030 10.80 v 238.78  | 1.532    59.890    74.475    0.6553    0.1000 | 0.308    98.111    0.989 | 0.374     97.222    0.986 |  3 hr 04 min
+
+At iteration: 10833
+
+Smoothing after 50
+0.00030 10.85 l 239.87  | 1.532    59.890    74.475    0.6553    0.1000 | 0.307    98.278    0.990 | 0.302     94.444    0.972 |  3 hr 05 min  0 10849
+
+Smoothing after 50
+0.00030 10.90 l 240.97  | 1.532    59.890    74.475    0.6553    0.1000 | 0.310    98.056    0.988 | 0.280     100.000    1.000 |  3 hr 06 min  0 10899
+
+At iteration: 10902
+
+Smoothing after 50
+0.00030 10.95 l 242.08  | 1.532    59.890    74.475    0.6553    0.1000 | 0.286    98.556    0.991 | 0.279     100.000    1.000 |  3 hr 07 min  0 10949
+
+At iteration: 10971
+
+Smoothing after 50
+0.00030 11.00 l 243.18  | 1.532    59.890    74.475    0.6553    0.1000 | 0.303    98.278    0.990 | 0.292     100.000    1.000 |  3 hr 07 min  0 10999
+0.00030 11.00 v 243.21  | 1.541    59.779    73.923    0.6534    0.1000 | 0.303    98.278    0.990 | 0.292     100.000    1.000 |  3 hr 08 min
+
+At iteration: 11040
+
+Smoothing after 50
+0.00030 11.05 l 244.29  | 1.541    59.779    73.923    0.6534    0.1000 | 0.300    98.389    0.991 | 0.284     100.000    1.000 |  3 hr 08 min  0 11049
+
+Smoothing after 50
+0.00030 11.10 l 245.39  | 1.541    59.779    73.923    0.6534    0.1000 | 0.302    98.667    0.991 | 0.234     100.000    1.000 |  3 hr 09 min  0 11099
+
+At iteration: 11109
+
+Smoothing after 50
+0.00030 11.15 l 246.50  | 1.541    59.779    73.923    0.6534    0.1000 | 0.282    98.556    0.992 | 0.204     100.000    1.000 |  3 hr 10 min  0 11149
+
+At iteration: 11178
+
+Smoothing after 50
+0.00030 11.20 l 247.61  | 1.541    59.779    73.923    0.6534    0.1000 | 0.285    98.722    0.993 | 0.327     97.222    0.986 |  3 hr 11 min  0 11199
+0.00030 11.20 v 247.63  | 1.561    60.663    74.254    0.6617    0.1000 | 0.285    98.722    0.993 | 0.327     97.222    0.986 |  3 hr 11 min
+
+At iteration: 11247
+
+Smoothing after 50
+0.00030 11.25 l 248.71  | 1.561    60.663    74.254    0.6617    0.1000 | 0.302    98.278    0.990 | 0.306     97.222    0.986 |  3 hr 12 min  0 11249
+
+Smoothing after 50
+0.00030 11.30 l 249.82  | 1.561    60.663    74.254    0.6617    0.1000 | 0.295    98.333    0.990 | 0.344     97.222    0.981 |  3 hr 13 min  0 11299
+
+At iteration: 11316
+
+Smoothing after 50
+0.00030 11.35 l 250.92  | 1.561    60.663    74.254    0.6617    0.1000 | 0.282    98.444    0.991 | 0.378     94.444    0.972 |  3 hr 13 min  0 11349
+
+At iteration: 11385
+
+Smoothing after 50
+0.00030 11.40 l 252.03  | 1.561    60.663    74.254    0.6617    0.1000 | 0.297    98.000    0.988 | 0.352     100.000    1.000 |  3 hr 14 min  0 11399
+0.00030 11.40 v 252.05  | 1.592    57.017    72.044    0.6283    0.1000 | 0.297    98.000    0.988 | 0.352     100.000    1.000 |  3 hr 15 min
+
+Smoothing after 50
+0.00030 11.45 l 253.13  | 1.592    57.017    72.044    0.6283    0.1000 | 0.288    98.444    0.991 | 0.377     94.444    0.968 |  3 hr 15 min  0 11449
+
+At iteration: 11454
+
+Smoothing after 50
+0.00030 11.50 l 254.24  | 1.592    57.017    72.044    0.6283    0.1000 | 0.291    98.222    0.990 | 0.276     94.444    0.972 |  3 hr 16 min  0 11499
+
+At iteration: 11523
+
+Smoothing after 50
+0.00030 11.55 l 255.34  | 1.592    57.017    72.044    0.6283    0.1000 | 0.296    98.222    0.990 | 0.231     97.222    0.986 |  3 hr 17 min  0 11549
+
+At iteration: 11592
+
+Smoothing after 50
+0.00030 11.60 l 256.45  | 1.592    57.017    72.044    0.6283    0.1000 | 0.284    98.944    0.994 | 0.247     100.000    1.000 |  3 hr 18 min  0 11599
+0.00030 11.60 v 256.47  | 1.567    60.000    76.133    0.6656    0.1000 | 0.284    98.944    0.994 | 0.247     100.000    1.000 |  3 hr 18 min
+
+Smoothing after 50
+0.00030 11.65 l 257.56  | 1.567    60.000    76.133    0.6656    0.1000 | 0.285    98.222    0.991 | 0.354     91.667    0.958 |  3 hr 19 min  0 11649
+
+At iteration: 11661
+
+Smoothing after 50
+0.00030 11.70 l 258.66  | 1.567    60.000    76.133    0.6656    0.1000 | 0.281    98.389    0.992 | 0.211     100.000    1.000 |  3 hr 19 min  0 11699
+
+At iteration: 11730
+
+Smoothing after 50
+0.00030 11.75 l 259.77  | 1.567    60.000    76.133    0.6656    0.1000 | 0.299    97.833    0.987 | 0.305     97.222    0.986 |  3 hr 20 min  0 11749
+
+At iteration: 11799
+
+Smoothing after 50
+0.00030 11.80 l 260.87  | 1.567    60.000    76.133    0.6656    0.1000 | 0.283    98.611    0.993 | 0.254     100.000    1.000 |  3 hr 21 min  0 11799
+0.00030 11.80 v 260.89  | 1.557    59.116    73.702    0.6489    0.1000 | 0.283    98.611    0.993 | 0.254     100.000    1.000 |  3 hr 21 min
+
+Smoothing after 50
+0.00030 11.85 l 261.98  | 1.557    59.116    73.702    0.6489    0.1000 | 0.284    98.667    0.993 | 0.269     100.000    1.000 |  3 hr 22 min  0 11849
+
+At iteration: 11868
+
+Smoothing after 50
+0.00030 11.90 l 263.08  | 1.557    59.116    73.702    0.6489    0.1000 | 0.294    98.167    0.989 | 0.244     100.000    1.000 |  3 hr 23 min  0 11899
+
+At iteration: 11937
+
+Smoothing after 50
+0.00030 11.95 l 264.19  | 1.557    59.116    73.702    0.6489    0.1000 | 0.277    98.722    0.992 | 0.220     100.000    1.000 |  3 hr 24 min  0 11949
+
+Smoothing after 50
+0.00030 12.00 l 265.29  | 1.557    59.116    73.702    0.6489    0.1000 | 0.283    98.556    0.991 | 0.316     97.222    0.972 |  3 hr 24 min  0 11999
+0.00030 12.00 v 265.32  | 1.555    59.669    75.249    0.6567    0.1000 | 0.283    98.556    0.991 | 0.316     97.222    0.972 |  3 hr 25 min
+
+At iteration: 12006
+
+Smoothing after 50
+0.00030 12.05 l 266.40  | 1.555    59.669    75.249    0.6567    0.1000 | 0.274    98.611    0.992 | 0.339     94.444    0.961 |  3 hr 25 min  0 12049
+
+At iteration: 12075
+
+Smoothing after 50
+0.00030 12.10 l 267.50  | 1.555    59.669    75.249    0.6567    0.1000 | 0.295    98.000    0.988 | 0.278     94.444    0.972 |  3 hr 26 min  0 12099
+
+At iteration: 12144
+
+Smoothing after 50
+0.00030 12.15 l 268.61  | 1.555    59.669    75.249    0.6567    0.1000 | 0.273    99.056    0.995 | 0.293     97.222    0.981 |  3 hr 27 min  0 12149
+
+Smoothing after 50
+0.00030 12.20 l 269.72  | 1.555    59.669    75.249    0.6567    0.1000 | 0.282    98.722    0.993 | 0.353     97.222    0.986 |  3 hr 28 min  0 12199
+0.00030 12.20 v 269.74  | 1.561    61.657    75.138    0.6694    0.1000 | 0.282    98.722    0.993 | 0.353     97.222    0.986 |  3 hr 28 min
+
+At iteration: 12213
+
+Smoothing after 50
+0.00030 12.25 l 270.82  | 1.561    61.657    75.138    0.6694    0.1000 | 0.254    99.333    0.996 | 0.200     100.000    1.000 |  3 hr 29 min  0 12249
+
+At iteration: 12282
+
+Smoothing after 50
+0.00030 12.30 l 271.93  | 1.561    61.657    75.138    0.6694    0.1000 | 0.278    98.444    0.992 | 0.258     100.000    1.000 |  3 hr 30 min  0 12299
+
+Smoothing after 50
+0.00030 12.35 l 273.03  | 1.561    61.657    75.138    0.6694    0.1000 | 0.272    98.389    0.991 | 0.309     97.222    0.981 |  3 hr 30 min  0 12349
+
+At iteration: 12351
+
+Smoothing after 50
+0.00030 12.40 l 274.14  | 1.561    61.657    75.138    0.6694    0.1000 | 0.269    99.000    0.994 | 0.221     100.000    1.000 |  3 hr 31 min  0 12399
+0.00030 12.40 v 274.16  | 1.580    60.442    74.254    0.6588    0.1000 | 0.269    99.000    0.994 | 0.221     100.000    1.000 |  3 hr 31 min
+
+At iteration: 12420
+
+Smoothing after 50
+0.00030 12.45 l 275.24  | 1.580    60.442    74.254    0.6588    0.1000 | 0.281    98.278    0.990 | 0.315     97.222    0.972 |  3 hr 32 min  0 12449
+
+At iteration: 12489
+
+Smoothing after 50
+0.00030 12.50 l 276.35  | 1.580    60.442    74.254    0.6588    0.1000 | 0.291    97.833    0.988 | 0.278     97.222    0.986 |  3 hr 33 min  0 12499
+
+Smoothing after 50
+0.00030 12.55 l 277.45  | 1.580    60.442    74.254    0.6588    0.1000 | 0.269    98.389    0.991 | 0.251     100.000    1.000 |  3 hr 34 min  0 12549
+
+At iteration: 12558
+
+Smoothing after 50
+0.00030 12.60 l 278.56  | 1.580    60.442    74.254    0.6588    0.1000 | 0.278    98.833    0.993 | 0.324     97.222    0.972 |  3 hr 34 min  0 12599
+0.00030 12.60 v 278.58  | 1.602    59.890    74.254    0.6572    0.1000 | 0.278    98.833    0.993 | 0.324     97.222    0.972 |  3 hr 35 min
+
+At iteration: 12627
+
+Smoothing after 50
+0.00030 12.65 l 279.66  | 1.602    59.890    74.254    0.6572    0.1000 | 0.261    98.944    0.994 | 0.234     100.000    1.000 |  3 hr 36 min  0 12649
+
+At iteration: 12696
+
+Smoothing after 50
+0.00030 12.70 l 280.77  | 1.602    59.890    74.254    0.6572    0.1000 | 0.284    98.278    0.989 | 0.307     97.222    0.986 |  3 hr 36 min  0 12699
+
+Smoothing after 50
+0.00030 12.75 l 281.88  | 1.602    59.890    74.254    0.6572    0.1000 | 0.266    99.000    0.994 | 0.322     100.000    1.000 |  3 hr 37 min  0 12749
+
+At iteration: 12765
+
+Smoothing after 50
+0.00030 12.80 l 282.98  | 1.602    59.890    74.254    0.6572    0.1000 | 0.269    98.667    0.992 | 0.274     100.000    1.000 |  3 hr 38 min  0 12799
+0.00030 12.80 v 283.00  | 1.560    60.000    73.481    0.6540    0.1000 | 0.269    98.667    0.992 | 0.274     100.000    1.000 |  3 hr 38 min
+
+At iteration: 12834
+
+Smoothing after 50
+0.00030 12.85 l 284.09  | 1.560    60.000    73.481    0.6540    0.1000 | 0.265    98.722    0.992 | 0.189     100.000    1.000 |  3 hr 39 min  0 12849
+
+Smoothing after 50
+0.00030 12.90 l 285.19  | 1.560    60.000    73.481    0.6540    0.1000 | 0.276    98.111    0.989 | 0.305     91.667    0.958 |  3 hr 40 min  0 12899
+
+At iteration: 12903
+
+Smoothing after 50
+0.00030 12.95 l 286.30  | 1.560    60.000    73.481    0.6540    0.1000 | 0.267    98.667    0.992 | 0.198     100.000    1.000 |  3 hr 40 min  0 12949
+
+At iteration: 12972
+
+Smoothing after 50
+0.00030 13.00 l 287.40  | 1.560    60.000    73.481    0.6540    0.1000 | 0.272    98.111    0.989 | 0.378     91.667    0.940 |  3 hr 41 min  0 12999
+0.00030 13.00 v 287.43  | 1.584    59.448    73.039    0.6474    0.1000 | 0.272    98.111    0.989 | 0.378     91.667    0.940 |  3 hr 41 min
+
+At iteration: 13041
+
+Smoothing after 50
+0.00030 13.05 l 288.51  | 1.584    59.448    73.039    0.6474    0.1000 | 0.270    98.389    0.991 | 0.241     97.222    0.979 |  3 hr 42 min  0 13049
+
+Smoothing after 50
+0.00030 13.10 l 289.61  | 1.584    59.448    73.039    0.6474    0.1000 | 0.271    98.333    0.990 | 0.229     100.000    1.000 |  3 hr 43 min  0 13099
+
+At iteration: 13110
+
+Smoothing after 50
+0.00030 13.15 l 290.72  | 1.584    59.448    73.039    0.6474    0.1000 | 0.262    98.389    0.991 | 0.249     97.222    0.986 |  3 hr 44 min  0 13149
+
+At iteration: 13179
+
+Smoothing after 50
+0.00030 13.20 l 291.82  | 1.584    59.448    73.039    0.6474    0.1000 | 0.258    99.278    0.996 | 0.241     97.222    0.986 |  3 hr 45 min  0 13199
+0.00030 13.20 v 291.85  | 1.595    60.110    74.696    0.6584    0.1000 | 0.258    99.278    0.996 | 0.241     97.222    0.986 |  3 hr 45 min
+
+At iteration: 13248
+
+Smoothing after 50
+0.00030 13.25 l 292.93  | 1.595    60.110    74.696    0.6584    0.1000 | 0.270    98.333    0.989 | 0.201     100.000    1.000 |  3 hr 46 min  0 13249
+
+Smoothing after 50
+0.00030 13.30 l 294.04  | 1.595    60.110    74.696    0.6584    0.1000 | 0.263    98.944    0.994 | 0.395     97.222    0.978 |  3 hr 46 min  0 13299
+
+At iteration: 13317
+
+Smoothing after 50
+0.00030 13.35 l 295.14  | 1.595    60.110    74.696    0.6584    0.1000 | 0.279    98.222    0.990 | 0.249     97.222    0.978 |  3 hr 47 min  0 13349
+
+At iteration: 13386
+
+Smoothing after 50
+0.00030 13.40 l 296.25  | 1.595    60.110    74.696    0.6584    0.1000 | 0.275    98.278    0.989 | 0.268     100.000    1.000 |  3 hr 48 min  0 13399
+0.00030 13.40 v 296.27  | 1.619    60.442    75.801    0.6634    0.1000 | 0.275    98.278    0.989 | 0.268     100.000    1.000 |  3 hr 48 min
+
+Smoothing after 50
+0.00030 13.45 l 297.35  | 1.619    60.442    75.801    0.6634    0.1000 | 0.270    97.833    0.988 | 0.240     97.222    0.986 |  3 hr 49 min  0 13449
+
+At iteration: 13455
+
+Smoothing after 50
+0.00030 13.50 l 298.46  | 1.619    60.442    75.801    0.6634    0.1000 | 0.257    98.556    0.992 | 0.270     100.000    1.000 |  3 hr 50 min  0 13499
+
+At iteration: 13524
+
+Smoothing after 50
+0.00030 13.55 l 299.56  | 1.619    60.442    75.801    0.6634    0.1000 | 0.270    98.333    0.990 | 0.270     97.222    0.986 |  3 hr 50 min  0 13549
+
+At iteration: 13593
+
+Smoothing after 50
+0.00030 13.60 l 300.67  | 1.619    60.442    75.801    0.6634    0.1000 | 0.264    98.833    0.993 | 0.300     97.222    0.986 |  3 hr 51 min  0 13599
+0.00030 13.60 v 300.69  | 1.578    59.779    73.702    0.6533    0.1000 | 0.264    98.833    0.993 | 0.300     97.222    0.986 |  3 hr 52 min
+
+Smoothing after 50
+0.00030 13.65 l 301.77  | 1.578    59.779    73.702    0.6533    0.1000 | 0.262    98.444    0.991 | 0.287     97.222    0.979 |  3 hr 52 min  0 13649
+
+At iteration: 13662
+
+Smoothing after 50
+0.00030 13.70 l 302.88  | 1.578    59.779    73.702    0.6533    0.1000 | 0.252    98.500    0.991 | 0.256     100.000    1.000 |  3 hr 53 min  0 13699
+
+At iteration: 13731
+
+Smoothing after 50
+0.00030 13.75 l 303.99  | 1.578    59.779    73.702    0.6533    0.1000 | 0.262    98.389    0.991 | 0.219     100.000    1.000 |  3 hr 54 min  0 13749
+
+Smoothing after 50
+0.00030 13.80 l 305.09  | 1.578    59.779    73.702    0.6533    0.1000 | 0.275    97.889    0.988 | 0.195     100.000    1.000 |  3 hr 55 min  0 13799
+
+At iteration: 13800
+0.00030 13.80 v 305.11  | 1.597    60.110    75.138    0.6600    0.1000 | 0.275    97.889    0.988 | 0.195     100.000    1.000 |  3 hr 55 min
+
+Smoothing after 50
+0.00030 13.85 l 306.20  | 1.597    60.110    75.138    0.6600    0.1000 | 0.261    98.722    0.993 | 0.252     100.000    1.000 |  3 hr 56 min  0 13849
+
+At iteration: 13869
+
+Smoothing after 50
+0.00030 13.90 l 307.30  | 1.597    60.110    75.138    0.6600    0.1000 | 0.251    98.778    0.993 | 0.248     100.000    1.000 |  3 hr 56 min  0 13899
+
+At iteration: 13938
+
+Smoothing after 50
+0.00030 13.95 l 308.41  | 1.597    60.110    75.138    0.6600    0.1000 | 0.252    98.500    0.992 | 0.238     100.000    1.000 |  3 hr 57 min  0 13949
+
+Smoothing after 50
+0.00030 14.00 l 309.51  | 1.597    60.110    75.138    0.6600    0.1000 | 0.248    98.611    0.992 | 0.257     97.222    0.986 |  3 hr 58 min  0 13999
+0.00030 14.00 v 309.53  | 1.596    60.552    74.917    0.6638    0.1000 | 0.248    98.611    0.992 | 0.257     97.222    0.986 |  3 hr 58 min
+
+At iteration: 14007
+
+Smoothing after 50
+0.00030 14.05 l 310.62  | 1.596    60.552    74.917    0.6638    0.1000 | 0.253    98.556    0.992 | 0.322     100.000    1.000 |  3 hr 59 min  0 14049

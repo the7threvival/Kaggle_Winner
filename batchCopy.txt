@@ -1,0 +1,6 @@
+get scratch/Masters-Thesis/Kaggle_Winner/models/model.py ./models/model.py
+get scratch/Masters-Thesis/Kaggle_Winner/models/utils.py ./models/utils.py
+get scratch/Masters-Thesis/Kaggle_Winner/dataSet/reader.py ./dataSet/reader.py
+get scratch/Masters-Thesis/Kaggle_Winner/input/bboxs.csv ./input/bboxs.csv
+get scratch/Masters-Thesis/Kaggle_Winner/input/label.csv ./input/label.csv
+get scratch/Masters-Thesis/Kaggle_Winner/input/split_notes.txt ./input/split_notes.txt
