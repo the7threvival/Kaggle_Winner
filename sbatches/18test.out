@@ -1,0 +1,8294 @@
+Some params:
+Fold_index: small_test, Check_start: 0, Learning rate: 0.0003, Min # of Occ.: 0, Freeze: False
+!!! Sanity check !!!
+Input:  ['train.py', 'small_test', '0', '3e-4', '0']
+
+Chosen model: senet154
+
+ start_time :2020-05-12 19:36:53 
+ batch_size :12 
+
+Initial incoming image analysis
+
+Looking at 138 total images.
+123 train and 15 validation images
+3 train and 3 valid individuals
+False False
+loading bbox...
+loading mask...
+loading bbox...
+loading bbox...
+
+Analysis of images to be used
+Train & valid image analysis:
+Number of training images with at least 0 instances: 123
+Number of validation images with at least 0 instances: 15
+There are 3 individuals found in train
+3 out of 3 ids in valid are found in train
+
+format: 
+rate   iter  k  epoch | valid   top@1   top@5   map@5   best_t | train   top@1   map@5 | batch   top@1   map@5 | time 
+--------------------------------------------------------------------------------------------------------------------------------------
+
+At iteration: 0
+0.00030  0.00 v  0.00  | 1.406    0.000    0.000    0.0000    0.1000 | 0.000    0.000    0.000 | 0.000     0.000    0.000 |  0 hr 00 min
+
+At iteration: 1
+
+At iteration: 2
+
+At iteration: 3
+
+At iteration: 4
+
+At iteration: 5
+
+At iteration: 6
+
+At iteration: 7
+
+At iteration: 8
+
+At iteration: 9
+
+At iteration: 10
+
+At iteration: 11
+
+At iteration: 12
+
+At iteration: 13
+
+At iteration: 14
+
+At iteration: 15
+
+At iteration: 16
+
+At iteration: 17
+
+At iteration: 18
+
+At iteration: 19
+
+At iteration: 20
+
+At iteration: 21
+
+At iteration: 22
+
+At iteration: 23
+
+At iteration: 24
+
+At iteration: 25
+
+At iteration: 26
+
+At iteration: 27
+
+At iteration: 28
+
+At iteration: 29
+
+At iteration: 30
+
+At iteration: 31
+
+At iteration: 32
+
+At iteration: 33
+
+At iteration: 34
+
+At iteration: 35
+
+At iteration: 36
+
+At iteration: 37
+
+At iteration: 38
+
+At iteration: 39
+
+At iteration: 40
+
+At iteration: 41
+
+At iteration: 42
+
+At iteration: 43
+
+At iteration: 44
+
+At iteration: 45
+
+At iteration: 46
+
+At iteration: 47
+
+At iteration: 48
+
+At iteration: 49
+
+Smoothing after 50
+0.00030  0.05 l 19.12  | 1.406    0.000    0.000    0.0000    0.1000 | 2.259    26.444    0.437 | 2.468     44.444    0.559 |  0 hr 01 min  0 49
+
+At iteration: 50
+
+At iteration: 51
+
+At iteration: 52
+
+At iteration: 53
+
+At iteration: 54
+
+At iteration: 55
+
+At iteration: 56
+
+At iteration: 57
+
+At iteration: 58
+
+At iteration: 59
+
+At iteration: 60
+
+At iteration: 61
+
+At iteration: 62
+
+At iteration: 63
+
+At iteration: 64
+
+At iteration: 65
+
+At iteration: 66
+
+At iteration: 67
+
+At iteration: 68
+
+At iteration: 69
+
+At iteration: 70
+
+At iteration: 71
+
+At iteration: 72
+
+At iteration: 73
+
+At iteration: 74
+
+At iteration: 75
+
+At iteration: 76
+
+At iteration: 77
+
+At iteration: 78
+
+At iteration: 79
+
+At iteration: 80
+
+At iteration: 81
+
+At iteration: 82
+
+At iteration: 83
+
+At iteration: 84
+
+At iteration: 85
+
+At iteration: 86
+
+At iteration: 87
+
+At iteration: 88
+
+At iteration: 89
+
+At iteration: 90
+
+At iteration: 91
+
+At iteration: 92
+
+At iteration: 93
+
+At iteration: 94
+
+At iteration: 95
+
+At iteration: 96
+
+At iteration: 97
+
+At iteration: 98
+
+At iteration: 99
+
+Smoothing after 50
+0.00030  0.10 l 38.63  | 1.406    0.000    0.000    0.0000    0.1000 | 2.083    39.333    0.633 | 1.963     33.333    0.648 |  0 hr 02 min  0 99
+
+At iteration: 100
+
+At iteration: 101
+
+At iteration: 102
+
+At iteration: 103
+
+At iteration: 104
+
+At iteration: 105
+
+At iteration: 106
+
+At iteration: 107
+
+At iteration: 108
+
+At iteration: 109
+
+At iteration: 110
+
+At iteration: 111
+
+At iteration: 112
+
+At iteration: 113
+
+At iteration: 114
+
+At iteration: 115
+
+At iteration: 116
+
+At iteration: 117
+
+At iteration: 118
+
+At iteration: 119
+
+At iteration: 120
+
+At iteration: 121
+
+At iteration: 122
+
+At iteration: 123
+
+At iteration: 124
+
+At iteration: 125
+
+At iteration: 126
+
+At iteration: 127
+
+At iteration: 128
+
+At iteration: 129
+
+At iteration: 130
+
+At iteration: 131
+
+At iteration: 132
+
+At iteration: 133
+
+At iteration: 134
+
+At iteration: 135
+
+At iteration: 136
+
+At iteration: 137
+
+At iteration: 138
+
+At iteration: 139
+
+At iteration: 140
+
+At iteration: 141
+
+At iteration: 142
+
+At iteration: 143
+
+At iteration: 144
+
+At iteration: 145
+
+At iteration: 146
+
+At iteration: 147
+
+At iteration: 148
+
+At iteration: 149
+
+Smoothing after 50
+0.00030  0.15 l 58.15  | 1.406    0.000    0.000    0.0000    0.1000 | 1.576    46.444    0.691 | 1.628     44.444    0.694 |  0 hr 03 min  0 149
+
+At iteration: 150
+
+At iteration: 151
+
+At iteration: 152
+
+At iteration: 153
+
+At iteration: 154
+
+At iteration: 155
+
+At iteration: 156
+
+At iteration: 157
+
+At iteration: 158
+
+At iteration: 159
+
+At iteration: 160
+
+At iteration: 161
+
+At iteration: 162
+
+At iteration: 163
+
+At iteration: 164
+
+At iteration: 165
+
+At iteration: 166
+
+At iteration: 167
+
+At iteration: 168
+
+At iteration: 169
+
+At iteration: 170
+
+At iteration: 171
+
+At iteration: 172
+
+At iteration: 173
+
+At iteration: 174
+
+At iteration: 175
+
+At iteration: 176
+
+At iteration: 177
+
+At iteration: 178
+
+At iteration: 179
+
+At iteration: 180
+
+At iteration: 181
+
+At iteration: 182
+
+At iteration: 183
+
+At iteration: 184
+
+At iteration: 185
+
+At iteration: 186
+
+At iteration: 187
+
+At iteration: 188
+
+At iteration: 189
+
+At iteration: 190
+
+At iteration: 191
+
+At iteration: 192
+
+At iteration: 193
+
+At iteration: 194
+
+At iteration: 195
+
+At iteration: 196
+
+At iteration: 197
+
+At iteration: 198
+
+At iteration: 199
+
+Smoothing after 50
+0.00030  0.20 l 77.66  | 1.406    0.000    0.000    0.0000    0.1000 | 1.393    51.556    0.735 | 0.940     88.889    0.944 |  0 hr 04 min  0 199
+
+At iteration: 200
+0.00030  0.20 v 78.05  | 0.837    86.667    100.000    0.9333    0.1000 | 1.393    51.556    0.735 | 0.940     88.889    0.944 |  0 hr 04 min
+
+At iteration: 201
+
+At iteration: 202
+
+At iteration: 203
+
+At iteration: 204
+
+At iteration: 205
+
+At iteration: 206
+
+At iteration: 207
+
+At iteration: 208
+
+At iteration: 209
+
+At iteration: 210
+
+At iteration: 211
+
+At iteration: 212
+
+At iteration: 213
+
+At iteration: 214
+
+At iteration: 215
+
+At iteration: 216
+
+At iteration: 217
+
+At iteration: 218
+
+At iteration: 219
+
+At iteration: 220
+
+At iteration: 221
+
+At iteration: 222
+
+At iteration: 223
+
+At iteration: 224
+
+At iteration: 225
+
+At iteration: 226
+
+At iteration: 227
+
+At iteration: 228
+
+At iteration: 229
+
+At iteration: 230
+
+At iteration: 231
+
+At iteration: 232
+
+At iteration: 233
+
+At iteration: 234
+
+At iteration: 235
+
+At iteration: 236
+
+At iteration: 237
+
+At iteration: 238
+
+At iteration: 239
+
+At iteration: 240
+
+At iteration: 241
+
+At iteration: 242
+
+At iteration: 243
+
+At iteration: 244
+
+At iteration: 245
+
+At iteration: 246
+
+At iteration: 247
+
+At iteration: 248
+
+At iteration: 249
+
+Smoothing after 50
+0.00030  0.25 l 97.17  | 0.837    86.667    100.000    0.9333    0.1000 | 1.276    45.556    0.709 | 0.879     44.444    0.722 |  0 hr 05 min  0 249
+
+At iteration: 250
+
+At iteration: 251
+
+At iteration: 252
+
+At iteration: 253
+
+At iteration: 254
+
+At iteration: 255
+
+At iteration: 256
+
+At iteration: 257
+
+At iteration: 258
+
+At iteration: 259
+
+At iteration: 260
+
+At iteration: 261
+
+At iteration: 262
+
+At iteration: 263
+
+At iteration: 264
+
+At iteration: 265
+
+At iteration: 266
+
+At iteration: 267
+
+At iteration: 268
+
+At iteration: 269
+
+At iteration: 270
+
+At iteration: 271
+
+At iteration: 272
+
+At iteration: 273
+
+At iteration: 274
+
+At iteration: 275
+
+At iteration: 276
+
+At iteration: 277
+
+At iteration: 278
+
+At iteration: 279
+
+At iteration: 280
+
+At iteration: 281
+
+At iteration: 282
+
+At iteration: 283
+
+At iteration: 284
+
+At iteration: 285
+
+At iteration: 286
+
+At iteration: 287
+
+At iteration: 288
+
+At iteration: 289
+
+At iteration: 290
+
+At iteration: 291
+
+At iteration: 292
+
+At iteration: 293
+
+At iteration: 294
+
+At iteration: 295
+
+At iteration: 296
+
+At iteration: 297
+
+At iteration: 298
+
+At iteration: 299
+
+Smoothing after 50
+0.00030  0.30 l 116.68  | 0.837    86.667    100.000    0.9333    0.1000 | 1.144    47.778    0.731 | 1.075     66.667    0.833 |  0 hr 06 min  0 299
+
+At iteration: 300
+
+At iteration: 301
+
+At iteration: 302
+
+At iteration: 303
+
+At iteration: 304
+
+At iteration: 305
+
+At iteration: 306
+
+At iteration: 307
+
+At iteration: 308
+
+At iteration: 309
+
+At iteration: 310
+
+At iteration: 311
+
+At iteration: 312
+
+At iteration: 313
+
+At iteration: 314
+
+At iteration: 315
+
+At iteration: 316
+
+At iteration: 317
+
+At iteration: 318
+
+At iteration: 319
+
+At iteration: 320
+
+At iteration: 321
+
+At iteration: 322
+
+At iteration: 323
+
+At iteration: 324
+
+At iteration: 325
+
+At iteration: 326
+
+At iteration: 327
+
+At iteration: 328
+
+At iteration: 329
+
+At iteration: 330
+
+At iteration: 331
+
+At iteration: 332
+
+At iteration: 333
+
+At iteration: 334
+
+At iteration: 335
+
+At iteration: 336
+
+At iteration: 337
+
+At iteration: 338
+
+At iteration: 339
+
+At iteration: 340
+
+At iteration: 341
+
+At iteration: 342
+
+At iteration: 343
+
+At iteration: 344
+
+At iteration: 345
+
+At iteration: 346
+
+At iteration: 347
+
+At iteration: 348
+
+At iteration: 349
+
+Smoothing after 50
+0.00030  0.35 l 136.20  | 0.837    86.667    100.000    0.9333    0.1000 | 1.069    51.556    0.750 | 1.017     66.667    0.833 |  0 hr 07 min  0 349
+
+At iteration: 350
+
+At iteration: 351
+
+At iteration: 352
+
+At iteration: 353
+
+At iteration: 354
+
+At iteration: 355
+
+At iteration: 356
+
+At iteration: 357
+
+At iteration: 358
+
+At iteration: 359
+
+At iteration: 360
+
+At iteration: 361
+
+At iteration: 362
+
+At iteration: 363
+
+At iteration: 364
+
+At iteration: 365
+
+At iteration: 366
+
+At iteration: 367
+
+At iteration: 368
+
+At iteration: 369
+
+At iteration: 370
+
+At iteration: 371
+
+At iteration: 372
+
+At iteration: 373
+
+At iteration: 374
+
+At iteration: 375
+
+At iteration: 376
+
+At iteration: 377
+
+At iteration: 378
+
+At iteration: 379
+
+At iteration: 380
+
+At iteration: 381
+
+At iteration: 382
+
+At iteration: 383
+
+At iteration: 384
+
+At iteration: 385
+
+At iteration: 386
+
+At iteration: 387
+
+At iteration: 388
+
+At iteration: 389
+
+At iteration: 390
+
+At iteration: 391
+
+At iteration: 392
+
+At iteration: 393
+
+At iteration: 394
+
+At iteration: 395
+
+At iteration: 396
+
+At iteration: 397
+
+At iteration: 398
+
+At iteration: 399
+
+Smoothing after 50
+0.00030  0.40 l 155.71  | 0.837    86.667    100.000    0.9333    0.1000 | 1.033    48.889    0.735 | 1.414     44.444    0.689 |  0 hr 08 min  0 399
+
+At iteration: 400
+0.00030  0.40 v 156.10  | 0.707    93.333    100.000    0.9667    0.1000 | 1.033    48.889    0.735 | 1.414     44.444    0.689 |  0 hr 08 min
+
+At iteration: 401
+
+At iteration: 402
+
+At iteration: 403
+
+At iteration: 404
+
+At iteration: 405
+
+At iteration: 406
+
+At iteration: 407
+
+At iteration: 408
+
+At iteration: 409
+
+At iteration: 410
+
+At iteration: 411
+
+At iteration: 412
+
+At iteration: 413
+
+At iteration: 414
+
+At iteration: 415
+
+At iteration: 416
+
+At iteration: 417
+
+At iteration: 418
+
+At iteration: 419
+
+At iteration: 420
+
+At iteration: 421
+
+At iteration: 422
+
+At iteration: 423
+
+At iteration: 424
+
+At iteration: 425
+
+At iteration: 426
+
+At iteration: 427
+
+At iteration: 428
+
+At iteration: 429
+
+At iteration: 430
+
+At iteration: 431
+
+At iteration: 432
+
+At iteration: 433
+
+At iteration: 434
+
+At iteration: 435
+
+At iteration: 436
+
+At iteration: 437
+
+At iteration: 438
+
+At iteration: 439
+
+At iteration: 440
+
+At iteration: 441
+
+At iteration: 442
+
+At iteration: 443
+
+At iteration: 444
+
+At iteration: 445
+
+At iteration: 446
+
+At iteration: 447
+
+At iteration: 448
+
+At iteration: 449
+
+Smoothing after 50
+0.00030  0.45 l 175.22  | 0.707    93.333    100.000    0.9667    0.1000 | 0.932    51.333    0.752 | 0.801     77.778    0.889 |  0 hr 09 min  0 449
+
+At iteration: 450
+
+At iteration: 451
+
+At iteration: 452
+
+At iteration: 453
+
+At iteration: 454
+
+At iteration: 455
+
+At iteration: 456
+
+At iteration: 457
+
+At iteration: 458
+
+At iteration: 459
+
+At iteration: 460
+
+At iteration: 461
+
+At iteration: 462
+
+At iteration: 463
+
+At iteration: 464
+
+At iteration: 465
+
+At iteration: 466
+
+At iteration: 467
+
+At iteration: 468
+
+At iteration: 469
+
+At iteration: 470
+
+At iteration: 471
+
+At iteration: 472
+
+At iteration: 473
+
+At iteration: 474
+
+At iteration: 475
+
+At iteration: 476
+
+At iteration: 477
+
+At iteration: 478
+
+At iteration: 479
+
+At iteration: 480
+
+At iteration: 481
+
+At iteration: 482
+
+At iteration: 483
+
+At iteration: 484
+
+At iteration: 485
+
+At iteration: 486
+
+At iteration: 487
+
+At iteration: 488
+
+At iteration: 489
+
+At iteration: 490
+
+At iteration: 491
+
+At iteration: 492
+
+At iteration: 493
+
+At iteration: 494
+
+At iteration: 495
+
+At iteration: 496
+
+At iteration: 497
+
+At iteration: 498
+
+At iteration: 499
+
+Smoothing after 50
+0.00030  0.50 l 194.73  | 0.707    93.333    100.000    0.9667    0.1000 | 0.976    51.556    0.749 | 0.806     22.222    0.583 |  0 hr 10 min  0 499
+
+At iteration: 500
+
+At iteration: 501
+
+At iteration: 502
+
+At iteration: 503
+
+At iteration: 504
+
+At iteration: 505
+
+At iteration: 506
+
+At iteration: 507
+
+At iteration: 508
+
+At iteration: 509
+
+At iteration: 510
+
+At iteration: 511
+
+At iteration: 512
+
+At iteration: 513
+
+At iteration: 514
+
+At iteration: 515
+
+At iteration: 516
+
+At iteration: 517
+
+At iteration: 518
+
+At iteration: 519
+
+At iteration: 520
+
+At iteration: 521
+
+At iteration: 522
+
+At iteration: 523
+
+At iteration: 524
+
+At iteration: 525
+
+At iteration: 526
+
+At iteration: 527
+
+At iteration: 528
+
+At iteration: 529
+
+At iteration: 530
+
+At iteration: 531
+
+At iteration: 532
+
+At iteration: 533
+
+At iteration: 534
+
+At iteration: 535
+
+At iteration: 536
+
+At iteration: 537
+
+At iteration: 538
+
+At iteration: 539
+
+At iteration: 540
+
+At iteration: 541
+
+At iteration: 542
+
+At iteration: 543
+
+At iteration: 544
+
+At iteration: 545
+
+At iteration: 546
+
+At iteration: 547
+
+At iteration: 548
+
+At iteration: 549
+
+Smoothing after 50
+0.00030  0.55 l 214.24  | 0.707    93.333    100.000    0.9667    0.1000 | 0.938    52.667    0.758 | 1.215     66.667    0.806 |  0 hr 11 min  0 549
+
+At iteration: 550
+
+At iteration: 551
+
+At iteration: 552
+
+At iteration: 553
+
+At iteration: 554
+
+At iteration: 555
+
+At iteration: 556
+
+At iteration: 557
+
+At iteration: 558
+
+At iteration: 559
+
+At iteration: 560
+
+At iteration: 561
+
+At iteration: 562
+
+At iteration: 563
+
+At iteration: 564
+
+At iteration: 565
+
+At iteration: 566
+
+At iteration: 567
+
+At iteration: 568
+
+At iteration: 569
+
+At iteration: 570
+
+At iteration: 571
+
+At iteration: 572
+
+At iteration: 573
+
+At iteration: 574
+
+At iteration: 575
+
+At iteration: 576
+
+At iteration: 577
+
+At iteration: 578
+
+At iteration: 579
+
+At iteration: 580
+
+At iteration: 581
+
+At iteration: 582
+
+At iteration: 583
+
+At iteration: 584
+
+At iteration: 585
+
+At iteration: 586
+
+At iteration: 587
+
+At iteration: 588
+
+At iteration: 589
+
+At iteration: 590
+
+At iteration: 591
+
+At iteration: 592
+
+At iteration: 593
+
+At iteration: 594
+
+At iteration: 595
+
+At iteration: 596
+
+At iteration: 597
+
+At iteration: 598
+
+At iteration: 599
+
+Smoothing after 50
+0.00030  0.60 l 233.76  | 0.707    93.333    100.000    0.9667    0.1000 | 0.943    56.667    0.775 | 0.597     77.778    0.889 |  0 hr 12 min  0 599
+
+At iteration: 600
+0.00030  0.60 v 234.15  | 0.591    93.333    100.000    0.9667    0.1000 | 0.943    56.667    0.775 | 0.597     77.778    0.889 |  0 hr 12 min
+
+At iteration: 601
+
+At iteration: 602
+
+At iteration: 603
+
+At iteration: 604
+
+At iteration: 605
+
+At iteration: 606
+
+At iteration: 607
+
+At iteration: 608
+
+At iteration: 609
+
+At iteration: 610
+
+At iteration: 611
+
+At iteration: 612
+
+At iteration: 613
+
+At iteration: 614
+
+At iteration: 615
+
+At iteration: 616
+
+At iteration: 617
+
+At iteration: 618
+
+At iteration: 619
+
+At iteration: 620
+
+At iteration: 621
+
+At iteration: 622
+
+At iteration: 623
+
+At iteration: 624
+
+At iteration: 625
+
+At iteration: 626
+
+At iteration: 627
+
+At iteration: 628
+
+At iteration: 629
+
+At iteration: 630
+
+At iteration: 631
+
+At iteration: 632
+
+At iteration: 633
+
+At iteration: 634
+
+At iteration: 635
+
+At iteration: 636
+
+At iteration: 637
+
+At iteration: 638
+
+At iteration: 639
+
+At iteration: 640
+
+At iteration: 641
+
+At iteration: 642
+
+At iteration: 643
+
+At iteration: 644
+
+At iteration: 645
+
+At iteration: 646
+
+At iteration: 647
+
+At iteration: 648
+
+At iteration: 649
+
+Smoothing after 50
+0.00030  0.65 l 253.27  | 0.591    93.333    100.000    0.9667    0.1000 | 0.832    57.556    0.783 | 1.553     66.667    0.806 |  0 hr 14 min  0 649
+
+At iteration: 650
+
+At iteration: 651
+
+At iteration: 652
+
+At iteration: 653
+
+At iteration: 654
+
+At iteration: 655
+
+At iteration: 656
+
+At iteration: 657
+
+At iteration: 658
+
+At iteration: 659
+
+At iteration: 660
+
+At iteration: 661
+
+At iteration: 662
+
+At iteration: 663
+
+At iteration: 664
+
+At iteration: 665
+
+At iteration: 666
+
+At iteration: 667
+
+At iteration: 668
+
+At iteration: 669
+
+At iteration: 670
+
+At iteration: 671
+
+At iteration: 672
+
+At iteration: 673
+
+At iteration: 674
+
+At iteration: 675
+
+At iteration: 676
+
+At iteration: 677
+
+At iteration: 678
+
+At iteration: 679
+
+At iteration: 680
+
+At iteration: 681
+
+At iteration: 682
+
+At iteration: 683
+
+At iteration: 684
+
+At iteration: 685
+
+At iteration: 686
+
+At iteration: 687
+
+At iteration: 688
+
+At iteration: 689
+
+At iteration: 690
+
+At iteration: 691
+
+At iteration: 692
+
+At iteration: 693
+
+At iteration: 694
+
+At iteration: 695
+
+At iteration: 696
+
+At iteration: 697
+
+At iteration: 698
+
+At iteration: 699
+
+Smoothing after 50
+0.00030  0.70 l 272.78  | 0.591    93.333    100.000    0.9667    0.1000 | 0.763    67.333    0.831 | 0.511     55.556    0.778 |  0 hr 15 min  0 699
+
+At iteration: 700
+
+At iteration: 701
+
+At iteration: 702
+
+At iteration: 703
+
+At iteration: 704
+
+At iteration: 705
+
+At iteration: 706
+
+At iteration: 707
+
+At iteration: 708
+
+At iteration: 709
+
+At iteration: 710
+
+At iteration: 711
+
+At iteration: 712
+
+At iteration: 713
+
+At iteration: 714
+
+At iteration: 715
+
+At iteration: 716
+
+At iteration: 717
+
+At iteration: 718
+
+At iteration: 719
+
+At iteration: 720
+
+At iteration: 721
+
+At iteration: 722
+
+At iteration: 723
+
+At iteration: 724
+
+At iteration: 725
+
+At iteration: 726
+
+At iteration: 727
+
+At iteration: 728
+
+At iteration: 729
+
+At iteration: 730
+
+At iteration: 731
+
+At iteration: 732
+
+At iteration: 733
+
+At iteration: 734
+
+At iteration: 735
+
+At iteration: 736
+
+At iteration: 737
+
+At iteration: 738
+
+At iteration: 739
+
+At iteration: 740
+
+At iteration: 741
+
+At iteration: 742
+
+At iteration: 743
+
+At iteration: 744
+
+At iteration: 745
+
+At iteration: 746
+
+At iteration: 747
+
+At iteration: 748
+
+At iteration: 749
+
+Smoothing after 50
+0.00030  0.75 l 292.29  | 0.591    93.333    100.000    0.9667    0.1000 | 0.741    66.444    0.827 | 0.473     77.778    0.889 |  0 hr 16 min  0 749
+
+At iteration: 750
+
+At iteration: 751
+
+At iteration: 752
+
+At iteration: 753
+
+At iteration: 754
+
+At iteration: 755
+
+At iteration: 756
+
+At iteration: 757
+
+At iteration: 758
+
+At iteration: 759
+
+At iteration: 760
+
+At iteration: 761
+
+At iteration: 762
+
+At iteration: 763
+
+At iteration: 764
+
+At iteration: 765
+
+At iteration: 766
+
+At iteration: 767
+
+At iteration: 768
+
+At iteration: 769
+
+At iteration: 770
+
+At iteration: 771
+
+At iteration: 772
+
+At iteration: 773
+
+At iteration: 774
+
+At iteration: 775
+
+At iteration: 776
+
+At iteration: 777
+
+At iteration: 778
+
+At iteration: 779
+
+At iteration: 780
+
+At iteration: 781
+
+At iteration: 782
+
+At iteration: 783
+
+At iteration: 784
+
+At iteration: 785
+
+At iteration: 786
+
+At iteration: 787
+
+At iteration: 788
+
+At iteration: 789
+
+At iteration: 790
+
+At iteration: 791
+
+At iteration: 792
+
+At iteration: 793
+
+At iteration: 794
+
+At iteration: 795
+
+At iteration: 796
+
+At iteration: 797
+
+At iteration: 798
+
+At iteration: 799
+
+Smoothing after 50
+0.00030  0.80 l 311.80  | 0.591    93.333    100.000    0.9667    0.1000 | 0.730    73.111    0.861 | 0.759     88.889    0.944 |  0 hr 17 min  0 799
+
+At iteration: 800
+0.00030  0.80 v 312.20  | 0.571    73.333    100.000    0.8667    0.1000 | 0.730    73.111    0.861 | 0.759     88.889    0.944 |  0 hr 17 min
+
+At iteration: 801
+
+At iteration: 802
+
+At iteration: 803
+
+At iteration: 804
+
+At iteration: 805
+
+At iteration: 806
+
+At iteration: 807
+
+At iteration: 808
+
+At iteration: 809
+
+At iteration: 810
+
+At iteration: 811
+
+At iteration: 812
+
+At iteration: 813
+
+At iteration: 814
+
+At iteration: 815
+
+At iteration: 816
+
+At iteration: 817
+
+At iteration: 818
+
+At iteration: 819
+
+At iteration: 820
+
+At iteration: 821
+
+At iteration: 822
+
+At iteration: 823
+
+At iteration: 824
+
+At iteration: 825
+
+At iteration: 826
+
+At iteration: 827
+
+At iteration: 828
+
+At iteration: 829
+
+At iteration: 830
+
+At iteration: 831
+
+At iteration: 832
+
+At iteration: 833
+
+At iteration: 834
+
+At iteration: 835
+
+At iteration: 836
+
+At iteration: 837
+
+At iteration: 838
+
+At iteration: 839
+
+At iteration: 840
+
+At iteration: 841
+
+At iteration: 842
+
+At iteration: 843
+
+At iteration: 844
+
+At iteration: 845
+
+At iteration: 846
+
+At iteration: 847
+
+At iteration: 848
+
+At iteration: 849
+
+Smoothing after 50
+0.00030  0.85 l 331.32  | 0.571    73.333    100.000    0.8667    0.1000 | 0.690    73.111    0.862 | 0.582     77.778    0.889 |  0 hr 18 min  0 849
+
+At iteration: 850
+
+At iteration: 851
+
+At iteration: 852
+
+At iteration: 853
+
+At iteration: 854
+
+At iteration: 855
+
+At iteration: 856
+
+At iteration: 857
+
+At iteration: 858
+
+At iteration: 859
+
+At iteration: 860
+
+At iteration: 861
+
+At iteration: 862
+
+At iteration: 863
+
+At iteration: 864
+
+At iteration: 865
+
+At iteration: 866
+
+At iteration: 867
+
+At iteration: 868
+
+At iteration: 869
+
+At iteration: 870
+
+At iteration: 871
+
+At iteration: 872
+
+At iteration: 873
+
+At iteration: 874
+
+At iteration: 875
+
+At iteration: 876
+
+At iteration: 877
+
+At iteration: 878
+
+At iteration: 879
+
+At iteration: 880
+
+At iteration: 881
+
+At iteration: 882
+
+At iteration: 883
+
+At iteration: 884
+
+At iteration: 885
+
+At iteration: 886
+
+At iteration: 887
+
+At iteration: 888
+
+At iteration: 889
+
+At iteration: 890
+
+At iteration: 891
+
+At iteration: 892
+
+At iteration: 893
+
+At iteration: 894
+
+At iteration: 895
+
+At iteration: 896
+
+At iteration: 897
+
+At iteration: 898
+
+At iteration: 899
+
+Smoothing after 50
+0.00030  0.90 l 350.83  | 0.571    73.333    100.000    0.8667    0.1000 | 0.614    70.889    0.852 | 0.886     55.556    0.778 |  0 hr 19 min  0 899
+
+At iteration: 900
+
+At iteration: 901
+
+At iteration: 902
+
+At iteration: 903
+
+At iteration: 904
+
+At iteration: 905
+
+At iteration: 906
+
+At iteration: 907
+
+At iteration: 908
+
+At iteration: 909
+
+At iteration: 910
+
+At iteration: 911
+
+At iteration: 912
+
+At iteration: 913
+
+At iteration: 914
+
+At iteration: 915
+
+At iteration: 916
+
+At iteration: 917
+
+At iteration: 918
+
+At iteration: 919
+
+At iteration: 920
+
+At iteration: 921
+
+At iteration: 922
+
+At iteration: 923
+
+At iteration: 924
+
+At iteration: 925
+
+At iteration: 926
+
+At iteration: 927
+
+At iteration: 928
+
+At iteration: 929
+
+At iteration: 930
+
+At iteration: 931
+
+At iteration: 932
+
+At iteration: 933
+
+At iteration: 934
+
+At iteration: 935
+
+At iteration: 936
+
+At iteration: 937
+
+At iteration: 938
+
+At iteration: 939
+
+At iteration: 940
+
+At iteration: 941
+
+At iteration: 942
+
+At iteration: 943
+
+At iteration: 944
+
+At iteration: 945
+
+At iteration: 946
+
+At iteration: 947
+
+At iteration: 948
+
+At iteration: 949
+
+Smoothing after 50
+0.00030  0.95 l 370.34  | 0.571    73.333    100.000    0.8667    0.1000 | 0.589    75.333    0.871 | 0.559     77.778    0.870 |  0 hr 20 min  0 949
+
+At iteration: 950
+
+At iteration: 951
+
+At iteration: 952
+
+At iteration: 953
+
+At iteration: 954
+
+At iteration: 955
+
+At iteration: 956
+
+At iteration: 957
+
+At iteration: 958
+
+At iteration: 959
+
+At iteration: 960
+
+At iteration: 961
+
+At iteration: 962
+
+At iteration: 963
+
+At iteration: 964
+
+At iteration: 965
+
+At iteration: 966
+
+At iteration: 967
+
+At iteration: 968
+
+At iteration: 969
+
+At iteration: 970
+
+At iteration: 971
+
+At iteration: 972
+
+At iteration: 973
+
+At iteration: 974
+
+At iteration: 975
+
+At iteration: 976
+
+At iteration: 977
+
+At iteration: 978
+
+At iteration: 979
+
+At iteration: 980
+
+At iteration: 981
+
+At iteration: 982
+
+At iteration: 983
+
+At iteration: 984
+
+At iteration: 985
+
+At iteration: 986
+
+At iteration: 987
+
+At iteration: 988
+
+At iteration: 989
+
+At iteration: 990
+
+At iteration: 991
+
+At iteration: 992
+
+At iteration: 993
+
+At iteration: 994
+
+At iteration: 995
+
+At iteration: 996
+
+At iteration: 997
+
+At iteration: 998
+
+At iteration: 999
+
+Smoothing after 50
+0.00030  1.00 l 389.85  | 0.571    73.333    100.000    0.8667    0.1000 | 0.568    76.444    0.879 | 0.664     77.778    0.889 |  0 hr 21 min  0 999
+
+At iteration: 1000
+0.00030  1.00 v 390.24  | 0.297    100.000    100.000    1.0000    0.1000 | 0.568    76.444    0.879 | 0.664     77.778    0.889 |  0 hr 21 min
+
+At iteration: 1001
+
+At iteration: 1002
+
+At iteration: 1003
+
+At iteration: 1004
+
+At iteration: 1005
+
+At iteration: 1006
+
+At iteration: 1007
+
+At iteration: 1008
+
+At iteration: 1009
+
+At iteration: 1010
+
+At iteration: 1011
+
+At iteration: 1012
+
+At iteration: 1013
+
+At iteration: 1014
+
+At iteration: 1015
+
+At iteration: 1016
+
+At iteration: 1017
+
+At iteration: 1018
+
+At iteration: 1019
+
+At iteration: 1020
+
+At iteration: 1021
+
+At iteration: 1022
+
+At iteration: 1023
+
+At iteration: 1024
+
+At iteration: 1025
+
+At iteration: 1026
+
+At iteration: 1027
+
+At iteration: 1028
+
+At iteration: 1029
+
+At iteration: 1030
+
+At iteration: 1031
+
+At iteration: 1032
+
+At iteration: 1033
+
+At iteration: 1034
+
+At iteration: 1035
+
+At iteration: 1036
+
+At iteration: 1037
+
+At iteration: 1038
+
+At iteration: 1039
+
+At iteration: 1040
+
+At iteration: 1041
+
+At iteration: 1042
+
+At iteration: 1043
+
+At iteration: 1044
+
+At iteration: 1045
+
+At iteration: 1046
+
+At iteration: 1047
+
+At iteration: 1048
+
+At iteration: 1049
+
+Smoothing after 50
+0.00030  1.05 l 409.37  | 0.297    100.000    100.000    1.0000    0.1000 | 0.572    78.444    0.888 | 0.734     66.667    0.833 |  0 hr 22 min  0 1049
+
+At iteration: 1050
+
+At iteration: 1051
+
+At iteration: 1052
+
+At iteration: 1053
+
+At iteration: 1054
+
+At iteration: 1055
+
+At iteration: 1056
+
+At iteration: 1057
+
+At iteration: 1058
+
+At iteration: 1059
+
+At iteration: 1060
+
+At iteration: 1061
+
+At iteration: 1062
+
+At iteration: 1063
+
+At iteration: 1064
+
+At iteration: 1065
+
+At iteration: 1066
+
+At iteration: 1067
+
+At iteration: 1068
+
+At iteration: 1069
+
+At iteration: 1070
+
+At iteration: 1071
+
+At iteration: 1072
+
+At iteration: 1073
+
+At iteration: 1074
+
+At iteration: 1075
+
+At iteration: 1076
+
+At iteration: 1077
+
+At iteration: 1078
+
+At iteration: 1079
+
+At iteration: 1080
+
+At iteration: 1081
+
+At iteration: 1082
+
+At iteration: 1083
+
+At iteration: 1084
+
+At iteration: 1085
+
+At iteration: 1086
+
+At iteration: 1087
+
+At iteration: 1088
+
+At iteration: 1089
+
+At iteration: 1090
+
+At iteration: 1091
+
+At iteration: 1092
+
+At iteration: 1093
+
+At iteration: 1094
+
+At iteration: 1095
+
+At iteration: 1096
+
+At iteration: 1097
+
+At iteration: 1098
+
+At iteration: 1099
+
+Smoothing after 50
+0.00030  1.10 l 428.88  | 0.297    100.000    100.000    1.0000    0.1000 | 0.489    80.667    0.901 | 0.590     77.778    0.889 |  0 hr 23 min  0 1099
+
+At iteration: 1100
+
+At iteration: 1101
+
+At iteration: 1102
+
+At iteration: 1103
+
+At iteration: 1104
+
+At iteration: 1105
+
+At iteration: 1106
+
+At iteration: 1107
+
+At iteration: 1108
+
+At iteration: 1109
+
+At iteration: 1110
+
+At iteration: 1111
+
+At iteration: 1112
+
+At iteration: 1113
+
+At iteration: 1114
+
+At iteration: 1115
+
+At iteration: 1116
+
+At iteration: 1117
+
+At iteration: 1118
+
+At iteration: 1119
+
+At iteration: 1120
+
+At iteration: 1121
+
+At iteration: 1122
+
+At iteration: 1123
+
+At iteration: 1124
+
+At iteration: 1125
+
+At iteration: 1126
+
+At iteration: 1127
+
+At iteration: 1128
+
+At iteration: 1129
+
+At iteration: 1130
+
+At iteration: 1131
+
+At iteration: 1132
+
+At iteration: 1133
+
+At iteration: 1134
+
+At iteration: 1135
+
+At iteration: 1136
+
+At iteration: 1137
+
+At iteration: 1138
+
+At iteration: 1139
+
+At iteration: 1140
+
+At iteration: 1141
+
+At iteration: 1142
+
+At iteration: 1143
+
+At iteration: 1144
+
+At iteration: 1145
+
+At iteration: 1146
+
+At iteration: 1147
+
+At iteration: 1148
+
+At iteration: 1149
+
+Smoothing after 50
+0.00030  1.15 l 448.39  | 0.297    100.000    100.000    1.0000    0.1000 | 0.492    78.889    0.891 | 0.369     88.889    0.944 |  0 hr 24 min  0 1149
+
+At iteration: 1150
+
+At iteration: 1151
+
+At iteration: 1152
+
+At iteration: 1153
+
+At iteration: 1154
+
+At iteration: 1155
+
+At iteration: 1156
+
+At iteration: 1157
+
+At iteration: 1158
+
+At iteration: 1159
+
+At iteration: 1160
+
+At iteration: 1161
+
+At iteration: 1162
+
+At iteration: 1163
+
+At iteration: 1164
+
+At iteration: 1165
+
+At iteration: 1166
+
+At iteration: 1167
+
+At iteration: 1168
+
+At iteration: 1169
+
+At iteration: 1170
+
+At iteration: 1171
+
+At iteration: 1172
+
+At iteration: 1173
+
+At iteration: 1174
+
+At iteration: 1175
+
+At iteration: 1176
+
+At iteration: 1177
+
+At iteration: 1178
+
+At iteration: 1179
+
+At iteration: 1180
+
+At iteration: 1181
+
+At iteration: 1182
+
+At iteration: 1183
+
+At iteration: 1184
+
+At iteration: 1185
+
+At iteration: 1186
+
+At iteration: 1187
+
+At iteration: 1188
+
+At iteration: 1189
+
+At iteration: 1190
+
+At iteration: 1191
+
+At iteration: 1192
+
+At iteration: 1193
+
+At iteration: 1194
+
+At iteration: 1195
+
+At iteration: 1196
+
+At iteration: 1197
+
+At iteration: 1198
+
+At iteration: 1199
+
+Smoothing after 50
+0.00030  1.20 l 467.90  | 0.297    100.000    100.000    1.0000    0.1000 | 0.433    80.667    0.901 | 0.239     88.889    0.944 |  0 hr 25 min  0 1199
+
+At iteration: 1200
+0.00030  1.20 v 468.29  | 0.296    100.000    100.000    1.0000    0.1000 | 0.433    80.667    0.901 | 0.239     88.889    0.944 |  0 hr 25 min
+
+At iteration: 1201
+
+At iteration: 1202
+
+At iteration: 1203
+
+At iteration: 1204
+
+At iteration: 1205
+
+At iteration: 1206
+
+At iteration: 1207
+
+At iteration: 1208
+
+At iteration: 1209
+
+At iteration: 1210
+
+At iteration: 1211
+
+At iteration: 1212
+
+At iteration: 1213
+
+At iteration: 1214
+
+At iteration: 1215
+
+At iteration: 1216
+
+At iteration: 1217
+
+At iteration: 1218
+
+At iteration: 1219
+
+At iteration: 1220
+
+At iteration: 1221
+
+At iteration: 1222
+
+At iteration: 1223
+
+At iteration: 1224
+
+At iteration: 1225
+
+At iteration: 1226
+
+At iteration: 1227
+
+At iteration: 1228
+
+At iteration: 1229
+
+At iteration: 1230
+
+At iteration: 1231
+
+At iteration: 1232
+
+At iteration: 1233
+
+At iteration: 1234
+
+At iteration: 1235
+
+At iteration: 1236
+
+At iteration: 1237
+
+At iteration: 1238
+
+At iteration: 1239
+
+At iteration: 1240
+
+At iteration: 1241
+
+At iteration: 1242
+
+At iteration: 1243
+
+At iteration: 1244
+
+At iteration: 1245
+
+At iteration: 1246
+
+At iteration: 1247
+
+At iteration: 1248
+
+At iteration: 1249
+
+Smoothing after 50
+0.00030  1.25 l 487.41  | 0.296    100.000    100.000    1.0000    0.1000 | 0.432    84.889    0.920 | 0.591     77.778    0.889 |  0 hr 26 min  0 1249
+
+At iteration: 1250
+
+At iteration: 1251
+
+At iteration: 1252
+
+At iteration: 1253
+
+At iteration: 1254
+
+At iteration: 1255
+
+At iteration: 1256
+
+At iteration: 1257
+
+At iteration: 1258
+
+At iteration: 1259
+
+At iteration: 1260
+
+At iteration: 1261
+
+At iteration: 1262
+
+At iteration: 1263
+
+At iteration: 1264
+
+At iteration: 1265
+
+At iteration: 1266
+
+At iteration: 1267
+
+At iteration: 1268
+
+At iteration: 1269
+
+At iteration: 1270
+
+At iteration: 1271
+
+At iteration: 1272
+
+At iteration: 1273
+
+At iteration: 1274
+
+At iteration: 1275
+
+At iteration: 1276
+
+At iteration: 1277
+
+At iteration: 1278
+
+At iteration: 1279
+
+At iteration: 1280
+
+At iteration: 1281
+
+At iteration: 1282
+
+At iteration: 1283
+
+At iteration: 1284
+
+At iteration: 1285
+
+At iteration: 1286
+
+At iteration: 1287
+
+At iteration: 1288
+
+At iteration: 1289
+
+At iteration: 1290
+
+At iteration: 1291
+
+At iteration: 1292
+
+At iteration: 1293
+
+At iteration: 1294
+
+At iteration: 1295
+
+At iteration: 1296
+
+At iteration: 1297
+
+At iteration: 1298
+
+At iteration: 1299
+
+Smoothing after 50
+0.00030  1.30 l 506.93  | 0.296    100.000    100.000    1.0000    0.1000 | 0.389    88.222    0.938 | 0.263     100.000    1.000 |  0 hr 27 min  0 1299
+
+At iteration: 1300
+
+At iteration: 1301
+
+At iteration: 1302
+
+At iteration: 1303
+
+At iteration: 1304
+
+At iteration: 1305
+
+At iteration: 1306
+
+At iteration: 1307
+
+At iteration: 1308
+
+At iteration: 1309
+
+At iteration: 1310
+
+At iteration: 1311
+
+At iteration: 1312
+
+At iteration: 1313
+
+At iteration: 1314
+
+At iteration: 1315
+
+At iteration: 1316
+
+At iteration: 1317
+
+At iteration: 1318
+
+At iteration: 1319
+
+At iteration: 1320
+
+At iteration: 1321
+
+At iteration: 1322
+
+At iteration: 1323
+
+At iteration: 1324
+
+At iteration: 1325
+
+At iteration: 1326
+
+At iteration: 1327
+
+At iteration: 1328
+
+At iteration: 1329
+
+At iteration: 1330
+
+At iteration: 1331
+
+At iteration: 1332
+
+At iteration: 1333
+
+At iteration: 1334
+
+At iteration: 1335
+
+At iteration: 1336
+
+At iteration: 1337
+
+At iteration: 1338
+
+At iteration: 1339
+
+At iteration: 1340
+
+At iteration: 1341
+
+At iteration: 1342
+
+At iteration: 1343
+
+At iteration: 1344
+
+At iteration: 1345
+
+At iteration: 1346
+
+At iteration: 1347
+
+At iteration: 1348
+
+At iteration: 1349
+
+Smoothing after 50
+0.00030  1.35 l 526.44  | 0.296    100.000    100.000    1.0000    0.1000 | 0.352    90.000    0.947 | 0.207     100.000    1.000 |  0 hr 28 min  0 1349
+
+At iteration: 1350
+
+At iteration: 1351
+
+At iteration: 1352
+
+At iteration: 1353
+
+At iteration: 1354
+
+At iteration: 1355
+
+At iteration: 1356
+
+At iteration: 1357
+
+At iteration: 1358
+
+At iteration: 1359
+
+At iteration: 1360
+
+At iteration: 1361
+
+At iteration: 1362
+
+At iteration: 1363
+
+At iteration: 1364
+
+At iteration: 1365
+
+At iteration: 1366
+
+At iteration: 1367
+
+At iteration: 1368
+
+At iteration: 1369
+
+At iteration: 1370
+
+At iteration: 1371
+
+At iteration: 1372
+
+At iteration: 1373
+
+At iteration: 1374
+
+At iteration: 1375
+
+At iteration: 1376
+
+At iteration: 1377
+
+At iteration: 1378
+
+At iteration: 1379
+
+At iteration: 1380
+
+At iteration: 1381
+
+At iteration: 1382
+
+At iteration: 1383
+
+At iteration: 1384
+
+At iteration: 1385
+
+At iteration: 1386
+
+At iteration: 1387
+
+At iteration: 1388
+
+At iteration: 1389
+
+At iteration: 1390
+
+At iteration: 1391
+
+At iteration: 1392
+
+At iteration: 1393
+
+At iteration: 1394
+
+At iteration: 1395
+
+At iteration: 1396
+
+At iteration: 1397
+
+At iteration: 1398
+
+At iteration: 1399
+
+Smoothing after 50
+0.00030  1.40 l 545.95  | 0.296    100.000    100.000    1.0000    0.1000 | 0.265    93.333    0.966 | 0.273     88.889    0.944 |  0 hr 29 min  0 1399
+
+At iteration: 1400
+0.00030  1.40 v 546.34  | 0.184    93.333    100.000    0.9556    0.1000 | 0.265    93.333    0.966 | 0.273     88.889    0.944 |  0 hr 29 min
+
+At iteration: 1401
+
+At iteration: 1402
+
+At iteration: 1403
+
+At iteration: 1404
+
+At iteration: 1405
+
+At iteration: 1406
+
+At iteration: 1407
+
+At iteration: 1408
+
+At iteration: 1409
+
+At iteration: 1410
+
+At iteration: 1411
+
+At iteration: 1412
+
+At iteration: 1413
+
+At iteration: 1414
+
+At iteration: 1415
+
+At iteration: 1416
+
+At iteration: 1417
+
+At iteration: 1418
+
+At iteration: 1419
+
+At iteration: 1420
+
+At iteration: 1421
+
+At iteration: 1422
+
+At iteration: 1423
+
+At iteration: 1424
+
+At iteration: 1425
+
+At iteration: 1426
+
+At iteration: 1427
+
+At iteration: 1428
+
+At iteration: 1429
+
+At iteration: 1430
+
+At iteration: 1431
+
+At iteration: 1432
+
+At iteration: 1433
+
+At iteration: 1434
+
+At iteration: 1435
+
+At iteration: 1436
+
+At iteration: 1437
+
+At iteration: 1438
+
+At iteration: 1439
+
+At iteration: 1440
+
+At iteration: 1441
+
+At iteration: 1442
+
+At iteration: 1443
+
+At iteration: 1444
+
+At iteration: 1445
+
+At iteration: 1446
+
+At iteration: 1447
+
+At iteration: 1448
+
+At iteration: 1449
+
+Smoothing after 50
+0.00030  1.45 l 565.46  | 0.184    93.333    100.000    0.9556    0.1000 | 0.284    91.333    0.952 | 0.332     88.889    0.944 |  0 hr 30 min  0 1449
+
+At iteration: 1450
+
+At iteration: 1451
+
+At iteration: 1452
+
+At iteration: 1453
+
+At iteration: 1454
+
+At iteration: 1455
+
+At iteration: 1456
+
+At iteration: 1457
+
+At iteration: 1458
+
+At iteration: 1459
+
+At iteration: 1460
+
+At iteration: 1461
+
+At iteration: 1462
+
+At iteration: 1463
+
+At iteration: 1464
+
+At iteration: 1465
+
+At iteration: 1466
+
+At iteration: 1467
+
+At iteration: 1468
+
+At iteration: 1469
+
+At iteration: 1470
+
+At iteration: 1471
+
+At iteration: 1472
+
+At iteration: 1473
+
+At iteration: 1474
+
+At iteration: 1475
+
+At iteration: 1476
+
+At iteration: 1477
+
+At iteration: 1478
+
+At iteration: 1479
+
+At iteration: 1480
+
+At iteration: 1481
+
+At iteration: 1482
+
+At iteration: 1483
+
+At iteration: 1484
+
+At iteration: 1485
+
+At iteration: 1486
+
+At iteration: 1487
+
+At iteration: 1488
+
+At iteration: 1489
+
+At iteration: 1490
+
+At iteration: 1491
+
+At iteration: 1492
+
+At iteration: 1493
+
+At iteration: 1494
+
+At iteration: 1495
+
+At iteration: 1496
+
+At iteration: 1497
+
+At iteration: 1498
+
+At iteration: 1499
+
+Smoothing after 50
+0.00030  1.50 l 584.98  | 0.184    93.333    100.000    0.9556    0.1000 | 0.314    94.222    0.966 | 0.159     100.000    1.000 |  0 hr 31 min  0 1499
+
+At iteration: 1500
+
+At iteration: 1501
+
+At iteration: 1502
+
+At iteration: 1503
+
+At iteration: 1504
+
+At iteration: 1505
+
+At iteration: 1506
+
+At iteration: 1507
+
+At iteration: 1508
+
+At iteration: 1509
+
+At iteration: 1510
+
+At iteration: 1511
+
+At iteration: 1512
+
+At iteration: 1513
+
+At iteration: 1514
+
+At iteration: 1515
+
+At iteration: 1516
+
+At iteration: 1517
+
+At iteration: 1518
+
+At iteration: 1519
+
+At iteration: 1520
+
+At iteration: 1521
+
+At iteration: 1522
+
+At iteration: 1523
+
+At iteration: 1524
+
+At iteration: 1525
+
+At iteration: 1526
+
+At iteration: 1527
+
+At iteration: 1528
+
+At iteration: 1529
+
+At iteration: 1530
+
+At iteration: 1531
+
+At iteration: 1532
+
+At iteration: 1533
+
+At iteration: 1534
+
+At iteration: 1535
+
+At iteration: 1536
+
+At iteration: 1537
+
+At iteration: 1538
+
+At iteration: 1539
+
+At iteration: 1540
+
+At iteration: 1541
+
+At iteration: 1542
+
+At iteration: 1543
+
+At iteration: 1544
+
+At iteration: 1545
+
+At iteration: 1546
+
+At iteration: 1547
+
+At iteration: 1548
+
+At iteration: 1549
+
+Smoothing after 50
+0.00030  1.55 l 604.49  | 0.184    93.333    100.000    0.9556    0.1000 | 0.233    93.778    0.968 | 0.188     88.889    0.944 |  0 hr 32 min  0 1549
+
+At iteration: 1550
+
+At iteration: 1551
+
+At iteration: 1552
+
+At iteration: 1553
+
+At iteration: 1554
+
+At iteration: 1555
+
+At iteration: 1556
+
+At iteration: 1557
+
+At iteration: 1558
+
+At iteration: 1559
+
+At iteration: 1560
+
+At iteration: 1561
+
+At iteration: 1562
+
+At iteration: 1563
+
+At iteration: 1564
+
+At iteration: 1565
+
+At iteration: 1566
+
+At iteration: 1567
+
+At iteration: 1568
+
+At iteration: 1569
+
+At iteration: 1570
+
+At iteration: 1571
+
+At iteration: 1572
+
+At iteration: 1573
+
+At iteration: 1574
+
+At iteration: 1575
+
+At iteration: 1576
+
+At iteration: 1577
+
+At iteration: 1578
+
+At iteration: 1579
+
+At iteration: 1580
+
+At iteration: 1581
+
+At iteration: 1582
+
+At iteration: 1583
+
+At iteration: 1584
+
+At iteration: 1585
+
+At iteration: 1586
+
+At iteration: 1587
+
+At iteration: 1588
+
+At iteration: 1589
+
+At iteration: 1590
+
+At iteration: 1591
+
+At iteration: 1592
+
+At iteration: 1593
+
+At iteration: 1594
+
+At iteration: 1595
+
+At iteration: 1596
+
+At iteration: 1597
+
+At iteration: 1598
+
+At iteration: 1599
+
+Smoothing after 50
+0.00030  1.60 l 624.00  | 0.184    93.333    100.000    0.9556    0.1000 | 0.226    95.111    0.972 | 0.211     100.000    1.000 |  0 hr 33 min  0 1599
+
+At iteration: 1600
+0.00030  1.60 v 624.39  | 0.201    93.333    100.000    0.9556    0.1000 | 0.226    95.111    0.972 | 0.211     100.000    1.000 |  0 hr 33 min
+
+At iteration: 1601
+
+At iteration: 1602
+
+At iteration: 1603
+
+At iteration: 1604
+
+At iteration: 1605
+
+At iteration: 1606
+
+At iteration: 1607
+
+At iteration: 1608
+
+At iteration: 1609
+
+At iteration: 1610
+
+At iteration: 1611
+
+At iteration: 1612
+
+At iteration: 1613
+
+At iteration: 1614
+
+At iteration: 1615
+
+At iteration: 1616
+
+At iteration: 1617
+
+At iteration: 1618
+
+At iteration: 1619
+
+At iteration: 1620
+
+At iteration: 1621
+
+At iteration: 1622
+
+At iteration: 1623
+
+At iteration: 1624
+
+At iteration: 1625
+
+At iteration: 1626
+
+At iteration: 1627
+
+At iteration: 1628
+
+At iteration: 1629
+
+At iteration: 1630
+
+At iteration: 1631
+
+At iteration: 1632
+
+At iteration: 1633
+
+At iteration: 1634
+
+At iteration: 1635
+
+At iteration: 1636
+
+At iteration: 1637
+
+At iteration: 1638
+
+At iteration: 1639
+
+At iteration: 1640
+
+At iteration: 1641
+
+At iteration: 1642
+
+At iteration: 1643
+
+At iteration: 1644
+
+At iteration: 1645
+
+At iteration: 1646
+
+At iteration: 1647
+
+At iteration: 1648
+
+At iteration: 1649
+
+Smoothing after 50
+0.00030  1.65 l 643.51  | 0.201    93.333    100.000    0.9556    0.1000 | 0.203    95.111    0.974 | 0.271     88.889    0.944 |  0 hr 34 min  0 1649
+
+At iteration: 1650
+
+At iteration: 1651
+
+At iteration: 1652
+
+At iteration: 1653
+
+At iteration: 1654
+
+At iteration: 1655
+
+At iteration: 1656
+
+At iteration: 1657
+
+At iteration: 1658
+
+At iteration: 1659
+
+At iteration: 1660
+
+At iteration: 1661
+
+At iteration: 1662
+
+At iteration: 1663
+
+At iteration: 1664
+
+At iteration: 1665
+
+At iteration: 1666
+
+At iteration: 1667
+
+At iteration: 1668
+
+At iteration: 1669
+
+At iteration: 1670
+
+At iteration: 1671
+
+At iteration: 1672
+
+At iteration: 1673
+
+At iteration: 1674
+
+At iteration: 1675
+
+At iteration: 1676
+
+At iteration: 1677
+
+At iteration: 1678
+
+At iteration: 1679
+
+At iteration: 1680
+
+At iteration: 1681
+
+At iteration: 1682
+
+At iteration: 1683
+
+At iteration: 1684
+
+At iteration: 1685
+
+At iteration: 1686
+
+At iteration: 1687
+
+At iteration: 1688
+
+At iteration: 1689
+
+At iteration: 1690
+
+At iteration: 1691
+
+At iteration: 1692
+
+At iteration: 1693
+
+At iteration: 1694
+
+At iteration: 1695
+
+At iteration: 1696
+
+At iteration: 1697
+
+At iteration: 1698
+
+At iteration: 1699
+
+Smoothing after 50
+0.00030  1.70 l 663.02  | 0.201    93.333    100.000    0.9556    0.1000 | 0.231    93.778    0.967 | 0.136     100.000    1.000 |  0 hr 35 min  0 1699
+
+At iteration: 1700
+
+At iteration: 1701
+
+At iteration: 1702
+
+At iteration: 1703
+
+At iteration: 1704
+
+At iteration: 1705
+
+At iteration: 1706
+
+At iteration: 1707
+
+At iteration: 1708
+
+At iteration: 1709
+
+At iteration: 1710
+
+At iteration: 1711
+
+At iteration: 1712
+
+At iteration: 1713
+
+At iteration: 1714
+
+At iteration: 1715
+
+At iteration: 1716
+
+At iteration: 1717
+
+At iteration: 1718
+
+At iteration: 1719
+
+At iteration: 1720
+
+At iteration: 1721
+
+At iteration: 1722
+
+At iteration: 1723
+
+At iteration: 1724
+
+At iteration: 1725
+
+At iteration: 1726
+
+At iteration: 1727
+
+At iteration: 1728
+
+At iteration: 1729
+
+At iteration: 1730
+
+At iteration: 1731
+
+At iteration: 1732
+
+At iteration: 1733
+
+At iteration: 1734
+
+At iteration: 1735
+
+At iteration: 1736
+
+At iteration: 1737
+
+At iteration: 1738
+
+At iteration: 1739
+
+At iteration: 1740
+
+At iteration: 1741
+
+At iteration: 1742
+
+At iteration: 1743
+
+At iteration: 1744
+
+At iteration: 1745
+
+At iteration: 1746
+
+At iteration: 1747
+
+At iteration: 1748
+
+At iteration: 1749
+
+Smoothing after 50
+0.00030  1.75 l 682.54  | 0.201    93.333    100.000    0.9556    0.1000 | 0.188    95.556    0.977 | 0.105     100.000    1.000 |  0 hr 36 min  0 1749
+
+At iteration: 1750
+
+At iteration: 1751
+
+At iteration: 1752
+
+At iteration: 1753
+
+At iteration: 1754
+
+At iteration: 1755
+
+At iteration: 1756
+
+At iteration: 1757
+
+At iteration: 1758
+
+At iteration: 1759
+
+At iteration: 1760
+
+At iteration: 1761
+
+At iteration: 1762
+
+At iteration: 1763
+
+At iteration: 1764
+
+At iteration: 1765
+
+At iteration: 1766
+
+At iteration: 1767
+
+At iteration: 1768
+
+At iteration: 1769
+
+At iteration: 1770
+
+At iteration: 1771
+
+At iteration: 1772
+
+At iteration: 1773
+
+At iteration: 1774
+
+At iteration: 1775
+
+At iteration: 1776
+
+At iteration: 1777
+
+At iteration: 1778
+
+At iteration: 1779
+
+At iteration: 1780
+
+At iteration: 1781
+
+At iteration: 1782
+
+At iteration: 1783
+
+At iteration: 1784
+
+At iteration: 1785
+
+At iteration: 1786
+
+At iteration: 1787
+
+At iteration: 1788
+
+At iteration: 1789
+
+At iteration: 1790
+
+At iteration: 1791
+
+At iteration: 1792
+
+At iteration: 1793
+
+At iteration: 1794
+
+At iteration: 1795
+
+At iteration: 1796
+
+At iteration: 1797
+
+At iteration: 1798
+
+At iteration: 1799
+
+Smoothing after 50
+0.00030  1.80 l 702.05  | 0.201    93.333    100.000    0.9556    0.1000 | 0.182    96.667    0.981 | 0.262     88.889    0.926 |  0 hr 37 min  0 1799
+
+At iteration: 1800
+0.00030  1.80 v 702.44  | 0.144    93.333    100.000    0.9667    0.1000 | 0.182    96.667    0.981 | 0.262     88.889    0.926 |  0 hr 38 min
+
+At iteration: 1801
+
+At iteration: 1802
+
+At iteration: 1803
+
+At iteration: 1804
+
+At iteration: 1805
+
+At iteration: 1806
+
+At iteration: 1807
+
+At iteration: 1808
+
+At iteration: 1809
+
+At iteration: 1810
+
+At iteration: 1811
+
+At iteration: 1812
+
+At iteration: 1813
+
+At iteration: 1814
+
+At iteration: 1815
+
+At iteration: 1816
+
+At iteration: 1817
+
+At iteration: 1818
+
+At iteration: 1819
+
+At iteration: 1820
+
+At iteration: 1821
+
+At iteration: 1822
+
+At iteration: 1823
+
+At iteration: 1824
+
+At iteration: 1825
+
+At iteration: 1826
+
+At iteration: 1827
+
+At iteration: 1828
+
+At iteration: 1829
+
+At iteration: 1830
+
+At iteration: 1831
+
+At iteration: 1832
+
+At iteration: 1833
+
+At iteration: 1834
+
+At iteration: 1835
+
+At iteration: 1836
+
+At iteration: 1837
+
+At iteration: 1838
+
+At iteration: 1839
+
+At iteration: 1840
+
+At iteration: 1841
+
+At iteration: 1842
+
+At iteration: 1843
+
+At iteration: 1844
+
+At iteration: 1845
+
+At iteration: 1846
+
+At iteration: 1847
+
+At iteration: 1848
+
+At iteration: 1849
+
+Smoothing after 50
+0.00030  1.85 l 721.56  | 0.144    93.333    100.000    0.9667    0.1000 | 0.240    91.778    0.955 | 0.197     100.000    1.000 |  0 hr 39 min  0 1849
+
+At iteration: 1850
+
+At iteration: 1851
+
+At iteration: 1852
+
+At iteration: 1853
+
+At iteration: 1854
+
+At iteration: 1855
+
+At iteration: 1856
+
+At iteration: 1857
+
+At iteration: 1858
+
+At iteration: 1859
+
+At iteration: 1860
+
+At iteration: 1861
+
+At iteration: 1862
+
+At iteration: 1863
+
+At iteration: 1864
+
+At iteration: 1865
+
+At iteration: 1866
+
+At iteration: 1867
+
+At iteration: 1868
+
+At iteration: 1869
+
+At iteration: 1870
+
+At iteration: 1871
+
+At iteration: 1872
+
+At iteration: 1873
+
+At iteration: 1874
+
+At iteration: 1875
+
+At iteration: 1876
+
+At iteration: 1877
+
+At iteration: 1878
+
+At iteration: 1879
+
+At iteration: 1880
+
+At iteration: 1881
+
+At iteration: 1882
+
+At iteration: 1883
+
+At iteration: 1884
+
+At iteration: 1885
+
+At iteration: 1886
+
+At iteration: 1887
+
+At iteration: 1888
+
+At iteration: 1889
+
+At iteration: 1890
+
+At iteration: 1891
+
+At iteration: 1892
+
+At iteration: 1893
+
+At iteration: 1894
+
+At iteration: 1895
+
+At iteration: 1896
+
+At iteration: 1897
+
+At iteration: 1898
+
+At iteration: 1899
+
+Smoothing after 50
+0.00030  1.90 l 741.07  | 0.144    93.333    100.000    0.9667    0.1000 | 0.184    95.778    0.977 | 0.099     100.000    1.000 |  0 hr 40 min  0 1899
+
+At iteration: 1900
+
+At iteration: 1901
+
+At iteration: 1902
+
+At iteration: 1903
+
+At iteration: 1904
+
+At iteration: 1905
+
+At iteration: 1906
+
+At iteration: 1907
+
+At iteration: 1908
+
+At iteration: 1909
+
+At iteration: 1910
+
+At iteration: 1911
+
+At iteration: 1912
+
+At iteration: 1913
+
+At iteration: 1914
+
+At iteration: 1915
+
+At iteration: 1916
+
+At iteration: 1917
+
+At iteration: 1918
+
+At iteration: 1919
+
+At iteration: 1920
+
+At iteration: 1921
+
+At iteration: 1922
+
+At iteration: 1923
+
+At iteration: 1924
+
+At iteration: 1925
+
+At iteration: 1926
+
+At iteration: 1927
+
+At iteration: 1928
+
+At iteration: 1929
+
+At iteration: 1930
+
+At iteration: 1931
+
+At iteration: 1932
+
+At iteration: 1933
+
+At iteration: 1934
+
+At iteration: 1935
+
+At iteration: 1936
+
+At iteration: 1937
+
+At iteration: 1938
+
+At iteration: 1939
+
+At iteration: 1940
+
+At iteration: 1941
+
+At iteration: 1942
+
+At iteration: 1943
+
+At iteration: 1944
+
+At iteration: 1945
+
+At iteration: 1946
+
+At iteration: 1947
+
+At iteration: 1948
+
+At iteration: 1949
+
+Smoothing after 50
+0.00030  1.95 l 760.59  | 0.144    93.333    100.000    0.9667    0.1000 | 0.154    96.667    0.981 | 0.092     100.000    1.000 |  0 hr 41 min  0 1949
+
+At iteration: 1950
+
+At iteration: 1951
+
+At iteration: 1952
+
+At iteration: 1953
+
+At iteration: 1954
+
+At iteration: 1955
+
+At iteration: 1956
+
+At iteration: 1957
+
+At iteration: 1958
+
+At iteration: 1959
+
+At iteration: 1960
+
+At iteration: 1961
+
+At iteration: 1962
+
+At iteration: 1963
+
+At iteration: 1964
+
+At iteration: 1965
+
+At iteration: 1966
+
+At iteration: 1967
+
+At iteration: 1968
+
+At iteration: 1969
+
+At iteration: 1970
+
+At iteration: 1971
+
+At iteration: 1972
+
+At iteration: 1973
+
+At iteration: 1974
+
+At iteration: 1975
+
+At iteration: 1976
+
+At iteration: 1977
+
+At iteration: 1978
+
+At iteration: 1979
+
+At iteration: 1980
+
+At iteration: 1981
+
+At iteration: 1982
+
+At iteration: 1983
+
+At iteration: 1984
+
+At iteration: 1985
+
+At iteration: 1986
+
+At iteration: 1987
+
+At iteration: 1988
+
+At iteration: 1989
+
+At iteration: 1990
+
+At iteration: 1991
+
+At iteration: 1992
+
+At iteration: 1993
+
+At iteration: 1994
+
+At iteration: 1995
+
+At iteration: 1996
+
+At iteration: 1997
+
+At iteration: 1998
+
+At iteration: 1999
+
+Smoothing after 50
+0.00030  2.00 l 780.10  | 0.144    93.333    100.000    0.9667    0.1000 | 0.145    96.444    0.980 | 0.155     100.000    1.000 |  0 hr 42 min  0 1999
+
+At iteration: 2000
+0.00030  2.00 v 780.49  | 0.141    100.000    100.000    1.0000    0.1000 | 0.145    96.444    0.980 | 0.155     100.000    1.000 |  0 hr 42 min
+
+At iteration: 2001
+
+At iteration: 2002
+
+At iteration: 2003
+
+At iteration: 2004
+
+At iteration: 2005
+
+At iteration: 2006
+
+At iteration: 2007
+
+At iteration: 2008
+
+At iteration: 2009
+
+At iteration: 2010
+
+At iteration: 2011
+
+At iteration: 2012
+
+At iteration: 2013
+
+At iteration: 2014
+
+At iteration: 2015
+
+At iteration: 2016
+
+At iteration: 2017
+
+At iteration: 2018
+
+At iteration: 2019
+
+At iteration: 2020
+
+At iteration: 2021
+
+At iteration: 2022
+
+At iteration: 2023
+
+At iteration: 2024
+
+At iteration: 2025
+
+At iteration: 2026
+
+At iteration: 2027
+
+At iteration: 2028
+
+At iteration: 2029
+
+At iteration: 2030
+
+At iteration: 2031
+
+At iteration: 2032
+
+At iteration: 2033
+
+At iteration: 2034
+
+At iteration: 2035
+
+At iteration: 2036
+
+At iteration: 2037
+
+At iteration: 2038
+
+At iteration: 2039
+
+At iteration: 2040
+
+At iteration: 2041
+
+At iteration: 2042
+
+At iteration: 2043
+
+At iteration: 2044
+
+At iteration: 2045
+
+At iteration: 2046
+
+At iteration: 2047
+
+At iteration: 2048
+
+At iteration: 2049
+
+Smoothing after 50
+0.00030  2.05 l 799.61  | 0.141    100.000    100.000    1.0000    0.1000 | 0.170    95.778    0.976 | 0.140     100.000    1.000 |  0 hr 43 min  0 2049
+
+At iteration: 2050
+
+At iteration: 2051
+
+At iteration: 2052
+
+At iteration: 2053
+
+At iteration: 2054
+
+At iteration: 2055
+
+At iteration: 2056
+
+At iteration: 2057
+
+At iteration: 2058
+
+At iteration: 2059
+
+At iteration: 2060
+
+At iteration: 2061
+
+At iteration: 2062
+
+At iteration: 2063
+
+At iteration: 2064
+
+At iteration: 2065
+
+At iteration: 2066
+
+At iteration: 2067
+
+At iteration: 2068
+
+At iteration: 2069
+
+At iteration: 2070
+
+At iteration: 2071
+
+At iteration: 2072
+
+At iteration: 2073
+
+At iteration: 2074
+
+At iteration: 2075
+
+At iteration: 2076
+
+At iteration: 2077
+
+At iteration: 2078
+
+At iteration: 2079
+
+At iteration: 2080
+
+At iteration: 2081
+
+At iteration: 2082
+
+At iteration: 2083
+
+At iteration: 2084
+
+At iteration: 2085
+
+At iteration: 2086
+
+At iteration: 2087
+
+At iteration: 2088
+
+At iteration: 2089
+
+At iteration: 2090
+
+At iteration: 2091
+
+At iteration: 2092
+
+At iteration: 2093
+
+At iteration: 2094
+
+At iteration: 2095
+
+At iteration: 2096
+
+At iteration: 2097
+
+At iteration: 2098
+
+At iteration: 2099
+
+Smoothing after 50
+0.00030  2.10 l 819.12  | 0.141    100.000    100.000    1.0000    0.1000 | 0.104    98.444    0.991 | 0.174     88.889    0.944 |  0 hr 44 min  0 2099
+
+At iteration: 2100
+
+At iteration: 2101
+
+At iteration: 2102
+
+At iteration: 2103
+
+At iteration: 2104
+
+At iteration: 2105
+
+At iteration: 2106
+
+At iteration: 2107
+
+At iteration: 2108
+
+At iteration: 2109
+
+At iteration: 2110
+
+At iteration: 2111
+
+At iteration: 2112
+
+At iteration: 2113
+
+At iteration: 2114
+
+At iteration: 2115
+
+At iteration: 2116
+
+At iteration: 2117
+
+At iteration: 2118
+
+At iteration: 2119
+
+At iteration: 2120
+
+At iteration: 2121
+
+At iteration: 2122
+
+At iteration: 2123
+
+At iteration: 2124
+
+At iteration: 2125
+
+At iteration: 2126
+
+At iteration: 2127
+
+At iteration: 2128
+
+At iteration: 2129
+
+At iteration: 2130
+
+At iteration: 2131
+
+At iteration: 2132
+
+At iteration: 2133
+
+At iteration: 2134
+
+At iteration: 2135
+
+At iteration: 2136
+
+At iteration: 2137
+
+At iteration: 2138
+
+At iteration: 2139
+
+At iteration: 2140
+
+At iteration: 2141
+
+At iteration: 2142
+
+At iteration: 2143
+
+At iteration: 2144
+
+At iteration: 2145
+
+At iteration: 2146
+
+At iteration: 2147
+
+At iteration: 2148
+
+At iteration: 2149
+
+Smoothing after 50
+0.00030  2.15 l 838.63  | 0.141    100.000    100.000    1.0000    0.1000 | 0.156    96.222    0.976 | 0.065     100.000    1.000 |  0 hr 45 min  0 2149
+
+At iteration: 2150
+
+At iteration: 2151
+
+At iteration: 2152
+
+At iteration: 2153
+
+At iteration: 2154
+
+At iteration: 2155
+
+At iteration: 2156
+
+At iteration: 2157
+
+At iteration: 2158
+
+At iteration: 2159
+
+At iteration: 2160
+
+At iteration: 2161
+
+At iteration: 2162
+
+At iteration: 2163
+
+At iteration: 2164
+
+At iteration: 2165
+
+At iteration: 2166
+
+At iteration: 2167
+
+At iteration: 2168
+
+At iteration: 2169
+
+At iteration: 2170
+
+At iteration: 2171
+
+At iteration: 2172
+
+At iteration: 2173
+
+At iteration: 2174
+
+At iteration: 2175
+
+At iteration: 2176
+
+At iteration: 2177
+
+At iteration: 2178
+
+At iteration: 2179
+
+At iteration: 2180
+
+At iteration: 2181
+
+At iteration: 2182
+
+At iteration: 2183
+
+At iteration: 2184
+
+At iteration: 2185
+
+At iteration: 2186
+
+At iteration: 2187
+
+At iteration: 2188
+
+At iteration: 2189
+
+At iteration: 2190
+
+At iteration: 2191
+
+At iteration: 2192
+
+At iteration: 2193
+
+At iteration: 2194
+
+At iteration: 2195
+
+At iteration: 2196
+
+At iteration: 2197
+
+At iteration: 2198
+
+At iteration: 2199
+
+Smoothing after 50
+0.00030  2.20 l 858.15  | 0.141    100.000    100.000    1.0000    0.1000 | 0.161    94.667    0.971 | 0.094     100.000    1.000 |  0 hr 46 min  0 2199
+
+At iteration: 2200
+0.00030  2.20 v 858.54  | 0.158    100.000    100.000    1.0000    0.1000 | 0.161    94.667    0.971 | 0.094     100.000    1.000 |  0 hr 46 min
+
+At iteration: 2201
+
+At iteration: 2202
+
+At iteration: 2203
+
+At iteration: 2204
+
+At iteration: 2205
+
+At iteration: 2206
+
+At iteration: 2207
+
+At iteration: 2208
+
+At iteration: 2209
+
+At iteration: 2210
+
+At iteration: 2211
+
+At iteration: 2212
+
+At iteration: 2213
+
+At iteration: 2214
+
+At iteration: 2215
+
+At iteration: 2216
+
+At iteration: 2217
+
+At iteration: 2218
+
+At iteration: 2219
+
+At iteration: 2220
+
+At iteration: 2221
+
+At iteration: 2222
+
+At iteration: 2223
+
+At iteration: 2224
+
+At iteration: 2225
+
+At iteration: 2226
+
+At iteration: 2227
+
+At iteration: 2228
+
+At iteration: 2229
+
+At iteration: 2230
+
+At iteration: 2231
+
+At iteration: 2232
+
+At iteration: 2233
+
+At iteration: 2234
+
+At iteration: 2235
+
+At iteration: 2236
+
+At iteration: 2237
+
+At iteration: 2238
+
+At iteration: 2239
+
+At iteration: 2240
+
+At iteration: 2241
+
+At iteration: 2242
+
+At iteration: 2243
+
+At iteration: 2244
+
+At iteration: 2245
+
+At iteration: 2246
+
+At iteration: 2247
+
+At iteration: 2248
+
+At iteration: 2249
+
+Smoothing after 50
+0.00030  2.25 l 877.66  | 0.158    100.000    100.000    1.0000    0.1000 | 0.147    96.444    0.980 | 0.531     88.889    0.926 |  0 hr 47 min  0 2249
+
+At iteration: 2250
+
+At iteration: 2251
+
+At iteration: 2252
+
+At iteration: 2253
+
+At iteration: 2254
+
+At iteration: 2255
+
+At iteration: 2256
+
+At iteration: 2257
+
+At iteration: 2258
+
+At iteration: 2259
+
+At iteration: 2260
+
+At iteration: 2261
+
+At iteration: 2262
+
+At iteration: 2263
+
+At iteration: 2264
+
+At iteration: 2265
+
+At iteration: 2266
+
+At iteration: 2267
+
+At iteration: 2268
+
+At iteration: 2269
+
+At iteration: 2270
+
+At iteration: 2271
+
+At iteration: 2272
+
+At iteration: 2273
+
+At iteration: 2274
+
+At iteration: 2275
+
+At iteration: 2276
+
+At iteration: 2277
+
+At iteration: 2278
+
+At iteration: 2279
+
+At iteration: 2280
+
+At iteration: 2281
+
+At iteration: 2282
+
+At iteration: 2283
+
+At iteration: 2284
+
+At iteration: 2285
+
+At iteration: 2286
+
+At iteration: 2287
+
+At iteration: 2288
+
+At iteration: 2289
+
+At iteration: 2290
+
+At iteration: 2291
+
+At iteration: 2292
+
+At iteration: 2293
+
+At iteration: 2294
+
+At iteration: 2295
+
+At iteration: 2296
+
+At iteration: 2297
+
+At iteration: 2298
+
+At iteration: 2299
+
+Smoothing after 50
+0.00030  2.30 l 897.17  | 0.158    100.000    100.000    1.0000    0.1000 | 0.111    96.667    0.981 | 0.057     100.000    1.000 |  0 hr 48 min  0 2299
+
+At iteration: 2300
+
+At iteration: 2301
+
+At iteration: 2302
+
+At iteration: 2303
+
+At iteration: 2304
+
+At iteration: 2305
+
+At iteration: 2306
+
+At iteration: 2307
+
+At iteration: 2308
+
+At iteration: 2309
+
+At iteration: 2310
+
+At iteration: 2311
+
+At iteration: 2312
+
+At iteration: 2313
+
+At iteration: 2314
+
+At iteration: 2315
+
+At iteration: 2316
+
+At iteration: 2317
+
+At iteration: 2318
+
+At iteration: 2319
+
+At iteration: 2320
+
+At iteration: 2321
+
+At iteration: 2322
+
+At iteration: 2323
+
+At iteration: 2324
+
+At iteration: 2325
+
+At iteration: 2326
+
+At iteration: 2327
+
+At iteration: 2328
+
+At iteration: 2329
+
+At iteration: 2330
+
+At iteration: 2331
+
+At iteration: 2332
+
+At iteration: 2333
+
+At iteration: 2334
+
+At iteration: 2335
+
+At iteration: 2336
+
+At iteration: 2337
+
+At iteration: 2338
+
+At iteration: 2339
+
+At iteration: 2340
+
+At iteration: 2341
+
+At iteration: 2342
+
+At iteration: 2343
+
+At iteration: 2344
+
+At iteration: 2345
+
+At iteration: 2346
+
+At iteration: 2347
+
+At iteration: 2348
+
+At iteration: 2349
+
+Smoothing after 50
+0.00030  2.35 l 916.68  | 0.158    100.000    100.000    1.0000    0.1000 | 0.102    98.000    0.989 | 0.067     100.000    1.000 |  0 hr 49 min  0 2349
+
+At iteration: 2350
+
+At iteration: 2351
+
+At iteration: 2352
+
+At iteration: 2353
+
+At iteration: 2354
+
+At iteration: 2355
+
+At iteration: 2356
+
+At iteration: 2357
+
+At iteration: 2358
+
+At iteration: 2359
+
+At iteration: 2360
+
+At iteration: 2361
+
+At iteration: 2362
+
+At iteration: 2363
+
+At iteration: 2364
+
+At iteration: 2365
+
+At iteration: 2366
+
+At iteration: 2367
+
+At iteration: 2368
+
+At iteration: 2369
+
+At iteration: 2370
+
+At iteration: 2371
+
+At iteration: 2372
+
+At iteration: 2373
+
+At iteration: 2374
+
+At iteration: 2375
+
+At iteration: 2376
+
+At iteration: 2377
+
+At iteration: 2378
+
+At iteration: 2379
+
+At iteration: 2380
+
+At iteration: 2381
+
+At iteration: 2382
+
+At iteration: 2383
+
+At iteration: 2384
+
+At iteration: 2385
+
+At iteration: 2386
+
+At iteration: 2387
+
+At iteration: 2388
+
+At iteration: 2389
+
+At iteration: 2390
+
+At iteration: 2391
+
+At iteration: 2392
+
+At iteration: 2393
+
+At iteration: 2394
+
+At iteration: 2395
+
+At iteration: 2396
+
+At iteration: 2397
+
+At iteration: 2398
+
+At iteration: 2399
+
+Smoothing after 50
+0.00030  2.40 l 936.20  | 0.158    100.000    100.000    1.0000    0.1000 | 0.138    96.667    0.980 | 0.044     100.000    1.000 |  0 hr 50 min  0 2399
+
+At iteration: 2400
+0.00030  2.40 v 936.59  | 0.202    93.333    100.000    0.9500    0.1000 | 0.138    96.667    0.980 | 0.044     100.000    1.000 |  0 hr 50 min
+
+At iteration: 2401
+
+At iteration: 2402
+
+At iteration: 2403
+
+At iteration: 2404
+
+At iteration: 2405
+
+At iteration: 2406
+
+At iteration: 2407
+
+At iteration: 2408
+
+At iteration: 2409
+
+At iteration: 2410
+
+At iteration: 2411
+
+At iteration: 2412
+
+At iteration: 2413
+
+At iteration: 2414
+
+At iteration: 2415
+
+At iteration: 2416
+
+At iteration: 2417
+
+At iteration: 2418
+
+At iteration: 2419
+
+At iteration: 2420
+
+At iteration: 2421
+
+At iteration: 2422
+
+At iteration: 2423
+
+At iteration: 2424
+
+At iteration: 2425
+
+At iteration: 2426
+
+At iteration: 2427
+
+At iteration: 2428
+
+At iteration: 2429
+
+At iteration: 2430
+
+At iteration: 2431
+
+At iteration: 2432
+
+At iteration: 2433
+
+At iteration: 2434
+
+At iteration: 2435
+
+At iteration: 2436
+
+At iteration: 2437
+
+At iteration: 2438
+
+At iteration: 2439
+
+At iteration: 2440
+
+At iteration: 2441
+
+At iteration: 2442
+
+At iteration: 2443
+
+At iteration: 2444
+
+At iteration: 2445
+
+At iteration: 2446
+
+At iteration: 2447
+
+At iteration: 2448
+
+At iteration: 2449
+
+Smoothing after 50
+0.00030  2.45 l 955.71  | 0.202    93.333    100.000    0.9500    0.1000 | 0.116    98.222    0.989 | 0.059     100.000    1.000 |  0 hr 51 min  0 2449
+
+At iteration: 2450
+
+At iteration: 2451
+
+At iteration: 2452
+
+At iteration: 2453
+
+At iteration: 2454
+
+At iteration: 2455
+
+At iteration: 2456
+
+At iteration: 2457
+
+At iteration: 2458
+
+At iteration: 2459
+
+At iteration: 2460
+
+At iteration: 2461
+
+At iteration: 2462
+
+At iteration: 2463
+
+At iteration: 2464
+
+At iteration: 2465
+
+At iteration: 2466
+
+At iteration: 2467
+
+At iteration: 2468
+
+At iteration: 2469
+
+At iteration: 2470
+
+At iteration: 2471
+
+At iteration: 2472
+
+At iteration: 2473
+
+At iteration: 2474
+
+At iteration: 2475
+
+At iteration: 2476
+
+At iteration: 2477
+
+At iteration: 2478
+
+At iteration: 2479
+
+At iteration: 2480
+
+At iteration: 2481
+
+At iteration: 2482
+
+At iteration: 2483
+
+At iteration: 2484
+
+At iteration: 2485
+
+At iteration: 2486
+
+At iteration: 2487
+
+At iteration: 2488
+
+At iteration: 2489
+
+At iteration: 2490
+
+At iteration: 2491
+
+At iteration: 2492
+
+At iteration: 2493
+
+At iteration: 2494
+
+At iteration: 2495
+
+At iteration: 2496
+
+At iteration: 2497
+
+At iteration: 2498
+
+At iteration: 2499
+
+Smoothing after 50
+0.00030  2.50 l 975.22  | 0.202    93.333    100.000    0.9500    0.1000 | 0.134    96.444    0.979 | 0.051     100.000    1.000 |  0 hr 52 min  0 2499
+
+At iteration: 2500
+
+At iteration: 2501
+
+At iteration: 2502
+
+At iteration: 2503
+
+At iteration: 2504
+
+At iteration: 2505
+
+At iteration: 2506
+
+At iteration: 2507
+
+At iteration: 2508
+
+At iteration: 2509
+
+At iteration: 2510
+
+At iteration: 2511
+
+At iteration: 2512
+
+At iteration: 2513
+
+At iteration: 2514
+
+At iteration: 2515
+
+At iteration: 2516
+
+At iteration: 2517
+
+At iteration: 2518
+
+At iteration: 2519
+
+At iteration: 2520
+
+At iteration: 2521
+
+At iteration: 2522
+
+At iteration: 2523
+
+At iteration: 2524
+
+At iteration: 2525
+
+At iteration: 2526
+
+At iteration: 2527
+
+At iteration: 2528
+
+At iteration: 2529
+
+At iteration: 2530
+
+At iteration: 2531
+
+At iteration: 2532
+
+At iteration: 2533
+
+At iteration: 2534
+
+At iteration: 2535
+
+At iteration: 2536
+
+At iteration: 2537
+
+At iteration: 2538
+
+At iteration: 2539
+
+At iteration: 2540
+
+At iteration: 2541
+
+At iteration: 2542
+
+At iteration: 2543
+
+At iteration: 2544
+
+At iteration: 2545
+
+At iteration: 2546
+
+At iteration: 2547
+
+At iteration: 2548
+
+At iteration: 2549
+
+Smoothing after 50
+0.00030  2.55 l 994.73  | 0.202    93.333    100.000    0.9500    0.1000 | 0.124    96.889    0.983 | 0.224     88.889    0.944 |  0 hr 53 min  0 2549
+
+At iteration: 2550
+
+At iteration: 2551
+
+At iteration: 2552
+
+At iteration: 2553
+
+At iteration: 2554
+
+At iteration: 2555
+
+At iteration: 2556
+
+At iteration: 2557
+
+At iteration: 2558
+
+At iteration: 2559
+
+At iteration: 2560
+
+At iteration: 2561
+
+At iteration: 2562
+
+At iteration: 2563
+
+At iteration: 2564
+
+At iteration: 2565
+
+At iteration: 2566
+
+At iteration: 2567
+
+At iteration: 2568
+
+At iteration: 2569
+
+At iteration: 2570
+
+At iteration: 2571
+
+At iteration: 2572
+
+At iteration: 2573
+
+At iteration: 2574
+
+At iteration: 2575
+
+At iteration: 2576
+
+At iteration: 2577
+
+At iteration: 2578
+
+At iteration: 2579
+
+At iteration: 2580
+
+At iteration: 2581
+
+At iteration: 2582
+
+At iteration: 2583
+
+At iteration: 2584
+
+At iteration: 2585
+
+At iteration: 2586
+
+At iteration: 2587
+
+At iteration: 2588
+
+At iteration: 2589
+
+At iteration: 2590
+
+At iteration: 2591
+
+At iteration: 2592
+
+At iteration: 2593
+
+At iteration: 2594
+
+At iteration: 2595
+
+At iteration: 2596
+
+At iteration: 2597
+
+At iteration: 2598
+
+At iteration: 2599
+
+Smoothing after 50
+0.00030  2.60 l 1014.24  | 0.202    93.333    100.000    0.9500    0.1000 | 0.108    96.444    0.981 | 0.053     100.000    1.000 |  0 hr 54 min  0 2599
+
+At iteration: 2600
+0.00030  2.60 v 1014.63  | 0.200    93.333    100.000    0.9500    0.1000 | 0.108    96.444    0.981 | 0.053     100.000    1.000 |  0 hr 54 min
+
+At iteration: 2601
+
+At iteration: 2602
+
+At iteration: 2603
+
+At iteration: 2604
+
+At iteration: 2605
+
+At iteration: 2606
+
+At iteration: 2607
+
+At iteration: 2608
+
+At iteration: 2609
+
+At iteration: 2610
+
+At iteration: 2611
+
+At iteration: 2612
+
+At iteration: 2613
+
+At iteration: 2614
+
+At iteration: 2615
+
+At iteration: 2616
+
+At iteration: 2617
+
+At iteration: 2618
+
+At iteration: 2619
+
+At iteration: 2620
+
+At iteration: 2621
+
+At iteration: 2622
+
+At iteration: 2623
+
+At iteration: 2624
+
+At iteration: 2625
+
+At iteration: 2626
+
+At iteration: 2627
+
+At iteration: 2628
+
+At iteration: 2629
+
+At iteration: 2630
+
+At iteration: 2631
+
+At iteration: 2632
+
+At iteration: 2633
+
+At iteration: 2634
+
+At iteration: 2635
+
+At iteration: 2636
+
+At iteration: 2637
+
+At iteration: 2638
+
+At iteration: 2639
+
+At iteration: 2640
+
+At iteration: 2641
+
+At iteration: 2642
+
+At iteration: 2643
+
+At iteration: 2644
+
+At iteration: 2645
+
+At iteration: 2646
+
+At iteration: 2647
+
+At iteration: 2648
+
+At iteration: 2649
+
+Smoothing after 50
+0.00030  2.65 l 1033.76  | 0.200    93.333    100.000    0.9500    0.1000 | 0.092    97.556    0.986 | 0.178     100.000    1.000 |  0 hr 55 min  0 2649
+
+At iteration: 2650
+
+At iteration: 2651
+
+At iteration: 2652
+
+At iteration: 2653
+
+At iteration: 2654
+
+At iteration: 2655
+
+At iteration: 2656
+
+At iteration: 2657
+
+At iteration: 2658
+
+At iteration: 2659
+
+At iteration: 2660
+
+At iteration: 2661
+
+At iteration: 2662
+
+At iteration: 2663
+
+At iteration: 2664
+
+At iteration: 2665
+
+At iteration: 2666
+
+At iteration: 2667
+
+At iteration: 2668
+
+At iteration: 2669
+
+At iteration: 2670
+
+At iteration: 2671
+
+At iteration: 2672
+
+At iteration: 2673
+
+At iteration: 2674
+
+At iteration: 2675
+
+At iteration: 2676
+
+At iteration: 2677
+
+At iteration: 2678
+
+At iteration: 2679
+
+At iteration: 2680
+
+At iteration: 2681
+
+At iteration: 2682
+
+At iteration: 2683
+
+At iteration: 2684
+
+At iteration: 2685
+
+At iteration: 2686
+
+At iteration: 2687
+
+At iteration: 2688
+
+At iteration: 2689
+
+At iteration: 2690
+
+At iteration: 2691
+
+At iteration: 2692
+
+At iteration: 2693
+
+At iteration: 2694
+
+At iteration: 2695
+
+At iteration: 2696
+
+At iteration: 2697
+
+At iteration: 2698
+
+At iteration: 2699
+
+Smoothing after 50
+0.00030  2.70 l 1053.27  | 0.200    93.333    100.000    0.9500    0.1000 | 0.149    95.778    0.976 | 0.059     100.000    1.000 |  0 hr 56 min  0 2699
+
+At iteration: 2700
+
+At iteration: 2701
+
+At iteration: 2702
+
+At iteration: 2703
+
+At iteration: 2704
+
+At iteration: 2705
+
+At iteration: 2706
+
+At iteration: 2707
+
+At iteration: 2708
+
+At iteration: 2709
+
+At iteration: 2710
+
+At iteration: 2711
+
+At iteration: 2712
+
+At iteration: 2713
+
+At iteration: 2714
+
+At iteration: 2715
+
+At iteration: 2716
+
+At iteration: 2717
+
+At iteration: 2718
+
+At iteration: 2719
+
+At iteration: 2720
+
+At iteration: 2721
+
+At iteration: 2722
+
+At iteration: 2723
+
+At iteration: 2724
+
+At iteration: 2725
+
+At iteration: 2726
+
+At iteration: 2727
+
+At iteration: 2728
+
+At iteration: 2729
+
+At iteration: 2730
+
+At iteration: 2731
+
+At iteration: 2732
+
+At iteration: 2733
+
+At iteration: 2734
+
+At iteration: 2735
+
+At iteration: 2736
+
+At iteration: 2737
+
+At iteration: 2738
+
+At iteration: 2739
+
+At iteration: 2740
+
+At iteration: 2741
+
+At iteration: 2742
+
+At iteration: 2743
+
+At iteration: 2744
+
+At iteration: 2745
+
+At iteration: 2746
+
+At iteration: 2747
+
+At iteration: 2748
+
+At iteration: 2749
+
+Smoothing after 50
+0.00030  2.75 l 1072.78  | 0.200    93.333    100.000    0.9500    0.1000 | 0.117    96.444    0.981 | 0.157     100.000    1.000 |  0 hr 57 min  0 2749
+
+At iteration: 2750
+
+At iteration: 2751
+
+At iteration: 2752
+
+At iteration: 2753
+
+At iteration: 2754
+
+At iteration: 2755
+
+At iteration: 2756
+
+At iteration: 2757
+
+At iteration: 2758
+
+At iteration: 2759
+
+At iteration: 2760
+
+At iteration: 2761
+
+At iteration: 2762
+
+At iteration: 2763
+
+At iteration: 2764
+
+At iteration: 2765
+
+At iteration: 2766
+
+At iteration: 2767
+
+At iteration: 2768
+
+At iteration: 2769
+
+At iteration: 2770
+
+At iteration: 2771
+
+At iteration: 2772
+
+At iteration: 2773
+
+At iteration: 2774
+
+At iteration: 2775
+
+At iteration: 2776
+
+At iteration: 2777
+
+At iteration: 2778
+
+At iteration: 2779
+
+At iteration: 2780
+
+At iteration: 2781
+
+At iteration: 2782
+
+At iteration: 2783
+
+At iteration: 2784
+
+At iteration: 2785
+
+At iteration: 2786
+
+At iteration: 2787
+
+At iteration: 2788
+
+At iteration: 2789
+
+At iteration: 2790
+
+At iteration: 2791
+
+At iteration: 2792
+
+At iteration: 2793
+
+At iteration: 2794
+
+At iteration: 2795
+
+At iteration: 2796
+
+At iteration: 2797
+
+At iteration: 2798
+
+At iteration: 2799
+
+Smoothing after 50
+0.00030  2.80 l 1092.29  | 0.200    93.333    100.000    0.9500    0.1000 | 0.075    98.444    0.992 | 0.434     88.889    0.911 |  0 hr 58 min  0 2799
+
+At iteration: 2800
+0.00030  2.80 v 1092.68  | 0.049    93.333    100.000    0.9667    0.1000 | 0.075    98.444    0.992 | 0.434     88.889    0.911 |  0 hr 58 min
+
+At iteration: 2801
+
+At iteration: 2802
+
+At iteration: 2803
+
+At iteration: 2804
+
+At iteration: 2805
+
+At iteration: 2806
+
+At iteration: 2807
+
+At iteration: 2808
+
+At iteration: 2809
+
+At iteration: 2810
+
+At iteration: 2811
+
+At iteration: 2812
+
+At iteration: 2813
+
+At iteration: 2814
+
+At iteration: 2815
+
+At iteration: 2816
+
+At iteration: 2817
+
+At iteration: 2818
+
+At iteration: 2819
+
+At iteration: 2820
+
+At iteration: 2821
+
+At iteration: 2822
+
+At iteration: 2823
+
+At iteration: 2824
+
+At iteration: 2825
+
+At iteration: 2826
+
+At iteration: 2827
+
+At iteration: 2828
+
+At iteration: 2829
+
+At iteration: 2830
+
+At iteration: 2831
+
+At iteration: 2832
+
+At iteration: 2833
+
+At iteration: 2834
+
+At iteration: 2835
+
+At iteration: 2836
+
+At iteration: 2837
+
+At iteration: 2838
+
+At iteration: 2839
+
+At iteration: 2840
+
+At iteration: 2841
+
+At iteration: 2842
+
+At iteration: 2843
+
+At iteration: 2844
+
+At iteration: 2845
+
+At iteration: 2846
+
+At iteration: 2847
+
+At iteration: 2848
+
+At iteration: 2849
+
+Smoothing after 50
+0.00030  2.85 l 1111.80  | 0.049    93.333    100.000    0.9667    0.1000 | 0.066    98.222    0.991 | 0.050     100.000    1.000 |  0 hr 59 min  0 2849
+
+At iteration: 2850
+
+At iteration: 2851
+
+At iteration: 2852
+
+At iteration: 2853
+
+At iteration: 2854
+
+At iteration: 2855
+
+At iteration: 2856
+
+At iteration: 2857
+
+At iteration: 2858
+
+At iteration: 2859
+
+At iteration: 2860
+
+At iteration: 2861
+
+At iteration: 2862
+
+At iteration: 2863
+
+At iteration: 2864
+
+At iteration: 2865
+
+At iteration: 2866
+
+At iteration: 2867
+
+At iteration: 2868
+
+At iteration: 2869
+
+At iteration: 2870
+
+At iteration: 2871
+
+At iteration: 2872
+
+At iteration: 2873
+
+At iteration: 2874
+
+At iteration: 2875
+
+At iteration: 2876
+
+At iteration: 2877
+
+At iteration: 2878
+
+At iteration: 2879
+
+At iteration: 2880
+
+At iteration: 2881
+
+At iteration: 2882
+
+At iteration: 2883
+
+At iteration: 2884
+
+At iteration: 2885
+
+At iteration: 2886
+
+At iteration: 2887
+
+At iteration: 2888
+
+At iteration: 2889
+
+At iteration: 2890
+
+At iteration: 2891
+
+At iteration: 2892
+
+At iteration: 2893
+
+At iteration: 2894
+
+At iteration: 2895
+
+At iteration: 2896
+
+At iteration: 2897
+
+At iteration: 2898
+
+At iteration: 2899
+
+Smoothing after 50
+0.00030  2.90 l 1131.32  | 0.049    93.333    100.000    0.9667    0.1000 | 0.068    98.667    0.993 | 0.036     100.000    1.000 |  1 hr 01 min  0 2899
+
+At iteration: 2900
+
+At iteration: 2901
+
+At iteration: 2902
+
+At iteration: 2903
+
+At iteration: 2904
+
+At iteration: 2905
+
+At iteration: 2906
+
+At iteration: 2907
+
+At iteration: 2908
+
+At iteration: 2909
+
+At iteration: 2910
+
+At iteration: 2911
+
+At iteration: 2912
+
+At iteration: 2913
+
+At iteration: 2914
+
+At iteration: 2915
+
+At iteration: 2916
+
+At iteration: 2917
+
+At iteration: 2918
+
+At iteration: 2919
+
+At iteration: 2920
+
+At iteration: 2921
+
+At iteration: 2922
+
+At iteration: 2923
+
+At iteration: 2924
+
+At iteration: 2925
+
+At iteration: 2926
+
+At iteration: 2927
+
+At iteration: 2928
+
+At iteration: 2929
+
+At iteration: 2930
+
+At iteration: 2931
+
+At iteration: 2932
+
+At iteration: 2933
+
+At iteration: 2934
+
+At iteration: 2935
+
+At iteration: 2936
+
+At iteration: 2937
+
+At iteration: 2938
+
+At iteration: 2939
+
+At iteration: 2940
+
+At iteration: 2941
+
+At iteration: 2942
+
+At iteration: 2943
+
+At iteration: 2944
+
+At iteration: 2945
+
+At iteration: 2946
+
+At iteration: 2947
+
+At iteration: 2948
+
+At iteration: 2949
+
+Smoothing after 50
+0.00030  2.95 l 1150.83  | 0.049    93.333    100.000    0.9667    0.1000 | 0.055    99.111    0.995 | 0.086     88.889    0.944 |  1 hr 02 min  0 2949
+
+At iteration: 2950
+
+At iteration: 2951
+
+At iteration: 2952
+
+At iteration: 2953
+
+At iteration: 2954
+
+At iteration: 2955
+
+At iteration: 2956
+
+At iteration: 2957
+
+At iteration: 2958
+
+At iteration: 2959
+
+At iteration: 2960
+
+At iteration: 2961
+
+At iteration: 2962
+
+At iteration: 2963
+
+At iteration: 2964
+
+At iteration: 2965
+
+At iteration: 2966
+
+At iteration: 2967
+
+At iteration: 2968
+
+At iteration: 2969
+
+At iteration: 2970
+
+At iteration: 2971
+
+At iteration: 2972
+
+At iteration: 2973
+
+At iteration: 2974
+
+At iteration: 2975
+
+At iteration: 2976
+
+At iteration: 2977
+
+At iteration: 2978
+
+At iteration: 2979
+
+At iteration: 2980
+
+At iteration: 2981
+
+At iteration: 2982
+
+At iteration: 2983
+
+At iteration: 2984
+
+At iteration: 2985
+
+At iteration: 2986
+
+At iteration: 2987
+
+At iteration: 2988
+
+At iteration: 2989
+
+At iteration: 2990
+
+At iteration: 2991
+
+At iteration: 2992
+
+At iteration: 2993
+
+At iteration: 2994
+
+At iteration: 2995
+
+At iteration: 2996
+
+At iteration: 2997
+
+At iteration: 2998
+
+At iteration: 2999
+
+Smoothing after 50
+0.00030  3.00 l 1170.34  | 0.049    93.333    100.000    0.9667    0.1000 | 0.105    96.889    0.982 | 0.027     100.000    1.000 |  1 hr 03 min  0 2999
+
+At iteration: 3000
+0.00030  3.00 v 1170.73  | 0.476    93.333    100.000    0.9500    0.1000 | 0.105    96.889    0.982 | 0.027     100.000    1.000 |  1 hr 03 min
+
+At iteration: 3001
+
+At iteration: 3002
+
+At iteration: 3003
+
+At iteration: 3004
+
+At iteration: 3005
+
+At iteration: 3006
+
+At iteration: 3007
+
+At iteration: 3008
+
+At iteration: 3009
+
+At iteration: 3010
+
+At iteration: 3011
+
+At iteration: 3012
+
+At iteration: 3013
+
+At iteration: 3014
+
+At iteration: 3015
+
+At iteration: 3016
+
+At iteration: 3017
+
+At iteration: 3018
+
+At iteration: 3019
+
+At iteration: 3020
+
+At iteration: 3021
+
+At iteration: 3022
+
+At iteration: 3023
+
+At iteration: 3024
+
+At iteration: 3025
+
+At iteration: 3026
+
+At iteration: 3027
+
+At iteration: 3028
+
+At iteration: 3029
+
+At iteration: 3030
+
+At iteration: 3031
+
+At iteration: 3032
+
+At iteration: 3033
+
+At iteration: 3034
+
+At iteration: 3035
+
+At iteration: 3036
+
+At iteration: 3037
+
+At iteration: 3038
+
+At iteration: 3039
+
+At iteration: 3040
+
+At iteration: 3041
+
+At iteration: 3042
+
+At iteration: 3043
+
+At iteration: 3044
+
+At iteration: 3045
+
+At iteration: 3046
+
+At iteration: 3047
+
+At iteration: 3048
+
+At iteration: 3049
+
+Smoothing after 50
+0.00030  3.05 l 1189.85  | 0.476    93.333    100.000    0.9500    0.1000 | 0.121    97.556    0.985 | 0.048     100.000    1.000 |  1 hr 04 min  0 3049
+
+At iteration: 3050
+
+At iteration: 3051
+
+At iteration: 3052
+
+At iteration: 3053
+
+At iteration: 3054
+
+At iteration: 3055
+
+At iteration: 3056
+
+At iteration: 3057
+
+At iteration: 3058
+
+At iteration: 3059
+
+At iteration: 3060
+
+At iteration: 3061
+
+At iteration: 3062
+
+At iteration: 3063
+
+At iteration: 3064
+
+At iteration: 3065
+
+At iteration: 3066
+
+At iteration: 3067
+
+At iteration: 3068
+
+At iteration: 3069
+
+At iteration: 3070
+
+At iteration: 3071
+
+At iteration: 3072
+
+At iteration: 3073
+
+At iteration: 3074
+
+At iteration: 3075
+
+At iteration: 3076
+
+At iteration: 3077
+
+At iteration: 3078
+
+At iteration: 3079
+
+At iteration: 3080
+
+At iteration: 3081
+
+At iteration: 3082
+
+At iteration: 3083
+
+At iteration: 3084
+
+At iteration: 3085
+
+At iteration: 3086
+
+At iteration: 3087
+
+At iteration: 3088
+
+At iteration: 3089
+
+At iteration: 3090
+
+At iteration: 3091
+
+At iteration: 3092
+
+At iteration: 3093
+
+At iteration: 3094
+
+At iteration: 3095
+
+At iteration: 3096
+
+At iteration: 3097
+
+At iteration: 3098
+
+At iteration: 3099
+
+Smoothing after 50
+0.00030  3.10 l 1209.37  | 0.476    93.333    100.000    0.9500    0.1000 | 0.100    96.889    0.981 | 0.051     100.000    1.000 |  1 hr 05 min  0 3099
+
+At iteration: 3100
+
+At iteration: 3101
+
+At iteration: 3102
+
+At iteration: 3103
+
+At iteration: 3104
+
+At iteration: 3105
+
+At iteration: 3106
+
+At iteration: 3107
+
+At iteration: 3108
+
+At iteration: 3109
+
+At iteration: 3110
+
+At iteration: 3111
+
+At iteration: 3112
+
+At iteration: 3113
+
+At iteration: 3114
+
+At iteration: 3115
+
+At iteration: 3116
+
+At iteration: 3117
+
+At iteration: 3118
+
+At iteration: 3119
+
+At iteration: 3120
+
+At iteration: 3121
+
+At iteration: 3122
+
+At iteration: 3123
+
+At iteration: 3124
+
+At iteration: 3125
+
+At iteration: 3126
+
+At iteration: 3127
+
+At iteration: 3128
+
+At iteration: 3129
+
+At iteration: 3130
+
+At iteration: 3131
+
+At iteration: 3132
+
+At iteration: 3133
+
+At iteration: 3134
+
+At iteration: 3135
+
+At iteration: 3136
+
+At iteration: 3137
+
+At iteration: 3138
+
+At iteration: 3139
+
+At iteration: 3140
+
+At iteration: 3141
+
+At iteration: 3142
+
+At iteration: 3143
+
+At iteration: 3144
+
+At iteration: 3145
+
+At iteration: 3146
+
+At iteration: 3147
+
+At iteration: 3148
+
+At iteration: 3149
+
+Smoothing after 50
+0.00030  3.15 l 1228.88  | 0.476    93.333    100.000    0.9500    0.1000 | 0.076    98.222    0.991 | 0.343     100.000    1.000 |  1 hr 06 min  0 3149
+
+At iteration: 3150
+
+At iteration: 3151
+
+At iteration: 3152
+
+At iteration: 3153
+
+At iteration: 3154
+
+At iteration: 3155
+
+At iteration: 3156
+
+At iteration: 3157
+
+At iteration: 3158
+
+At iteration: 3159
+
+At iteration: 3160
+
+At iteration: 3161
+
+At iteration: 3162
+
+At iteration: 3163
+
+At iteration: 3164
+
+At iteration: 3165
+
+At iteration: 3166
+
+At iteration: 3167
+
+At iteration: 3168
+
+At iteration: 3169
+
+At iteration: 3170
+
+At iteration: 3171
+
+At iteration: 3172
+
+At iteration: 3173
+
+At iteration: 3174
+
+At iteration: 3175
+
+At iteration: 3176
+
+At iteration: 3177
+
+At iteration: 3178
+
+At iteration: 3179
+
+At iteration: 3180
+
+At iteration: 3181
+
+At iteration: 3182
+
+At iteration: 3183
+
+At iteration: 3184
+
+At iteration: 3185
+
+At iteration: 3186
+
+At iteration: 3187
+
+At iteration: 3188
+
+At iteration: 3189
+
+At iteration: 3190
+
+At iteration: 3191
+
+At iteration: 3192
+
+At iteration: 3193
+
+At iteration: 3194
+
+At iteration: 3195
+
+At iteration: 3196
+
+At iteration: 3197
+
+At iteration: 3198
+
+At iteration: 3199
+
+Smoothing after 50
+0.00030  3.20 l 1248.39  | 0.476    93.333    100.000    0.9500    0.1000 | 0.114    97.333    0.984 | 0.087     100.000    1.000 |  1 hr 07 min  0 3199
+
+At iteration: 3200
+0.00030  3.20 v 1248.78  | 0.254    100.000    100.000    1.0000    0.1000 | 0.114    97.333    0.984 | 0.087     100.000    1.000 |  1 hr 07 min
+
+At iteration: 3201
+
+At iteration: 3202
+
+At iteration: 3203
+
+At iteration: 3204
+
+At iteration: 3205
+
+At iteration: 3206
+
+At iteration: 3207
+
+At iteration: 3208
+
+At iteration: 3209
+
+At iteration: 3210
+
+At iteration: 3211
+
+At iteration: 3212
+
+At iteration: 3213
+
+At iteration: 3214
+
+At iteration: 3215
+
+At iteration: 3216
+
+At iteration: 3217
+
+At iteration: 3218
+
+At iteration: 3219
+
+At iteration: 3220
+
+At iteration: 3221
+
+At iteration: 3222
+
+At iteration: 3223
+
+At iteration: 3224
+
+At iteration: 3225
+
+At iteration: 3226
+
+At iteration: 3227
+
+At iteration: 3228
+
+At iteration: 3229
+
+At iteration: 3230
+
+At iteration: 3231
+
+At iteration: 3232
+
+At iteration: 3233
+
+At iteration: 3234
+
+At iteration: 3235
+
+At iteration: 3236
+
+At iteration: 3237
+
+At iteration: 3238
+
+At iteration: 3239
+
+At iteration: 3240
+
+At iteration: 3241
+
+At iteration: 3242
+
+At iteration: 3243
+
+At iteration: 3244
+
+At iteration: 3245
+
+At iteration: 3246
+
+At iteration: 3247
+
+At iteration: 3248
+
+At iteration: 3249
+
+Smoothing after 50
+0.00030  3.25 l 1267.90  | 0.254    100.000    100.000    1.0000    0.1000 | 0.102    97.111    0.984 | 0.512     88.889    0.926 |  1 hr 08 min  0 3249
+
+At iteration: 3250
+
+At iteration: 3251
+
+At iteration: 3252
+
+At iteration: 3253
+
+At iteration: 3254
+
+At iteration: 3255
+
+At iteration: 3256
+
+At iteration: 3257
+
+At iteration: 3258
+
+At iteration: 3259
+
+At iteration: 3260
+
+At iteration: 3261
+
+At iteration: 3262
+
+At iteration: 3263
+
+At iteration: 3264
+
+At iteration: 3265
+
+At iteration: 3266
+
+At iteration: 3267
+
+At iteration: 3268
+
+At iteration: 3269
+
+At iteration: 3270
+
+At iteration: 3271
+
+At iteration: 3272
+
+At iteration: 3273
+
+At iteration: 3274
+
+At iteration: 3275
+
+At iteration: 3276
+
+At iteration: 3277
+
+At iteration: 3278
+
+At iteration: 3279
+
+At iteration: 3280
+
+At iteration: 3281
+
+At iteration: 3282
+
+At iteration: 3283
+
+At iteration: 3284
+
+At iteration: 3285
+
+At iteration: 3286
+
+At iteration: 3287
+
+At iteration: 3288
+
+At iteration: 3289
+
+At iteration: 3290
+
+At iteration: 3291
+
+At iteration: 3292
+
+At iteration: 3293
+
+At iteration: 3294
+
+At iteration: 3295
+
+At iteration: 3296
+
+At iteration: 3297
+
+At iteration: 3298
+
+At iteration: 3299
+
+Smoothing after 50
+0.00030  3.30 l 1287.41  | 0.254    100.000    100.000    1.0000    0.1000 | 0.063    98.667    0.992 | 0.020     100.000    1.000 |  1 hr 09 min  0 3299
+
+At iteration: 3300
+
+At iteration: 3301
+
+At iteration: 3302
+
+At iteration: 3303
+
+At iteration: 3304
+
+At iteration: 3305
+
+At iteration: 3306
+
+At iteration: 3307
+
+At iteration: 3308
+
+At iteration: 3309
+
+At iteration: 3310
+
+At iteration: 3311
+
+At iteration: 3312
+
+At iteration: 3313
+
+At iteration: 3314
+
+At iteration: 3315
+
+At iteration: 3316
+
+At iteration: 3317
+
+At iteration: 3318
+
+At iteration: 3319
+
+At iteration: 3320
+
+At iteration: 3321
+
+At iteration: 3322
+
+At iteration: 3323
+
+At iteration: 3324
+
+At iteration: 3325
+
+At iteration: 3326
+
+At iteration: 3327
+
+At iteration: 3328
+
+At iteration: 3329
+
+At iteration: 3330
+
+At iteration: 3331
+
+At iteration: 3332
+
+At iteration: 3333
+
+At iteration: 3334
+
+At iteration: 3335
+
+At iteration: 3336
+
+At iteration: 3337
+
+At iteration: 3338
+
+At iteration: 3339
+
+At iteration: 3340
+
+At iteration: 3341
+
+At iteration: 3342
+
+At iteration: 3343
+
+At iteration: 3344
+
+At iteration: 3345
+
+At iteration: 3346
+
+At iteration: 3347
+
+At iteration: 3348
+
+At iteration: 3349
+
+Smoothing after 50
+0.00030  3.35 l 1306.93  | 0.254    100.000    100.000    1.0000    0.1000 | 0.034    99.778    0.999 | 0.026     100.000    1.000 |  1 hr 10 min  0 3349
+
+At iteration: 3350
+
+At iteration: 3351
+
+At iteration: 3352
+
+At iteration: 3353
+
+At iteration: 3354
+
+At iteration: 3355
+
+At iteration: 3356
+
+At iteration: 3357
+
+At iteration: 3358
+
+At iteration: 3359
+
+At iteration: 3360
+
+At iteration: 3361
+
+At iteration: 3362
+
+At iteration: 3363
+
+At iteration: 3364
+
+At iteration: 3365
+
+At iteration: 3366
+
+At iteration: 3367
+
+At iteration: 3368
+
+At iteration: 3369
+
+At iteration: 3370
+
+At iteration: 3371
+
+At iteration: 3372
+
+At iteration: 3373
+
+At iteration: 3374
+
+At iteration: 3375
+
+At iteration: 3376
+
+At iteration: 3377
+
+At iteration: 3378
+
+At iteration: 3379
+
+At iteration: 3380
+
+At iteration: 3381
+
+At iteration: 3382
+
+At iteration: 3383
+
+At iteration: 3384
+
+At iteration: 3385
+
+At iteration: 3386
+
+At iteration: 3387
+
+At iteration: 3388
+
+At iteration: 3389
+
+At iteration: 3390
+
+At iteration: 3391
+
+At iteration: 3392
+
+At iteration: 3393
+
+At iteration: 3394
+
+At iteration: 3395
+
+At iteration: 3396
+
+At iteration: 3397
+
+At iteration: 3398
+
+At iteration: 3399
+
+Smoothing after 50
+0.00030  3.40 l 1326.44  | 0.254    100.000    100.000    1.0000    0.1000 | 0.088    97.111    0.984 | 0.032     100.000    1.000 |  1 hr 11 min  0 3399
+
+At iteration: 3400
+0.00030  3.40 v 1326.83  | 0.177    100.000    100.000    1.0000    0.1000 | 0.088    97.111    0.984 | 0.032     100.000    1.000 |  1 hr 11 min
+
+At iteration: 3401
+
+At iteration: 3402
+
+At iteration: 3403
+
+At iteration: 3404
+
+At iteration: 3405
+
+At iteration: 3406
+
+At iteration: 3407
+
+At iteration: 3408
+
+At iteration: 3409
+
+At iteration: 3410
+
+At iteration: 3411
+
+At iteration: 3412
+
+At iteration: 3413
+
+At iteration: 3414
+
+At iteration: 3415
+
+At iteration: 3416
+
+At iteration: 3417
+
+At iteration: 3418
+
+At iteration: 3419
+
+At iteration: 3420
+
+At iteration: 3421
+
+At iteration: 3422
+
+At iteration: 3423
+
+At iteration: 3424
+
+At iteration: 3425
+
+At iteration: 3426
+
+At iteration: 3427
+
+At iteration: 3428
+
+At iteration: 3429
+
+At iteration: 3430
+
+At iteration: 3431
+
+At iteration: 3432
+
+At iteration: 3433
+
+At iteration: 3434
+
+At iteration: 3435
+
+At iteration: 3436
+
+At iteration: 3437
+
+At iteration: 3438
+
+At iteration: 3439
+
+At iteration: 3440
+
+At iteration: 3441
+
+At iteration: 3442
+
+At iteration: 3443
+
+At iteration: 3444
+
+At iteration: 3445
+
+At iteration: 3446
+
+At iteration: 3447
+
+At iteration: 3448
+
+At iteration: 3449
+
+Smoothing after 50
+0.00030  3.45 l 1345.95  | 0.177    100.000    100.000    1.0000    0.1000 | 0.067    98.000    0.989 | 0.020     100.000    1.000 |  1 hr 12 min  0 3449
+
+At iteration: 3450
+
+At iteration: 3451
+
+At iteration: 3452
+
+At iteration: 3453
+
+At iteration: 3454
+
+At iteration: 3455
+
+At iteration: 3456
+
+At iteration: 3457
+
+At iteration: 3458
+
+At iteration: 3459
+
+At iteration: 3460
+
+At iteration: 3461
+
+At iteration: 3462
+
+At iteration: 3463
+
+At iteration: 3464
+
+At iteration: 3465
+
+At iteration: 3466
+
+At iteration: 3467
+
+At iteration: 3468
+
+At iteration: 3469
+
+At iteration: 3470
+
+At iteration: 3471
+
+At iteration: 3472
+
+At iteration: 3473
+
+At iteration: 3474
+
+At iteration: 3475
+
+At iteration: 3476
+
+At iteration: 3477
+
+At iteration: 3478
+
+At iteration: 3479
+
+At iteration: 3480
+
+At iteration: 3481
+
+At iteration: 3482
+
+At iteration: 3483
+
+At iteration: 3484
+
+At iteration: 3485
+
+At iteration: 3486
+
+At iteration: 3487
+
+At iteration: 3488
+
+At iteration: 3489
+
+At iteration: 3490
+
+At iteration: 3491
+
+At iteration: 3492
+
+At iteration: 3493
+
+At iteration: 3494
+
+At iteration: 3495
+
+At iteration: 3496
+
+At iteration: 3497
+
+At iteration: 3498
+
+At iteration: 3499
+
+Smoothing after 50
+0.00030  3.50 l 1365.46  | 0.177    100.000    100.000    1.0000    0.1000 | 0.042    98.667    0.993 | 0.031     100.000    1.000 |  1 hr 13 min  0 3499
+
+At iteration: 3500
+
+At iteration: 3501
+
+At iteration: 3502
+
+At iteration: 3503
+
+At iteration: 3504
+
+At iteration: 3505
+
+At iteration: 3506
+
+At iteration: 3507
+
+At iteration: 3508
+
+At iteration: 3509
+
+At iteration: 3510
+
+At iteration: 3511
+
+At iteration: 3512
+
+At iteration: 3513
+
+At iteration: 3514
+
+At iteration: 3515
+
+At iteration: 3516
+
+At iteration: 3517
+
+At iteration: 3518
+
+At iteration: 3519
+
+At iteration: 3520
+
+At iteration: 3521
+
+At iteration: 3522
+
+At iteration: 3523
+
+At iteration: 3524
+
+At iteration: 3525
+
+At iteration: 3526
+
+At iteration: 3527
+
+At iteration: 3528
+
+At iteration: 3529
+
+At iteration: 3530
+
+At iteration: 3531
+
+At iteration: 3532
+
+At iteration: 3533
+
+At iteration: 3534
+
+At iteration: 3535
+
+At iteration: 3536
+
+At iteration: 3537
+
+At iteration: 3538
+
+At iteration: 3539
+
+At iteration: 3540
+
+At iteration: 3541
+
+At iteration: 3542
+
+At iteration: 3543
+
+At iteration: 3544
+
+At iteration: 3545
+
+At iteration: 3546
+
+At iteration: 3547
+
+At iteration: 3548
+
+At iteration: 3549
+
+Smoothing after 50
+0.00030  3.55 l 1384.98  | 0.177    100.000    100.000    1.0000    0.1000 | 0.082    96.889    0.981 | 0.030     100.000    1.000 |  1 hr 14 min  0 3549
+
+At iteration: 3550
+
+At iteration: 3551
+
+At iteration: 3552
+
+At iteration: 3553
+
+At iteration: 3554
+
+At iteration: 3555
+
+At iteration: 3556
+
+At iteration: 3557
+
+At iteration: 3558
+
+At iteration: 3559
+
+At iteration: 3560
+
+At iteration: 3561
+
+At iteration: 3562
+
+At iteration: 3563
+
+At iteration: 3564
+
+At iteration: 3565
+
+At iteration: 3566
+
+At iteration: 3567
+
+At iteration: 3568
+
+At iteration: 3569
+
+At iteration: 3570
+
+At iteration: 3571
+
+At iteration: 3572
+
+At iteration: 3573
+
+At iteration: 3574
+
+At iteration: 3575
+
+At iteration: 3576
+
+At iteration: 3577
+
+At iteration: 3578
+
+At iteration: 3579
+
+At iteration: 3580
+
+At iteration: 3581
+
+At iteration: 3582
+
+At iteration: 3583
+
+At iteration: 3584
+
+At iteration: 3585
+
+At iteration: 3586
+
+At iteration: 3587
+
+At iteration: 3588
+
+At iteration: 3589
+
+At iteration: 3590
+
+At iteration: 3591
+
+At iteration: 3592
+
+At iteration: 3593
+
+At iteration: 3594
+
+At iteration: 3595
+
+At iteration: 3596
+
+At iteration: 3597
+
+At iteration: 3598
+
+At iteration: 3599
+
+Smoothing after 50
+0.00030  3.60 l 1404.49  | 0.177    100.000    100.000    1.0000    0.1000 | 0.105    97.556    0.985 | 0.023     100.000    1.000 |  1 hr 15 min  0 3599
+
+At iteration: 3600
+0.00030  3.60 v 1404.88  | 0.108    93.333    100.000    0.9556    0.1000 | 0.105    97.556    0.985 | 0.023     100.000    1.000 |  1 hr 15 min
+
+At iteration: 3601
+
+At iteration: 3602
+
+At iteration: 3603
+
+At iteration: 3604
+
+At iteration: 3605
+
+At iteration: 3606
+
+At iteration: 3607
+
+At iteration: 3608
+
+At iteration: 3609
+
+At iteration: 3610
+
+At iteration: 3611
+
+At iteration: 3612
+
+At iteration: 3613
+
+At iteration: 3614
+
+At iteration: 3615
+
+At iteration: 3616
+
+At iteration: 3617
+
+At iteration: 3618
+
+At iteration: 3619
+
+At iteration: 3620
+
+At iteration: 3621
+
+At iteration: 3622
+
+At iteration: 3623
+
+At iteration: 3624
+
+At iteration: 3625
+
+At iteration: 3626
+
+At iteration: 3627
+
+At iteration: 3628
+
+At iteration: 3629
+
+At iteration: 3630
+
+At iteration: 3631
+
+At iteration: 3632
+
+At iteration: 3633
+
+At iteration: 3634
+
+At iteration: 3635
+
+At iteration: 3636
+
+At iteration: 3637
+
+At iteration: 3638
+
+At iteration: 3639
+
+At iteration: 3640
+
+At iteration: 3641
+
+At iteration: 3642
+
+At iteration: 3643
+
+At iteration: 3644
+
+At iteration: 3645
+
+At iteration: 3646
+
+At iteration: 3647
+
+At iteration: 3648
+
+At iteration: 3649
+
+Smoothing after 50
+0.00030  3.65 l 1424.00  | 0.108    93.333    100.000    0.9556    0.1000 | 0.096    98.000    0.988 | 0.015     100.000    1.000 |  1 hr 16 min  0 3649
+
+At iteration: 3650
+
+At iteration: 3651
+
+At iteration: 3652
+
+At iteration: 3653
+
+At iteration: 3654
+
+At iteration: 3655
+
+At iteration: 3656
+
+At iteration: 3657
+
+At iteration: 3658
+
+At iteration: 3659
+
+At iteration: 3660
+
+At iteration: 3661
+
+At iteration: 3662
+
+At iteration: 3663
+
+At iteration: 3664
+
+At iteration: 3665
+
+At iteration: 3666
+
+At iteration: 3667
+
+At iteration: 3668
+
+At iteration: 3669
+
+At iteration: 3670
+
+At iteration: 3671
+
+At iteration: 3672
+
+At iteration: 3673
+
+At iteration: 3674
+
+At iteration: 3675
+
+At iteration: 3676
+
+At iteration: 3677
+
+At iteration: 3678
+
+At iteration: 3679
+
+At iteration: 3680
+
+At iteration: 3681
+
+At iteration: 3682
+
+At iteration: 3683
+
+At iteration: 3684
+
+At iteration: 3685
+
+At iteration: 3686
+
+At iteration: 3687
+
+At iteration: 3688
+
+At iteration: 3689
+
+At iteration: 3690
+
+At iteration: 3691
+
+At iteration: 3692
+
+At iteration: 3693
+
+At iteration: 3694
+
+At iteration: 3695
+
+At iteration: 3696
+
+At iteration: 3697
+
+At iteration: 3698
+
+At iteration: 3699
+
+Smoothing after 50
+0.00030  3.70 l 1443.51  | 0.108    93.333    100.000    0.9556    0.1000 | 0.060    98.222    0.990 | 0.023     100.000    1.000 |  1 hr 17 min  0 3699
+
+At iteration: 3700
+
+At iteration: 3701
+
+At iteration: 3702
+
+At iteration: 3703
+
+At iteration: 3704
+
+At iteration: 3705
+
+At iteration: 3706
+
+At iteration: 3707
+
+At iteration: 3708
+
+At iteration: 3709
+
+At iteration: 3710
+
+At iteration: 3711
+
+At iteration: 3712
+
+At iteration: 3713
+
+At iteration: 3714
+
+At iteration: 3715
+
+At iteration: 3716
+
+At iteration: 3717
+
+At iteration: 3718
+
+At iteration: 3719
+
+At iteration: 3720
+
+At iteration: 3721
+
+At iteration: 3722
+
+At iteration: 3723
+
+At iteration: 3724
+
+At iteration: 3725
+
+At iteration: 3726
+
+At iteration: 3727
+
+At iteration: 3728
+
+At iteration: 3729
+
+At iteration: 3730
+
+At iteration: 3731
+
+At iteration: 3732
+
+At iteration: 3733
+
+At iteration: 3734
+
+At iteration: 3735
+
+At iteration: 3736
+
+At iteration: 3737
+
+At iteration: 3738
+
+At iteration: 3739
+
+At iteration: 3740
+
+At iteration: 3741
+
+At iteration: 3742
+
+At iteration: 3743
+
+At iteration: 3744
+
+At iteration: 3745
+
+At iteration: 3746
+
+At iteration: 3747
+
+At iteration: 3748
+
+At iteration: 3749
+
+Smoothing after 50
+0.00030  3.75 l 1463.02  | 0.108    93.333    100.000    0.9556    0.1000 | 0.033    99.333    0.997 | 0.026     100.000    1.000 |  1 hr 18 min  0 3749
+
+At iteration: 3750
+
+At iteration: 3751
+
+At iteration: 3752
+
+At iteration: 3753
+
+At iteration: 3754
+
+At iteration: 3755
+
+At iteration: 3756
+
+At iteration: 3757
+
+At iteration: 3758
+
+At iteration: 3759
+
+At iteration: 3760
+
+At iteration: 3761
+
+At iteration: 3762
+
+At iteration: 3763
+
+At iteration: 3764
+
+At iteration: 3765
+
+At iteration: 3766
+
+At iteration: 3767
+
+At iteration: 3768
+
+At iteration: 3769
+
+At iteration: 3770
+
+At iteration: 3771
+
+At iteration: 3772
+
+At iteration: 3773
+
+At iteration: 3774
+
+At iteration: 3775
+
+At iteration: 3776
+
+At iteration: 3777
+
+At iteration: 3778
+
+At iteration: 3779
+
+At iteration: 3780
+
+At iteration: 3781
+
+At iteration: 3782
+
+At iteration: 3783
+
+At iteration: 3784
+
+At iteration: 3785
+
+At iteration: 3786
+
+At iteration: 3787
+
+At iteration: 3788
+
+At iteration: 3789
+
+At iteration: 3790
+
+At iteration: 3791
+
+At iteration: 3792
+
+At iteration: 3793
+
+At iteration: 3794
+
+At iteration: 3795
+
+At iteration: 3796
+
+At iteration: 3797
+
+At iteration: 3798
+
+At iteration: 3799
+
+Smoothing after 50
+0.00030  3.80 l 1482.54  | 0.108    93.333    100.000    0.9556    0.1000 | 0.038    98.667    0.993 | 0.030     100.000    1.000 |  1 hr 19 min  0 3799
+
+At iteration: 3800
+0.00030  3.80 v 1482.93  | 0.215    93.333    100.000    0.9667    0.1000 | 0.038    98.667    0.993 | 0.030     100.000    1.000 |  1 hr 19 min
+
+At iteration: 3801
+
+At iteration: 3802
+
+At iteration: 3803
+
+At iteration: 3804
+
+At iteration: 3805
+
+At iteration: 3806
+
+At iteration: 3807
+
+At iteration: 3808
+
+At iteration: 3809
+
+At iteration: 3810
+
+At iteration: 3811
+
+At iteration: 3812
+
+At iteration: 3813
+
+At iteration: 3814
+
+At iteration: 3815
+
+At iteration: 3816
+
+At iteration: 3817
+
+At iteration: 3818
+
+At iteration: 3819
+
+At iteration: 3820
+
+At iteration: 3821
+
+At iteration: 3822
+
+At iteration: 3823
+
+At iteration: 3824
+
+At iteration: 3825
+
+At iteration: 3826
+
+At iteration: 3827
+
+At iteration: 3828
+
+At iteration: 3829
+
+At iteration: 3830
+
+At iteration: 3831
+
+At iteration: 3832
+
+At iteration: 3833
+
+At iteration: 3834
+
+At iteration: 3835
+
+At iteration: 3836
+
+At iteration: 3837
+
+At iteration: 3838
+
+At iteration: 3839
+
+At iteration: 3840
+
+At iteration: 3841
+
+At iteration: 3842
+
+At iteration: 3843
+
+At iteration: 3844
+
+At iteration: 3845
+
+At iteration: 3846
+
+At iteration: 3847
+
+At iteration: 3848
+
+At iteration: 3849
+
+Smoothing after 50
+0.00030  3.85 l 1502.05  | 0.215    93.333    100.000    0.9667    0.1000 | 0.061    99.111    0.994 | 0.026     100.000    1.000 |  1 hr 20 min  0 3849
+
+At iteration: 3850
+
+At iteration: 3851
+
+At iteration: 3852
+
+At iteration: 3853
+
+At iteration: 3854
+
+At iteration: 3855
+
+At iteration: 3856
+
+At iteration: 3857
+
+At iteration: 3858
+
+At iteration: 3859
+
+At iteration: 3860
+
+At iteration: 3861
+
+At iteration: 3862
+
+At iteration: 3863
+
+At iteration: 3864
+
+At iteration: 3865
+
+At iteration: 3866
+
+At iteration: 3867
+
+At iteration: 3868
+
+At iteration: 3869
+
+At iteration: 3870
+
+At iteration: 3871
+
+At iteration: 3872
+
+At iteration: 3873
+
+At iteration: 3874
+
+At iteration: 3875
+
+At iteration: 3876
+
+At iteration: 3877
+
+At iteration: 3878
+
+At iteration: 3879
+
+At iteration: 3880
+
+At iteration: 3881
+
+At iteration: 3882
+
+At iteration: 3883
+
+At iteration: 3884
+
+At iteration: 3885
+
+At iteration: 3886
+
+At iteration: 3887
+
+At iteration: 3888
+
+At iteration: 3889
+
+At iteration: 3890
+
+At iteration: 3891
+
+At iteration: 3892
+
+At iteration: 3893
+
+At iteration: 3894
+
+At iteration: 3895
+
+At iteration: 3896
+
+At iteration: 3897
+
+At iteration: 3898
+
+At iteration: 3899
+
+Smoothing after 50
+0.00030  3.90 l 1521.56  | 0.215    93.333    100.000    0.9667    0.1000 | 0.087    98.222    0.987 | 0.081     100.000    1.000 |  1 hr 21 min  0 3899
+
+At iteration: 3900
+
+At iteration: 3901
+
+At iteration: 3902
+
+At iteration: 3903
+
+At iteration: 3904
+
+At iteration: 3905
+
+At iteration: 3906
+
+At iteration: 3907
+
+At iteration: 3908
+
+At iteration: 3909
+
+At iteration: 3910
+
+At iteration: 3911
+
+At iteration: 3912
+
+At iteration: 3913
+
+At iteration: 3914
+
+At iteration: 3915
+
+At iteration: 3916
+
+At iteration: 3917
+
+At iteration: 3918
+
+At iteration: 3919
+
+At iteration: 3920
+
+At iteration: 3921
+
+At iteration: 3922
+
+At iteration: 3923
+
+At iteration: 3924
+
+At iteration: 3925
+
+At iteration: 3926
+
+At iteration: 3927
+
+At iteration: 3928
+
+At iteration: 3929
+
+At iteration: 3930
+
+At iteration: 3931
+
+At iteration: 3932
+
+At iteration: 3933
+
+At iteration: 3934
+
+At iteration: 3935
+
+At iteration: 3936
+
+At iteration: 3937
+
+At iteration: 3938
+
+At iteration: 3939
+
+At iteration: 3940
+
+At iteration: 3941
+
+At iteration: 3942
+
+At iteration: 3943
+
+At iteration: 3944
+
+At iteration: 3945
+
+At iteration: 3946
+
+At iteration: 3947
+
+At iteration: 3948
+
+At iteration: 3949
+
+Smoothing after 50
+0.00030  3.95 l 1541.07  | 0.215    93.333    100.000    0.9667    0.1000 | 0.061    97.333    0.986 | 0.170     100.000    1.000 |  1 hr 22 min  0 3949
+
+At iteration: 3950
+
+At iteration: 3951
+
+At iteration: 3952
+
+At iteration: 3953
+
+At iteration: 3954
+
+At iteration: 3955
+
+At iteration: 3956
+
+At iteration: 3957
+
+At iteration: 3958
+
+At iteration: 3959
+
+At iteration: 3960
+
+At iteration: 3961
+
+At iteration: 3962
+
+At iteration: 3963
+
+At iteration: 3964
+
+At iteration: 3965
+
+At iteration: 3966
+
+At iteration: 3967
+
+At iteration: 3968
+
+At iteration: 3969
+
+At iteration: 3970
+
+At iteration: 3971
+
+At iteration: 3972
+
+At iteration: 3973
+
+At iteration: 3974
+
+At iteration: 3975
+
+At iteration: 3976
+
+At iteration: 3977
+
+At iteration: 3978
+
+At iteration: 3979
+
+At iteration: 3980
+
+At iteration: 3981
+
+At iteration: 3982
+
+At iteration: 3983
+
+At iteration: 3984
+
+At iteration: 3985
+
+At iteration: 3986
+
+At iteration: 3987
+
+At iteration: 3988
+
+At iteration: 3989
+
+At iteration: 3990
+
+At iteration: 3991
+
+At iteration: 3992
+
+At iteration: 3993
+
+At iteration: 3994
+
+At iteration: 3995
+
+At iteration: 3996
+
+At iteration: 3997
+
+At iteration: 3998
+
+At iteration: 3999
+
+Smoothing after 50
+0.00030  4.00 l 1560.59  | 0.215    93.333    100.000    0.9667    0.1000 | 0.066    97.333    0.985 | 0.243     88.889    0.944 |  1 hr 23 min  0 3999
+
+At iteration: 4000
+0.00030  4.00 v 1560.98  | 0.065    100.000    100.000    1.0000    0.1000 | 0.066    97.333    0.985 | 0.243     88.889    0.944 |  1 hr 23 min

@@ -1,0 +1,35 @@
+/gpfs/u/home/DLAN/DLANstnf/scratch/miniconda3/envs/thesis/lib/python3.6/site-packages/torch/nn/_reduction.py:46: UserWarning: size_average and reduce args will be deprecated, please use reduction='mean' instead.
+  warnings.warn(warning.format(ret))
+Traceback (most recent call last):
+  File "train.py", line 872, in <module>
+  File "train.py", line 631, in train
+    valid_loss, top1, top5, top10, map10, best_t = \
+  File "train.py", line 177, in eval
+    all_labels = []
+  File "/gpfs/u/home/DLAN/DLANstnf/scratch/miniconda3/envs/thesis/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 582, in __next__
+    return self._process_next_batch(batch)
+  File "/gpfs/u/home/DLAN/DLANstnf/scratch/miniconda3/envs/thesis/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 608, in _process_next_batch
+    raise batch.exc_type(batch.exc_msg)
+TypeError: Traceback (most recent call last):
+  File "/gpfs/u/home/DLAN/DLANstnf/scratch/miniconda3/envs/thesis/lib/python3.6/site-packages/torch/utils/data/_utils/worker.py", line 99, in _worker_loop
+    samples = collate_fn([dataset[i] for i in batch_indices])
+  File "/gpfs/u/home/DLAN/DLANstnf/scratch/miniconda3/envs/thesis/lib/python3.6/site-packages/torch/utils/data/_utils/worker.py", line 99, in <listcomp>
+    samples = collate_fn([dataset[i] for i in batch_indices])
+  File "/gpfs/u/scratch/DLAN/DLANstnf/Masters-Thesis/Kaggle_Winner/dataSet/reader.py", line 284, in __getitem__
+    image = self.get_image(name, self.transform)
+  File "/gpfs/u/scratch/DLAN/DLANstnf/Masters-Thesis/Kaggle_Winner/dataSet/reader.py", line 232, in get_image
+    mask = np.zeros_like(image[:, :, 0])
+TypeError: 'NoneType' object is not subscriptable
+
+
+If you suspect this is an IPython bug, please report it at:
+    https://github.com/ipython/ipython/issues
+or send an email to the mailing list at ipython-dev@python.org
+
+You can print a more detailed traceback right now with "%tb", or use "%debug"
+to interactively debug it.
+
+Extra-detailed tracebacks for bug-reporting purposes can be enabled via:
+    %config Application.verbose_crash=True
+
+srun: error: dcs142: task 0: Exited with exit code 1

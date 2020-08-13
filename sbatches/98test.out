@@ -1,0 +1,22 @@
+Model name: senet154
+Fold: new_flukes
+Checkpoint start: 6000
+Also tests flipped images: True
+Embedding? False
+Getting features (if embed) from files with ending: 
+Doing final embedding tests? False
+
+Number of images to test: 839
+loading bbox...
+
+Classification accuracy:
+best_t: 0.1
+top1: 71.156136 ; top5: 80.92968 ; top10: 84.1478
+Known whales:
+   top1: 71.156136
+   top5: 80.92968
+   top10: 84.1478
+New whales:
+   top1: 0.0
+   top5: 0.0
+   top10: 0.0

@@ -1,0 +1,40 @@
+/gpfs/u/home/DLAN/DLANstnf/scratch/miniconda3/envs/thesis/lib/python3.6/site-packages/torch/nn/_reduction.py:46: UserWarning: size_average and reduce args will be deprecated, please use reduction='mean' instead.
+  warnings.warn(warning.format(ret))
+Traceback (most recent call last):
+  File "train.py", line 486, in <module>
+    train(debug, freeze, fold_index, model_name, min_num_class, checkpoint_start, lr, batch_size, num_classes)
+  File "train.py", line 365, in train
+    global_feat, local_feat, results = model.forward(images)
+  File "/gpfs/u/scratch/DLAN/DLANstnf/Masters-Thesis/Kaggle_Winner/models/model.py", line 74, in forward
+    feat = self.basemodel(x)
+  File "/gpfs/u/home/DLAN/DLANstnf/scratch/miniconda3/envs/thesis/lib/python3.6/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/gpfs/u/scratch/DLAN/DLANstnf/Masters-Thesis/Kaggle_Winner/models/modelZoo/senet.py", line 352, in forward
+    x = self.layer3(x)
+  File "/gpfs/u/home/DLAN/DLANstnf/scratch/miniconda3/envs/thesis/lib/python3.6/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/gpfs/u/home/DLAN/DLANstnf/scratch/miniconda3/envs/thesis/lib/python3.6/site-packages/torch/nn/modules/container.py", line 92, in forward
+    input = module(input)
+  File "/gpfs/u/home/DLAN/DLANstnf/scratch/miniconda3/envs/thesis/lib/python3.6/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/gpfs/u/scratch/DLAN/DLANstnf/Masters-Thesis/Kaggle_Winner/models/modelZoo/senet.py", line 124, in forward
+    out = self.bn3(out)
+  File "/gpfs/u/home/DLAN/DLANstnf/scratch/miniconda3/envs/thesis/lib/python3.6/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/gpfs/u/home/DLAN/DLANstnf/scratch/miniconda3/envs/thesis/lib/python3.6/site-packages/torch/nn/modules/batchnorm.py", line 83, in forward
+    exponential_average_factor, self.eps)
+  File "/gpfs/u/home/DLAN/DLANstnf/scratch/miniconda3/envs/thesis/lib/python3.6/site-packages/torch/nn/functional.py", line 1697, in batch_norm
+    training, momentum, eps, torch.backends.cudnn.enabled
+RuntimeError: CUDA out of memory. Tried to allocate 96.00 MiB (GPU 0; 31.75 GiB total capacity; 30.17 GiB already allocated; 304.50 MiB free; 221.75 MiB cached; 0 bytes inactive)
+
+If you suspect this is an IPython bug, please report it at:
+    https://github.com/ipython/ipython/issues
+or send an email to the mailing list at ipython-dev@python.org
+
+You can print a more detailed traceback right now with "%tb", or use "%debug"
+to interactively debug it.
+
+Extra-detailed tracebacks for bug-reporting purposes can be enabled via:
+    %config Application.verbose_crash=True
+
+srun: error: dcs209: task 0: Exited with exit code 1

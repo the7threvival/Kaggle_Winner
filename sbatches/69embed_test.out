@@ -1,0 +1,7 @@
+Model name: senet154
+Fold: final2
+Checkpoint start: 8600
+Getting features (if embed) from files with ending: _final2
+
+Number of images to add: 200
+loading bbox...

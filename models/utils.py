@@ -103,33 +103,67 @@ def try_bestfitting_loss(results, labels, selected_num=10):
     return nonew_loss + error_loss
 
 
-def sigmoid_loss(results, labels, topk=10):
+def sigmoid_loss(results, labels, topk=10, embed=None):
     if len(results.shape) == 1:
         results = results.view(1, -1)
     batch_size, class_num = results.shape
     labels = labels.view(-1, 1)
-    one_hot_target = torch.zeros(batch_size, class_num + 1).cuda().scatter_(1, labels, 1)[:, :CLASSES * 2]
+    #print(type(embed))
+    #print("Checking shapes")
+    #print(batch_size)
+    #print(labels.shape)
+    if type(embed) != type(None):
+        # Creating target output result, not actually 1-hot 
+        #print("Trying embedding")
+        one_hot_target = embed.expand(labels.shape[0], -1).eq(labels).float()
+        error = torch.abs(one_hot_target - results)
+        # print("Error values for embedding")
+        # print(error)
+    else:
+        # Creating 1-hot version of labels. ie. target output result
+        one_hot_target = torch.zeros(batch_size, class_num + 1).cuda().scatter_(1, labels, 1)[:, :CLASSES * 2]
+        # Everything that doesn't match exactly what it should be will get an
+        # error value increasingly close to 1
+        error = torch.abs(one_hot_target - torch.sigmoid(results))
     #lovasz_loss = lovasz_hinge(results, one_hot_target)
     
     """
-    print("\n"*7)
+    #print("\n"*7)
     print("#"*30)
-    print(labels)
+    #print(labels)
     print("Show me what's wrong:")
     print(one_hot_target.shape, results.shape)
+    print(one_hot_target.dtype, results.dtype)
     print("#"*30)
-    print("\n"*7)
+    #print("\n"*7)
     """
     
-    error = torch.abs(one_hot_target - torch.sigmoid(results))
-    error = error.topk(topk, 1, True, True)[0].contiguous()
-    target_error = torch.zeros_like(error).float().cuda()
-    error_loss = nn.BCELoss(reduce=True)(error, target_error)
-    labels = labels.view(-1)
-    indexs_new = (labels != CLASSES * 2).nonzero().view(-1)
-    if len(indexs_new) == 0:
+    # This output does not have typical classes, so not this..
+    """
+    Problem is that my indices for results do not directly correspond
+    to the classes the results belong to. I would have to convert results 
+    into the typical classification output (by like merging outputs for each
+    class for example) for this to work..
+    """
+    """
+    if type(embed) != type(None):
+        #error_loss = nn.CrossEntropyLoss()(results, embed)
         return error_loss
-    results_nonew = results[torch.arange(0, len(results))[indexs_new], labels[indexs_new]].contiguous()
+    else:
+    """
+    if 1:
+        error = error.topk(topk, 1, True, True)[0].contiguous()
+        target_error = torch.zeros_like(error).float().cuda()
+        # TODO: Maybe BCE is causing issues for this?..
+        error_loss = nn.BCELoss(reduce=True)(error, target_error)
+    labels = labels.view(-1)
+    # Now, get the indices of all non 'new_whale' instances
+    # Second loss is for the correct classifications of the known whales. 
+    # this puts more emphasis on getting those right
+    indexs_nonew = (labels != CLASSES * 2).nonzero().view(-1)
+    if len(indexs_nonew) == 0:
+        return error_loss
+    results_nonew = results[torch.arange(0, len(results))[indexs_nonew], labels[indexs_nonew]].contiguous()
     target_nonew = torch.ones_like(results_nonew).float().cuda()
     nonew_loss = nn.BCEWithLogitsLoss(reduce=True)(results_nonew, target_nonew)
     return nonew_loss + error_loss

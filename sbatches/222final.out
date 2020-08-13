@@ -1,0 +1,1039 @@
+Some params:
+Fold_index: final2, Check_start: 0, Learning rate: 0.0003, Min # of Occ.: 0, Embedding: False
+!!! Sanity check !!!
+Input:  ['train.py', 'final2', '0', '3e-4', '0']
+
+Chosen model: senet154
+
+ start_time :2020-07-17 15:45:02 
+ batch_size :12 
+
+Initial incoming image analysis
+
+Looking at 5106 total images.
+4614 train and 492 validation images
+840 train and 332 valid individuals
+loading bbox...
+loading mask...
+loading bbox...
+loading bbox...
+
+Analysis of images to be used
+Train & valid image analysis:
+Number of training images with at least 0 instances: 4614
+Number of validation images with at least 0 instances: 492
+There are 840 individuals found in train
+332 out of 332 ids in valid are found in train
+
+format: 
+rate   iter  k  epoch | valid   top@1   top@5   map@5   best_t | train   top@1   map@5 | batch   top@1   map@5 | time 
+--------------------------------------------------------------------------------------------------------------------------------------
+No existing max valid found. Creating one.
+
+At iteration: 0
+New max valid for this run
+Saving current features. Best valid acc. found.
+0.00030  0.00 v  0.00  | 1.389    32.114    32.520    32.724    0.3232    0.6000 | 0.000    0.000    0.000 | 0.000     0.000    0.000 |  0 hr 02 min
+
+Smoothing after 50
+e: known: [tensor([0.], device='cuda:0'), tensor([0.], device='cuda:0'), tensor([2.7778], device='cuda:0')], new: [tensor([0.], device='cuda:0'), tensor([0.], device='cuda:0'), tensor([0.], device='cuda:0')], top5: tensor([0.], device='cuda:0')
+0.00030  0.05 l  0.51  | 1.389    32.114    32.520    0.3232    0.6000 | 2.065    0.125    0.002 | 2.088     0.000    0.000 |  0 hr 03 min  0 49
+
+At iteration: 70
+
+Smoothing after 50
+e: known: [tensor([0.], device='cuda:0'), tensor([0.], device='cuda:0'), tensor([0.], device='cuda:0')], new: [tensor([0.], device='cuda:0'), tensor([0.], device='cuda:0'), tensor([0.], device='cuda:0')], top5: tensor([0.], device='cuda:0')
+0.00030  0.10 l  1.03  | 1.389    32.114    32.520    0.3232    0.6000 | 1.941    0.375    0.006 | 1.836     0.000    0.000 |  0 hr 04 min  0 99
+
+At iteration: 140
+
+Smoothing after 50
+e: known: [tensor([0.], device='cuda:0'), tensor([2.7778], device='cuda:0'), tensor([2.7778], device='cuda:0')], new: [tensor([0.], device='cuda:0'), tensor([0.], device='cuda:0'), tensor([0.], device='cuda:0')], top5: tensor([2.0833], device='cuda:0')
+0.00030  0.15 l  1.55  | 1.389    32.114    32.520    0.3232    0.6000 | 1.826    0.375    0.005 | 1.877     0.000    0.004 |  0 hr 05 min  0 149
+
+Smoothing after 50
+e: known: [tensor([0.], device='cuda:0'), tensor([0.], device='cuda:0'), tensor([0.], device='cuda:0')], new: [tensor([0.], device='cuda:0'), tensor([0.], device='cuda:0'), tensor([0.], device='cuda:0')], top5: tensor([0.], device='cuda:0')
+0.00030  0.20 l  2.07  | 1.389    32.114    32.520    0.3232    0.6000 | 1.819    0.833    0.011 | 1.767     0.000    0.000 |  0 hr 07 min  0 199
+0.00030  0.20 v  2.08  | 1.231    32.114    32.927    34.350    0.3240    0.6000 | 1.819    0.833    0.011 | 1.767     0.000    0.000 |  0 hr 07 min
+
+At iteration: 210
+
+Smoothing after 50
+e: known: [tensor([0.], device='cuda:0'), tensor([2.7778], device='cuda:0'), tensor([2.7778], device='cuda:0')], new: [tensor([0.], device='cuda:0'), tensor([0.], device='cuda:0'), tensor([0.], device='cuda:0')], top5: tensor([2.0833], device='cuda:0')
+0.00030  0.25 l  2.59  | 1.231    32.114    32.927    0.3240    0.6000 | 1.813    1.167    0.017 | 1.848     0.000    0.004 |  0 hr 08 min  0 249
+
+At iteration: 280
+
+Smoothing after 50
+e: known: [tensor([2.7778], device='cuda:0'), tensor([16.6667], device='cuda:0'), tensor([22.2222], device='cuda:0')], new: [tensor([0.], device='cuda:0'), tensor([0.], device='cuda:0'), tensor([0.], device='cuda:0')], top5: tensor([12.5000], device='cuda:0')
+0.00030  0.30 l  3.11  | 1.231    32.114    32.927    0.3240    0.6000 | 1.826    0.875    0.015 | 1.791     2.083    0.060 |  0 hr 09 min  0 299
+
+Smoothing after 50
+e: known: [tensor([0.], device='cuda:0'), tensor([2.7778], device='cuda:0'), tensor([5.5556], device='cuda:0')], new: [tensor([0.], device='cuda:0'), tensor([0.], device='cuda:0'), tensor([0.], device='cuda:0')], top5: tensor([2.0833], device='cuda:0')
+0.00030  0.35 l  3.63  | 1.231    32.114    32.927    0.3240    0.6000 | 1.824    1.333    0.020 | 1.726     0.000    0.010 |  0 hr 10 min  0 349
+
+At iteration: 350
+
+Smoothing after 50
+e: known: [tensor([5.5556], device='cuda:0'), tensor([13.8889], device='cuda:0'), tensor([16.6667], device='cuda:0')], new: [tensor([0.], device='cuda:0'), tensor([0.], device='cuda:0'), tensor([0.], device='cuda:0')], top5: tensor([10.4167], device='cuda:0')
+0.00030  0.40 l  4.15  | 1.231    32.114    32.927    0.3240    0.6000 | 1.820    2.458    0.037 | 1.744     4.167    0.073 |  0 hr 11 min  0 399
+0.00030  0.40 v  4.16  | 1.235    32.114    38.008    40.854    0.3416    0.6000 | 1.820    2.458    0.037 | 1.744     4.167    0.073 |  0 hr 12 min
+
+At iteration: 420
+
+Smoothing after 50
+e: known: [tensor([5.5556], device='cuda:0'), tensor([16.6667], device='cuda:0'), tensor([22.2222], device='cuda:0')], new: [tensor([0.], device='cuda:0'), tensor([0.], device='cuda:0'), tensor([16.6667], device='cuda:0')], top5: tensor([12.5000], device='cuda:0')
+0.00030  0.45 l  4.67  | 1.235    32.114    38.008    0.3416    0.6000 | 1.819    2.583    0.041 | 1.781     4.167    0.068 |  0 hr 13 min  0 449
+
+At iteration: 490
+
+Smoothing after 50
+e: known: [tensor([16.6667], device='cuda:0'), tensor([25.], device='cuda:0'), tensor([25.], device='cuda:0')], new: [tensor([0.], device='cuda:0'), tensor([0.], device='cuda:0'), tensor([0.], device='cuda:0')], top5: tensor([18.7500], device='cuda:0')
+0.00030  0.50 l  5.19  | 1.235    32.114    38.008    0.3416    0.6000 | 1.810    4.417    0.064 | 1.819     12.500    0.156 |  0 hr 14 min  0 499
+
+Smoothing after 50
+e: known: [tensor([2.7778], device='cuda:0'), tensor([8.3333], device='cuda:0'), tensor([11.1111], device='cuda:0')], new: [tensor([0.], device='cuda:0'), tensor([0.], device='cuda:0'), tensor([8.3333], device='cuda:0')], top5: tensor([6.2500], device='cuda:0')
+0.00030  0.55 l  5.71  | 1.235    32.114    38.008    0.3416    0.6000 | 1.800    5.667    0.080 | 1.805     2.083    0.042 |  0 hr 15 min  0 549
+
+At iteration: 560
+
+Smoothing after 50
+e: known: [tensor([22.2222], device='cuda:0'), tensor([36.1111], device='cuda:0'), tensor([52.7778], device='cuda:0')], new: [tensor([0.], device='cuda:0'), tensor([0.], device='cuda:0'), tensor([16.6667], device='cuda:0')], top5: tensor([27.0833], device='cuda:0')
+0.00030  0.60 l  6.23  | 1.235    32.114    38.008    0.3416    0.6000 | 1.798    7.875    0.112 | 1.768     16.667    0.200 |  0 hr 16 min  0 599
+0.00030  0.60 v  6.24  | 1.282    32.114    44.919    49.797    0.3686    0.7000 | 1.798    7.875    0.112 | 1.768     16.667    0.200 |  0 hr 17 min
+
+At iteration: 630
+
+Smoothing after 50
+e: known: [tensor([19.4444], device='cuda:0'), tensor([36.1111], device='cuda:0'), tensor([36.1111], device='cuda:0')], new: [tensor([0.], device='cuda:0'), tensor([0.], device='cuda:0'), tensor([8.3333], device='cuda:0')], top5: tensor([27.0833], device='cuda:0')
+0.00030  0.65 l  6.75  | 1.282    32.114    44.919    0.3686    0.7000 | 1.792    10.250    0.142 | 1.801     14.583    0.192 |  0 hr 18 min  0 649
+
+Smoothing after 50
+e: known: [tensor([19.4444], device='cuda:0'), tensor([30.5556], device='cuda:0'), tensor([44.4444], device='cuda:0')], new: [tensor([0.], device='cuda:0'), tensor([8.3333], device='cuda:0'), tensor([8.3333], device='cuda:0')], top5: tensor([25.], device='cuda:0')
+0.00030  0.70 l  7.27  | 1.282    32.114    44.919    0.3686    0.7000 | 1.782    12.000    0.163 | 1.745     14.583    0.194 |  0 hr 19 min  0 699
+
+At iteration: 700
+
+Smoothing after 50
+e: known: [tensor([25.], device='cuda:0'), tensor([33.3333], device='cuda:0'), tensor([47.2222], device='cuda:0')], new: [tensor([8.3333], device='cuda:0'), tensor([16.6667], device='cuda:0'), tensor([16.6667], device='cuda:0')], top5: tensor([29.1667], device='cuda:0')
+0.00030  0.75 l  7.79  | 1.282    32.114    44.919    0.3686    0.7000 | 1.764    16.958    0.223 | 1.854     20.833    0.232 |  0 hr 20 min  0 749
+
+At iteration: 770
+
+Smoothing after 50
+e: known: [tensor([22.2222], device='cuda:0'), tensor([50.], device='cuda:0'), tensor([69.4444], device='cuda:0')], new: [tensor([8.3333], device='cuda:0'), tensor([8.3333], device='cuda:0'), tensor([25.], device='cuda:0')], top5: tensor([39.5833], device='cuda:0')
+0.00030  0.80 l  8.31  | 1.282    32.114    44.919    0.3686    0.7000 | 1.755    18.292    0.240 | 1.780     18.750    0.270 |  0 hr 21 min  0 799
+New max valid for this run
+Saving current features. Best valid acc. found.
+0.00030  0.80 v  8.32  | 1.246    33.537    56.504    64.024    0.4289    0.6000 | 1.755    18.292    0.240 | 1.780     18.750    0.270 |  0 hr 23 min
+
+At iteration: 840
+
+Smoothing after 50
+e: known: [tensor([41.6667], device='cuda:0'), tensor([66.6667], device='cuda:0'), tensor([75.], device='cuda:0')], new: [tensor([8.3333], device='cuda:0'), tensor([25.], device='cuda:0'), tensor([25.], device='cuda:0')], top5: tensor([56.2500], device='cuda:0')
+0.00030  0.85 l  8.83  | 1.246    33.537    56.504    0.4289    0.6000 | 1.728    22.792    0.292 | 1.647     33.333    0.432 |  0 hr 25 min  0 849
+
+Smoothing after 50
+e: known: [tensor([25.], device='cuda:0'), tensor([41.6667], device='cuda:0'), tensor([52.7778], device='cuda:0')], new: [tensor([8.3333], device='cuda:0'), tensor([33.3333], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([39.5833], device='cuda:0')
+0.00030  0.90 l  9.35  | 1.246    33.537    56.504    0.4289    0.6000 | 1.711    27.542    0.345 | 1.794     20.833    0.278 |  0 hr 26 min  0 899
+
+At iteration: 910
+
+Smoothing after 50
+e: known: [tensor([36.1111], device='cuda:0'), tensor([63.8889], device='cuda:0'), tensor([66.6667], device='cuda:0')], new: [tensor([8.3333], device='cuda:0'), tensor([8.3333], device='cuda:0'), tensor([8.3333], device='cuda:0')], top5: tensor([50.], device='cuda:0')
+0.00030  0.95 l  9.87  | 1.246    33.537    56.504    0.4289    0.6000 | 1.699    31.708    0.391 | 1.639     29.167    0.376 |  0 hr 27 min  0 949
+
+At iteration: 980
+
+Smoothing after 50
+e: known: [tensor([38.8889], device='cuda:0'), tensor([58.3333], device='cuda:0'), tensor([69.4444], device='cuda:0')], new: [tensor([16.6667], device='cuda:0'), tensor([25.], device='cuda:0'), tensor([66.6667], device='cuda:0')], top5: tensor([50.], device='cuda:0')
+0.00030  1.00 l 10.39  | 1.246    33.537    56.504    0.4289    0.6000 | 1.676    37.000    0.442 | 1.636     33.333    0.391 |  0 hr 28 min  0 999
+New max valid for this run
+Saving current features. Best valid acc. found.
+0.00030  1.00 v 10.40  | 1.181    43.089    62.602    70.325    0.5095    0.5000 | 1.676    37.000    0.442 | 1.636     33.333    0.391 |  0 hr 30 min
+
+Smoothing after 50
+e: known: [tensor([38.8889], device='cuda:0'), tensor([63.8889], device='cuda:0'), tensor([66.6667], device='cuda:0')], new: [tensor([16.6667], device='cuda:0'), tensor([25.], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([54.1667], device='cuda:0')
+0.00030  1.05 l 10.91  | 1.181    43.089    62.602    0.5095    0.5000 | 1.679    37.792    0.450 | 1.661     33.333    0.409 |  0 hr 32 min  0 1049
+
+At iteration: 1050
+
+Smoothing after 50
+e: known: [tensor([66.6667], device='cuda:0'), tensor([72.2222], device='cuda:0'), tensor([77.7778], device='cuda:0')], new: [tensor([16.6667], device='cuda:0'), tensor([33.3333], device='cuda:0'), tensor([50.], device='cuda:0')], top5: tensor([62.5000], device='cuda:0')
+0.00030  1.10 l 11.43  | 1.181    43.089    62.602    0.5095    0.5000 | 1.641    46.583    0.535 | 1.583     54.167    0.571 |  0 hr 33 min  0 1099
+
+At iteration: 1120
+
+Smoothing after 50
+e: known: [tensor([86.1111], device='cuda:0'), tensor([97.2222], device='cuda:0'), tensor([97.2222], device='cuda:0')], new: [tensor([16.6667], device='cuda:0'), tensor([16.6667], device='cuda:0'), tensor([33.3333], device='cuda:0')], top5: tensor([77.0833], device='cuda:0')
+0.00030  1.15 l 11.95  | 1.181    43.089    62.602    0.5095    0.5000 | 1.623    47.792    0.553 | 1.560     68.750    0.729 |  0 hr 34 min  0 1149
+
+At iteration: 1190
+
+Smoothing after 50
+e: known: [tensor([69.4444], device='cuda:0'), tensor([94.4444], device='cuda:0'), tensor([94.4444], device='cuda:0')], new: [tensor([16.6667], device='cuda:0'), tensor([25.], device='cuda:0'), tensor([33.3333], device='cuda:0')], top5: tensor([77.0833], device='cuda:0')
+0.00030  1.20 l 12.47  | 1.181    43.089    62.602    0.5095    0.5000 | 1.612    51.208    0.582 | 1.625     56.250    0.650 |  0 hr 35 min  0 1199
+0.00030  1.20 v 12.48  | 1.262    35.163    55.894    59.146    0.4420    0.6000 | 1.612    51.208    0.582 | 1.625     56.250    0.650 |  0 hr 35 min
+
+Smoothing after 50
+e: known: [tensor([72.2222], device='cuda:0'), tensor([86.1111], device='cuda:0'), tensor([86.1111], device='cuda:0')], new: [tensor([16.6667], device='cuda:0'), tensor([33.3333], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([72.9167], device='cuda:0')
+0.00030  1.25 l 12.99  | 1.262    35.163    55.894    0.4420    0.6000 | 1.586    55.042    0.618 | 1.528     58.333    0.638 |  0 hr 36 min  0 1249
+
+At iteration: 1260
+
+Smoothing after 50
+e: known: [tensor([75.], device='cuda:0'), tensor([80.5555], device='cuda:0'), tensor([86.1111], device='cuda:0')], new: [tensor([0.], device='cuda:0'), tensor([41.6667], device='cuda:0'), tensor([58.3333], device='cuda:0')], top5: tensor([70.8333], device='cuda:0')
+0.00030  1.30 l 13.51  | 1.262    35.163    55.894    0.4420    0.6000 | 1.566    59.583    0.665 | 1.480     56.250    0.620 |  0 hr 38 min  0 1299
+
+At iteration: 1330
+
+Smoothing after 50
+e: known: [tensor([83.3333], device='cuda:0'), tensor([91.6667], device='cuda:0'), tensor([94.4444], device='cuda:0')], new: [tensor([16.6667], device='cuda:0'), tensor([33.3333], device='cuda:0'), tensor([50.], device='cuda:0')], top5: tensor([77.0833], device='cuda:0')
+0.00030  1.35 l 14.03  | 1.262    35.163    55.894    0.4420    0.6000 | 1.538    62.167    0.680 | 1.477     66.667    0.712 |  0 hr 39 min  0 1349
+
+Smoothing after 50
+e: known: [tensor([77.7778], device='cuda:0'), tensor([86.1111], device='cuda:0'), tensor([86.1111], device='cuda:0')], new: [tensor([25.], device='cuda:0'), tensor([25.], device='cuda:0'), tensor([33.3333], device='cuda:0')], top5: tensor([70.8333], device='cuda:0')
+0.00030  1.40 l 14.55  | 1.262    35.163    55.894    0.4420    0.6000 | 1.530    63.708    0.694 | 1.475     64.583    0.672 |  0 hr 40 min  0 1399
+
+At iteration: 1400
+New max valid for this run
+Saving current features. Best valid acc. found.
+0.00030  1.40 v 14.56  | 1.193    63.008    79.472    82.520    0.6999    0.6000 | 1.530    63.708    0.694 | 1.475     64.583    0.672 |  0 hr 42 min
+
+Smoothing after 50
+e: known: [tensor([83.3333], device='cuda:0'), tensor([94.4444], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([16.6667], device='cuda:0'), tensor([66.6667], device='cuda:0'), tensor([75.], device='cuda:0')], top5: tensor([87.5000], device='cuda:0')
+0.00030  1.45 l 15.07  | 1.193    63.008    79.472    0.6999    0.6000 | 1.500    67.458    0.735 | 1.558     66.667    0.745 |  0 hr 43 min  0 1449
+
+At iteration: 1470
+
+Smoothing after 50
+e: known: [tensor([75.], device='cuda:0'), tensor([91.6667], device='cuda:0'), tensor([94.4444], device='cuda:0')], new: [tensor([16.6667], device='cuda:0'), tensor([33.3333], device='cuda:0'), tensor([58.3333], device='cuda:0')], top5: tensor([77.0833], device='cuda:0')
+0.00030  1.50 l 15.59  | 1.193    63.008    79.472    0.6999    0.6000 | 1.469    68.250    0.738 | 1.484     60.417    0.681 |  0 hr 45 min  0 1499
+
+At iteration: 1540
+
+Smoothing after 50
+e: known: [tensor([94.4444], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([41.6667], device='cuda:0'), tensor([66.6667], device='cuda:0'), tensor([66.6667], device='cuda:0')], top5: tensor([91.6667], device='cuda:0')
+0.00030  1.55 l 16.11  | 1.193    63.008    79.472    0.6999    0.6000 | 1.465    70.458    0.757 | 1.372     81.250    0.856 |  0 hr 46 min  0 1549
+
+Smoothing after 50
+e: known: [tensor([91.6667], device='cuda:0'), tensor([97.2222], device='cuda:0'), tensor([97.2222], device='cuda:0')], new: [tensor([16.6667], device='cuda:0'), tensor([50.], device='cuda:0'), tensor([75.], device='cuda:0')], top5: tensor([85.4167], device='cuda:0')
+0.00030  1.60 l 16.63  | 1.193    63.008    79.472    0.6999    0.6000 | 1.431    73.000    0.782 | 1.458     72.917    0.781 |  0 hr 47 min  0 1599
+0.00030  1.60 v 16.64  | 1.271    43.293    54.675    58.740    0.4791    0.5000 | 1.431    73.000    0.782 | 1.458     72.917    0.781 |  0 hr 47 min
+
+At iteration: 1610
+
+Smoothing after 50
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([33.3333], device='cuda:0'), tensor([41.6667], device='cuda:0'), tensor([50.], device='cuda:0')], top5: tensor([85.4167], device='cuda:0')
+0.00030  1.65 l 17.15  | 1.271    43.293    54.675    0.4791    0.5000 | 1.405    73.875    0.794 | 1.341     81.250    0.833 |  0 hr 48 min  0 1649
+
+At iteration: 1680
+
+Smoothing after 50
+e: known: [tensor([83.3333], device='cuda:0'), tensor([94.4444], device='cuda:0'), tensor([94.4444], device='cuda:0')], new: [tensor([66.6667], device='cuda:0'), tensor([83.3333], device='cuda:0'), tensor([83.3333], device='cuda:0')], top5: tensor([91.6667], device='cuda:0')
+0.00030  1.70 l 17.67  | 1.271    43.293    54.675    0.4791    0.5000 | 1.399    76.083    0.812 | 1.340     79.167    0.844 |  0 hr 50 min  0 1699
+
+Smoothing after 50
+e: known: [tensor([91.6667], device='cuda:0'), tensor([97.2222], device='cuda:0'), tensor([97.2222], device='cuda:0')], new: [tensor([50.], device='cuda:0'), tensor([66.6667], device='cuda:0'), tensor([66.6667], device='cuda:0')], top5: tensor([89.5833], device='cuda:0')
+0.00030  1.75 l 18.20  | 1.271    43.293    54.675    0.4791    0.5000 | 1.373    77.375    0.824 | 1.394     81.250    0.841 |  0 hr 51 min  0 1749
+
+At iteration: 1750
+
+Smoothing after 50
+e: known: [tensor([94.4444], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([41.6667], device='cuda:0'), tensor([66.6667], device='cuda:0'), tensor([83.3333], device='cuda:0')], top5: tensor([91.6667], device='cuda:0')
+0.00030  1.80 l 18.72  | 1.271    43.293    54.675    0.4791    0.5000 | 1.343    81.500    0.859 | 1.372     81.250    0.852 |  0 hr 52 min  0 1799
+New max valid for this run
+Saving current features. Best valid acc. found.
+0.00030  1.80 v 18.73  | 1.024    72.561    82.724    85.772    0.7667    0.5000 | 1.343    81.500    0.859 | 1.372     81.250    0.852 |  0 hr 54 min
+
+At iteration: 1820
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([41.6667], device='cuda:0'), tensor([75.], device='cuda:0'), tensor([83.3333], device='cuda:0')], top5: tensor([93.7500], device='cuda:0')
+0.00030  1.85 l 19.24  | 1.024    72.561    82.724    0.7667    0.5000 | 1.318    80.000    0.849 | 1.310     85.417    0.887 |  0 hr 55 min  0 1849
+
+At iteration: 1890
+
+Smoothing after 50
+e: known: [tensor([94.4444], device='cuda:0'), tensor([97.2222], device='cuda:0'), tensor([97.2222], device='cuda:0')], new: [tensor([58.3333], device='cuda:0'), tensor([91.6667], device='cuda:0'), tensor([91.6667], device='cuda:0')], top5: tensor([95.8333], device='cuda:0')
+0.00030  1.90 l 19.76  | 1.024    72.561    82.724    0.7667    0.5000 | 1.315    82.458    0.871 | 1.306     85.417    0.891 |  0 hr 57 min  0 1899
+
+Smoothing after 50
+e: known: [tensor([86.1111], device='cuda:0'), tensor([88.8889], device='cuda:0'), tensor([88.8889], device='cuda:0')], new: [tensor([50.], device='cuda:0'), tensor([91.6667], device='cuda:0'), tensor([91.6667], device='cuda:0')], top5: tensor([89.5833], device='cuda:0')
+0.00030  1.95 l 20.28  | 1.024    72.561    82.724    0.7667    0.5000 | 1.293    83.417    0.879 | 1.220     77.083    0.812 |  0 hr 58 min  0 1949
+
+At iteration: 1960
+
+Smoothing after 50
+e: known: [tensor([88.8889], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([75.], device='cuda:0'), tensor([91.6667], device='cuda:0'), tensor([91.6667], device='cuda:0')], top5: tensor([97.9167], device='cuda:0')
+0.00030  2.00 l 20.80  | 1.024    72.561    82.724    0.7667    0.5000 | 1.273    84.625    0.890 | 1.253     85.417    0.907 |  0 hr 59 min  0 1999
+0.00030  2.00 v 20.81  | 1.040    71.341    85.772    87.195    0.7757    0.6000 | 1.273    84.625    0.890 | 1.253     85.417    0.907 |  0 hr 59 min
+
+At iteration: 2030
+
+Smoothing after 50
+e: known: [tensor([91.6667], device='cuda:0'), tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([66.6667], device='cuda:0'), tensor([83.3333], device='cuda:0'), tensor([91.6667], device='cuda:0')], top5: tensor([93.7500], device='cuda:0')
+0.00030  2.05 l 21.32  | 1.040    71.341    85.772    0.7757    0.6000 | 1.248    86.708    0.905 | 1.286     85.417    0.887 |  1 hr 00 min  0 2049
+
+Smoothing after 50
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([58.3333], device='cuda:0'), tensor([83.3333], device='cuda:0'), tensor([91.6667], device='cuda:0')], top5: tensor([95.8333], device='cuda:0')
+0.00030  2.10 l 21.84  | 1.040    71.341    85.772    0.7757    0.6000 | 1.232    87.292    0.908 | 1.243     87.500    0.911 |  1 hr 01 min  0 2099
+
+At iteration: 2100
+
+Smoothing after 50
+e: known: [tensor([94.4444], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([75.], device='cuda:0'), tensor([91.6667], device='cuda:0'), tensor([91.6667], device='cuda:0')], top5: tensor([97.9167], device='cuda:0')
+0.00030  2.15 l 22.36  | 1.040    71.341    85.772    0.7757    0.6000 | 1.194    87.750    0.913 | 1.177     89.583    0.938 |  1 hr 03 min  0 2149
+
+At iteration: 2170
+
+Smoothing after 50
+e: known: [tensor([94.4444], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([58.3333], device='cuda:0'), tensor([83.3333], device='cuda:0'), tensor([91.6667], device='cuda:0')], top5: tensor([95.8333], device='cuda:0')
+0.00030  2.20 l 22.88  | 1.040    71.341    85.772    0.7757    0.6000 | 1.197    89.458    0.924 | 1.223     85.417    0.898 |  1 hr 04 min  0 2199
+New max valid for this run
+Saving current features. Best valid acc. found.
+0.00030  2.20 v 22.89  | 0.975    76.220    85.163    88.415    0.7977    0.5000 | 1.197    89.458    0.924 | 1.223     85.417    0.898 |  1 hr 06 min
+
+At iteration: 2240
+
+Smoothing after 50
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([66.6667], device='cuda:0'), tensor([83.3333], device='cuda:0'), tensor([83.3333], device='cuda:0')], top5: tensor([95.8333], device='cuda:0')
+0.00030  2.25 l 23.40  | 0.975    76.220    85.163    0.7977    0.5000 | 1.191    89.458    0.927 | 1.189     89.583    0.912 |  1 hr 07 min  0 2249
+
+Smoothing after 50
+e: known: [tensor([94.4444], device='cuda:0'), tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([75.], device='cuda:0'), tensor([91.6667], device='cuda:0'), tensor([91.6667], device='cuda:0')], top5: tensor([95.8333], device='cuda:0')
+0.00030  2.30 l 23.92  | 0.975    76.220    85.163    0.7977    0.5000 | 1.170    90.583    0.933 | 1.129     89.583    0.924 |  1 hr 08 min  0 2299
+
+At iteration: 2310
+
+Smoothing after 50
+e: known: [tensor([94.4444], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([91.6667], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  2.35 l 24.44  | 0.975    76.220    85.163    0.7977    0.5000 | 1.132    91.000    0.939 | 1.099     93.750    0.964 |  1 hr 10 min  0 2349
+
+At iteration: 2380
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([91.6667], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  2.40 l 24.96  | 0.975    76.220    85.163    0.7977    0.5000 | 1.141    92.417    0.949 | 1.090     97.917    0.990 |  1 hr 11 min  0 2399
+0.00030  2.40 v 24.97  | 0.928    76.220    86.585    88.618    0.8055    0.5000 | 1.141    92.417    0.949 | 1.090     97.917    0.990 |  1 hr 11 min
+
+Smoothing after 50
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([91.6667], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  2.45 l 25.48  | 0.928    76.220    86.585    0.8055    0.5000 | 1.111    92.375    0.949 | 1.048     95.833    0.976 |  1 hr 12 min  0 2449
+
+At iteration: 2450
+
+Smoothing after 50
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([83.3333], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  2.50 l 26.00  | 0.928    76.220    86.585    0.8055    0.5000 | 1.092    93.250    0.951 | 1.092     93.750    0.964 |  1 hr 13 min  0 2499
+
+At iteration: 2520
+
+Smoothing after 50
+e: known: [tensor([94.4444], device='cuda:0'), tensor([94.4444], device='cuda:0'), tensor([97.2222], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([95.8333], device='cuda:0')
+0.00030  2.55 l 26.52  | 0.928    76.220    86.585    0.8055    0.5000 | 1.068    94.583    0.964 | 1.080     95.833    0.958 |  1 hr 14 min  0 2549
+
+At iteration: 2590
+
+Smoothing after 50
+e: known: [tensor([97.2222], device='cuda:0'), tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([83.3333], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([97.9167], device='cuda:0')
+0.00030  2.60 l 27.04  | 0.928    76.220    86.585    0.8055    0.5000 | 1.070    92.833    0.952 | 1.022     93.750    0.958 |  1 hr 16 min  0 2599
+New max valid for this run
+Saving current features. Best valid acc. found.
+0.00030  2.60 v 27.05  | 0.876    79.472    87.398    89.024    0.8302    0.5000 | 1.070    92.833    0.952 | 1.022     93.750    0.958 |  1 hr 18 min
+
+Smoothing after 50
+e: known: [tensor([94.4444], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([75.], device='cuda:0'), tensor([91.6667], device='cuda:0'), tensor([91.6667], device='cuda:0')], top5: tensor([97.9167], device='cuda:0')
+0.00030  2.65 l 27.56  | 0.876    79.472    87.398    0.8302    0.5000 | 1.046    95.042    0.968 | 1.057     89.583    0.931 |  1 hr 19 min  0 2649
+
+At iteration: 2660
+
+Smoothing after 50
+e: known: [tensor([94.4444], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  2.70 l 28.08  | 0.876    79.472    87.398    0.8302    0.5000 | 1.021    95.167    0.968 | 0.970     95.833    0.976 |  1 hr 20 min  0 2699
+
+At iteration: 2730
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([83.3333], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  2.75 l 28.60  | 0.876    79.472    87.398    0.8302    0.5000 | 1.023    95.083    0.967 | 0.935     95.833    0.979 |  1 hr 21 min  0 2749
+
+Smoothing after 50
+e: known: [tensor([94.4444], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  2.80 l 29.12  | 0.876    79.472    87.398    0.8302    0.5000 | 1.014    95.500    0.969 | 1.033     95.833    0.979 |  1 hr 22 min  0 2799
+
+At iteration: 2800
+0.00030  2.80 v 29.13  | 0.872    79.268    86.585    89.431    0.8233    0.5000 | 1.014    95.500    0.969 | 1.033     95.833    0.979 |  1 hr 23 min
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([83.3333], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  2.85 l 29.64  | 0.872    79.268    86.585    0.8233    0.5000 | 0.979    95.792    0.972 | 0.975     95.833    0.970 |  1 hr 24 min  0 2849
+
+At iteration: 2870
+
+Smoothing after 50
+e: known: [tensor([94.4444], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  2.90 l 30.16  | 0.872    79.268    86.585    0.8233    0.5000 | 0.973    95.958    0.973 | 1.029     95.833    0.979 |  1 hr 25 min  0 2899
+
+At iteration: 2940
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  2.95 l 30.68  | 0.872    79.268    86.585    0.8233    0.5000 | 0.964    96.542    0.979 | 0.955     100.000    1.000 |  1 hr 26 min  0 2949
+
+Smoothing after 50
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  3.00 l 31.20  | 0.872    79.268    86.585    0.8233    0.5000 | 0.955    96.333    0.976 | 0.950     97.917    0.986 |  1 hr 27 min  0 2999
+New max valid for this run
+Saving current features. Best valid acc. found.
+0.00030  3.00 v 31.21  | 0.828    80.894    89.228    90.041    0.8430    0.5000 | 0.955    96.333    0.976 | 0.950     97.917    0.986 |  1 hr 30 min
+
+At iteration: 3010
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  3.05 l 31.72  | 0.828    80.894    89.228    0.8430    0.5000 | 0.925    96.917    0.980 | 0.883     100.000    1.000 |  1 hr 31 min  0 3049
+
+At iteration: 3080
+
+Smoothing after 50
+e: known: [tensor([94.4444], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  3.10 l 32.24  | 0.828    80.894    89.228    0.8430    0.5000 | 0.917    97.208    0.982 | 0.887     95.833    0.979 |  1 hr 32 min  0 3099
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  3.15 l 32.76  | 0.828    80.894    89.228    0.8430    0.5000 | 0.922    97.083    0.982 | 0.858     100.000    1.000 |  1 hr 33 min  0 3149
+
+At iteration: 3150
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  3.20 l 33.28  | 0.828    80.894    89.228    0.8430    0.5000 | 0.879    98.125    0.988 | 0.922     100.000    1.000 |  1 hr 34 min  0 3199
+New max valid for this run
+Saving current features. Best valid acc. found.
+0.00030  3.20 v 33.29  | 0.810    81.504    88.211    89.837    0.8443    0.5000 | 0.879    98.125    0.988 | 0.922     100.000    1.000 |  1 hr 37 min
+
+At iteration: 3220
+
+Smoothing after 50
+e: known: [tensor([97.2222], device='cuda:0'), tensor([97.2222], device='cuda:0'), tensor([97.2222], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([97.9167], device='cuda:0')
+0.00030  3.25 l 33.80  | 0.810    81.504    88.211    0.8443    0.5000 | 0.895    96.500    0.978 | 0.935     97.917    0.979 |  1 hr 38 min  0 3249
+
+At iteration: 3290
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  3.30 l 34.32  | 0.810    81.504    88.211    0.8443    0.5000 | 0.867    97.625    0.985 | 0.928     100.000    1.000 |  1 hr 39 min  0 3299
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  3.35 l 34.84  | 0.810    81.504    88.211    0.8443    0.5000 | 0.855    97.542    0.985 | 0.925     100.000    1.000 |  1 hr 40 min  0 3349
+
+At iteration: 3360
+
+Smoothing after 50
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  3.40 l 35.36  | 0.810    81.504    88.211    0.8443    0.5000 | 0.839    97.417    0.984 | 0.904     97.917    0.986 |  1 hr 41 min  0 3399
+New max valid for this run
+Saving current features. Best valid acc. found.
+0.00030  3.40 v 35.37  | 0.780    81.707    89.024    90.041    0.8471    0.4000 | 0.839    97.417    0.984 | 0.904     97.917    0.986 |  1 hr 44 min
+
+At iteration: 3430
+
+Smoothing after 50
+e: known: [tensor([94.4444], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  3.45 l 35.88  | 0.780    81.707    89.024    0.8471    0.4000 | 0.833    97.833    0.985 | 0.841     95.833    0.967 |  1 hr 45 min  0 3449
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  3.50 l 36.40  | 0.780    81.707    89.024    0.8471    0.4000 | 0.833    97.750    0.987 | 0.799     100.000    1.000 |  1 hr 46 min  0 3499
+
+At iteration: 3500
+
+Smoothing after 50
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  3.55 l 36.92  | 0.780    81.707    89.024    0.8471    0.4000 | 0.806    98.292    0.989 | 0.806     97.917    0.990 |  1 hr 47 min  0 3549
+
+At iteration: 3570
+
+Smoothing after 50
+e: known: [tensor([94.4444], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  3.60 l 37.44  | 0.780    81.707    89.024    0.8471    0.4000 | 0.825    97.542    0.984 | 0.839     95.833    0.979 |  1 hr 48 min  0 3599
+0.00030  3.60 v 37.45  | 0.767    81.504    88.618    89.634    0.8453    0.4000 | 0.825    97.542    0.984 | 0.839     95.833    0.979 |  1 hr 49 min
+
+At iteration: 3640
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  3.65 l 37.96  | 0.767    81.504    88.618    0.8453    0.4000 | 0.790    98.250    0.989 | 0.733     100.000    1.000 |  1 hr 50 min  0 3649
+
+Smoothing after 50
+e: known: [tensor([97.2222], device='cuda:0'), tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([97.9167], device='cuda:0')
+0.00030  3.70 l 38.48  | 0.767    81.504    88.618    0.8453    0.4000 | 0.778    98.375    0.990 | 0.755     97.917    0.979 |  1 hr 51 min  0 3699
+
+At iteration: 3710
+
+Smoothing after 50
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  3.75 l 39.00  | 0.767    81.504    88.618    0.8453    0.4000 | 0.783    98.208    0.988 | 0.791     97.917    0.990 |  1 hr 52 min  0 3749
+
+At iteration: 3780
+
+Smoothing after 50
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  3.80 l 39.52  | 0.767    81.504    88.618    0.8453    0.4000 | 0.773    98.208    0.989 | 0.747     97.917    0.990 |  1 hr 53 min  0 3799
+New max valid for this run
+Saving current features. Best valid acc. found.
+0.00030  3.80 v 39.53  | 0.736    82.317    88.415    90.854    0.8494    0.4000 | 0.773    98.208    0.989 | 0.747     97.917    0.990 |  1 hr 55 min
+
+Smoothing after 50
+e: known: [tensor([94.4444], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([91.6667], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  3.85 l 40.04  | 0.736    82.317    88.415    0.8494    0.4000 | 0.761    98.000    0.987 | 0.901     93.750    0.969 |  1 hr 57 min  0 3849
+
+At iteration: 3850
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  3.90 l 40.56  | 0.736    82.317    88.415    0.8494    0.4000 | 0.735    98.375    0.990 | 0.691     100.000    1.000 |  1 hr 58 min  0 3899
+
+At iteration: 3920
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  3.95 l 41.08  | 0.736    82.317    88.415    0.8494    0.4000 | 0.728    98.625    0.992 | 0.719     100.000    1.000 |  1 hr 59 min  0 3949
+
+At iteration: 3990
+
+Smoothing after 50
+e: known: [tensor([97.2222], device='cuda:0'), tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([97.9167], device='cuda:0')
+0.00030  4.00 l 41.60  | 0.736    82.317    88.415    0.8494    0.4000 | 0.733    98.167    0.988 | 0.716     97.917    0.979 |  2 hr 00 min  0 3999
+New max valid for this run
+Saving current features. Best valid acc. found.
+0.00030  4.00 v 41.61  | 0.723    82.724    89.634    90.447    0.8566    0.4000 | 0.733    98.167    0.988 | 0.716     97.917    0.979 |  2 hr 02 min
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  4.05 l 42.12  | 0.723    82.724    89.634    0.8566    0.4000 | 0.725    98.417    0.990 | 0.700     100.000    1.000 |  2 hr 04 min  0 4049
+
+At iteration: 4060
+
+Smoothing after 50
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  4.10 l 42.64  | 0.723    82.724    89.634    0.8566    0.4000 | 0.718    98.375    0.990 | 0.860     97.917    0.986 |  2 hr 05 min  0 4099
+
+At iteration: 4130
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  4.15 l 43.16  | 0.723    82.724    89.634    0.8566    0.4000 | 0.733    97.875    0.987 | 0.669     100.000    1.000 |  2 hr 06 min  0 4149
+
+Smoothing after 50
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  4.20 l 43.68  | 0.723    82.724    89.634    0.8566    0.4000 | 0.711    97.750    0.986 | 0.717     97.917    0.986 |  2 hr 07 min  0 4199
+
+At iteration: 4200
+0.00030  4.20 v 43.69  | 0.704    82.114    88.008    90.447    0.8443    0.4000 | 0.711    97.750    0.986 | 0.717     97.917    0.986 |  2 hr 07 min
+
+Smoothing after 50
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  4.25 l 44.20  | 0.704    82.114    88.008    0.8443    0.4000 | 0.697    98.375    0.991 | 0.676     97.917    0.986 |  2 hr 08 min  0 4249
+
+At iteration: 4270
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  4.30 l 44.72  | 0.704    82.114    88.008    0.8443    0.4000 | 0.682    98.292    0.990 | 0.658     100.000    1.000 |  2 hr 10 min  0 4299
+
+At iteration: 4340
+
+Smoothing after 50
+e: known: [tensor([97.2222], device='cuda:0'), tensor([97.2222], device='cuda:0'), tensor([97.2222], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([97.9167], device='cuda:0')
+0.00030  4.35 l 45.24  | 0.704    82.114    88.008    0.8443    0.4000 | 0.666    98.708    0.992 | 0.770     97.917    0.979 |  2 hr 11 min  0 4349
+
+Smoothing after 50
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  4.40 l 45.76  | 0.704    82.114    88.008    0.8443    0.4000 | 0.658    98.625    0.992 | 0.750     97.917    0.990 |  2 hr 12 min  0 4399
+0.00030  4.40 v 45.77  | 0.717    80.894    88.211    89.634    0.8413    0.4000 | 0.658    98.625    0.992 | 0.750     97.917    0.990 |  2 hr 12 min
+
+At iteration: 4410
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  4.45 l 46.28  | 0.717    80.894    88.211    0.8413    0.4000 | 0.660    98.375    0.990 | 0.636     100.000    1.000 |  2 hr 13 min  0 4449
+
+At iteration: 4480
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  4.50 l 46.80  | 0.717    80.894    88.211    0.8413    0.4000 | 0.660    98.417    0.991 | 0.626     100.000    1.000 |  2 hr 14 min  0 4499
+
+Smoothing after 50
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  4.55 l 47.32  | 0.717    80.894    88.211    0.8413    0.4000 | 0.659    98.583    0.992 | 0.609     97.917    0.990 |  2 hr 16 min  0 4549
+
+At iteration: 4550
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  4.60 l 47.84  | 0.717    80.894    88.211    0.8413    0.4000 | 0.647    98.417    0.990 | 0.568     100.000    1.000 |  2 hr 17 min  0 4599
+0.00030  4.60 v 47.85  | 0.683    82.114    89.634    90.447    0.8520    0.4000 | 0.647    98.417    0.990 | 0.568     100.000    1.000 |  2 hr 17 min
+
+At iteration: 4620
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  4.65 l 48.36  | 0.683    82.114    89.634    0.8520    0.4000 | 0.646    99.042    0.994 | 0.596     100.000    1.000 |  2 hr 18 min  0 4649
+
+At iteration: 4690
+
+Smoothing after 50
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  4.70 l 48.88  | 0.683    82.114    89.634    0.8520    0.4000 | 0.632    98.333    0.990 | 0.647     97.917    0.990 |  2 hr 19 min  0 4699
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  4.75 l 49.40  | 0.683    82.114    89.634    0.8520    0.4000 | 0.630    98.417    0.991 | 0.595     100.000    1.000 |  2 hr 20 min  0 4749
+
+At iteration: 4760
+
+Smoothing after 50
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  4.80 l 49.92  | 0.683    82.114    89.634    0.8520    0.4000 | 0.611    98.833    0.994 | 0.607     97.917    0.990 |  2 hr 22 min  0 4799
+New max valid for this run
+Saving current features. Best valid acc. found.
+0.00030  4.80 v 49.93  | 0.677    83.740    89.634    90.854    0.8633    0.3000 | 0.611    98.833    0.994 | 0.607     97.917    0.990 |  2 hr 24 min
+
+At iteration: 4830
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  4.85 l 50.44  | 0.677    83.740    89.634    0.8633    0.3000 | 0.628    98.708    0.992 | 0.606     100.000    1.000 |  2 hr 25 min  0 4849
+
+Smoothing after 50
+e: known: [tensor([91.6667], device='cuda:0'), tensor([97.2222], device='cuda:0'), tensor([97.2222], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([97.9167], device='cuda:0')
+0.00030  4.90 l 50.96  | 0.677    83.740    89.634    0.8633    0.3000 | 0.614    98.750    0.993 | 0.683     93.750    0.958 |  2 hr 26 min  0 4899
+
+At iteration: 4900
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  4.95 l 51.49  | 0.677    83.740    89.634    0.8633    0.3000 | 0.606    98.667    0.992 | 0.528     100.000    1.000 |  2 hr 27 min  0 4949
+
+At iteration: 4970
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  5.00 l 52.01  | 0.677    83.740    89.634    0.8633    0.3000 | 0.589    98.750    0.992 | 0.539     100.000    1.000 |  2 hr 29 min  0 4999
+0.00030  5.00 v 52.02  | 0.683    81.911    89.228    90.650    0.8505    0.4000 | 0.589    98.750    0.992 | 0.539     100.000    1.000 |  2 hr 29 min
+
+At iteration: 5040
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  5.05 l 52.53  | 0.683    81.911    89.228    0.8505    0.4000 | 0.593    98.583    0.992 | 0.560     100.000    1.000 |  2 hr 30 min  0 5049
+
+Smoothing after 50
+e: known: [tensor([88.8889], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  5.10 l 53.05  | 0.683    81.911    89.228    0.8505    0.4000 | 0.595    98.708    0.993 | 0.677     91.667    0.955 |  2 hr 31 min  0 5099
+
+At iteration: 5110
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  5.15 l 53.57  | 0.683    81.911    89.228    0.8505    0.4000 | 0.588    98.875    0.994 | 0.577     100.000    1.000 |  2 hr 32 min  0 5149
+
+At iteration: 5180
+
+Smoothing after 50
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  5.20 l 54.09  | 0.683    81.911    89.228    0.8505    0.4000 | 0.592    98.583    0.992 | 0.607     97.917    0.983 |  2 hr 33 min  0 5199
+0.00030  5.20 v 54.10  | 0.661    82.114    89.431    90.041    0.8536    0.4000 | 0.592    98.583    0.992 | 0.607     97.917    0.983 |  2 hr 34 min
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  5.25 l 54.61  | 0.661    82.114    89.431    0.8536    0.4000 | 0.573    98.500    0.991 | 0.544     100.000    1.000 |  2 hr 35 min  0 5249
+
+At iteration: 5250
+
+Smoothing after 50
+e: known: [tensor([94.4444], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  5.30 l 55.13  | 0.661    82.114    89.431    0.8536    0.4000 | 0.573    98.583    0.992 | 0.564     95.833    0.973 |  2 hr 36 min  0 5299
+
+At iteration: 5320
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  5.35 l 55.65  | 0.661    82.114    89.431    0.8536    0.4000 | 0.575    98.792    0.993 | 0.526     100.000    1.000 |  2 hr 37 min  0 5349
+
+At iteration: 5390
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  5.40 l 56.17  | 0.661    82.114    89.431    0.8536    0.4000 | 0.568    98.333    0.990 | 0.501     100.000    1.000 |  2 hr 38 min  0 5399
+0.00030  5.40 v 56.18  | 0.678    81.911    89.228    90.244    0.8507    0.4000 | 0.568    98.333    0.990 | 0.501     100.000    1.000 |  2 hr 38 min
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  5.45 l 56.69  | 0.678    81.911    89.228    0.8507    0.4000 | 0.577    98.292    0.990 | 0.574     100.000    1.000 |  2 hr 40 min  0 5449
+
+At iteration: 5460
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  5.50 l 57.21  | 0.678    81.911    89.228    0.8507    0.4000 | 0.565    99.042    0.995 | 0.572     100.000    1.000 |  2 hr 41 min  0 5499
+
+At iteration: 5530
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  5.55 l 57.73  | 0.678    81.911    89.228    0.8507    0.4000 | 0.555    99.125    0.995 | 0.552     100.000    1.000 |  2 hr 42 min  0 5549
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  5.60 l 58.25  | 0.678    81.911    89.228    0.8507    0.4000 | 0.549    98.583    0.991 | 0.510     100.000    1.000 |  2 hr 43 min  0 5599
+
+At iteration: 5600
+0.00030  5.60 v 58.26  | 0.651    82.724    88.821    90.854    0.8538    0.3000 | 0.549    98.583    0.991 | 0.510     100.000    1.000 |  2 hr 43 min
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  5.65 l 58.77  | 0.651    82.724    88.821    0.8538    0.3000 | 0.544    98.792    0.993 | 0.559     100.000    1.000 |  2 hr 45 min  0 5649
+
+At iteration: 5670
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  5.70 l 59.29  | 0.651    82.724    88.821    0.8538    0.3000 | 0.558    98.625    0.992 | 0.537     100.000    1.000 |  2 hr 46 min  0 5699
+
+At iteration: 5740
+
+Smoothing after 50
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  5.75 l 59.81  | 0.651    82.724    88.821    0.8538    0.3000 | 0.560    98.708    0.993 | 0.503     97.917    0.990 |  2 hr 47 min  0 5749
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  5.80 l 60.33  | 0.651    82.724    88.821    0.8538    0.3000 | 0.547    98.625    0.993 | 0.515     100.000    1.000 |  2 hr 48 min  0 5799
+0.00030  5.80 v 60.34  | 0.672    82.520    89.024    90.244    0.8541    0.3000 | 0.547    98.625    0.993 | 0.515     100.000    1.000 |  2 hr 48 min
+
+At iteration: 5810
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  5.85 l 60.85  | 0.672    82.520    89.024    0.8541    0.3000 | 0.529    99.083    0.995 | 0.550     100.000    1.000 |  2 hr 49 min  0 5849
+
+At iteration: 5880
+
+Smoothing after 50
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  5.90 l 61.37  | 0.672    82.520    89.024    0.8541    0.3000 | 0.540    98.375    0.991 | 0.486     97.917    0.990 |  2 hr 51 min  0 5899
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  5.95 l 61.89  | 0.672    82.520    89.024    0.8541    0.3000 | 0.529    99.042    0.995 | 0.580     100.000    1.000 |  2 hr 52 min  0 5949
+
+At iteration: 5950
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  6.00 l 62.41  | 0.672    82.520    89.024    0.8541    0.3000 | 0.530    98.708    0.993 | 0.573     100.000    1.000 |  2 hr 53 min  0 5999
+0.00030  6.00 v 62.42  | 0.652    82.520    89.024    90.447    0.8544    0.3000 | 0.530    98.708    0.993 | 0.573     100.000    1.000 |  2 hr 53 min
+
+At iteration: 6020
+
+Smoothing after 50
+e: known: [tensor([94.4444], device='cuda:0'), tensor([97.2222], device='cuda:0'), tensor([97.2222], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([97.9167], device='cuda:0')
+0.00030  6.05 l 62.93  | 0.652    82.520    89.024    0.8544    0.3000 | 0.527    98.917    0.994 | 0.572     95.833    0.969 |  2 hr 54 min  0 6049
+
+At iteration: 6090
+
+Smoothing after 50
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  6.10 l 63.45  | 0.652    82.520    89.024    0.8544    0.3000 | 0.524    98.833    0.994 | 0.553     97.917    0.990 |  2 hr 55 min  0 6099
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  6.15 l 63.97  | 0.652    82.520    89.024    0.8544    0.3000 | 0.520    99.125    0.995 | 0.540     100.000    1.000 |  2 hr 57 min  0 6149
+
+At iteration: 6160
+
+Smoothing after 50
+e: known: [tensor([94.4444], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  6.20 l 64.49  | 0.652    82.520    89.024    0.8544    0.3000 | 0.532    98.792    0.993 | 0.530     95.833    0.976 |  2 hr 58 min  0 6199
+0.00030  6.20 v 64.50  | 0.671    82.724    89.634    90.650    0.8545    0.3000 | 0.532    98.792    0.993 | 0.530     95.833    0.976 |  2 hr 58 min
+
+At iteration: 6230
+
+Smoothing after 50
+e: known: [tensor([91.6667], device='cuda:0'), tensor([97.2222], device='cuda:0'), tensor([97.2222], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([97.9167], device='cuda:0')
+0.00030  6.25 l 65.01  | 0.671    82.724    89.634    0.8545    0.3000 | 0.512    98.833    0.993 | 0.508     93.750    0.958 |  2 hr 59 min  0 6249
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  6.30 l 65.53  | 0.671    82.724    89.634    0.8545    0.3000 | 0.510    99.083    0.995 | 0.530     100.000    1.000 |  3 hr 00 min  0 6299
+
+At iteration: 6300
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  6.35 l 66.05  | 0.671    82.724    89.634    0.8545    0.3000 | 0.518    99.042    0.994 | 0.501     100.000    1.000 |  3 hr 01 min  0 6349
+
+At iteration: 6370
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  6.40 l 66.57  | 0.671    82.724    89.634    0.8545    0.3000 | 0.505    99.000    0.994 | 0.443     100.000    1.000 |  3 hr 03 min  0 6399
+0.00030  6.40 v 66.58  | 0.670    80.894    89.024    90.447    0.8448    0.3000 | 0.505    99.000    0.994 | 0.443     100.000    1.000 |  3 hr 03 min
+
+At iteration: 6440
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  6.45 l 67.09  | 0.670    80.894    89.024    0.8448    0.3000 | 0.516    98.583    0.993 | 0.565     100.000    1.000 |  3 hr 04 min  0 6449
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  6.50 l 67.61  | 0.670    80.894    89.024    0.8448    0.3000 | 0.501    98.792    0.993 | 0.514     100.000    1.000 |  3 hr 05 min  0 6499
+
+At iteration: 6510
+
+Smoothing after 50
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  6.55 l 68.13  | 0.670    80.894    89.024    0.8448    0.3000 | 0.521    98.875    0.993 | 0.468     97.917    0.990 |  3 hr 06 min  0 6549
+
+At iteration: 6580
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  6.60 l 68.65  | 0.670    80.894    89.024    0.8448    0.3000 | 0.485    99.000    0.995 | 0.501     100.000    1.000 |  3 hr 07 min  0 6599
+0.00030  6.60 v 68.66  | 0.645    83.333    89.431    90.854    0.8614    0.3000 | 0.485    99.000    0.995 | 0.501     100.000    1.000 |  3 hr 08 min
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  6.65 l 69.17  | 0.645    83.333    89.431    0.8614    0.3000 | 0.497    99.000    0.995 | 0.537     100.000    1.000 |  3 hr 09 min  0 6649
+
+At iteration: 6650
+
+Smoothing after 50
+e: known: [tensor([91.6667], device='cuda:0'), tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([97.9167], device='cuda:0')
+0.00030  6.70 l 69.69  | 0.645    83.333    89.431    0.8614    0.3000 | 0.502    99.042    0.994 | 0.523     93.750    0.955 |  3 hr 10 min  0 6699
+
+At iteration: 6720
+
+Smoothing after 50
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  6.75 l 70.21  | 0.645    83.333    89.431    0.8614    0.3000 | 0.482    98.750    0.993 | 0.490     97.917    0.990 |  3 hr 11 min  0 6749
+
+At iteration: 6790
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  6.80 l 70.73  | 0.645    83.333    89.431    0.8614    0.3000 | 0.484    99.000    0.995 | 0.422     100.000    1.000 |  3 hr 12 min  0 6799
+0.00030  6.80 v 70.74  | 0.650    83.130    89.634    90.447    0.8605    0.3000 | 0.484    99.000    0.995 | 0.422     100.000    1.000 |  3 hr 12 min
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  6.85 l 71.25  | 0.650    83.130    89.634    0.8605    0.3000 | 0.483    98.958    0.994 | 0.486     100.000    1.000 |  3 hr 14 min  0 6849
+
+At iteration: 6860
+
+Smoothing after 50
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  6.90 l 71.77  | 0.650    83.130    89.634    0.8605    0.3000 | 0.486    99.083    0.994 | 0.473     97.917    0.990 |  3 hr 15 min  0 6899
+
+At iteration: 6930
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  6.95 l 72.29  | 0.650    83.130    89.634    0.8605    0.3000 | 0.493    98.542    0.992 | 0.483     100.000    1.000 |  3 hr 16 min  0 6949
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  7.00 l 72.81  | 0.650    83.130    89.634    0.8605    0.3000 | 0.495    99.417    0.997 | 0.435     100.000    1.000 |  3 hr 17 min  0 6999
+
+At iteration: 7000
+0.00030  7.00 v 72.82  | 0.680    82.114    88.821    90.447    0.8501    0.3000 | 0.495    99.417    0.997 | 0.435     100.000    1.000 |  3 hr 17 min
+
+Smoothing after 50
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  7.05 l 73.33  | 0.680    82.114    88.821    0.8501    0.3000 | 0.479    99.167    0.996 | 0.493     97.917    0.990 |  3 hr 18 min  0 7049
+
+At iteration: 7070
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  7.10 l 73.85  | 0.680    82.114    88.821    0.8501    0.3000 | 0.466    99.042    0.995 | 0.466     100.000    1.000 |  3 hr 20 min  0 7099
+
+At iteration: 7140
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  7.15 l 74.37  | 0.680    82.114    88.821    0.8501    0.3000 | 0.465    99.500    0.997 | 0.427     100.000    1.000 |  3 hr 21 min  0 7149
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  7.20 l 74.89  | 0.680    82.114    88.821    0.8501    0.3000 | 0.488    98.875    0.994 | 0.455     100.000    1.000 |  3 hr 22 min  0 7199
+0.00030  7.20 v 74.90  | 0.620    82.724    88.821    90.447    0.8535    0.3000 | 0.488    98.875    0.994 | 0.455     100.000    1.000 |  3 hr 22 min
+
+At iteration: 7210
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  7.25 l 75.41  | 0.620    82.724    88.821    0.8535    0.3000 | 0.464    99.042    0.994 | 0.508     100.000    1.000 |  3 hr 23 min  0 7249
+
+At iteration: 7280
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  7.30 l 75.93  | 0.620    82.724    88.821    0.8535    0.3000 | 0.476    99.000    0.994 | 0.405     100.000    1.000 |  3 hr 24 min  0 7299
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  7.35 l 76.45  | 0.620    82.724    88.821    0.8535    0.3000 | 0.472    98.708    0.992 | 0.393     100.000    1.000 |  3 hr 26 min  0 7349
+
+At iteration: 7350
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  7.40 l 76.97  | 0.620    82.724    88.821    0.8535    0.3000 | 0.463    98.833    0.994 | 0.514     100.000    1.000 |  3 hr 27 min  0 7399
+0.00030  7.40 v 76.98  | 0.620    81.911    90.447    91.057    0.8537    0.4000 | 0.463    98.833    0.994 | 0.514     100.000    1.000 |  3 hr 27 min
+
+At iteration: 7420
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  7.45 l 77.49  | 0.620    81.911    90.447    0.8537    0.4000 | 0.438    99.000    0.995 | 0.395     100.000    1.000 |  3 hr 28 min  0 7449
+
+At iteration: 7490
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  7.50 l 78.01  | 0.620    81.911    90.447    0.8537    0.4000 | 0.491    99.083    0.995 | 0.460     100.000    1.000 |  3 hr 29 min  0 7499
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  7.55 l 78.53  | 0.620    81.911    90.447    0.8537    0.4000 | 0.476    98.958    0.994 | 0.466     100.000    1.000 |  3 hr 30 min  0 7549
+
+At iteration: 7560
+
+Smoothing after 50
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  7.60 l 79.05  | 0.620    81.911    90.447    0.8537    0.4000 | 0.455    98.833    0.993 | 0.355     97.917    0.990 |  3 hr 32 min  0 7599
+0.00030  7.60 v 79.06  | 0.666    81.707    89.228    90.854    0.8473    0.3000 | 0.455    98.833    0.993 | 0.355     97.917    0.990 |  3 hr 32 min
+
+At iteration: 7630
+
+Smoothing after 50
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  7.65 l 79.57  | 0.666    81.707    89.228    0.8473    0.3000 | 0.462    99.250    0.996 | 0.420     97.917    0.990 |  3 hr 33 min  0 7649
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  7.70 l 80.09  | 0.666    81.707    89.228    0.8473    0.3000 | 0.456    99.042    0.995 | 0.448     100.000    1.000 |  3 hr 34 min  0 7699
+
+At iteration: 7700
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  7.75 l 80.61  | 0.666    81.707    89.228    0.8473    0.3000 | 0.464    98.875    0.994 | 0.433     100.000    1.000 |  3 hr 35 min  0 7749
+
+At iteration: 7770
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  7.80 l 81.13  | 0.666    81.707    89.228    0.8473    0.3000 | 0.464    98.917    0.994 | 0.417     100.000    1.000 |  3 hr 37 min  0 7799
+0.00030  7.80 v 81.14  | 0.660    82.114    89.634    91.057    0.8514    0.3000 | 0.464    98.917    0.994 | 0.417     100.000    1.000 |  3 hr 37 min
+
+At iteration: 7840
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  7.85 l 81.65  | 0.660    82.114    89.634    0.8514    0.3000 | 0.465    99.125    0.995 | 0.470     100.000    1.000 |  3 hr 38 min  0 7849
+
+Smoothing after 50
+e: known: [tensor([94.4444], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([91.6667], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  7.90 l 82.17  | 0.660    82.114    89.634    0.8514    0.3000 | 0.468    98.500    0.992 | 0.473     93.750    0.969 |  3 hr 39 min  0 7899
+
+At iteration: 7910
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  7.95 l 82.69  | 0.660    82.114    89.634    0.8514    0.3000 | 0.441    99.292    0.996 | 0.422     100.000    1.000 |  3 hr 40 min  0 7949
+
+At iteration: 7980
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  8.00 l 83.21  | 0.660    82.114    89.634    0.8514    0.3000 | 0.465    99.042    0.995 | 0.402     100.000    1.000 |  3 hr 41 min  0 7999
+0.00030  8.00 v 83.22  | 0.640    82.114    89.024    91.260    0.8508    0.3000 | 0.465    99.042    0.995 | 0.402     100.000    1.000 |  3 hr 42 min
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  8.05 l 83.73  | 0.640    82.114    89.024    0.8508    0.3000 | 0.451    98.833    0.994 | 0.396     100.000    1.000 |  3 hr 43 min  0 8049
+
+At iteration: 8050
+
+Smoothing after 50
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  8.10 l 84.25  | 0.640    82.114    89.024    0.8508    0.3000 | 0.446    98.833    0.993 | 0.594     97.917    0.990 |  3 hr 44 min  0 8099
+
+At iteration: 8120
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  8.15 l 84.78  | 0.640    82.114    89.024    0.8508    0.3000 | 0.454    98.958    0.995 | 0.427     100.000    1.000 |  3 hr 45 min  0 8149
+
+At iteration: 8190
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  8.20 l 85.30  | 0.640    82.114    89.024    0.8508    0.3000 | 0.462    99.042    0.995 | 0.349     100.000    1.000 |  3 hr 46 min  0 8199
+0.00030  8.20 v 85.31  | 0.636    82.114    89.228    91.057    0.8496    0.3000 | 0.462    99.042    0.995 | 0.349     100.000    1.000 |  3 hr 47 min
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  8.25 l 85.82  | 0.636    82.114    89.228    0.8496    0.3000 | 0.435    98.875    0.994 | 0.442     100.000    1.000 |  3 hr 48 min  0 8249
+
+At iteration: 8260
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  8.30 l 86.34  | 0.636    82.114    89.228    0.8496    0.3000 | 0.437    98.917    0.994 | 0.490     100.000    1.000 |  3 hr 49 min  0 8299
+
+At iteration: 8330
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  8.35 l 86.86  | 0.636    82.114    89.228    0.8496    0.3000 | 0.442    99.000    0.995 | 0.419     100.000    1.000 |  3 hr 50 min  0 8349
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  8.40 l 87.38  | 0.636    82.114    89.228    0.8496    0.3000 | 0.449    99.250    0.996 | 0.416     100.000    1.000 |  3 hr 51 min  0 8399
+
+At iteration: 8400
+0.00030  8.40 v 87.39  | 0.645    82.927    90.244    91.870    0.8597    0.3000 | 0.449    99.250    0.996 | 0.416     100.000    1.000 |  3 hr 51 min
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  8.45 l 87.90  | 0.645    82.927    90.244    0.8597    0.3000 | 0.458    98.833    0.993 | 0.464     100.000    1.000 |  3 hr 53 min  0 8449
+
+At iteration: 8470
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  8.50 l 88.42  | 0.645    82.927    90.244    0.8597    0.3000 | 0.444    99.375    0.997 | 0.436     100.000    1.000 |  3 hr 54 min  0 8499
+
+At iteration: 8540
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  8.55 l 88.94  | 0.645    82.927    90.244    0.8597    0.3000 | 0.437    98.958    0.994 | 0.443     100.000    1.000 |  3 hr 55 min  0 8549
+
+Smoothing after 50
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], top5: tensor([100.], device='cuda:0')
+0.00030  8.60 l 89.46  | 0.645    82.927    90.244    0.8597    0.3000 | 0.445    98.875    0.994 | 0.507     100.000    1.000 |  3 hr 56 min  0 8599
+New max valid for this run
+Saving current features. Best valid acc. found.
+0.00030  8.60 v 89.47  | 0.643    84.350    89.634    90.650    0.8652    0.3000 | 0.445    98.875    0.994 | 0.507     100.000    1.000 |  3 hr 58 min
+
+At iteration: 8610

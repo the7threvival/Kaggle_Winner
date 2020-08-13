@@ -13,6 +13,7 @@ import time
 BASE_SIZE = 256
 # NUM_CLASSES = 5004 * 2
 NUM_CLASSES = 839 * 2
+#new_whale = True
 new_whale = True
 
 def do_length_decode(rle, H=192, W=384, fill_value=255):
@@ -28,13 +29,17 @@ def do_length_decode(rle, H=192, W=384, fill_value=255):
     return mask
 
 class WhaleDataset(Dataset):
-    def __init__(self, names, labels=None, mode='train', transform_train=None,  min_num_classes=0):
+    def __init__(self, names, labels=None, mode='train', transform_train=None,  min_num_classes=0, newWhale=True):
         super(WhaleDataset, self).__init__()
+        global new_whale 
+        new_whale = newWhale
+        #print(new_whale, newWhale)
         self.pairs = 2
         self.names = names
         # labels is used to have all the labels that are input. they might
         # be repeated or not. (Represents original entries of elephant IDs
         # passed in as the training data)
+        # By the end, repeated labels are removed
         self.labels = labels
         self.mode = mode
         self.transform_train = transform_train
@@ -54,6 +59,8 @@ class WhaleDataset(Dataset):
                 labels.append(label)
         self.labels = labels
         if mode in ['train', 'valid']:
+            # dict_train holds the list of images associated with a particular ID for
+            # all IDs
             self.dict_train = self.balance_train()
             # This is overwritten right after so removed for now
             # self.labels = list(self.dict_train.keys())
@@ -160,6 +167,10 @@ class WhaleDataset(Dataset):
         label = self.labels[index]
         names = self.dict_train[label]
         nums = len(names)
+        # IT SEEMS LIKE WHEN THIS LABEL IS 'NEW_WHALE', IT WILL GIVE BOTH A 
+        # POSITIVE AND NEGATIVE OTHER NEW_WHALE AS WELL... THAT MAKES NO SENSE
+        # This is taken care of directly in hard_example_mining
+         
         # Anchor and positive are same if only 1 image exists
         # Low probability otherwise
         if nums == 1:
@@ -168,10 +179,12 @@ class WhaleDataset(Dataset):
         else:
             anchor_name, positive_name = random.sample(names, 2)
 
+        #print("getting images")
+        #print("Label:", label, "names:",  anchor_name, positive_name)
         # Negative is picked from labels excluding anchor and new_whale
         if new_whale:
           negative_label = random.choice(list(set(self.labels) ^ set([label, 'new_whale'])))
-          # Previuosly excluded as I did not have this new_whale thing
+          # Previously excluded as I did not have this new_whale thing
           negative_label2 = 'new_whale'
           negative_name2 = random.choice(self.dict_train[negative_label2])
           negative_image2, negative_add2 = self.get_image(negative_name2, self.transform_train, negative_label2)
@@ -262,10 +275,14 @@ class WhaleTestDataset(Dataset):
             name = self.names[index]
             image = self.get_image(name, self.transform, mode='test')
             return image, name
-        elif self.mode in ['valid', 'train']:
+        elif self.mode in ['valid', 'train', 'embed']:
             name = self.names[index]
             label = self.labels_dict[self.labels[index]]
-            image = self.get_image(name, self.transform)
+            if self.mode == 'embed':
+                image = self.get_image(name, self.transform, mode='test')
+            else:
+                image = self.get_image(name, self.transform)
+            #print(label)
             return image, label, name
 
 

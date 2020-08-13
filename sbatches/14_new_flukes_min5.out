@@ -1,0 +1,5 @@
+/gpfs/u/home/DLAN/DLANstnf/scratch/miniconda3/envs/thesis/lib/python3.6/site-packages/torch/nn/_reduction.py:46: UserWarning: size_average and reduce args will be deprecated, please use reduction='mean' instead.
+  warnings.warn(warning.format(ret))
+slurmstepd: error: *** STEP 107191.0 ON dcs214 CANCELLED AT 2020-04-03T20:58:51 DUE TO TIME LIMIT ***
+slurmstepd: error: *** JOB 107191 ON dcs214 CANCELLED AT 2020-04-03T20:58:51 DUE TO TIME LIMIT ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.

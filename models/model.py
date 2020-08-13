@@ -62,28 +62,41 @@ class model_whale(nn.Module):
         self.local_bn.bias.requires_grad_(False)  # no shift
         self.bottleneck_g = nn.BatchNorm1d(planes)
         self.bottleneck_g.bias.requires_grad_(False)  # no shift
-        # self.archead = Arcface(embedding_size=planes, classnum=num_classes, s=64.0)
-        #
-        print("\n\n\n\n\n\n\n\n")
-        print(num_classes)
         self.fc = nn.Linear(planes, num_classes)
         init.normal_(self.fc.weight, std=0.001)
         init.constant_(self.fc.bias, 0)
 
-    def forward(self, x, label=None):
+    def forward(self, x):
         feat = self.basemodel(x)
+        see = False
+        if see:
+            print("\nSENet-154 output")
+            print(feat.shape)
+
         # global feat
+        if see: print("\nglobal features")
         global_feat = F.avg_pool2d(feat, feat.size()[2:])
+        if see: print(global_feat.shape)
         global_feat = global_feat.view(global_feat.size(0), -1)
+        if see: print(global_feat.shape)
         global_feat = F.dropout(global_feat, p=0.2)
+        if see: print(global_feat.shape)
         global_feat = self.bottleneck_g(global_feat)
+        if see: print(global_feat.shape)
         global_feat = l2_norm(global_feat)
+        if see: print(global_feat.shape)
 
         # local feat
+        if see: print("\nlocal features")
         local_feat = torch.mean(feat, -1, keepdim=True)
+        if see: print(local_feat.shape)
         local_feat = self.local_bn(self.local_conv(local_feat))
+        if see: print(local_feat.shape)
         local_feat = local_feat.squeeze(-1).permute(0, 2, 1)
+        if see: print(local_feat.shape)
         local_feat = l2_norm(local_feat, axis=-1)
+        if see: print(local_feat.shape)
+        if see: print()
 
         out = self.fc(global_feat) * 16
         return global_feat, local_feat, out
@@ -153,10 +166,20 @@ class model_whale(nn.Module):
 
 
 
-    def getLoss(self, global_feat, local_feat, results,labels):
+    def getLoss(self, global_feat, local_feat, results, labels, embed=None):
         triple_loss = global_loss(TripletLoss(margin=0.3), global_feat, labels)[0] + \
                       local_loss(TripletLoss(margin=0.3), local_feat, labels)[0]
-        loss_ = sigmoid_loss(results, labels, topk=30)
+        
+        # ATTEMPT
+        # If training for embedding, don't run the second loss
+        if type(results) == type(None):
+            self.loss = triple_loss
+            return
+        
+        #print("In getLoss")
+        #print(type(embed))
+        # Maybe increasing the topk number here would help convergence?
+        loss_ = sigmoid_loss(results, labels, topk=30, embed=embed)
 
         self.loss = triple_loss + loss_
 

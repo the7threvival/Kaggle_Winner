@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "train.py", line 874, in <module>
+    train(debug, freeze, fold_index, model_name, min_num_class, checkpoint_start, lr, batch_size, num_classes, embed)
+  File "train.py", line 450, in train
+    summary(model.cuda(), (3, width, height))
+NameError: name 'summary' is not defined
+
+If you suspect this is an IPython bug, please report it at:
+    https://github.com/ipython/ipython/issues
+or send an email to the mailing list at ipython-dev@python.org
+
+You can print a more detailed traceback right now with "%tb", or use "%debug"
+to interactively debug it.
+
+Extra-detailed tracebacks for bug-reporting purposes can be enabled via:
+    %config Application.verbose_crash=True
+
+srun: error: dcs089: task 0: Exited with exit code 1

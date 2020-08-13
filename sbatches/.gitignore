@@ -1,0 +1,6 @@
+# Ignore all pycache files
+*__pycache__*
+
+
+# Ignore heavy features files
+train_features*

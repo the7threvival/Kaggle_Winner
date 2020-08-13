@@ -7,6 +7,9 @@ import torch
 from torch import nn
 from torch.autograd import Variable
 
+#CLASSES = 5004
+CLASSES = 839
+
 def normalize(x, axis=-1):
     """Normalizing to unit length along the specified dimension.
     Args:
@@ -57,7 +60,7 @@ def hard_example_mining(dist_mat, labels, return_inds=False):
     N = dist_mat.size(0)
 
     # shape [N, N]
-    new_whale_indexs = (labels == 5004 * 2).nonzero()
+    new_whale_indexs = (labels == CLASSES * 2).nonzero()
     is_pos = labels.expand(N, N).eq(labels.expand(N, N).t())
     is_neg = labels.expand(N, N).ne(labels.expand(N, N).t())
     for i in new_whale_indexs:
@@ -175,6 +178,7 @@ def local_dist(x, y):
 #         else:
 #             loss = self.ranking_loss(dist_an - dist_ap, y)
 #         return loss, dist_ap, dist_an
+
 class TripletLoss(object):
   """Modified from Tong Xiao's open-reid (https://github.com/Cysu/open-reid).
   Related Triplet Loss theory can be found in paper 'In Defense of the Triplet

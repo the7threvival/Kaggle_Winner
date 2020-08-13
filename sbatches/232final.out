@@ -1,0 +1,1019 @@
+Some params:
+Fold_index: final2, Check_start: 8600, Learning rate: 0.0003, Min # of Occ.: 0, Embedding: True
+!!! Sanity check !!!
+Input:  ['train.py', 'final2', '8600', '3e-4', '1']
+
+Chosen model: senet154
+
+ start_time :2020-07-17 20:41:11 
+ batch_size :24 
+
+Initial incoming image analysis
+
+Looking at 5106 total images.
+4614 train and 492 validation images
+840 train and 332 valid individuals
+loading bbox...
+loading mask...
+loading bbox...
+loading bbox...
+
+Analysis of images to be used
+Train & valid image analysis:
+Number of training images with at least 0 instances: 4614
+Number of validation images with at least 0 instances: 492
+There are 840 individuals found in train
+332 out of 332 ids in valid are found in train
+
+Starting from iter 8600, l_rate = 0.0003 
+freeze=False, batch_size=24, min_num_class=0 
+
+format: 
+rate   iter  k  epoch | valid   top@1   top@5   map@5   best_t | train   top@1   map@5 | batch   top@1   map@5 | time 
+--------------------------------------------------------------------------------------------------------------------------------------
+No existing max valid found. Creating one.
+
+At iteration: 8600
+Min and Max distances seen: 0.9338247776031494 1.5959677696228027
+Best in eval
+e: known: [tensor([66.1677], device='cuda:0'), tensor([77.2455], device='cuda:0'), tensor([79.6407], device='cuda:0')], new: [tensor([96.8354], device='cuda:0'), tensor([99.3671], device='cuda:0'), tensor([100.], device='cuda:0')]
+top1: tensor([76.0163], device='cuda:0'), top5: tensor([84.3496], device='cuda:0')
+New max valid for this run
+Saving current features. Best valid acc. found.
+0.00030  8.60 v 89.47  | 1.533    76.016    84.350    86.179    0.7982    0.5000 | 0.000    0.000    0.000 | 0.000     0.000    0.000 |  0 hr 02 min
+Min and Max distances seen: 0.8794023394584656 1.586331844329834
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([20.8333], device='cuda:0'), tensor([41.6667], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([85.4167], device='cuda:0'), top10: tensor([85.4167], device='cuda:0')
+Min and Max distances seen: 0.9221178889274597 1.6049078702926636
+In train
+e: known: [tensor([95.8333], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([25.], device='cuda:0'), tensor([45.8333], device='cuda:0'), tensor([45.8333], device='cuda:0')], top5: tensor([85.4167], device='cuda:0'), top10: tensor([86.4583], device='cuda:0')
+Min and Max distances seen: 0.8521156311035156 1.5918630361557007
+In train
+e: known: [tensor([93.0555], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([16.6667], device='cuda:0'), tensor([29.1667], device='cuda:0'), tensor([37.5000], device='cuda:0')], top5: tensor([82.2917], device='cuda:0'), top10: tensor([84.3750], device='cuda:0')
+Min and Max distances seen: 0.9101201295852661 1.5884523391723633
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([20.8333], device='cuda:0'), tensor([41.6667], device='cuda:0'), tensor([45.8333], device='cuda:0')], top5: tensor([85.4167], device='cuda:0'), top10: tensor([86.4583], device='cuda:0')
+Min and Max distances seen: 0.8946778774261475 1.5811370611190796
+In train
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([33.3333], device='cuda:0'), tensor([41.6667], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([85.4167], device='cuda:0'), top10: tensor([85.4167], device='cuda:0')
+Min and Max distances seen: 0.8902795314788818 1.5836985111236572
+In train
+e: known: [tensor([95.8333], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([25.], device='cuda:0'), tensor([37.5000], device='cuda:0'), tensor([45.8333], device='cuda:0')], top5: tensor([84.3750], device='cuda:0'), top10: tensor([86.4583], device='cuda:0')
+Min and Max distances seen: 0.8962523341178894 1.584954023361206
+In train
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([29.1667], device='cuda:0'), tensor([45.8333], device='cuda:0'), tensor([54.1667], device='cuda:0')], top5: tensor([86.4583], device='cuda:0'), top10: tensor([88.5417], device='cuda:0')
+Min and Max distances seen: 0.86888587474823 1.625385046005249
+In train
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([16.6667], device='cuda:0'), tensor([16.6667], device='cuda:0'), tensor([20.8333], device='cuda:0')], top5: tensor([79.1667], device='cuda:0'), top10: tensor([80.2083], device='cuda:0')
+Min and Max distances seen: 0.8582503199577332 1.5936081409454346
+In train
+e: known: [tensor([94.4444], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([98.6111], device='cuda:0')], new: [tensor([33.3333], device='cuda:0'), tensor([41.6667], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([84.3750], device='cuda:0'), top10: tensor([84.3750], device='cuda:0')
+Min and Max distances seen: 0.8821491003036499 1.5986524820327759
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([37.5000], device='cuda:0'), tensor([41.6667], device='cuda:0'), tensor([45.8333], device='cuda:0')], top5: tensor([83.3333], device='cuda:0'), top10: tensor([86.4583], device='cuda:0')
+
+Smoothing after 10
+e: known: [tensor([97.2222], device='cuda:0'), tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([37.5000], device='cuda:0'), tensor([41.6667], device='cuda:0'), tensor([45.8333], device='cuda:0')], top5: tensor([83.3333], device='cuda:0')
+0.00030  8.61 l 89.65  | 1.533    76.016    84.350    0.7982    0.5000 | 0.275    79.271    0.814 | 0.317     82.292    0.833 |  0 hr 14 min  8600 8609
+Min and Max distances seen: 0.8951536417007446 1.581084966659546
+In train
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([20.8333], device='cuda:0'), tensor([29.1667], device='cuda:0'), tensor([37.5000], device='cuda:0')], top5: tensor([82.2917], device='cuda:0'), top10: tensor([84.3750], device='cuda:0')
+Min and Max distances seen: 0.8494884967803955 1.589044451713562
+In train
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([16.6667], device='cuda:0'), tensor([25.], device='cuda:0'), tensor([37.5000], device='cuda:0')], top5: tensor([81.2500], device='cuda:0'), top10: tensor([84.3750], device='cuda:0')
+Min and Max distances seen: 0.8907719254493713 1.5932317972183228
+In train
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([20.8333], device='cuda:0'), tensor([33.3333], device='cuda:0'), tensor([33.3333], device='cuda:0')], top5: tensor([83.3333], device='cuda:0'), top10: tensor([83.3333], device='cuda:0')
+Min and Max distances seen: 0.8854618072509766 1.5941683053970337
+In train
+e: known: [tensor([95.8333], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([37.5000], device='cuda:0'), tensor([50.], device='cuda:0'), tensor([62.5000], device='cuda:0')], top5: tensor([86.4583], device='cuda:0'), top10: tensor([90.6250], device='cuda:0')
+Min and Max distances seen: 0.8768053650856018 1.6049431562423706
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([25.], device='cuda:0'), tensor([33.3333], device='cuda:0'), tensor([37.5000], device='cuda:0')], top5: tensor([83.3333], device='cuda:0'), top10: tensor([84.3750], device='cuda:0')
+Min and Max distances seen: 0.9260281920433044 1.5903913974761963
+In train
+e: known: [tensor([95.8333], device='cuda:0'), tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([29.1667], device='cuda:0'), tensor([37.5000], device='cuda:0'), tensor([37.5000], device='cuda:0')], top5: tensor([82.2917], device='cuda:0'), top10: tensor([84.3750], device='cuda:0')
+Min and Max distances seen: 0.8757565021514893 1.617529034614563
+In train
+e: known: [tensor([95.8333], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([98.6111], device='cuda:0')], new: [tensor([25.], device='cuda:0'), tensor([37.5000], device='cuda:0'), tensor([37.5000], device='cuda:0')], top5: tensor([83.3333], device='cuda:0'), top10: tensor([83.3333], device='cuda:0')
+Min and Max distances seen: 0.8582894206047058 1.6098597049713135
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([33.3333], device='cuda:0'), tensor([41.6667], device='cuda:0'), tensor([50.], device='cuda:0')], top5: tensor([85.4167], device='cuda:0'), top10: tensor([87.5000], device='cuda:0')
+Min and Max distances seen: 0.8558194041252136 1.5795329809188843
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([20.8333], device='cuda:0'), tensor([33.3333], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([83.3333], device='cuda:0'), top10: tensor([85.4167], device='cuda:0')
+Min and Max distances seen: 0.8339136838912964 1.5961229801177979
+In train
+e: known: [tensor([98.5714], device='cuda:0'), tensor([98.5714], device='cuda:0'), tensor([98.5714], device='cuda:0')], new: [tensor([19.2308], device='cuda:0'), tensor([46.1538], device='cuda:0'), tensor([61.5385], device='cuda:0')], top5: tensor([84.3750], device='cuda:0'), top10: tensor([88.5417], device='cuda:0')
+
+Smoothing after 10
+e: known: [tensor([98.5714], device='cuda:0'), tensor([98.5714], device='cuda:0'), tensor([98.5714], device='cuda:0')], new: [tensor([19.2308], device='cuda:0'), tensor([46.1538], device='cuda:0'), tensor([61.5385], device='cuda:0')], top5: tensor([84.3750], device='cuda:0')
+0.00030  8.62 l 89.86  | 1.533    76.016    84.350    0.7982    0.5000 | 0.255    79.479    0.814 | 0.210     77.083    0.805 |  0 hr 27 min  8600 8619
+Min and Max distances seen: 0.9442595839500427 1.592883586883545
+Best in eval
+e: known: [tensor([65.5689], device='cuda:0'), tensor([78.1437], device='cuda:0'), tensor([79.3413], device='cuda:0')], new: [tensor([98.7342], device='cuda:0'), tensor([99.3671], device='cuda:0'), tensor([100.], device='cuda:0')]
+top1: tensor([76.2195], device='cuda:0'), top5: tensor([84.9594], device='cuda:0')
+New max valid for this run
+Saving current features. Best valid acc. found.
+0.00030  8.62 v 89.88  | 1.534    76.220    84.959    85.976    0.8007    0.5000 | 0.255    79.479    0.814 | 0.210     77.083    0.805 |  0 hr 29 min
+Min and Max distances seen: 0.9022166132926941 1.6025038957595825
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([98.6111], device='cuda:0')], new: [tensor([20.8333], device='cuda:0'), tensor([37.5000], device='cuda:0'), tensor([45.8333], device='cuda:0')], top5: tensor([83.3333], device='cuda:0'), top10: tensor([85.4167], device='cuda:0')
+Min and Max distances seen: 0.8789146542549133 1.5974299907684326
+In train
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([12.5000], device='cuda:0'), tensor([29.1667], device='cuda:0'), tensor([29.1667], device='cuda:0')], top5: tensor([82.2917], device='cuda:0'), top10: tensor([82.2917], device='cuda:0')
+Min and Max distances seen: 0.8893849849700928 1.623986005783081
+In train
+e: known: [tensor([93.0555], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([98.6111], device='cuda:0')], new: [tensor([33.3333], device='cuda:0'), tensor([37.5000], device='cuda:0'), tensor([37.5000], device='cuda:0')], top5: tensor([83.3333], device='cuda:0'), top10: tensor([83.3333], device='cuda:0')
+Min and Max distances seen: 0.8951545357704163 1.6130025386810303
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([33.3333], device='cuda:0'), tensor([41.6667], device='cuda:0'), tensor([45.8333], device='cuda:0')], top5: tensor([85.4167], device='cuda:0'), top10: tensor([86.4583], device='cuda:0')
+Min and Max distances seen: 0.9035562872886658 1.6242197751998901
+In train
+e: known: [tensor([95.8333], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([16.6667], device='cuda:0'), tensor([29.1667], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([82.2917], device='cuda:0'), top10: tensor([85.4167], device='cuda:0')
+Min and Max distances seen: 0.872775137424469 1.5971699953079224
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([98.6111], device='cuda:0')], new: [tensor([29.1667], device='cuda:0'), tensor([41.6667], device='cuda:0'), tensor([45.8333], device='cuda:0')], top5: tensor([84.3750], device='cuda:0'), top10: tensor([85.4167], device='cuda:0')
+Min and Max distances seen: 0.8775950074195862 1.6010977029800415
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([16.6667], device='cuda:0'), tensor([29.1667], device='cuda:0'), tensor([37.5000], device='cuda:0')], top5: tensor([82.2917], device='cuda:0'), top10: tensor([84.3750], device='cuda:0')
+Min and Max distances seen: 0.8593379855155945 1.5818696022033691
+In train
+e: known: [tensor([95.8333], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([98.6111], device='cuda:0')], new: [tensor([33.3333], device='cuda:0'), tensor([33.3333], device='cuda:0'), tensor([33.3333], device='cuda:0')], top5: tensor([82.2917], device='cuda:0'), top10: tensor([82.2917], device='cuda:0')
+Min and Max distances seen: 0.8475558757781982 1.5912878513336182
+In train
+e: known: [tensor([95.8333], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([29.1667], device='cuda:0'), tensor([41.6667], device='cuda:0'), tensor([45.8333], device='cuda:0')], top5: tensor([85.4167], device='cuda:0'), top10: tensor([86.4583], device='cuda:0')
+Min and Max distances seen: 0.8017591238021851 1.5964313745498657
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([20.8333], device='cuda:0'), tensor([37.5000], device='cuda:0'), tensor([37.5000], device='cuda:0')], top5: tensor([83.3333], device='cuda:0'), top10: tensor([84.3750], device='cuda:0')
+
+Smoothing after 10
+e: known: [tensor([98.6111], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([20.8333], device='cuda:0'), tensor([37.5000], device='cuda:0'), tensor([37.5000], device='cuda:0')], top5: tensor([83.3333], device='cuda:0')
+0.00030  8.63 l 90.07  | 1.534    76.220    84.959    0.8007    0.5000 | 0.264    78.854    0.808 | 0.278     79.167    0.809 |  0 hr 41 min  8600 8629
+Min and Max distances seen: 0.8890045285224915 1.5895870923995972
+In train
+e: known: [tensor([93.0555], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([29.1667], device='cuda:0'), tensor([37.5000], device='cuda:0'), tensor([37.5000], device='cuda:0')], top5: tensor([83.3333], device='cuda:0'), top10: tensor([84.3750], device='cuda:0')
+Min and Max distances seen: 0.8944461941719055 1.594212532043457
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([29.1667], device='cuda:0'), tensor([37.5000], device='cuda:0'), tensor([45.8333], device='cuda:0')], top5: tensor([84.3750], device='cuda:0'), top10: tensor([86.4583], device='cuda:0')
+Min and Max distances seen: 0.8995622992515564 1.5825293064117432
+In train
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([16.6667], device='cuda:0'), tensor([20.8333], device='cuda:0'), tensor([25.], device='cuda:0')], top5: tensor([80.2083], device='cuda:0'), top10: tensor([81.2500], device='cuda:0')
+Min and Max distances seen: 0.8540396094322205 1.588240385055542
+In train
+e: known: [tensor([93.0555], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([98.6111], device='cuda:0')], new: [tensor([25.], device='cuda:0'), tensor([29.1667], device='cuda:0'), tensor([37.5000], device='cuda:0')], top5: tensor([81.2500], device='cuda:0'), top10: tensor([83.3333], device='cuda:0')
+Min and Max distances seen: 0.873902440071106 1.6002711057662964
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([37.5000], device='cuda:0'), tensor([45.8333], device='cuda:0'), tensor([58.3333], device='cuda:0')], top5: tensor([86.4583], device='cuda:0'), top10: tensor([89.5833], device='cuda:0')
+
+At iteration: 8635
+Min and Max distances seen: 0.9197978377342224 1.5956536531448364
+In train
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([41.6667], device='cuda:0'), tensor([50.], device='cuda:0'), tensor([58.3333], device='cuda:0')], top5: tensor([87.5000], device='cuda:0'), top10: tensor([89.5833], device='cuda:0')
+Min and Max distances seen: 0.9053243398666382 1.589523434638977
+In train
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([25.], device='cuda:0'), tensor([37.5000], device='cuda:0'), tensor([37.5000], device='cuda:0')], top5: tensor([84.3750], device='cuda:0'), top10: tensor([84.3750], device='cuda:0')
+Min and Max distances seen: 0.8917779922485352 1.6105718612670898
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([97.2222], device='cuda:0'), tensor([97.2222], device='cuda:0')], new: [tensor([29.1667], device='cuda:0'), tensor([29.1667], device='cuda:0'), tensor([29.1667], device='cuda:0')], top5: tensor([80.2083], device='cuda:0'), top10: tensor([80.2083], device='cuda:0')
+Min and Max distances seen: 0.8925859928131104 1.5931487083435059
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([29.1667], device='cuda:0'), tensor([33.3333], device='cuda:0'), tensor([37.5000], device='cuda:0')], top5: tensor([83.3333], device='cuda:0'), top10: tensor([84.3750], device='cuda:0')
+Min and Max distances seen: 0.883758544921875 1.5944749116897583
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([33.3333], device='cuda:0'), tensor([33.3333], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([83.3333], device='cuda:0'), top10: tensor([85.4167], device='cuda:0')
+
+Smoothing after 10
+e: known: [tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([33.3333], device='cuda:0'), tensor([33.3333], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([83.3333], device='cuda:0')
+0.00030  8.64 l 90.28  | 1.534    76.220    84.959    0.8007    0.5000 | 0.267    80.625    0.820 | 0.286     82.292    0.828 |  0 hr 55 min  8600 8639
+Min and Max distances seen: 0.9390447735786438 1.595350980758667
+Best in eval
+e: known: [tensor([64.0719], device='cuda:0'), tensor([76.6467], device='cuda:0'), tensor([79.3413], device='cuda:0')], new: [tensor([98.1013], device='cuda:0'), tensor([99.3671], device='cuda:0'), tensor([100.], device='cuda:0')]
+top1: tensor([75.], device='cuda:0'), top5: tensor([83.9431], device='cuda:0')
+0.00030  8.64 v 90.30  | 1.533    75.000    83.943    85.976    0.7932    0.5000 | 0.267    80.625    0.820 | 0.286     82.292    0.828 |  0 hr 56 min
+Min and Max distances seen: 0.8824068307876587 1.6323162317276
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([20.8333], device='cuda:0'), tensor([33.3333], device='cuda:0'), tensor([37.5000], device='cuda:0')], top5: tensor([83.3333], device='cuda:0'), top10: tensor([84.3750], device='cuda:0')
+Min and Max distances seen: 0.8867790102958679 1.58169424533844
+In train
+e: known: [tensor([93.0555], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([25.], device='cuda:0'), tensor([29.1667], device='cuda:0'), tensor([29.1667], device='cuda:0')], top5: tensor([82.2917], device='cuda:0'), top10: tensor([82.2917], device='cuda:0')
+Min and Max distances seen: 0.856937050819397 1.593788981437683
+In train
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([16.6667], device='cuda:0'), tensor([29.1667], device='cuda:0'), tensor([37.5000], device='cuda:0')], top5: tensor([82.2917], device='cuda:0'), top10: tensor([84.3750], device='cuda:0')
+Min and Max distances seen: 0.8545839786529541 1.5984654426574707
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([37.5000], device='cuda:0'), tensor([54.1667], device='cuda:0'), tensor([54.1667], device='cuda:0')], top5: tensor([88.5417], device='cuda:0'), top10: tensor([88.5417], device='cuda:0')
+Min and Max distances seen: 0.9094341993331909 1.5914310216903687
+In train
+e: known: [tensor([93.0555], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([20.8333], device='cuda:0'), tensor([33.3333], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([82.2917], device='cuda:0'), top10: tensor([85.4167], device='cuda:0')
+Min and Max distances seen: 0.8649304509162903 1.6131618022918701
+In train
+e: known: [tensor([95.8333], device='cuda:0'), tensor([97.2222], device='cuda:0'), tensor([97.2222], device='cuda:0')], new: [tensor([25.], device='cuda:0'), tensor([29.1667], device='cuda:0'), tensor([33.3333], device='cuda:0')], top5: tensor([80.2083], device='cuda:0'), top10: tensor([81.2500], device='cuda:0')
+Min and Max distances seen: 0.8304591774940491 1.5993826389312744
+In train
+e: known: [tensor([95.8333], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([98.6111], device='cuda:0')], new: [tensor([41.6667], device='cuda:0'), tensor([54.1667], device='cuda:0'), tensor([54.1667], device='cuda:0')], top5: tensor([87.5000], device='cuda:0'), top10: tensor([87.5000], device='cuda:0')
+Min and Max distances seen: 0.8731390833854675 1.5955753326416016
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([12.5000], device='cuda:0'), tensor([25.], device='cuda:0'), tensor([33.3333], device='cuda:0')], top5: tensor([81.2500], device='cuda:0'), top10: tensor([83.3333], device='cuda:0')
+Min and Max distances seen: 0.863738477230072 1.5989794731140137
+In train
+e: known: [tensor([94.4444], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([98.6111], device='cuda:0')], new: [tensor([37.5000], device='cuda:0'), tensor([41.6667], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([84.3750], device='cuda:0'), top10: tensor([84.3750], device='cuda:0')
+Min and Max distances seen: 0.8847336769104004 1.588421106338501
+In train
+e: known: [tensor([98.5714], device='cuda:0'), tensor([98.5714], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([34.6154], device='cuda:0'), tensor([42.3077], device='cuda:0'), tensor([50.], device='cuda:0')], top5: tensor([83.3333], device='cuda:0'), top10: tensor([86.4583], device='cuda:0')
+
+Smoothing after 10
+e: known: [tensor([98.5714], device='cuda:0'), tensor([98.5714], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([34.6154], device='cuda:0'), tensor([42.3077], device='cuda:0'), tensor([50.], device='cuda:0')], top5: tensor([83.3333], device='cuda:0')
+0.00030  8.65 l 90.49  | 1.533    75.000    83.943    0.7932    0.5000 | 0.259    78.958    0.811 | 0.295     81.250    0.825 |  1 hr 08 min  8600 8649
+Min and Max distances seen: 0.9219380021095276 1.5943890810012817
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([16.6667], device='cuda:0'), tensor([41.6667], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([85.4167], device='cuda:0'), top10: tensor([85.4167], device='cuda:0')
+Min and Max distances seen: 0.9063435792922974 1.580666184425354
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([29.1667], device='cuda:0'), tensor([41.6667], device='cuda:0'), tensor([50.], device='cuda:0')], top5: tensor([85.4167], device='cuda:0'), top10: tensor([87.5000], device='cuda:0')
+Min and Max distances seen: 0.883732795715332 1.580122947692871
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([25.], device='cuda:0'), tensor([25.], device='cuda:0'), tensor([25.], device='cuda:0')], top5: tensor([81.2500], device='cuda:0'), top10: tensor([81.2500], device='cuda:0')
+Min and Max distances seen: 0.8825530409812927 1.5878199338912964
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([25.], device='cuda:0'), tensor([37.5000], device='cuda:0'), tensor([45.8333], device='cuda:0')], top5: tensor([84.3750], device='cuda:0'), top10: tensor([86.4583], device='cuda:0')
+Min and Max distances seen: 0.8653075098991394 1.5819669961929321
+In train
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([25.], device='cuda:0'), tensor([41.6667], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([85.4167], device='cuda:0'), top10: tensor([85.4167], device='cuda:0')
+Min and Max distances seen: 0.8742855191230774 1.599966049194336
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([33.3333], device='cuda:0'), tensor([33.3333], device='cuda:0'), tensor([33.3333], device='cuda:0')], top5: tensor([83.3333], device='cuda:0'), top10: tensor([83.3333], device='cuda:0')
+Min and Max distances seen: 0.9125378727912903 1.608513593673706
+In train
+e: known: [tensor([94.4444], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([98.6111], device='cuda:0')], new: [tensor([29.1667], device='cuda:0'), tensor([29.1667], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([81.2500], device='cuda:0'), top10: tensor([84.3750], device='cuda:0')
+Min and Max distances seen: 0.8460427522659302 1.5787562131881714
+In train
+e: known: [tensor([95.8333], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([98.6111], device='cuda:0')], new: [tensor([29.1667], device='cuda:0'), tensor([37.5000], device='cuda:0'), tensor([37.5000], device='cuda:0')], top5: tensor([83.3333], device='cuda:0'), top10: tensor([83.3333], device='cuda:0')
+Min and Max distances seen: 0.8879208564758301 1.6008131504058838
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([20.8333], device='cuda:0'), tensor([54.1667], device='cuda:0'), tensor([58.3333], device='cuda:0')], top5: tensor([88.5417], device='cuda:0'), top10: tensor([89.5833], device='cuda:0')
+Min and Max distances seen: 0.8849940896034241 1.5905784368515015
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([20.8333], device='cuda:0'), tensor([37.5000], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([84.3750], device='cuda:0'), top10: tensor([85.4167], device='cuda:0')
+
+Smoothing after 10
+e: known: [tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([20.8333], device='cuda:0'), tensor([37.5000], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([84.3750], device='cuda:0')
+0.00030  8.66 l 90.69  | 1.533    75.000    83.943    0.7932    0.5000 | 0.264    79.688    0.817 | 0.269     79.167    0.815 |  1 hr 22 min  8600 8659
+Min and Max distances seen: 0.9490975141525269 1.593031644821167
+Best in eval
+e: known: [tensor([64.3713], device='cuda:0'), tensor([76.6467], device='cuda:0'), tensor([79.9401], device='cuda:0')], new: [tensor([98.1013], device='cuda:0'), tensor([99.3671], device='cuda:0'), tensor([100.], device='cuda:0')]
+top1: tensor([75.2033], device='cuda:0'), top5: tensor([83.9431], device='cuda:0')
+0.00030  8.66 v 90.72  | 1.534    75.203    83.943    86.382    0.7932    0.5000 | 0.264    79.688    0.817 | 0.269     79.167    0.815 |  1 hr 23 min
+Min and Max distances seen: 0.8796548843383789 1.590837001800537
+In train
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([41.6667], device='cuda:0'), tensor([45.8333], device='cuda:0'), tensor([45.8333], device='cuda:0')], top5: tensor([86.4583], device='cuda:0'), top10: tensor([86.4583], device='cuda:0')
+Min and Max distances seen: 0.8757932186126709 1.602301836013794
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([37.5000], device='cuda:0'), tensor([50.], device='cuda:0'), tensor([54.1667], device='cuda:0')], top5: tensor([87.5000], device='cuda:0'), top10: tensor([88.5417], device='cuda:0')
+Min and Max distances seen: 0.8574368953704834 1.604593276977539
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([29.1667], device='cuda:0'), tensor([37.5000], device='cuda:0'), tensor([37.5000], device='cuda:0')], top5: tensor([84.3750], device='cuda:0'), top10: tensor([84.3750], device='cuda:0')
+Min and Max distances seen: 0.8364909887313843 1.5834095478057861
+In train
+e: known: [tensor([91.6667], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([16.6667], device='cuda:0'), tensor([29.1667], device='cuda:0'), tensor([37.5000], device='cuda:0')], top5: tensor([82.2917], device='cuda:0'), top10: tensor([84.3750], device='cuda:0')
+Min and Max distances seen: 0.9229920506477356 1.5995234251022339
+In train
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([37.5000], device='cuda:0'), tensor([41.6667], device='cuda:0'), tensor([50.], device='cuda:0')], top5: tensor([85.4167], device='cuda:0'), top10: tensor([87.5000], device='cuda:0')
+Min and Max distances seen: 0.923688530921936 1.577481746673584
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([29.1667], device='cuda:0'), tensor([37.5000], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([84.3750], device='cuda:0'), top10: tensor([85.4167], device='cuda:0')
+Min and Max distances seen: 0.8276298642158508 1.5900764465332031
+In train
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([29.1667], device='cuda:0'), tensor([33.3333], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([83.3333], device='cuda:0'), top10: tensor([85.4167], device='cuda:0')
+Min and Max distances seen: 0.890287458896637 1.6085623502731323
+In train
+e: known: [tensor([91.6667], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([25.], device='cuda:0'), tensor([29.1667], device='cuda:0'), tensor([33.3333], device='cuda:0')], top5: tensor([81.2500], device='cuda:0'), top10: tensor([83.3333], device='cuda:0')
+Min and Max distances seen: 0.9113720059394836 1.5819110870361328
+In train
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([16.6667], device='cuda:0'), tensor([33.3333], device='cuda:0'), tensor([37.5000], device='cuda:0')], top5: tensor([83.3333], device='cuda:0'), top10: tensor([84.3750], device='cuda:0')
+Min and Max distances seen: 0.872565507888794 1.589698076248169
+In train
+e: known: [tensor([95.8333], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([25.], device='cuda:0'), tensor([29.1667], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([81.2500], device='cuda:0'), top10: tensor([85.4167], device='cuda:0')
+
+Smoothing after 10
+e: known: [tensor([95.8333], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([25.], device='cuda:0'), tensor([29.1667], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([81.2500], device='cuda:0')
+0.00030  8.67 l 90.90  | 1.534    75.203    83.943    0.7932    0.5000 | 0.265    80.208    0.820 | 0.278     78.125    0.803 |  1 hr 35 min  8600 8669
+
+At iteration: 8670
+Min and Max distances seen: 0.8780076503753662 1.590746521949768
+In train
+e: known: [tensor([94.4444], device='cuda:0'), tensor([97.2222], device='cuda:0'), tensor([98.6111], device='cuda:0')], new: [tensor([29.1667], device='cuda:0'), tensor([33.3333], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([81.2500], device='cuda:0'), top10: tensor([84.3750], device='cuda:0')
+Min and Max distances seen: 0.8713324069976807 1.5866568088531494
+In train
+e: known: [tensor([95.7143], device='cuda:0'), tensor([98.5714], device='cuda:0'), tensor([98.5714], device='cuda:0')], new: [tensor([34.6154], device='cuda:0'), tensor([38.4615], device='cuda:0'), tensor([42.3077], device='cuda:0')], top5: tensor([82.2917], device='cuda:0'), top10: tensor([83.3333], device='cuda:0')
+Min and Max distances seen: 0.9082338213920593 1.5976992845535278
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([33.3333], device='cuda:0'), tensor([45.8333], device='cuda:0'), tensor([45.8333], device='cuda:0')], top5: tensor([85.4167], device='cuda:0'), top10: tensor([86.4583], device='cuda:0')
+Min and Max distances seen: 0.8803732395172119 1.5851069688796997
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([29.1667], device='cuda:0'), tensor([37.5000], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([83.3333], device='cuda:0'), top10: tensor([85.4167], device='cuda:0')
+Min and Max distances seen: 0.8797993063926697 1.6019741296768188
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([37.5000], device='cuda:0'), tensor([41.6667], device='cuda:0'), tensor([45.8333], device='cuda:0')], top5: tensor([85.4167], device='cuda:0'), top10: tensor([86.4583], device='cuda:0')
+Min and Max distances seen: 0.8983637690544128 1.5895195007324219
+In train
+e: known: [tensor([93.0555], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([33.3333], device='cuda:0'), tensor([37.5000], device='cuda:0'), tensor([37.5000], device='cuda:0')], top5: tensor([84.3750], device='cuda:0'), top10: tensor([84.3750], device='cuda:0')
+Min and Max distances seen: 0.8908212780952454 1.6209105253219604
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([37.5000], device='cuda:0'), tensor([54.1667], device='cuda:0'), tensor([58.3333], device='cuda:0')], top5: tensor([88.5417], device='cuda:0'), top10: tensor([89.5833], device='cuda:0')
+Min and Max distances seen: 0.8789671659469604 1.6158565282821655
+In train
+e: known: [tensor([95.8333], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([37.5000], device='cuda:0'), tensor([41.6667], device='cuda:0'), tensor([45.8333], device='cuda:0')], top5: tensor([85.4167], device='cuda:0'), top10: tensor([86.4583], device='cuda:0')
+Min and Max distances seen: 0.9043527841567993 1.6083699464797974
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([29.1667], device='cuda:0'), tensor([33.3333], device='cuda:0'), tensor([33.3333], device='cuda:0')], top5: tensor([83.3333], device='cuda:0'), top10: tensor([83.3333], device='cuda:0')
+Min and Max distances seen: 0.9036460518836975 1.6007072925567627
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([98.6111], device='cuda:0')], new: [tensor([20.8333], device='cuda:0'), tensor([33.3333], device='cuda:0'), tensor([33.3333], device='cuda:0')], top5: tensor([82.2917], device='cuda:0'), top10: tensor([82.2917], device='cuda:0')
+
+Smoothing after 10
+e: known: [tensor([97.2222], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([98.6111], device='cuda:0')], new: [tensor([20.8333], device='cuda:0'), tensor([33.3333], device='cuda:0'), tensor([33.3333], device='cuda:0')], top5: tensor([82.2917], device='cuda:0')
+0.00030  8.68 l 91.11  | 1.534    75.203    83.943    0.7932    0.5000 | 0.278    80.521    0.822 | 0.269     78.125    0.798 |  1 hr 49 min  8600 8679
+Min and Max distances seen: 0.938645601272583 1.5900331735610962
+Best in eval
+e: known: [tensor([64.3713], device='cuda:0'), tensor([77.2455], device='cuda:0'), tensor([79.9401], device='cuda:0')], new: [tensor([98.7342], device='cuda:0'), tensor([99.3671], device='cuda:0'), tensor([99.3671], device='cuda:0')]
+top1: tensor([75.4065], device='cuda:0'), top5: tensor([84.3496], device='cuda:0')
+0.00030  8.68 v 91.13  | 1.534    75.407    84.350    86.179    0.7978    0.5000 | 0.278    80.521    0.822 | 0.269     78.125    0.798 |  1 hr 50 min
+Min and Max distances seen: 0.9249433875083923 1.583635926246643
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([25.], device='cuda:0'), tensor([41.6667], device='cuda:0'), tensor([45.8333], device='cuda:0')], top5: tensor([85.4167], device='cuda:0'), top10: tensor([86.4583], device='cuda:0')
+Min and Max distances seen: 0.8810239434242249 1.5919183492660522
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([16.6667], device='cuda:0'), tensor([20.8333], device='cuda:0'), tensor([20.8333], device='cuda:0')], top5: tensor([80.2083], device='cuda:0'), top10: tensor([80.2083], device='cuda:0')
+Min and Max distances seen: 0.8365416526794434 1.5913281440734863
+In train
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([20.8333], device='cuda:0'), tensor([25.], device='cuda:0'), tensor([33.3333], device='cuda:0')], top5: tensor([81.2500], device='cuda:0'), top10: tensor([83.3333], device='cuda:0')
+Min and Max distances seen: 0.8994544148445129 1.6021250486373901
+In train
+e: known: [tensor([95.8333], device='cuda:0'), tensor([97.2222], device='cuda:0'), tensor([97.2222], device='cuda:0')], new: [tensor([29.1667], device='cuda:0'), tensor([37.5000], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([82.2917], device='cuda:0'), top10: tensor([83.3333], device='cuda:0')
+Min and Max distances seen: 0.8574174046516418 1.5983924865722656
+In train
+e: known: [tensor([95.8333], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([41.6667], device='cuda:0'), tensor([45.8333], device='cuda:0'), tensor([50.], device='cuda:0')], top5: tensor([86.4583], device='cuda:0'), top10: tensor([87.5000], device='cuda:0')
+Min and Max distances seen: 0.8852077722549438 1.6100412607192993
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([29.1667], device='cuda:0'), tensor([41.6667], device='cuda:0'), tensor([45.8333], device='cuda:0')], top5: tensor([85.4167], device='cuda:0'), top10: tensor([86.4583], device='cuda:0')
+Min and Max distances seen: 0.9195233583450317 1.5953601598739624
+In train
+e: known: [tensor([94.4444], device='cuda:0'), tensor([95.8333], device='cuda:0'), tensor([97.2222], device='cuda:0')], new: [tensor([25.], device='cuda:0'), tensor([33.3333], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([80.2083], device='cuda:0'), top10: tensor([83.3333], device='cuda:0')
+Min and Max distances seen: 0.8338242173194885 1.5816646814346313
+In train
+e: known: [tensor([95.8333], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([98.6111], device='cuda:0')], new: [tensor([25.], device='cuda:0'), tensor([37.5000], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([83.3333], device='cuda:0'), top10: tensor([84.3750], device='cuda:0')
+Min and Max distances seen: 0.868389368057251 1.588744044303894
+In train
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([33.3333], device='cuda:0'), tensor([37.5000], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([84.3750], device='cuda:0'), top10: tensor([85.4167], device='cuda:0')
+Min and Max distances seen: 0.8694311380386353 1.6028586626052856
+In train
+e: known: [tensor([94.4444], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([25.], device='cuda:0'), tensor([33.3333], device='cuda:0'), tensor([33.3333], device='cuda:0')], top5: tensor([83.3333], device='cuda:0'), top10: tensor([83.3333], device='cuda:0')
+
+Smoothing after 10
+e: known: [tensor([94.4444], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([25.], device='cuda:0'), tensor([33.3333], device='cuda:0'), tensor([33.3333], device='cuda:0')], top5: tensor([83.3333], device='cuda:0')
+0.00030  8.69 l 91.32  | 1.534    75.407    84.350    0.7978    0.5000 | 0.258    79.479    0.812 | 0.215     77.083    0.799 |  2 hr 02 min  8600 8689
+Min and Max distances seen: 0.9096969962120056 1.600738286972046
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([29.1667], device='cuda:0'), tensor([37.5000], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([84.3750], device='cuda:0'), top10: tensor([85.4167], device='cuda:0')
+Min and Max distances seen: 0.9047830104827881 1.607948660850525
+In train
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([29.1667], device='cuda:0'), tensor([41.6667], device='cuda:0'), tensor([54.1667], device='cuda:0')], top5: tensor([85.4167], device='cuda:0'), top10: tensor([88.5417], device='cuda:0')
+Min and Max distances seen: 0.9039013981819153 1.5960617065429688
+In train
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([20.8333], device='cuda:0'), tensor([25.], device='cuda:0'), tensor([33.3333], device='cuda:0')], top5: tensor([81.2500], device='cuda:0'), top10: tensor([83.3333], device='cuda:0')
+Min and Max distances seen: 0.8779247403144836 1.5665397644042969
+In train
+e: known: [tensor([94.4444], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([12.5000], device='cuda:0'), tensor([25.], device='cuda:0'), tensor([33.3333], device='cuda:0')], top5: tensor([80.2083], device='cuda:0'), top10: tensor([83.3333], device='cuda:0')
+Min and Max distances seen: 0.8650987148284912 1.6140491962432861
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([29.1667], device='cuda:0'), tensor([37.5000], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([84.3750], device='cuda:0'), top10: tensor([85.4167], device='cuda:0')
+Min and Max distances seen: 0.8987172245979309 1.5928677320480347
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([33.3333], device='cuda:0'), tensor([33.3333], device='cuda:0'), tensor([33.3333], device='cuda:0')], top5: tensor([82.2917], device='cuda:0'), top10: tensor([83.3333], device='cuda:0')
+Min and Max distances seen: 0.8749858736991882 1.5915592908859253
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([98.6111], device='cuda:0')], new: [tensor([20.8333], device='cuda:0'), tensor([29.1667], device='cuda:0'), tensor([29.1667], device='cuda:0')], top5: tensor([81.2500], device='cuda:0'), top10: tensor([81.2500], device='cuda:0')
+Min and Max distances seen: 0.8931434750556946 1.6195517778396606
+In train
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([16.6667], device='cuda:0'), tensor([25.], device='cuda:0'), tensor([37.5000], device='cuda:0')], top5: tensor([81.2500], device='cuda:0'), top10: tensor([84.3750], device='cuda:0')
+Min and Max distances seen: 0.8889055252075195 1.6015293598175049
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([33.3333], device='cuda:0'), tensor([37.5000], device='cuda:0'), tensor([37.5000], device='cuda:0')], top5: tensor([84.3750], device='cuda:0'), top10: tensor([84.3750], device='cuda:0')
+Min and Max distances seen: 0.852104902267456 1.5916939973831177
+In train
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([37.5000], device='cuda:0'), tensor([45.8333], device='cuda:0'), tensor([50.], device='cuda:0')], top5: tensor([86.4583], device='cuda:0'), top10: tensor([87.5000], device='cuda:0')
+
+Smoothing after 10
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([37.5000], device='cuda:0'), tensor([45.8333], device='cuda:0'), tensor([50.], device='cuda:0')], top5: tensor([86.4583], device='cuda:0')
+0.00030  8.70 l 91.53  | 1.534    75.407    84.350    0.7978    0.5000 | 0.254    80.208    0.816 | 0.235     84.375    0.851 |  2 hr 16 min  8600 8699
+Min and Max distances seen: 0.9338258504867554 1.5846951007843018
+Best in eval
+e: known: [tensor([64.0719], device='cuda:0'), tensor([77.8443], device='cuda:0'), tensor([81.1377], device='cuda:0')], new: [tensor([97.4684], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')]
+top1: tensor([74.7967], device='cuda:0'), top5: tensor([84.9594], device='cuda:0')
+0.00030  8.70 v 91.55  | 1.534    74.797    84.959    87.195    0.7944    0.5000 | 0.254    80.208    0.816 | 0.235     84.375    0.851 |  2 hr 17 min
+Min and Max distances seen: 0.9043797254562378 1.5779623985290527
+In train
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([25.], device='cuda:0'), tensor([33.3333], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([83.3333], device='cuda:0'), top10: tensor([85.4167], device='cuda:0')
+Min and Max distances seen: 0.9079610705375671 1.6029436588287354
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([98.6111], device='cuda:0')], new: [tensor([8.3333], device='cuda:0'), tensor([16.6667], device='cuda:0'), tensor([16.6667], device='cuda:0')], top5: tensor([78.1250], device='cuda:0'), top10: tensor([78.1250], device='cuda:0')
+Min and Max distances seen: 0.8737549781799316 1.5904780626296997
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([29.1667], device='cuda:0'), tensor([37.5000], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([84.3750], device='cuda:0'), top10: tensor([85.4167], device='cuda:0')
+Min and Max distances seen: 0.8681875467300415 1.594914197921753
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([20.8333], device='cuda:0'), tensor([33.3333], device='cuda:0'), tensor([33.3333], device='cuda:0')], top5: tensor([83.3333], device='cuda:0'), top10: tensor([83.3333], device='cuda:0')
+Min and Max distances seen: 0.8878099322319031 1.5850496292114258
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([98.6111], device='cuda:0')], new: [tensor([33.3333], device='cuda:0'), tensor([45.8333], device='cuda:0'), tensor([50.], device='cuda:0')], top5: tensor([85.4167], device='cuda:0'), top10: tensor([86.4583], device='cuda:0')
+
+At iteration: 8705
+Min and Max distances seen: 0.8482968211174011 1.5993833541870117
+In train
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([25.], device='cuda:0'), tensor([33.3333], device='cuda:0'), tensor([33.3333], device='cuda:0')], top5: tensor([83.3333], device='cuda:0'), top10: tensor([83.3333], device='cuda:0')
+Min and Max distances seen: 0.8254840970039368 1.5850698947906494
+In train
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([29.1667], device='cuda:0'), tensor([33.3333], device='cuda:0'), tensor([37.5000], device='cuda:0')], top5: tensor([83.3333], device='cuda:0'), top10: tensor([84.3750], device='cuda:0')
+Min and Max distances seen: 0.8813259601593018 1.598598837852478
+In train
+e: known: [tensor([95.8333], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([29.1667], device='cuda:0'), tensor([37.5000], device='cuda:0'), tensor([37.5000], device='cuda:0')], top5: tensor([84.3750], device='cuda:0'), top10: tensor([84.3750], device='cuda:0')
+Min and Max distances seen: 0.9166863560676575 1.606282114982605
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([29.1667], device='cuda:0'), tensor([41.6667], device='cuda:0'), tensor([45.8333], device='cuda:0')], top5: tensor([85.4167], device='cuda:0'), top10: tensor([86.4583], device='cuda:0')
+Min and Max distances seen: 0.89696204662323 1.6100789308547974
+In train
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([37.5000], device='cuda:0'), tensor([45.8333], device='cuda:0'), tensor([45.8333], device='cuda:0')], top5: tensor([86.4583], device='cuda:0'), top10: tensor([86.4583], device='cuda:0')
+
+Smoothing after 10
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([37.5000], device='cuda:0'), tensor([45.8333], device='cuda:0'), tensor([45.8333], device='cuda:0')], top5: tensor([86.4583], device='cuda:0')
+0.00030  8.71 l 91.73  | 1.534    74.797    84.959    0.7944    0.5000 | 0.255    80.417    0.819 | 0.266     84.375    0.850 |  2 hr 30 min  8600 8709
+Min and Max distances seen: 0.878097414970398 1.585732102394104
+In train
+e: known: [tensor([93.0555], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([41.6667], device='cuda:0'), tensor([50.], device='cuda:0'), tensor([50.], device='cuda:0')], top5: tensor([87.5000], device='cuda:0'), top10: tensor([87.5000], device='cuda:0')
+Min and Max distances seen: 0.8219885230064392 1.6036995649337769
+In train
+e: known: [tensor([93.0555], device='cuda:0'), tensor([95.8333], device='cuda:0'), tensor([98.6111], device='cuda:0')], new: [tensor([25.], device='cuda:0'), tensor([45.8333], device='cuda:0'), tensor([50.], device='cuda:0')], top5: tensor([83.3333], device='cuda:0'), top10: tensor([86.4583], device='cuda:0')
+Min and Max distances seen: 0.8175649046897888 1.5956522226333618
+In train
+e: known: [tensor([95.8333], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([29.1667], device='cuda:0'), tensor([33.3333], device='cuda:0'), tensor([33.3333], device='cuda:0')], top5: tensor([83.3333], device='cuda:0'), top10: tensor([83.3333], device='cuda:0')
+Min and Max distances seen: 0.8511834740638733 1.5950548648834229
+In train
+e: known: [tensor([94.4444], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([29.1667], device='cuda:0'), tensor([37.5000], device='cuda:0'), tensor([37.5000], device='cuda:0')], top5: tensor([84.3750], device='cuda:0'), top10: tensor([84.3750], device='cuda:0')
+Min and Max distances seen: 0.903486967086792 1.6035512685775757
+In train
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([20.8333], device='cuda:0'), tensor([37.5000], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([84.3750], device='cuda:0'), top10: tensor([85.4167], device='cuda:0')
+Min and Max distances seen: 0.831563413143158 1.611194133758545
+In train
+e: known: [tensor([95.8333], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([16.6667], device='cuda:0'), tensor([29.1667], device='cuda:0'), tensor([37.5000], device='cuda:0')], top5: tensor([82.2917], device='cuda:0'), top10: tensor([84.3750], device='cuda:0')
+Min and Max distances seen: 0.8687518239021301 1.5822404623031616
+In train
+e: known: [tensor([93.0555], device='cuda:0'), tensor([97.2222], device='cuda:0'), tensor([98.6111], device='cuda:0')], new: [tensor([12.5000], device='cuda:0'), tensor([29.1667], device='cuda:0'), tensor([33.3333], device='cuda:0')], top5: tensor([80.2083], device='cuda:0'), top10: tensor([82.2917], device='cuda:0')
+Min and Max distances seen: 0.8643653392791748 1.5923048257827759
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([29.1667], device='cuda:0'), tensor([37.5000], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([84.3750], device='cuda:0'), top10: tensor([85.4167], device='cuda:0')
+Min and Max distances seen: 0.8905768990516663 1.5855965614318848
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([16.6667], device='cuda:0'), tensor([25.], device='cuda:0'), tensor([29.1667], device='cuda:0')], top5: tensor([81.2500], device='cuda:0'), top10: tensor([82.2917], device='cuda:0')
+Min and Max distances seen: 0.8979053497314453 1.6278246641159058
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([45.8333], device='cuda:0'), tensor([50.], device='cuda:0'), tensor([50.], device='cuda:0')], top5: tensor([86.4583], device='cuda:0'), top10: tensor([87.5000], device='cuda:0')
+
+Smoothing after 10
+e: known: [tensor([97.2222], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([45.8333], device='cuda:0'), tensor([50.], device='cuda:0'), tensor([50.], device='cuda:0')], top5: tensor([86.4583], device='cuda:0')
+0.00030  8.72 l 91.94  | 1.534    74.797    84.959    0.7944    0.5000 | 0.262    78.542    0.805 | 0.312     84.375    0.853 |  2 hr 43 min  8600 8719
+Min and Max distances seen: 0.9611995220184326 1.5910842418670654
+Best in eval
+e: known: [tensor([65.5689], device='cuda:0'), tensor([77.8443], device='cuda:0'), tensor([79.6407], device='cuda:0')], new: [tensor([98.1013], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')]
+top1: tensor([76.0163], device='cuda:0'), top5: tensor([84.9594], device='cuda:0')
+0.00030  8.72 v 91.96  | 1.533    76.016    84.959    86.179    0.8007    0.5000 | 0.262    78.542    0.805 | 0.312     84.375    0.853 |  2 hr 45 min
+Min and Max distances seen: 0.9240686893463135 1.6020931005477905
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([25.], device='cuda:0'), tensor([29.1667], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([82.2917], device='cuda:0'), top10: tensor([85.4167], device='cuda:0')
+Min and Max distances seen: 0.8942579030990601 1.5852340459823608
+In train
+e: known: [tensor([94.4444], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([29.1667], device='cuda:0'), tensor([41.6667], device='cuda:0'), tensor([45.8333], device='cuda:0')], top5: tensor([85.4167], device='cuda:0'), top10: tensor([86.4583], device='cuda:0')
+Min and Max distances seen: 0.8380708694458008 1.577182650566101
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([25.], device='cuda:0'), tensor([25.], device='cuda:0'), tensor([25.], device='cuda:0')], top5: tensor([81.2500], device='cuda:0'), top10: tensor([81.2500], device='cuda:0')
+Min and Max distances seen: 0.8986994624137878 1.585316777229309
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([98.6111], device='cuda:0')], new: [tensor([20.8333], device='cuda:0'), tensor([37.5000], device='cuda:0'), tensor([37.5000], device='cuda:0')], top5: tensor([83.3333], device='cuda:0'), top10: tensor([83.3333], device='cuda:0')
+Min and Max distances seen: 0.8811771273612976 1.6021583080291748
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([98.6111], device='cuda:0')], new: [tensor([25.], device='cuda:0'), tensor([37.5000], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([83.3333], device='cuda:0'), top10: tensor([84.3750], device='cuda:0')
+Min and Max distances seen: 0.8859508633613586 1.5924427509307861
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([37.5000], device='cuda:0'), tensor([41.6667], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([84.3750], device='cuda:0'), top10: tensor([85.4167], device='cuda:0')
+Min and Max distances seen: 0.882257342338562 1.5791852474212646
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([20.8333], device='cuda:0'), tensor([37.5000], device='cuda:0'), tensor([45.8333], device='cuda:0')], top5: tensor([84.3750], device='cuda:0'), top10: tensor([86.4583], device='cuda:0')
+Min and Max distances seen: 0.8287531733512878 1.5947233438491821
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([20.8333], device='cuda:0'), tensor([37.5000], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([84.3750], device='cuda:0'), top10: tensor([85.4167], device='cuda:0')
+Min and Max distances seen: 0.913526713848114 1.611372709274292
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([29.1667], device='cuda:0'), tensor([50.], device='cuda:0'), tensor([50.], device='cuda:0')], top5: tensor([87.5000], device='cuda:0'), top10: tensor([87.5000], device='cuda:0')
+Min and Max distances seen: 0.8779340386390686 1.613466739654541
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([25.], device='cuda:0'), tensor([37.5000], device='cuda:0'), tensor([37.5000], device='cuda:0')], top5: tensor([83.3333], device='cuda:0'), top10: tensor([84.3750], device='cuda:0')
+
+Smoothing after 10
+e: known: [tensor([97.2222], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([25.], device='cuda:0'), tensor([37.5000], device='cuda:0'), tensor([37.5000], device='cuda:0')], top5: tensor([83.3333], device='cuda:0')
+0.00030  8.73 l 92.15  | 1.533    76.016    84.959    0.8007    0.5000 | 0.257    79.688    0.816 | 0.272     79.167    0.811 |  2 hr 57 min  8600 8729
+Min and Max distances seen: 0.9109264016151428 1.5943334102630615
+In train
+e: known: [tensor([95.8333], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([25.], device='cuda:0'), tensor([33.3333], device='cuda:0'), tensor([45.8333], device='cuda:0')], top5: tensor([83.3333], device='cuda:0'), top10: tensor([86.4583], device='cuda:0')
+Min and Max distances seen: 0.8412788510322571 1.5999184846878052
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([33.3333], device='cuda:0'), tensor([37.5000], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([84.3750], device='cuda:0'), top10: tensor([85.4167], device='cuda:0')
+Min and Max distances seen: 0.8823916912078857 1.6048725843429565
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([29.1667], device='cuda:0'), tensor([45.8333], device='cuda:0'), tensor([54.1667], device='cuda:0')], top5: tensor([86.4583], device='cuda:0'), top10: tensor([88.5417], device='cuda:0')
+Min and Max distances seen: 0.8638209104537964 1.6144425868988037
+In train
+e: known: [tensor([97.1429], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([26.9231], device='cuda:0'), tensor([34.6154], device='cuda:0'), tensor([38.4615], device='cuda:0')], top5: tensor([82.2917], device='cuda:0'), top10: tensor([83.3333], device='cuda:0')
+Min and Max distances seen: 0.9218603372573853 1.5998715162277222
+In train
+e: known: [tensor([95.8333], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([25.], device='cuda:0'), tensor([41.6667], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([85.4167], device='cuda:0'), top10: tensor([85.4167], device='cuda:0')
+Min and Max distances seen: 0.9003088474273682 1.5892373323440552
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([98.6111], device='cuda:0')], new: [tensor([29.1667], device='cuda:0'), tensor([33.3333], device='cuda:0'), tensor([33.3333], device='cuda:0')], top5: tensor([82.2917], device='cuda:0'), top10: tensor([82.2917], device='cuda:0')
+Min and Max distances seen: 0.8725712299346924 1.579675555229187
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([98.6111], device='cuda:0')], new: [tensor([25.], device='cuda:0'), tensor([25.], device='cuda:0'), tensor([33.3333], device='cuda:0')], top5: tensor([80.2083], device='cuda:0'), top10: tensor([82.2917], device='cuda:0')
+Min and Max distances seen: 0.848309338092804 1.590522289276123
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([25.], device='cuda:0'), tensor([25.], device='cuda:0'), tensor([33.3333], device='cuda:0')], top5: tensor([81.2500], device='cuda:0'), top10: tensor([83.3333], device='cuda:0')
+Min and Max distances seen: 0.8753482699394226 1.5979914665222168
+In train
+e: known: [tensor([93.0555], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([33.3333], device='cuda:0'), tensor([45.8333], device='cuda:0'), tensor([45.8333], device='cuda:0')], top5: tensor([86.4583], device='cuda:0'), top10: tensor([86.4583], device='cuda:0')
+Min and Max distances seen: 0.8605644702911377 1.6065893173217773
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([37.5000], device='cuda:0'), tensor([50.], device='cuda:0'), tensor([50.], device='cuda:0')], top5: tensor([87.5000], device='cuda:0'), top10: tensor([87.5000], device='cuda:0')
+
+Smoothing after 10
+e: known: [tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([37.5000], device='cuda:0'), tensor([50.], device='cuda:0'), tensor([50.], device='cuda:0')], top5: tensor([87.5000], device='cuda:0')
+0.00030  8.74 l 92.36  | 1.533    76.016    84.959    0.8007    0.5000 | 0.257    79.792    0.816 | 0.251     83.333    0.846 |  3 hr 10 min  8600 8739
+
+At iteration: 8740
+Min and Max distances seen: 0.9558783769607544 1.5883705615997314
+Best in eval
+e: known: [tensor([66.1677], device='cuda:0'), tensor([77.8443], device='cuda:0'), tensor([80.2395], device='cuda:0')], new: [tensor([98.7342], device='cuda:0'), tensor([99.3671], device='cuda:0'), tensor([100.], device='cuda:0')]
+top1: tensor([76.6260], device='cuda:0'), top5: tensor([84.7561], device='cuda:0')
+New max valid for this run
+Saving current features. Best valid acc. found.
+0.00030  8.74 v 92.38  | 1.533    76.626    84.756    86.585    0.8032    0.5000 | 0.257    79.792    0.816 | 0.251     83.333    0.846 |  3 hr 12 min
+Min and Max distances seen: 0.8873075842857361 1.6069252490997314
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([97.2222], device='cuda:0'), tensor([97.2222], device='cuda:0')], new: [tensor([16.6667], device='cuda:0'), tensor([25.], device='cuda:0'), tensor([29.1667], device='cuda:0')], top5: tensor([79.1667], device='cuda:0'), top10: tensor([80.2083], device='cuda:0')
+Min and Max distances seen: 0.8879488110542297 1.5911154747009277
+In train
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([25.], device='cuda:0'), tensor([25.], device='cuda:0'), tensor([25.], device='cuda:0')], top5: tensor([81.2500], device='cuda:0'), top10: tensor([81.2500], device='cuda:0')
+Min and Max distances seen: 0.8604139685630798 1.574185848236084
+In train
+e: known: [tensor([95.8333], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([98.6111], device='cuda:0')], new: [tensor([29.1667], device='cuda:0'), tensor([33.3333], device='cuda:0'), tensor([45.8333], device='cuda:0')], top5: tensor([82.2917], device='cuda:0'), top10: tensor([85.4167], device='cuda:0')
+Min and Max distances seen: 0.8714596033096313 1.5831810235977173
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([29.1667], device='cuda:0'), tensor([45.8333], device='cuda:0'), tensor([50.], device='cuda:0')], top5: tensor([86.4583], device='cuda:0'), top10: tensor([87.5000], device='cuda:0')
+Min and Max distances seen: 0.9468308091163635 1.6054712533950806
+In train
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([37.5000], device='cuda:0'), tensor([45.8333], device='cuda:0'), tensor([54.1667], device='cuda:0')], top5: tensor([86.4583], device='cuda:0'), top10: tensor([88.5417], device='cuda:0')
+Min and Max distances seen: 0.891226053237915 1.592686653137207
+In train
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([33.3333], device='cuda:0'), tensor([45.8333], device='cuda:0'), tensor([50.], device='cuda:0')], top5: tensor([86.4583], device='cuda:0'), top10: tensor([87.5000], device='cuda:0')
+Min and Max distances seen: 0.8611546158790588 1.5943489074707031
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([25.], device='cuda:0'), tensor([29.1667], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([82.2917], device='cuda:0'), top10: tensor([85.4167], device='cuda:0')
+Min and Max distances seen: 0.8696112632751465 1.5714112520217896
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([98.6111], device='cuda:0')], new: [tensor([33.3333], device='cuda:0'), tensor([41.6667], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([84.3750], device='cuda:0'), top10: tensor([84.3750], device='cuda:0')
+Min and Max distances seen: 0.8839298486709595 1.609893798828125
+In train
+e: known: [tensor([95.8333], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([98.6111], device='cuda:0')], new: [tensor([12.5000], device='cuda:0'), tensor([25.], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([80.2083], device='cuda:0'), top10: tensor([84.3750], device='cuda:0')
+Min and Max distances seen: 0.9019137620925903 1.5920889377593994
+In train
+e: known: [tensor([95.8333], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([20.8333], device='cuda:0'), tensor([37.5000], device='cuda:0'), tensor([50.], device='cuda:0')], top5: tensor([83.3333], device='cuda:0'), top10: tensor([87.5000], device='cuda:0')
+
+Smoothing after 10
+e: known: [tensor([95.8333], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([20.8333], device='cuda:0'), tensor([37.5000], device='cuda:0'), tensor([50.], device='cuda:0')], top5: tensor([83.3333], device='cuda:0')
+0.00030  8.75 l 92.57  | 1.533    76.626    84.756    0.8032    0.5000 | 0.253    79.792    0.815 | 0.265     77.083    0.806 |  3 hr 25 min  8600 8749
+Min and Max distances seen: 0.8773019909858704 1.5850696563720703
+In train
+e: known: [tensor([95.8333], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([16.6667], device='cuda:0'), tensor([20.8333], device='cuda:0'), tensor([33.3333], device='cuda:0')], top5: tensor([80.2083], device='cuda:0'), top10: tensor([83.3333], device='cuda:0')
+Min and Max distances seen: 0.9174953699111938 1.5948405265808105
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([97.2222], device='cuda:0'), tensor([98.6111], device='cuda:0')], new: [tensor([12.5000], device='cuda:0'), tensor([25.], device='cuda:0'), tensor([37.5000], device='cuda:0')], top5: tensor([79.1667], device='cuda:0'), top10: tensor([83.3333], device='cuda:0')
+Min and Max distances seen: 0.8805179595947266 1.5932765007019043
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([29.1667], device='cuda:0'), tensor([41.6667], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([85.4167], device='cuda:0'), top10: tensor([85.4167], device='cuda:0')
+Min and Max distances seen: 0.9065528512001038 1.592891812324524
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([29.1667], device='cuda:0'), tensor([45.8333], device='cuda:0'), tensor([45.8333], device='cuda:0')], top5: tensor([86.4583], device='cuda:0'), top10: tensor([86.4583], device='cuda:0')
+Min and Max distances seen: 0.8475608825683594 1.5971189737319946
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([98.6111], device='cuda:0')], new: [tensor([37.5000], device='cuda:0'), tensor([50.], device='cuda:0'), tensor([50.], device='cuda:0')], top5: tensor([86.4583], device='cuda:0'), top10: tensor([86.4583], device='cuda:0')
+Min and Max distances seen: 0.881188690662384 1.610917329788208
+In train
+e: known: [tensor([95.8333], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([25.], device='cuda:0'), tensor([37.5000], device='cuda:0'), tensor([37.5000], device='cuda:0')], top5: tensor([84.3750], device='cuda:0'), top10: tensor([84.3750], device='cuda:0')
+Min and Max distances seen: 0.8745468258857727 1.5852904319763184
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([37.5000], device='cuda:0'), tensor([41.6667], device='cuda:0'), tensor([45.8333], device='cuda:0')], top5: tensor([85.4167], device='cuda:0'), top10: tensor([86.4583], device='cuda:0')
+Min and Max distances seen: 0.9133864641189575 1.5770386457443237
+In train
+e: known: [tensor([95.7143], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([30.7692], device='cuda:0'), tensor([46.1538], device='cuda:0'), tensor([57.6923], device='cuda:0')], top5: tensor([85.4167], device='cuda:0'), top10: tensor([88.5417], device='cuda:0')
+Min and Max distances seen: 0.8769941329956055 1.595863699913025
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([12.5000], device='cuda:0'), tensor([25.], device='cuda:0'), tensor([33.3333], device='cuda:0')], top5: tensor([81.2500], device='cuda:0'), top10: tensor([83.3333], device='cuda:0')
+Min and Max distances seen: 0.9164085388183594 1.6047728061676025
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([16.6667], device='cuda:0'), tensor([29.1667], device='cuda:0'), tensor([37.5000], device='cuda:0')], top5: tensor([82.2917], device='cuda:0'), top10: tensor([84.3750], device='cuda:0')
+
+Smoothing after 10
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([16.6667], device='cuda:0'), tensor([29.1667], device='cuda:0'), tensor([37.5000], device='cuda:0')], top5: tensor([82.2917], device='cuda:0')
+0.00030  8.76 l 92.78  | 1.533    76.626    84.756    0.8032    0.5000 | 0.253    78.958    0.811 | 0.207     77.083    0.794 |  3 hr 38 min  8600 8759
+Min and Max distances seen: 0.9369390606880188 1.5973989963531494
+Best in eval
+e: known: [tensor([65.5689], device='cuda:0'), tensor([78.1437], device='cuda:0'), tensor([80.8383], device='cuda:0')], new: [tensor([98.1013], device='cuda:0'), tensor([99.3671], device='cuda:0'), tensor([99.3671], device='cuda:0')]
+top1: tensor([76.0163], device='cuda:0'), top5: tensor([84.9594], device='cuda:0')
+0.00030  8.76 v 92.80  | 1.534    76.016    84.959    86.789    0.7995    0.5000 | 0.253    78.958    0.811 | 0.207     77.083    0.794 |  3 hr 39 min
+Min and Max distances seen: 0.8941335082054138 1.586056113243103
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([98.6111], device='cuda:0')], new: [tensor([33.3333], device='cuda:0'), tensor([41.6667], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([84.3750], device='cuda:0'), top10: tensor([84.3750], device='cuda:0')
+Min and Max distances seen: 0.8761871457099915 1.6043232679367065
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([98.6111], device='cuda:0')], new: [tensor([29.1667], device='cuda:0'), tensor([37.5000], device='cuda:0'), tensor([50.], device='cuda:0')], top5: tensor([83.3333], device='cuda:0'), top10: tensor([86.4583], device='cuda:0')
+Min and Max distances seen: 0.8765081167221069 1.59708833694458
+In train
+e: known: [tensor([94.4444], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([20.8333], device='cuda:0'), tensor([33.3333], device='cuda:0'), tensor([37.5000], device='cuda:0')], top5: tensor([83.3333], device='cuda:0'), top10: tensor([84.3750], device='cuda:0')
+Min and Max distances seen: 0.8763381242752075 1.5847519636154175
+In train
+e: known: [tensor([94.4444], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([29.1667], device='cuda:0'), tensor([33.3333], device='cuda:0'), tensor([33.3333], device='cuda:0')], top5: tensor([82.2917], device='cuda:0'), top10: tensor([83.3333], device='cuda:0')
+Min and Max distances seen: 0.9069507718086243 1.612267255783081
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([20.8333], device='cuda:0'), tensor([33.3333], device='cuda:0'), tensor([33.3333], device='cuda:0')], top5: tensor([83.3333], device='cuda:0'), top10: tensor([83.3333], device='cuda:0')
+Min and Max distances seen: 0.8836895823478699 1.6008763313293457
+In train
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([20.8333], device='cuda:0'), tensor([33.3333], device='cuda:0'), tensor([37.5000], device='cuda:0')], top5: tensor([83.3333], device='cuda:0'), top10: tensor([84.3750], device='cuda:0')
+Min and Max distances seen: 0.8917741179466248 1.5931015014648438
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([33.3333], device='cuda:0'), tensor([45.8333], device='cuda:0'), tensor([45.8333], device='cuda:0')], top5: tensor([86.4583], device='cuda:0'), top10: tensor([86.4583], device='cuda:0')
+Min and Max distances seen: 0.9094556570053101 1.6067560911178589
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([33.3333], device='cuda:0'), tensor([41.6667], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([85.4167], device='cuda:0'), top10: tensor([85.4167], device='cuda:0')
+Min and Max distances seen: 0.8993043899536133 1.6046580076217651
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([29.1667], device='cuda:0'), tensor([41.6667], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([85.4167], device='cuda:0'), top10: tensor([85.4167], device='cuda:0')
+Min and Max distances seen: 0.8949527144432068 1.6042109727859497
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([33.3333], device='cuda:0'), tensor([41.6667], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([85.4167], device='cuda:0'), top10: tensor([85.4167], device='cuda:0')
+
+Smoothing after 10
+e: known: [tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([33.3333], device='cuda:0'), tensor([41.6667], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([85.4167], device='cuda:0')
+0.00030  8.77 l 92.98  | 1.534    76.016    84.959    0.7995    0.5000 | 0.257    80.312    0.819 | 0.239     82.292    0.834 |  3 hr 52 min  8600 8769
+Min and Max distances seen: 0.8122147917747498 1.604295015335083
+In train
+e: known: [tensor([95.8333], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([45.8333], device='cuda:0'), tensor([54.1667], device='cuda:0'), tensor([54.1667], device='cuda:0')], top5: tensor([88.5417], device='cuda:0'), top10: tensor([88.5417], device='cuda:0')
+Min and Max distances seen: 0.898141622543335 1.570054054260254
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([33.3333], device='cuda:0'), tensor([41.6667], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([85.4167], device='cuda:0'), top10: tensor([85.4167], device='cuda:0')
+Min and Max distances seen: 0.8647893667221069 1.6066672801971436
+In train
+e: known: [tensor([94.4444], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([50.], device='cuda:0'), tensor([58.3333], device='cuda:0'), tensor([58.3333], device='cuda:0')], top5: tensor([89.5833], device='cuda:0'), top10: tensor([89.5833], device='cuda:0')
+Min and Max distances seen: 0.9311152696609497 1.6018692255020142
+In train
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([33.3333], device='cuda:0'), tensor([45.8333], device='cuda:0'), tensor([50.], device='cuda:0')], top5: tensor([86.4583], device='cuda:0'), top10: tensor([87.5000], device='cuda:0')
+Min and Max distances seen: 0.8764669299125671 1.585455060005188
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([45.8333], device='cuda:0'), tensor([50.], device='cuda:0'), tensor([50.], device='cuda:0')], top5: tensor([87.5000], device='cuda:0'), top10: tensor([87.5000], device='cuda:0')
+
+At iteration: 8775
+Min and Max distances seen: 0.8778510689735413 1.6031930446624756
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([20.8333], device='cuda:0'), tensor([29.1667], device='cuda:0'), tensor([37.5000], device='cuda:0')], top5: tensor([81.2500], device='cuda:0'), top10: tensor([84.3750], device='cuda:0')
+Min and Max distances seen: 0.9042046070098877 1.5931288003921509
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([20.8333], device='cuda:0'), tensor([33.3333], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([83.3333], device='cuda:0'), top10: tensor([85.4167], device='cuda:0')
+Min and Max distances seen: 0.9024162888526917 1.5805425643920898
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([37.5000], device='cuda:0'), tensor([45.8333], device='cuda:0'), tensor([45.8333], device='cuda:0')], top5: tensor([86.4583], device='cuda:0'), top10: tensor([86.4583], device='cuda:0')
+Min and Max distances seen: 0.882221519947052 1.604703426361084
+In train
+e: known: [tensor([95.8333], device='cuda:0'), tensor([95.8333], device='cuda:0'), tensor([97.2222], device='cuda:0')], new: [tensor([33.3333], device='cuda:0'), tensor([41.6667], device='cuda:0'), tensor([45.8333], device='cuda:0')], top5: tensor([82.2917], device='cuda:0'), top10: tensor([84.3750], device='cuda:0')
+Min and Max distances seen: 0.853850781917572 1.601455569267273
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([33.3333], device='cuda:0'), tensor([41.6667], device='cuda:0'), tensor([50.], device='cuda:0')], top5: tensor([85.4167], device='cuda:0'), top10: tensor([87.5000], device='cuda:0')
+
+Smoothing after 10
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([33.3333], device='cuda:0'), tensor([41.6667], device='cuda:0'), tensor([50.], device='cuda:0')], top5: tensor([85.4167], device='cuda:0')
+0.00030  8.78 l 93.19  | 1.534    76.016    84.959    0.7995    0.5000 | 0.260    81.875    0.836 | 0.260     81.250    0.834 |  4 hr 05 min  8600 8779
+Min and Max distances seen: 0.9244987368583679 1.5912387371063232
+Best in eval
+e: known: [tensor([63.7725], device='cuda:0'), tensor([77.8443], device='cuda:0'), tensor([81.1377], device='cuda:0')], new: [tensor([98.7342], device='cuda:0'), tensor([99.3671], device='cuda:0'), tensor([99.3671], device='cuda:0')]
+top1: tensor([75.], device='cuda:0'), top5: tensor([84.7561], device='cuda:0')
+0.00030  8.78 v 93.21  | 1.533    75.000    84.756    86.992    0.7953    0.5000 | 0.260    81.875    0.836 | 0.260     81.250    0.834 |  4 hr 07 min
+Min and Max distances seen: 0.9042037129402161 1.5874518156051636
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([41.6667], device='cuda:0'), tensor([41.6667], device='cuda:0'), tensor([45.8333], device='cuda:0')], top5: tensor([84.3750], device='cuda:0'), top10: tensor([86.4583], device='cuda:0')
+Min and Max distances seen: 0.8742780685424805 1.5870641469955444
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([16.6667], device='cuda:0'), tensor([25.], device='cuda:0'), tensor([33.3333], device='cuda:0')], top5: tensor([81.2500], device='cuda:0'), top10: tensor([83.3333], device='cuda:0')
+Min and Max distances seen: 0.9206163287162781 1.5952740907669067
+In train
+e: known: [tensor([94.4444], device='cuda:0'), tensor([97.2222], device='cuda:0'), tensor([98.6111], device='cuda:0')], new: [tensor([25.], device='cuda:0'), tensor([37.5000], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([82.2917], device='cuda:0'), top10: tensor([84.3750], device='cuda:0')
+Min and Max distances seen: 0.8157290816307068 1.5951015949249268
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([98.6111], device='cuda:0')], new: [tensor([25.], device='cuda:0'), tensor([33.3333], device='cuda:0'), tensor([37.5000], device='cuda:0')], top5: tensor([82.2917], device='cuda:0'), top10: tensor([83.3333], device='cuda:0')
+Min and Max distances seen: 0.8884217739105225 1.5971200466156006
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([25.], device='cuda:0'), tensor([37.5000], device='cuda:0'), tensor([45.8333], device='cuda:0')], top5: tensor([83.3333], device='cuda:0'), top10: tensor([86.4583], device='cuda:0')
+Min and Max distances seen: 0.8759281039237976 1.5889400243759155
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([98.6111], device='cuda:0')], new: [tensor([20.8333], device='cuda:0'), tensor([37.5000], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([83.3333], device='cuda:0'), top10: tensor([84.3750], device='cuda:0')
+Min and Max distances seen: 0.9037252068519592 1.5822869539260864
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([16.6667], device='cuda:0'), tensor([37.5000], device='cuda:0'), tensor([45.8333], device='cuda:0')], top5: tensor([84.3750], device='cuda:0'), top10: tensor([86.4583], device='cuda:0')
+Min and Max distances seen: 0.9064061641693115 1.6034619808197021
+In train
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([16.6667], device='cuda:0'), tensor([20.8333], device='cuda:0'), tensor([25.], device='cuda:0')], top5: tensor([80.2083], device='cuda:0'), top10: tensor([81.2500], device='cuda:0')
+Min and Max distances seen: 0.8975957036018372 1.5886588096618652
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([41.6667], device='cuda:0'), tensor([58.3333], device='cuda:0'), tensor([58.3333], device='cuda:0')], top5: tensor([89.5833], device='cuda:0'), top10: tensor([89.5833], device='cuda:0')
+Min and Max distances seen: 0.8877468109130859 1.5919924974441528
+In train
+e: known: [tensor([94.4444], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([98.6111], device='cuda:0')], new: [tensor([25.], device='cuda:0'), tensor([45.8333], device='cuda:0'), tensor([45.8333], device='cuda:0')], top5: tensor([85.4167], device='cuda:0'), top10: tensor([85.4167], device='cuda:0')
+
+Smoothing after 10
+e: known: [tensor([94.4444], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([98.6111], device='cuda:0')], new: [tensor([25.], device='cuda:0'), tensor([45.8333], device='cuda:0'), tensor([45.8333], device='cuda:0')], top5: tensor([85.4167], device='cuda:0')
+0.00030  8.79 l 93.40  | 1.533    75.000    84.756    0.7953    0.5000 | 0.264    79.479    0.814 | 0.281     77.083    0.808 |  4 hr 19 min  8600 8789
+Min and Max distances seen: 0.9045301079750061 1.5873992443084717
+In train
+e: known: [tensor([94.4444], device='cuda:0'), tensor([97.2222], device='cuda:0'), tensor([98.6111], device='cuda:0')], new: [tensor([16.6667], device='cuda:0'), tensor([29.1667], device='cuda:0'), tensor([37.5000], device='cuda:0')], top5: tensor([80.2083], device='cuda:0'), top10: tensor([83.3333], device='cuda:0')
+Min and Max distances seen: 0.833332896232605 1.6183818578720093
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([25.], device='cuda:0'), tensor([37.5000], device='cuda:0'), tensor([37.5000], device='cuda:0')], top5: tensor([84.3750], device='cuda:0'), top10: tensor([84.3750], device='cuda:0')
+Min and Max distances seen: 0.8336211442947388 1.5948737859725952
+In train
+e: known: [tensor([95.8333], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([33.3333], device='cuda:0'), tensor([45.8333], device='cuda:0'), tensor([50.], device='cuda:0')], top5: tensor([86.4583], device='cuda:0'), top10: tensor([87.5000], device='cuda:0')
+Min and Max distances seen: 0.8776156306266785 1.596850037574768
+In train
+e: known: [tensor([94.4444], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([20.8333], device='cuda:0'), tensor([37.5000], device='cuda:0'), tensor([37.5000], device='cuda:0')], top5: tensor([84.3750], device='cuda:0'), top10: tensor([84.3750], device='cuda:0')
+Min and Max distances seen: 0.911391019821167 1.5984731912612915
+In train
+e: known: [tensor([98.5714], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([23.0769], device='cuda:0'), tensor([46.1538], device='cuda:0'), tensor([53.8462], device='cuda:0')], top5: tensor([85.4167], device='cuda:0'), top10: tensor([87.5000], device='cuda:0')
+Min and Max distances seen: 0.8929038643836975 1.6186339855194092
+In train
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([29.1667], device='cuda:0'), tensor([37.5000], device='cuda:0'), tensor([37.5000], device='cuda:0')], top5: tensor([84.3750], device='cuda:0'), top10: tensor([84.3750], device='cuda:0')
+Min and Max distances seen: 0.8707989454269409 1.609706163406372
+In train
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([12.5000], device='cuda:0'), tensor([41.6667], device='cuda:0'), tensor([50.], device='cuda:0')], top5: tensor([85.4167], device='cuda:0'), top10: tensor([87.5000], device='cuda:0')
+Min and Max distances seen: 0.8448734879493713 1.5924259424209595
+In train
+e: known: [tensor([94.4444], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([25.], device='cuda:0'), tensor([25.], device='cuda:0'), tensor([29.1667], device='cuda:0')], top5: tensor([81.2500], device='cuda:0'), top10: tensor([82.2917], device='cuda:0')
+Min and Max distances seen: 0.8840862512588501 1.591152310371399
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([29.1667], device='cuda:0'), tensor([33.3333], device='cuda:0'), tensor([37.5000], device='cuda:0')], top5: tensor([82.2917], device='cuda:0'), top10: tensor([84.3750], device='cuda:0')
+Min and Max distances seen: 0.8968034982681274 1.5904852151870728
+In train
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([29.1667], device='cuda:0'), tensor([33.3333], device='cuda:0'), tensor([33.3333], device='cuda:0')], top5: tensor([83.3333], device='cuda:0'), top10: tensor([83.3333], device='cuda:0')
+
+Smoothing after 10
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([29.1667], device='cuda:0'), tensor([33.3333], device='cuda:0'), tensor([33.3333], device='cuda:0')], top5: tensor([83.3333], device='cuda:0')
+0.00030  8.80 l 93.61  | 1.533    75.000    84.756    0.7953    0.5000 | 0.264    78.958    0.811 | 0.224     82.292    0.828 |  4 hr 32 min  8600 8799
+Min and Max distances seen: 0.9466317892074585 1.589176893234253
+Best in eval
+e: known: [tensor([64.6707], device='cuda:0'), tensor([78.1437], device='cuda:0'), tensor([80.8383], device='cuda:0')], new: [tensor([96.8354], device='cuda:0'), tensor([99.3671], device='cuda:0'), tensor([100.], device='cuda:0')]
+top1: tensor([75.], device='cuda:0'), top5: tensor([84.9594], device='cuda:0')
+0.00030  8.80 v 93.63  | 1.533    75.000    84.959    86.992    0.7944    0.5000 | 0.264    78.958    0.811 | 0.224     82.292    0.828 |  4 hr 34 min
+Min and Max distances seen: 0.8757852911949158 1.5790297985076904
+In train
+e: known: [tensor([95.8333], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([98.6111], device='cuda:0')], new: [tensor([33.3333], device='cuda:0'), tensor([37.5000], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([83.3333], device='cuda:0'), top10: tensor([84.3750], device='cuda:0')
+Min and Max distances seen: 0.9004592895507812 1.579769492149353
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([25.], device='cuda:0'), tensor([37.5000], device='cuda:0'), tensor([45.8333], device='cuda:0')], top5: tensor([84.3750], device='cuda:0'), top10: tensor([86.4583], device='cuda:0')
+Min and Max distances seen: 0.9048153162002563 1.5876100063323975
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([25.], device='cuda:0'), tensor([41.6667], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([85.4167], device='cuda:0'), top10: tensor([85.4167], device='cuda:0')
+Min and Max distances seen: 0.8994275331497192 1.5976128578186035
+In train
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([29.1667], device='cuda:0'), tensor([41.6667], device='cuda:0'), tensor([45.8333], device='cuda:0')], top5: tensor([85.4167], device='cuda:0'), top10: tensor([86.4583], device='cuda:0')
+Min and Max distances seen: 0.864246666431427 1.6002662181854248
+In train
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([25.], device='cuda:0'), tensor([29.1667], device='cuda:0'), tensor([33.3333], device='cuda:0')], top5: tensor([82.2917], device='cuda:0'), top10: tensor([83.3333], device='cuda:0')
+Min and Max distances seen: 0.9061289429664612 1.59744393825531
+In train
+e: known: [tensor([90.2778], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([20.8333], device='cuda:0'), tensor([37.5000], device='cuda:0'), tensor([45.8333], device='cuda:0')], top5: tensor([84.3750], device='cuda:0'), top10: tensor([86.4583], device='cuda:0')
+Min and Max distances seen: 0.8678277730941772 1.5808908939361572
+In train
+e: known: [tensor([93.0555], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([98.6111], device='cuda:0')], new: [tensor([29.1667], device='cuda:0'), tensor([41.6667], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([84.3750], device='cuda:0'), top10: tensor([84.3750], device='cuda:0')
+Min and Max distances seen: 0.8988794684410095 1.584574818611145
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([25.], device='cuda:0'), tensor([37.5000], device='cuda:0'), tensor([37.5000], device='cuda:0')], top5: tensor([84.3750], device='cuda:0'), top10: tensor([84.3750], device='cuda:0')
+Min and Max distances seen: 0.8768651485443115 1.5991291999816895
+In train
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([20.8333], device='cuda:0'), tensor([25.], device='cuda:0'), tensor([25.], device='cuda:0')], top5: tensor([81.2500], device='cuda:0'), top10: tensor([81.2500], device='cuda:0')
+Min and Max distances seen: 0.8532634973526001 1.5883182287216187
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([33.3333], device='cuda:0'), tensor([50.], device='cuda:0'), tensor([54.1667], device='cuda:0')], top5: tensor([87.5000], device='cuda:0'), top10: tensor([88.5417], device='cuda:0')
+
+Smoothing after 10
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([33.3333], device='cuda:0'), tensor([50.], device='cuda:0'), tensor([54.1667], device='cuda:0')], top5: tensor([87.5000], device='cuda:0')
+0.00030  8.81 l 93.82  | 1.533    75.000    84.959    0.7944    0.5000 | 0.267    79.375    0.815 | 0.288     81.250    0.836 |  4 hr 46 min  8600 8809
+
+At iteration: 8810
+Min and Max distances seen: 0.9067598581314087 1.596042513847351
+In train
+e: known: [tensor([95.8333], device='cuda:0'), tensor([97.2222], device='cuda:0'), tensor([98.6111], device='cuda:0')], new: [tensor([33.3333], device='cuda:0'), tensor([41.6667], device='cuda:0'), tensor([45.8333], device='cuda:0')], top5: tensor([83.3333], device='cuda:0'), top10: tensor([85.4167], device='cuda:0')
+Min and Max distances seen: 0.8591823577880859 1.6081678867340088
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([41.6667], device='cuda:0'), tensor([50.], device='cuda:0'), tensor([54.1667], device='cuda:0')], top5: tensor([87.5000], device='cuda:0'), top10: tensor([88.5417], device='cuda:0')
+Min and Max distances seen: 0.8412778973579407 1.5996605157852173
+In train
+e: known: [tensor([95.8333], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([29.1667], device='cuda:0'), tensor([33.3333], device='cuda:0'), tensor([37.5000], device='cuda:0')], top5: tensor([83.3333], device='cuda:0'), top10: tensor([84.3750], device='cuda:0')
+Min and Max distances seen: 0.861068606376648 1.6048991680145264
+In train
+e: known: [tensor([92.8571], device='cuda:0'), tensor([98.5714], device='cuda:0'), tensor([98.5714], device='cuda:0')], new: [tensor([26.9231], device='cuda:0'), tensor([34.6154], device='cuda:0'), tensor([38.4615], device='cuda:0')], top5: tensor([81.2500], device='cuda:0'), top10: tensor([82.2917], device='cuda:0')
+Min and Max distances seen: 0.8701887130737305 1.5950595140457153
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([98.6111], device='cuda:0')], new: [tensor([29.1667], device='cuda:0'), tensor([33.3333], device='cuda:0'), tensor([33.3333], device='cuda:0')], top5: tensor([82.2917], device='cuda:0'), top10: tensor([82.2917], device='cuda:0')
+Min and Max distances seen: 0.9144682884216309 1.6048256158828735
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([33.3333], device='cuda:0'), tensor([41.6667], device='cuda:0'), tensor([45.8333], device='cuda:0')], top5: tensor([85.4167], device='cuda:0'), top10: tensor([86.4583], device='cuda:0')
+Min and Max distances seen: 0.9096018075942993 1.6174237728118896
+In train
+e: known: [tensor([91.6667], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([25.], device='cuda:0'), tensor([25.], device='cuda:0'), tensor([25.], device='cuda:0')], top5: tensor([80.2083], device='cuda:0'), top10: tensor([81.2500], device='cuda:0')
+Min and Max distances seen: 0.8499974012374878 1.5938290357589722
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([29.1667], device='cuda:0'), tensor([33.3333], device='cuda:0'), tensor([33.3333], device='cuda:0')], top5: tensor([83.3333], device='cuda:0'), top10: tensor([83.3333], device='cuda:0')
+Min and Max distances seen: 0.8908089399337769 1.5878251791000366
+In train
+e: known: [tensor([95.8333], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([98.6111], device='cuda:0')], new: [tensor([29.1667], device='cuda:0'), tensor([33.3333], device='cuda:0'), tensor([33.3333], device='cuda:0')], top5: tensor([82.2917], device='cuda:0'), top10: tensor([82.2917], device='cuda:0')
+Min and Max distances seen: 0.861168622970581 1.6007678508758545
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([29.1667], device='cuda:0'), tensor([33.3333], device='cuda:0'), tensor([33.3333], device='cuda:0')], top5: tensor([83.3333], device='cuda:0'), top10: tensor([83.3333], device='cuda:0')
+
+Smoothing after 10
+e: known: [tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([29.1667], device='cuda:0'), tensor([33.3333], device='cuda:0'), tensor([33.3333], device='cuda:0')], top5: tensor([83.3333], device='cuda:0')
+0.00030  8.82 l 94.02  | 1.533    75.000    84.959    0.7944    0.5000 | 0.267    79.688    0.812 | 0.290     81.250    0.823 |  5 hr 00 min  8600 8819
+Min and Max distances seen: 0.9566811323165894 1.6013388633728027
+Best in eval
+e: known: [tensor([65.5689], device='cuda:0'), tensor([76.9461], device='cuda:0'), tensor([79.3413], device='cuda:0')], new: [tensor([98.1013], device='cuda:0'), tensor([99.3671], device='cuda:0'), tensor([99.3671], device='cuda:0')]
+top1: tensor([76.0163], device='cuda:0'), top5: tensor([84.1463], device='cuda:0')
+0.00030  8.82 v 94.04  | 1.533    76.016    84.146    85.772    0.7992    0.5000 | 0.267    79.688    0.812 | 0.290     81.250    0.823 |  5 hr 01 min
+Min and Max distances seen: 0.8925947546958923 1.6045255661010742
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([37.5000], device='cuda:0'), tensor([50.], device='cuda:0'), tensor([50.], device='cuda:0')], top5: tensor([86.4583], device='cuda:0'), top10: tensor([87.5000], device='cuda:0')
+Min and Max distances seen: 0.8484833836555481 1.6051557064056396
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([25.], device='cuda:0'), tensor([41.6667], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([85.4167], device='cuda:0'), top10: tensor([85.4167], device='cuda:0')
+Min and Max distances seen: 0.9013314843177795 1.5786516666412354
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([25.], device='cuda:0'), tensor([33.3333], device='cuda:0'), tensor([33.3333], device='cuda:0')], top5: tensor([83.3333], device='cuda:0'), top10: tensor([83.3333], device='cuda:0')
+Min and Max distances seen: 0.8819419741630554 1.5977696180343628
+In train
+e: known: [tensor([94.4444], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([98.6111], device='cuda:0')], new: [tensor([12.5000], device='cuda:0'), tensor([29.1667], device='cuda:0'), tensor([37.5000], device='cuda:0')], top5: tensor([81.2500], device='cuda:0'), top10: tensor([83.3333], device='cuda:0')
+Min and Max distances seen: 0.8613775372505188 1.6052420139312744
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([25.], device='cuda:0'), tensor([33.3333], device='cuda:0'), tensor([37.5000], device='cuda:0')], top5: tensor([83.3333], device='cuda:0'), top10: tensor([84.3750], device='cuda:0')
+Min and Max distances seen: 0.8518549799919128 1.585426926612854
+In train
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([33.3333], device='cuda:0'), tensor([37.5000], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([84.3750], device='cuda:0'), top10: tensor([85.4167], device='cuda:0')
+Min and Max distances seen: 0.8528706431388855 1.6172218322753906
+In train
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([25.], device='cuda:0'), tensor([41.6667], device='cuda:0'), tensor([45.8333], device='cuda:0')], top5: tensor([85.4167], device='cuda:0'), top10: tensor([86.4583], device='cuda:0')
+Min and Max distances seen: 0.8335830569267273 1.575131893157959
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([16.6667], device='cuda:0'), tensor([29.1667], device='cuda:0'), tensor([37.5000], device='cuda:0')], top5: tensor([82.2917], device='cuda:0'), top10: tensor([84.3750], device='cuda:0')
+Min and Max distances seen: 0.8751795291900635 1.59223473072052
+In train
+e: known: [tensor([94.4444], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([12.5000], device='cuda:0'), tensor([25.], device='cuda:0'), tensor([33.3333], device='cuda:0')], top5: tensor([81.2500], device='cuda:0'), top10: tensor([83.3333], device='cuda:0')
+Min and Max distances seen: 0.9047855138778687 1.585411787033081
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([16.6667], device='cuda:0'), tensor([25.], device='cuda:0'), tensor([33.3333], device='cuda:0')], top5: tensor([81.2500], device='cuda:0'), top10: tensor([83.3333], device='cuda:0')
+
+Smoothing after 10
+e: known: [tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([16.6667], device='cuda:0'), tensor([25.], device='cuda:0'), tensor([33.3333], device='cuda:0')], top5: tensor([81.2500], device='cuda:0')
+0.00030  8.83 l 94.23  | 1.533    76.016    84.146    0.7992    0.5000 | 0.251    79.062    0.810 | 0.321     78.125    0.796 |  5 hr 13 min  8600 8829
+Min and Max distances seen: 0.8605632781982422 1.6063908338546753
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([16.6667], device='cuda:0'), tensor([33.3333], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([83.3333], device='cuda:0'), top10: tensor([85.4167], device='cuda:0')
+Min and Max distances seen: 0.9107989072799683 1.6019853353500366
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([25.], device='cuda:0'), tensor([45.8333], device='cuda:0'), tensor([54.1667], device='cuda:0')], top5: tensor([86.4583], device='cuda:0'), top10: tensor([88.5417], device='cuda:0')
+Min and Max distances seen: 0.9217961430549622 1.6075921058654785
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([20.8333], device='cuda:0'), tensor([37.5000], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([84.3750], device='cuda:0'), top10: tensor([85.4167], device='cuda:0')
+Min and Max distances seen: 0.848621129989624 1.5856122970581055
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([20.8333], device='cuda:0'), tensor([29.1667], device='cuda:0'), tensor([37.5000], device='cuda:0')], top5: tensor([82.2917], device='cuda:0'), top10: tensor([84.3750], device='cuda:0')
+Min and Max distances seen: 0.8757908940315247 1.6096312999725342
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([98.6111], device='cuda:0')], new: [tensor([29.1667], device='cuda:0'), tensor([41.6667], device='cuda:0'), tensor([45.8333], device='cuda:0')], top5: tensor([84.3750], device='cuda:0'), top10: tensor([85.4167], device='cuda:0')
+Min and Max distances seen: 0.9167425036430359 1.5956557989120483
+In train
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([33.3333], device='cuda:0'), tensor([37.5000], device='cuda:0'), tensor([45.8333], device='cuda:0')], top5: tensor([84.3750], device='cuda:0'), top10: tensor([86.4583], device='cuda:0')
+Min and Max distances seen: 0.8864225745201111 1.5838812589645386
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([20.8333], device='cuda:0'), tensor([37.5000], device='cuda:0'), tensor([37.5000], device='cuda:0')], top5: tensor([83.3333], device='cuda:0'), top10: tensor([84.3750], device='cuda:0')
+Min and Max distances seen: 0.9067501425743103 1.5831618309020996
+In train
+e: known: [tensor([95.8333], device='cuda:0'), tensor([97.2222], device='cuda:0'), tensor([97.2222], device='cuda:0')], new: [tensor([29.1667], device='cuda:0'), tensor([37.5000], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([82.2917], device='cuda:0'), top10: tensor([83.3333], device='cuda:0')
+Min and Max distances seen: 0.8992242813110352 1.5903081893920898
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([16.6667], device='cuda:0'), tensor([29.1667], device='cuda:0'), tensor([37.5000], device='cuda:0')], top5: tensor([82.2917], device='cuda:0'), top10: tensor([84.3750], device='cuda:0')
+Min and Max distances seen: 0.9076076149940491 1.6093482971191406
+In train
+e: known: [tensor([93.0555], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([20.8333], device='cuda:0'), tensor([29.1667], device='cuda:0'), tensor([37.5000], device='cuda:0')], top5: tensor([82.2917], device='cuda:0'), top10: tensor([84.3750], device='cuda:0')
+
+Smoothing after 10
+e: known: [tensor([93.0555], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([20.8333], device='cuda:0'), tensor([29.1667], device='cuda:0'), tensor([37.5000], device='cuda:0')], top5: tensor([82.2917], device='cuda:0')
+0.00030  8.84 l 94.44  | 1.533    76.016    84.146    0.7992    0.5000 | 0.248    78.854    0.809 | 0.263     75.000    0.776 |  5 hr 27 min  8600 8839
+Min and Max distances seen: 0.949578046798706 1.5941903591156006
+Best in eval
+e: known: [tensor([65.5689], device='cuda:0'), tensor([77.5449], device='cuda:0'), tensor([79.0419], device='cuda:0')], new: [tensor([98.7342], device='cuda:0'), tensor([99.3671], device='cuda:0'), tensor([99.3671], device='cuda:0')]
+top1: tensor([76.2195], device='cuda:0'), top5: tensor([84.5528], device='cuda:0')
+0.00030  8.84 v 94.46  | 1.534    76.220    84.553    85.569    0.7996    0.5000 | 0.248    78.854    0.809 | 0.263     75.000    0.776 |  5 hr 28 min
+Min and Max distances seen: 0.8857770562171936 1.5853781700134277
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([25.], device='cuda:0'), tensor([37.5000], device='cuda:0'), tensor([37.5000], device='cuda:0')], top5: tensor([84.3750], device='cuda:0'), top10: tensor([84.3750], device='cuda:0')
+Min and Max distances seen: 0.8287544846534729 1.5950170755386353
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([29.1667], device='cuda:0'), tensor([33.3333], device='cuda:0'), tensor([33.3333], device='cuda:0')], top5: tensor([83.3333], device='cuda:0'), top10: tensor([83.3333], device='cuda:0')
+Min and Max distances seen: 0.8734303116798401 1.6055150032043457
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([33.3333], device='cuda:0'), tensor([33.3333], device='cuda:0'), tensor([37.5000], device='cuda:0')], top5: tensor([83.3333], device='cuda:0'), top10: tensor([84.3750], device='cuda:0')
+Min and Max distances seen: 0.8976256847381592 1.5971627235412598
+In train
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([29.1667], device='cuda:0'), tensor([29.1667], device='cuda:0'), tensor([37.5000], device='cuda:0')], top5: tensor([82.2917], device='cuda:0'), top10: tensor([84.3750], device='cuda:0')
+Min and Max distances seen: 0.8455612659454346 1.61335027217865
+In train
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([25.], device='cuda:0'), tensor([25.], device='cuda:0'), tensor([33.3333], device='cuda:0')], top5: tensor([81.2500], device='cuda:0'), top10: tensor([83.3333], device='cuda:0')
+
+At iteration: 8845
+Min and Max distances seen: 0.8879928588867188 1.586238145828247
+In train
+e: known: [tensor([95.8333], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([98.6111], device='cuda:0')], new: [tensor([16.6667], device='cuda:0'), tensor([29.1667], device='cuda:0'), tensor([37.5000], device='cuda:0')], top5: tensor([81.2500], device='cuda:0'), top10: tensor([83.3333], device='cuda:0')
+Min and Max distances seen: 0.8644488453865051 1.6174036264419556
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([16.6667], device='cuda:0'), tensor([33.3333], device='cuda:0'), tensor([33.3333], device='cuda:0')], top5: tensor([83.3333], device='cuda:0'), top10: tensor([83.3333], device='cuda:0')
+Min and Max distances seen: 0.9040453433990479 1.5966078042984009
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([29.1667], device='cuda:0'), tensor([33.3333], device='cuda:0'), tensor([37.5000], device='cuda:0')], top5: tensor([83.3333], device='cuda:0'), top10: tensor([84.3750], device='cuda:0')
+Min and Max distances seen: 0.875236451625824 1.5985957384109497
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([98.6111], device='cuda:0')], new: [tensor([37.5000], device='cuda:0'), tensor([45.8333], device='cuda:0'), tensor([45.8333], device='cuda:0')], top5: tensor([85.4167], device='cuda:0'), top10: tensor([85.4167], device='cuda:0')
+Min and Max distances seen: 0.8834015130996704 1.6184715032577515
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([98.6111], device='cuda:0')], new: [tensor([41.6667], device='cuda:0'), tensor([50.], device='cuda:0'), tensor([50.], device='cuda:0')], top5: tensor([86.4583], device='cuda:0'), top10: tensor([86.4583], device='cuda:0')
+
+Smoothing after 10
+e: known: [tensor([98.6111], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([98.6111], device='cuda:0')], new: [tensor([41.6667], device='cuda:0'), tensor([50.], device='cuda:0'), tensor([50.], device='cuda:0')], top5: tensor([86.4583], device='cuda:0')
+0.00030  8.85 l 94.65  | 1.534    76.220    84.553    0.7996    0.5000 | 0.261    80.833    0.821 | 0.256     84.375    0.854 |  5 hr 41 min  8600 8849
+Min and Max distances seen: 0.8992519974708557 1.5889931917190552
+In train
+e: known: [tensor([95.8333], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([37.5000], device='cuda:0'), tensor([50.], device='cuda:0'), tensor([54.1667], device='cuda:0')], top5: tensor([86.4583], device='cuda:0'), top10: tensor([88.5417], device='cuda:0')
+Min and Max distances seen: 0.9128406047821045 1.6029253005981445
+In train
+e: known: [tensor([95.8333], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([25.], device='cuda:0'), tensor([33.3333], device='cuda:0'), tensor([45.8333], device='cuda:0')], top5: tensor([83.3333], device='cuda:0'), top10: tensor([86.4583], device='cuda:0')
+Min and Max distances seen: 0.891770601272583 1.5881638526916504
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([20.8333], device='cuda:0'), tensor([37.5000], device='cuda:0'), tensor([50.], device='cuda:0')], top5: tensor([84.3750], device='cuda:0'), top10: tensor([87.5000], device='cuda:0')
+Min and Max distances seen: 0.8802650570869446 1.59226393699646
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([29.1667], device='cuda:0'), tensor([41.6667], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([85.4167], device='cuda:0'), top10: tensor([85.4167], device='cuda:0')
+Min and Max distances seen: 0.8217781782150269 1.62158203125
+In train
+e: known: [tensor([95.8333], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([33.3333], device='cuda:0'), tensor([37.5000], device='cuda:0'), tensor([45.8333], device='cuda:0')], top5: tensor([84.3750], device='cuda:0'), top10: tensor([86.4583], device='cuda:0')
+Min and Max distances seen: 0.9067339897155762 1.5842365026474
+In train
+e: known: [tensor([98.5714], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([38.4615], device='cuda:0'), tensor([46.1538], device='cuda:0'), tensor([46.1538], device='cuda:0')], top5: tensor([85.4167], device='cuda:0'), top10: tensor([85.4167], device='cuda:0')
+Min and Max distances seen: 0.8880797624588013 1.584275245666504
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([98.6111], device='cuda:0')], new: [tensor([37.5000], device='cuda:0'), tensor([37.5000], device='cuda:0'), tensor([50.], device='cuda:0')], top5: tensor([83.3333], device='cuda:0'), top10: tensor([86.4583], device='cuda:0')
+Min and Max distances seen: 0.8874504566192627 1.602984070777893
+In train
+e: known: [tensor([95.8333], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([37.5000], device='cuda:0'), tensor([37.5000], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([84.3750], device='cuda:0'), top10: tensor([85.4167], device='cuda:0')
+Min and Max distances seen: 0.8933760523796082 1.5889793634414673
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([33.3333], device='cuda:0'), tensor([37.5000], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([83.3333], device='cuda:0'), top10: tensor([85.4167], device='cuda:0')
+Min and Max distances seen: 0.8844558596611023 1.6035641431808472
+In train
+e: known: [tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([25.], device='cuda:0'), tensor([50.], device='cuda:0'), tensor([50.], device='cuda:0')], top5: tensor([87.5000], device='cuda:0'), top10: tensor([87.5000], device='cuda:0')
+
+Smoothing after 10
+e: known: [tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([25.], device='cuda:0'), tensor([50.], device='cuda:0'), tensor([50.], device='cuda:0')], top5: tensor([87.5000], device='cuda:0')
+0.00030  8.86 l 94.86  | 1.534    76.220    84.553    0.7996    0.5000 | 0.269    80.729    0.826 | 0.256     80.208    0.827 |  5 hr 54 min  8600 8859
+Min and Max distances seen: 0.9110701084136963 1.6044323444366455
+Best in eval
+e: known: [tensor([63.4731], device='cuda:0'), tensor([77.2455], device='cuda:0'), tensor([79.9401], device='cuda:0')], new: [tensor([99.3671], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')]
+top1: tensor([75.], device='cuda:0'), top5: tensor([84.5528], device='cuda:0')
+0.00030  8.86 v 94.88  | 1.532    75.000    84.553    86.382    0.7942    0.5000 | 0.269    80.729    0.826 | 0.256     80.208    0.827 |  5 hr 56 min
+Min and Max distances seen: 0.8838262557983398 1.5811058282852173
+In train
+e: known: [tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([16.6667], device='cuda:0'), tensor([41.6667], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([85.4167], device='cuda:0'), top10: tensor([85.4167], device='cuda:0')
+Min and Max distances seen: 0.8985539674758911 1.6015684604644775
+In train
+e: known: [tensor([95.8333], device='cuda:0'), tensor([100.], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([25.], device='cuda:0'), tensor([41.6667], device='cuda:0'), tensor([45.8333], device='cuda:0')], top5: tensor([85.4167], device='cuda:0'), top10: tensor([86.4583], device='cuda:0')
+Min and Max distances seen: 0.8965343236923218 1.5801582336425781
+In train
+e: known: [tensor([97.2222], device='cuda:0'), tensor([98.6111], device='cuda:0'), tensor([100.], device='cuda:0')], new: [tensor([25.], device='cuda:0'), tensor([37.5000], device='cuda:0'), tensor([41.6667], device='cuda:0')], top5: tensor([83.3333], device='cuda:0'), top10: tensor([85.4167], device='cuda:0')

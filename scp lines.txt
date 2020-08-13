@@ -1,8 +1,12 @@
-scp DLANstnf@lp01.ccni.rpi.edu:scratch/Masters-Thesis/Kaggle_Winner/train.py .
-scp DLANstnf@lp01.ccni.rpi.edu:scratch/Masters-Thesis/Kaggle_Winner/models/\{model,utils\}.py ./models/
-scp DLANstnf@lp01.ccni.rpi.edu:scratch/Masters-Thesis/Kaggle_Winner/input/\{bboxs,label\}.csv ./input/
-scp DLANstnf@lp02.ccni.rpi.edu:scratch/Masters-Thesis/Kaggle_Winner/dataSet/reader.py ./dataSet/
-scp -r DLANstnf@lp02.ccni.rpi.edu:scratch/Masters-Thesis/Kaggle_Winner/sbatches ./sbatches
-scp -r DLANstnf@lp01.ccni.rpi.edu:scratch/Masters-Thesis/Kaggle_Winner/input/\{train*,valid*\}.csv ./input
-scp -r DLANstnf@lp01.ccni.rpi.edu:scratch/Masters-Thesis/Kaggle_Winner/input/flukebook/data_formatters/* ./input/flukebook/data_formatters/
+scp DLANstnf@blp01.ccni.rpi.edu:scratch/Masters-Thesis/Kaggle_Winner/train.py .
+scp DLANstnf@blp01.ccni.rpi.edu:scratch/Masters-Thesis/Kaggle_Winner/test.py .
+scp DLANstnf@blp01.ccni.rpi.edu:scratch/Masters-Thesis/Kaggle_Winner/embed_test.py .
+scp DLANstnf@blp01.ccni.rpi.edu:scratch/Masters-Thesis/Kaggle_Winner/models/\{model,utils,triplet_loss\}.py ./models/
+scp DLANstnf@blp01.ccni.rpi.edu:scratch/Masters-Thesis/Kaggle_Winner/input/\{bboxs,label\}.csv ./input/
+scp DLANstnf@blp01.ccni.rpi.edu:scratch/Masters-Thesis/Kaggle_Winner/input/flukebook/3final2/\{train,test\}.csv ./input/flukebook/3final2/
+scp DLANstnf@blp01.ccni.rpi.edu:scratch/Masters-Thesis/Kaggle_Winner/dataSet/reader.py ./dataSet/
+scp DLANstnf@blp01.ccni.rpi.edu:scratch/Masters-Thesis/Kaggle_Winner/utils/metric.py ./utils/
 
+scp -r DLANstnf@blp01.ccni.rpi.edu:scratch/Masters-Thesis/Kaggle_Winner/sbatches/* ./sbatches
+scp -r DLANstnf@blp01.ccni.rpi.edu:scratch/Masters-Thesis/Kaggle_Winner/input/split_files/* ./input/split_files
+scp -r DLANstnf@blp01.ccni.rpi.edu:scratch/Masters-Thesis/Kaggle_Winner/input/flukebook/data_formatters/* ./input/flukebook/data_formatters

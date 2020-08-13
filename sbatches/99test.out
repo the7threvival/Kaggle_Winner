@@ -1,0 +1,27 @@
+Model name: senet154
+Fold: final2
+Checkpoint start: 8600
+Also tests flipped images: True
+Embedding? True
+Getting features (if embed) from files with ending: _final2
+Doing final embedding tests? False
+
+Number of images to test: 675
+loading bbox...
+Min and Max distances seen: 0.5914822220802307 1.5305488109588623
+####################
+Lower min found: 0.5914822220802307
+####################
+Higher max found: 0.9390665888786316
+
+Embedding accuracy:
+best_t: 0.30000000000000004
+top1: 80.296295 ; top5: 89.333336 ; top10: 91.40741
+Known whales:
+   top1: 81.69935
+   top5: 85.83878
+   top10: 88.01743
+New whales:
+   top1: 77.31481
+   top5: 96.759254
+   top10: 98.61111

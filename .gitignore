@@ -4,9 +4,6 @@
 # Ignore strange result thing
 result
 
-# Ignore temp files
-.train*
-
 # Ignore changes to train.py for now (until they work)
 # Actually achieved with this
 # https://stackoverflow.com/questions/7231608/how-to-ignore-files-which-are-in-repository
